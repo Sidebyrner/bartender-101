@@ -42,12 +42,15 @@ enum DrinkFamily: String, Codable, CaseIterable, Identifiable {
 enum GlassType: String, Codable, CaseIterable {
     case highball, collins, copperMug, rocks, coupe, martini
     case wine, flute, hurricane, julepCup, shot, irishCoffeeMug
+    case tikiMug, punchBowl
 
     var displayName: String {
         switch self {
         case .copperMug: return "Copper Mug"
         case .julepCup: return "Julep Cup"
         case .irishCoffeeMug: return "Irish Coffee Mug"
+        case .tikiMug: return "Tiki Mug"
+        case .punchBowl: return "Punch Bowl"
         default: return rawValue.prefix(1).uppercased() + rawValue.dropFirst()
         }
     }
