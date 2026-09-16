@@ -33,6 +33,7 @@ enum RecipeScaler {
             case .pinch: return "Pinch"
             case .optional: return "Optional"
             case .dash: return "Dash"
+            case .barspoon: return "Barspoon"
             case .oz: return nil
             }
         }
