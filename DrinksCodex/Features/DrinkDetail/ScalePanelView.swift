@@ -14,8 +14,10 @@ struct ScalePanel: View {
     /// than offering a control that does nothing.
     let batchEligible: Bool
 
-    private static let presets: [(title: String, servings: Double)] = [
-        ("Shot", 0.5), ("Single", 1), ("Double", 2)
+    private static let presets: [ScalePreset] = [
+        ScalePreset(title: "Shot", servings: 0.5),
+        ScalePreset(title: "Single", servings: 1),
+        ScalePreset(title: "Double", servings: 2),
     ]
 
     var body: some View {
@@ -33,7 +35,7 @@ struct ScalePanel: View {
             }
 
             HStack(spacing: 8) {
-                ForEach(Self.presets, id: \.title) { preset in
+                ForEach(Self.presets) { preset in
                     PresetButton(title: preset.title, isSelected: servings == preset.servings) {
                         servings = preset.servings
                     }
@@ -62,6 +64,15 @@ struct ScalePanel: View {
             ? "\(Int(servings))"
             : String(format: "%.1f", servings)
     }
+}
+
+/// A servings shortcut shown as a capsule button. A named struct rather than
+/// a tuple because Swift key paths can't address tuple elements, so a tuple
+/// array can't be fed to `ForEach`.
+private struct ScalePreset: Identifiable {
+    var id: String { title }
+    let title: String
+    let servings: Double
 }
 
 private struct PresetButton: View {
