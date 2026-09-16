@@ -14,11 +14,20 @@
 			remoteGlobalIDString = EAE78773BB895BB78EADAE14;
 			remoteInfo = Bartender101;
 		};
+		C0DE0000000000000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F25EA99CEF325406B5E2262B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0DE0000000000000000000C;
+			remoteInfo = DrinksCodex;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4BAD9579EAD853B88B6CB7BE /* Bartender101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bartender101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D892FA610CC5C52835B4FA1 /* Bartender101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bartender101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DE00000000000000000001 /* DrinksCodex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinksCodex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0DE00000000000000000002 /* DrinksCodexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinksCodexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -30,6 +39,21 @@
 		897996E6637458B48CCEF075 /* Bartender101Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Bartender101Tests;
+			sourceTree = "<group>";
+		};
+		C0DE00000000000000000003 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C0DE00000000000000000004 /* DrinksCodex */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DrinksCodex;
+			sourceTree = "<group>";
+		};
+		C0DE00000000000000000005 /* DrinksCodexTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DrinksCodexTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -49,14 +73,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0DE00000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DE00000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		06F0C60F5F9F5C8FBE9B5E7C /* Bartender101 project root */ = {
 			isa = PBXGroup;
 			children = (
+				C0DE00000000000000000003 /* Shared */,
 				AC8EC892FF625CC5AEB43DD3 /* Bartender101 */,
 				897996E6637458B48CCEF075 /* Bartender101Tests */,
+				C0DE00000000000000000004 /* DrinksCodex */,
+				C0DE00000000000000000005 /* DrinksCodexTests */,
 				3D958D0109785E35A06CD027 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +107,8 @@
 			children = (
 				4BAD9579EAD853B88B6CB7BE /* Bartender101.app */,
 				4D892FA610CC5C52835B4FA1 /* Bartender101Tests.xctest */,
+				C0DE00000000000000000001 /* DrinksCodex.app */,
+				C0DE00000000000000000002 /* DrinksCodexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +130,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				AC8EC892FF625CC5AEB43DD3 /* Bartender101 */,
+				C0DE00000000000000000003 /* Shared */,
 			);
 			name = Bartender101;
 			productName = Bartender101;
@@ -114,6 +158,48 @@
 			productReference = 4D892FA610CC5C52835B4FA1 /* Bartender101Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C0DE0000000000000000000C /* DrinksCodex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DE00000000000000000014 /* Build configuration list for PBXNativeTarget "DrinksCodex" */;
+			buildPhases = (
+				C0DE0000000000000000000A /* Sources */,
+				C0DE00000000000000000006 /* Frameworks */,
+				C0DE00000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C0DE00000000000000000004 /* DrinksCodex */,
+				C0DE00000000000000000003 /* Shared */,
+			);
+			name = DrinksCodex;
+			productName = DrinksCodex;
+			productReference = C0DE00000000000000000001 /* DrinksCodex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0DE0000000000000000000D /* DrinksCodexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0DE00000000000000000015 /* Build configuration list for PBXNativeTarget "DrinksCodexTests" */;
+			buildPhases = (
+				C0DE0000000000000000000B /* Sources */,
+				C0DE00000000000000000007 /* Frameworks */,
+				C0DE00000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0DE0000000000000000000F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C0DE00000000000000000005 /* DrinksCodexTests */,
+			);
+			name = DrinksCodexTests;
+			productName = DrinksCodexTests;
+			productReference = C0DE00000000000000000002 /* DrinksCodexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,6 +216,13 @@
 					A3AAB3B60C4852E5A5E6A200 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = EAE78773BB895BB78EADAE14;
+					};
+					C0DE0000000000000000000C = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					C0DE0000000000000000000D = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = C0DE0000000000000000000C;
 					};
 				};
 			};
@@ -148,6 +241,8 @@
 			targets = (
 				EAE78773BB895BB78EADAE14 /* Bartender101 */,
 				A3AAB3B60C4852E5A5E6A200 /* Bartender101Tests */,
+				C0DE0000000000000000000C /* DrinksCodex */,
+				C0DE0000000000000000000D /* DrinksCodexTests */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +256,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		907D0ED94B6D5440B2889219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DE00000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DE00000000000000000009 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -184,6 +293,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0DE0000000000000000000A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0DE0000000000000000000B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -191,6 +314,11 @@
 			isa = PBXTargetDependency;
 			target = EAE78773BB895BB78EADAE14 /* Bartender101 */;
 			targetProxy = E6FA60945E535CDF933242E2 /* PBXContainerItemProxy */;
+		};
+		C0DE0000000000000000000F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0DE0000000000000000000C /* DrinksCodex */;
+			targetProxy = C0DE0000000000000000000E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -406,6 +534,96 @@
 			};
 			name = Release;
 		};
+		C0DE00000000000000000010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drinks Codex";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations[sdk=iphonesimulator*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.DrinksCodex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0DE00000000000000000011 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Drinks Codex";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations[sdk=iphonesimulator*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.DrinksCodex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0DE00000000000000000012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.DrinksCodexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinksCodex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrinksCodex";
+			};
+			name = Debug;
+		};
+		C0DE00000000000000000013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.DrinksCodexTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinksCodex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DrinksCodex";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -432,6 +650,24 @@
 			buildConfigurations = (
 				FE4F866C80BD528CA25BA818 /* Debug */,
 				56CCDE8D845B5259AEDBA771 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DE00000000000000000014 /* Build configuration list for PBXNativeTarget "DrinksCodex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DE00000000000000000010 /* Debug */,
+				C0DE00000000000000000011 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0DE00000000000000000015 /* Build configuration list for PBXNativeTarget "DrinksCodexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DE00000000000000000012 /* Debug */,
+				C0DE00000000000000000013 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

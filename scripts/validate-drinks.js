@@ -7,12 +7,12 @@
 const fs = require("fs");
 const path = require("path");
 
-const DRINKS_PATH = path.join(__dirname, "..", "Bartender101", "Resources", "drinks.json");
+const DRINKS_PATH = path.join(__dirname, "..", "Shared", "Resources", "drinks.json");
 
 const FAMILIES = ["highball", "mule", "sour", "oldFashioned", "martini", "manhattan",
   "spritz", "tiki", "muddled", "cream", "shot", "misc"];
 const GLASSES = ["highball", "collins", "copperMug", "rocks", "coupe", "martini",
-  "wine", "flute", "hurricane", "julepCup", "shot", "irishCoffeeMug"];
+  "wine", "flute", "hurricane", "julepCup", "shot", "irishCoffeeMug", "tikiMug", "punchBowl"];
 const ICE = ["cubed", "largeCube", "crushed", "none"];
 const METHODS = ["build", "shake", "stir", "muddle", "blend", "layer"];
 const UNITS = ["oz", "topWith", "dash", "barspoon", "rinse", "splash", "muddled",

@@ -1,0 +1,6261 @@
+[
+  {
+    "id": "gin-tonic",
+    "name": "Gin & Tonic",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Tonic water",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Build in the glass over ice, add tonic last, one gentle lift with the barspoon. Stirring hard kills the carbonation."
+  },
+  {
+    "id": "vodka-soda",
+    "name": "Vodka Soda",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "The template for every well highball: 2 oz spirit, top with mixer, citrus wedge. Learn this ratio and a dozen drinks come free."
+  },
+  {
+    "id": "screwdriver",
+    "name": "Screwdriver",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Orange slice",
+    "notes": "Vodka and OJ. Add a splash of Galliano on top and it is a Harvey Wallbanger."
+  },
+  {
+    "id": "cuba-libre",
+    "name": "Cuba Libre",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cola",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "A Rum & Coke becomes a Cuba Libre the moment fresh lime goes in. If a guest asks for the real thing, squeeze the lime."
+  },
+  {
+    "id": "whiskey-ginger",
+    "name": "Whiskey Ginger",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger ale",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Ginger ale, not ginger beer. Swap in ginger beer and lime and you have built a Mule."
+  },
+  {
+    "id": "jack-and-coke",
+    "name": "Jack & Coke",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Jack Daniel's",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Cola",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge, optional",
+    "notes": "Called by brand, so pour the brand. Substituting another whiskey without saying so is how you lose a regular."
+  },
+  {
+    "id": "cape-codder",
+    "name": "Cape Codder",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Also ordered as a Vodka Cranberry. Add grapefruit and it is a Sea Breeze; add pineapple and it is a Bay Breeze."
+  },
+  {
+    "id": "sea-breeze",
+    "name": "Sea Breeze",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Sea = grapefruit. Bay = pineapple. Same vodka-cranberry base, and mixing them up is the single most common breeze mistake."
+  },
+  {
+    "id": "bay-breeze",
+    "name": "Bay Breeze",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Bay = pineapple. Drop the cranberry entirely and it is a Pineapple Screwdriver, not a breeze."
+  },
+  {
+    "id": "tom-collins",
+    "name": "Tom Collins",
+    "family": "highball",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lemon wheel and brandied cherry",
+    "notes": "A gin sour lengthened with soda. Shake the first three, strain over fresh ice, then top. Never shake the soda."
+  },
+  {
+    "id": "paloma",
+    "name": "Paloma",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit soda",
+        "amountOz": 4,
+        "unit": "topWith"
+      },
+      {
+        "name": "Salt",
+        "amountOz": null,
+        "unit": "pinch"
+      }
+    ],
+    "garnish": "Grapefruit wedge, salted rim",
+    "notes": "Mexico's actual everyday tequila drink, far more common there than the Margarita. Squeeze of salt in the build, not just on the rim."
+  },
+  {
+    "id": "dark-n-stormy",
+    "name": "Dark 'n' Stormy",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gosling's Black Seal rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Build the ginger beer and lime first, then float the dark rum on top so it storms down through the glass. The name is trademarked to Gosling's."
+  },
+  {
+    "id": "moscow-mule",
+    "name": "Moscow Mule",
+    "family": "mule",
+    "glass": "copperMug",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge and mint sprig",
+    "notes": "Ginger beer, not ginger ale. Swap the vodka for any spirit and it stays a mule: bourbon makes a Kentucky, tequila a Mexican, gin a London."
+  },
+  {
+    "id": "kentucky-mule",
+    "name": "Kentucky Mule",
+    "family": "mule",
+    "glass": "copperMug",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge and mint sprig",
+    "notes": "Proof that the mule is a template, not a recipe. Same build, bourbon in the vodka's place."
+  },
+  {
+    "id": "margarita",
+    "name": "Margarita",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Salted rim, lime wheel",
+    "notes": "2:1:1 tequila, triple sec, lime. Shake hard with ice, strain into a salt-rimmed rocks glass over fresh ice. Swap triple sec for agave + more lime and it's a Tommy's Margarita."
+  },
+  {
+    "id": "daiquiri",
+    "name": "Daiquiri",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "2:1:0.75, the sour ratio in its purest form. Shake hard and long — this drink is about the shake, not the ingredients. Add pureed strawberry or peach and it becomes a fruit daiquiri."
+  },
+  {
+    "id": "whiskey-sour",
+    "name": "Whiskey Sour",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": null,
+        "unit": "optional"
+      }
+    ],
+    "garnish": "Brandied cherry and lemon peel",
+    "notes": "With egg white, dry-shake first (no ice) to build foam, then shake again with ice. Skip the dry shake and the foam never forms."
+  },
+  {
+    "id": "amaretto-sour",
+    "name": "Amaretto Sour",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Amaretto",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": null,
+        "unit": "optional"
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "Less simple syrup than a whiskey sour since amaretto is already sweet. Same egg-white dry-shake technique if used."
+  },
+  {
+    "id": "gimlet",
+    "name": "Gimlet",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime cordial",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Traditionally Rose's lime cordial, not fresh lime juice — that's what separates it from a gin sour. A modern version uses fresh lime plus simple syrup instead."
+  },
+  {
+    "id": "sidecar",
+    "name": "Sidecar",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cognac",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Sugared rim, lemon twist",
+    "notes": "A brandy Margarita, essentially — same shake-and-strain structure with cognac instead of tequila and lemon instead of lime."
+  },
+  {
+    "id": "cosmopolitan",
+    "name": "Cosmopolitan",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Citron vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel or flamed orange peel",
+    "notes": "The cranberry is for color and a hint of tartness, not to dominate — go easy on it or the drink turns into juice."
+  },
+  {
+    "id": "lemon-drop",
+    "name": "Lemon Drop",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Sugared rim, lemon twist",
+    "notes": "A vodka sour with a sugared rim. Also served as a shot — see the shots section for the smaller-format version."
+  },
+  {
+    "id": "pisco-sour",
+    "name": "Pisco Sour",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Pisco",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash"
+      }
+    ],
+    "garnish": "Three dashes of bitters drawn through the foam",
+    "notes": "Always dry-shake the egg white first. The bitters go on top of the foam as a garnish pattern, not mixed in."
+  },
+  {
+    "id": "bees-knees",
+    "name": "Bee's Knees",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "Honey syrup is 1:1 honey and hot water, stirred until dissolved — straight honey won't incorporate in a cold shake."
+  },
+  {
+    "id": "old-fashioned",
+    "name": "Old Fashioned",
+    "family": "oldFashioned",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon or rye",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "The original cocktail template: spirit, sugar, bitters, ice. Muddle a sugar cube with bitters if no syrup is on hand, then build and stir."
+  },
+  {
+    "id": "sazerac",
+    "name": "Sazerac",
+    "family": "oldFashioned",
+    "glass": "rocks",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Peychaud's bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 3
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "rinse"
+      }
+    ],
+    "garnish": "Lemon peel, expressed and discarded",
+    "notes": "Rinse a chilled rocks glass with absinthe and dump the excess before stirring the rest and straining in — served up, no ice in the glass."
+  },
+  {
+    "id": "rusty-nail",
+    "name": "Rusty Nail",
+    "family": "oldFashioned",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Scotch",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Drambuie",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist, optional",
+    "notes": "Just two spirits built over ice and stirred briefly in the glass. No syrup, no bitters — the Drambuie brings its own sweetness."
+  },
+  {
+    "id": "dry-martini",
+    "name": "Dry Martini",
+    "family": "martini",
+    "glass": "martini",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist or olive",
+    "notes": "Stirred, never shaken — no juice or dairy means shaking only adds unwanted dilution and ice shards. \"Dry\" means less vermouth; ask before assuming a ratio."
+  },
+  {
+    "id": "dirty-martini",
+    "name": "Dirty Martini",
+    "family": "martini",
+    "glass": "martini",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka or gin",
+        "amountOz": 2.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Olive brine",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Olives, at least two",
+    "notes": "\"Dirty\" specifies olive brine added to the stir. Ask how dirty — more brine for guests who want it cloudier and saltier."
+  },
+  {
+    "id": "gibson",
+    "name": "Gibson",
+    "family": "martini",
+    "glass": "martini",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pickled cocktail onions",
+    "notes": "Identical build to a Dry Martini; the only difference is the garnish — onions instead of an olive or twist."
+  },
+  {
+    "id": "vesper",
+    "name": "Vesper",
+    "family": "martini",
+    "glass": "martini",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lillet Blanc",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "The one martini-family drink that's shaken, per Bond's own order — no vermouth, Lillet Blanc stands in its place."
+  },
+  {
+    "id": "espresso-martini",
+    "name": "Espresso Martini",
+    "family": "martini",
+    "glass": "martini",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Fresh espresso",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Three coffee beans",
+    "notes": "Shake hard and long — the foam cap on top comes entirely from the shake, there's no egg white or cream involved."
+  },
+  {
+    "id": "manhattan",
+    "name": "Manhattan",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye or bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "2:1 whiskey to sweet vermouth, stirred and strained up. The whiskey-forward sibling of the Negroni's equal-parts build."
+  },
+  {
+    "id": "rob-roy",
+    "name": "Rob Roy",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Scotch",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "A Manhattan built with scotch instead of rye or bourbon — same 2:1 ratio, same stir and strain."
+  },
+  {
+    "id": "negroni",
+    "name": "Negroni",
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Campari",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "Equal parts, stirred, served over one large cube. No citrus in the mix, so it's always stirred rather than shaken."
+  },
+  {
+    "id": "boulevardier",
+    "name": "Boulevardier",
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Campari",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "A Negroni with bourbon standing in for the gin, and slightly whiskey-forward rather than dead equal parts."
+  },
+  {
+    "id": "vieux-carre",
+    "name": "Vieux Carré",
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Cognac",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Bénédictine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Peychaud's bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "New Orleans' answer to the Manhattan — five ingredients, still just built by stirring everything over ice and straining."
+  },
+  {
+    "id": "aperol-spritz",
+    "name": "Aperol Spritz",
+    "family": "spritz",
+    "glass": "wine",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Prosecco",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Aperol",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "splash"
+      }
+    ],
+    "garnish": "Orange slice",
+    "notes": "3-2-1: prosecco, Aperol, soda, built in that order over ice so the bubbles aren't beaten flat by pouring spirit on top of them."
+  },
+  {
+    "id": "mimosa",
+    "name": "Mimosa",
+    "family": "spritz",
+    "glass": "flute",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Champagne or sparkling wine",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 3,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts, poured gently to preserve carbonation. Pour the juice first so the sparkling wine's fizz doesn't get knocked down by the pour."
+  },
+  {
+    "id": "bellini",
+    "name": "Bellini",
+    "family": "spritz",
+    "glass": "flute",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Prosecco",
+        "amountOz": 4,
+        "unit": "oz"
+      },
+      {
+        "name": "White peach purée",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Purée goes in the flute first, then top slowly with prosecco and give one gentle stir to combine without losing the fizz."
+  },
+  {
+    "id": "french-75",
+    "name": "French 75",
+    "family": "spritz",
+    "glass": "flute",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Champagne",
+        "amountOz": 2.5,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "Shake the gin, lemon, and syrup, strain into the flute, then top with champagne — the only spritz-family drink built on a proper shaken sour base."
+  },
+  {
+    "id": "kir-royale",
+    "name": "Kir Royale",
+    "family": "spritz",
+    "glass": "flute",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Champagne",
+        "amountOz": 4.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de cassis",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Cassis first, then top with champagne. Swap champagne for still white wine and drop the \"Royale\" and it's a plain Kir."
+  },
+  {
+    "id": "mai-tai",
+    "name": "Mai Tai",
+    "family": "tiki",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Aged rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orgeat",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Mint sprig and spent lime shell",
+    "notes": "Shake with crushed ice and dump the whole thing into the glass (do not strain). Orgeat is the almond syrup that gives it the signature nutty backbone."
+  },
+  {
+    "id": "pina-colada",
+    "name": "Piña Colada",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "blend",
+    "difficulty": 2,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 3,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple wedge and cherry",
+    "notes": "Blended, not shaken — everything goes in the blender with crushed ice until smooth and pourable."
+  },
+  {
+    "id": "painkiller",
+    "name": "Painkiller",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 4,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Freshly grated nutmeg",
+    "notes": "Shake and pour unstrained over crushed ice. The nutmeg grated fresh on top is non-negotiable for this one."
+  },
+  {
+    "id": "hurricane",
+    "name": "Hurricane",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Dark rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Passion fruit syrup",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange slice and cherry",
+    "notes": "Two rums, shaken hard and poured into a hurricane glass over fresh ice — invented at Pat O'Brien's in New Orleans."
+  },
+  {
+    "id": "jungle-bird",
+    "name": "Jungle Bird",
+    "family": "tiki",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Campari",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple wedge",
+    "notes": "The rare tiki drink built around a bittering agent — the Campari cuts the pineapple sweetness instead of just adding more fruit."
+  },
+  {
+    "id": "mojito",
+    "name": "Mojito",
+    "family": "muddled",
+    "glass": "highball",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 8
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Press mint gently to release oils — do not shred it, that releases bitter chlorophyll. Build in the glass, top with soda, swizzle rather than stir."
+  },
+  {
+    "id": "caipirinha",
+    "name": "Caipirinha",
+    "family": "muddled",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cachaça",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 1
+      },
+      {
+        "name": "Sugar",
+        "amountOz": null,
+        "unit": "barspoon",
+        "spoonCount": 2
+      }
+    ],
+    "garnish": "None, lime wheel optional",
+    "notes": "Muddle whole lime wedges with sugar directly in the glass before adding cachaça and crushed ice — no juicing, the muddle does the work."
+  },
+  {
+    "id": "bloody-mary",
+    "name": "Bloody Mary",
+    "family": "muddled",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Tomato juice",
+        "amountOz": 4,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Worcestershire sauce",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 3
+      },
+      {
+        "name": "Hot sauce",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Salt and pepper",
+        "amountOz": null,
+        "unit": "pinch"
+      }
+    ],
+    "garnish": "Celery stalk, lime wedge, olives",
+    "notes": "Roll (pour between two glasses) rather than shake — shaking makes the tomato juice foam and separate."
+  },
+  {
+    "id": "long-island-iced-tea",
+    "name": "Long Island Iced Tea",
+    "family": "muddled",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Gin",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "White rum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Blanco tequila",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cola",
+        "amountOz": 1,
+        "unit": "splash"
+      }
+    ],
+    "garnish": "Lemon wedge",
+    "notes": "Five spirits at a half ounce each, shaken with lemon and syrup, strained over ice, topped with a splash of cola for color. No cola-heavy pour — it should taste like a sour, not a soda."
+  },
+  {
+    "id": "mint-julep",
+    "name": "Mint Julep",
+    "family": "muddled",
+    "glass": "julepCup",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 10
+      }
+    ],
+    "garnish": "Large mint bouquet",
+    "notes": "Muddle mint with syrup only (no bourbon yet) to avoid bruising, then pack the cup with crushed ice and pour bourbon over, swizzling until the cup frosts."
+  },
+  {
+    "id": "white-russian",
+    "name": "White Russian",
+    "family": "cream",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Build vodka and coffee liqueur over ice, then float the cream gently on top by pouring over the back of a spoon rather than stirring it in."
+  },
+  {
+    "id": "mudslide",
+    "name": "Mudslide",
+    "family": "cream",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Chocolate syrup drizzle",
+    "notes": "Shaken and strained rather than built, so all four ingredients fully combine instead of layering like a White Russian."
+  },
+  {
+    "id": "brandy-alexander",
+    "name": "Brandy Alexander",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cognac",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Freshly grated nutmeg",
+    "notes": "Shake hard with ice to aerate the cream, then strain up. Grate nutmeg over the foam right before serving."
+  },
+  {
+    "id": "kamikaze",
+    "name": "Kamikaze",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Equal parts, shaken hard with ice and strained into a shot glass — a shot-format Margarita relative without the salt or tequila."
+  },
+  {
+    "id": "lemon-drop-shot",
+    "name": "Lemon Drop Shot",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Citron vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Sugared rim, lemon wedge",
+    "notes": "Shake and strain into a sugar-rimmed shot glass, served with a sugar-coated lemon wedge to bite after."
+  },
+  {
+    "id": "washington-apple",
+    "name": "Washington Apple",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Crown Royal",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sour apple schnapps",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shake with ice and strain — the whiskey, apple schnapps, and cranberry balance is what makes it taste like a candy apple."
+  },
+  {
+    "id": "green-tea-shot",
+    "name": "Green Tea Shot",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Jameson Irish whiskey",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Peach schnapps",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Sour mix",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Contains no actual tea — the whiskey and peach schnapps combination just turns the color of green tea when shaken and strained."
+  },
+  {
+    "id": "b-52",
+    "name": "B-52",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "layer",
+    "difficulty": 3,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Layered by density, heaviest first: coffee liqueur, then Irish cream, then orange liqueur poured slowly over the back of a barspoon so each layer floats distinct."
+  },
+  {
+    "id": "michelada",
+    "name": "Michelada",
+    "family": "misc",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Mexican lager",
+        "amountOz": 10,
+        "unit": "topWith"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Hot sauce",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 3
+      },
+      {
+        "name": "Worcestershire sauce",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Salt and Tajín",
+        "amountOz": null,
+        "unit": "pinch"
+      }
+    ],
+    "garnish": "Tajín-salted rim, lime wedge",
+    "notes": "Rim the glass with salt and Tajín, build the seasonings and lime first, then top slowly with beer to avoid excess foam."
+  },
+  {
+    "id": "irish-coffee",
+    "name": "Irish Coffee",
+    "family": "misc",
+    "glass": "irishCoffeeMug",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Irish whiskey",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Hot coffee",
+        "amountOz": 5,
+        "unit": "oz"
+      },
+      {
+        "name": "Brown sugar",
+        "amountOz": null,
+        "unit": "barspoon",
+        "spoonCount": 1
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lightly whipped cream float",
+    "notes": "Pre-heat the mug with hot water first. Whip the cream just to soft, pourable peaks and float it over the back of a spoon so it sits on top rather than mixing in."
+  },
+  {
+    "id": "aviation",
+    "name": "Aviation",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de violette",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "Crème de violette should be a whisper, not a flood — too much turns the drink purple and perfumey instead of pale grey-blue."
+  },
+  {
+    "id": "clover-club",
+    "name": "Clover Club",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Raspberry syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": null,
+        "unit": "optional"
+      }
+    ],
+    "garnish": "Three raspberries",
+    "notes": "Dry-shake with the egg white first to build foam, then shake again with ice — same two-step technique as a Whiskey Sour."
+  },
+  {
+    "id": "last-word",
+    "name": "Last Word",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "classic",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Green Chartreuse",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts of four ingredients — the easiest classic to remember and the hardest to keep in stock, since green Chartreuse is the one bottle every bar runs out of."
+  },
+  {
+    "id": "corpse-reviver-no-2",
+    "name": "Corpse Reviver No. 2",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Cointreau",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lillet Blanc",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "rinse"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "\"Four of these taken in swift succession will unrevive the corpse again\" — Harry Craddock's own warning. The absinthe rinse coats the glass and gets dumped, never measured in."
+  },
+  {
+    "id": "paper-plane",
+    "name": "Paper Plane",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Aperol",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Amaro Nonino",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts, a 2010s cocktail already inducted into the modern canon. Amaro Nonino specifically is not swappable without changing the drink noticeably."
+  },
+  {
+    "id": "southside",
+    "name": "Southside",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 6
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Mint is muddled gently, then shaken with the rest and double-strained so no leaf fragments make it into the glass."
+  },
+  {
+    "id": "bramble",
+    "name": "Bramble",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de mûre",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Blackberry and lemon wheel",
+    "notes": "Shake the gin, lemon, and syrup, strain over crushed ice, then drizzle the blackberry liqueur on top so it bleeds through the drink rather than mixing in."
+  },
+  {
+    "id": "white-lady",
+    "name": "White Lady",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cointreau",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Essentially a gin Sidecar. Some versions add egg white for texture — dry-shake first if you do."
+  },
+  {
+    "id": "between-the-sheets",
+    "name": "Between the Sheets",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cognac",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "White rum",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "Equal parts of three spirits plus lemon — a Sidecar with rum added, and stronger than the short ingredient list suggests."
+  },
+  {
+    "id": "jack-rose",
+    "name": "Jack Rose",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Applejack",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon wheel",
+    "notes": "Use real pomegranate grenadine, not corn-syrup bar syrup — both the color and the flavor fall flat with the fake stuff."
+  },
+  {
+    "id": "ward-8",
+    "name": "Ward 8",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "A Whiskey Sour with orange juice added and grenadine standing in for simple syrup."
+  },
+  {
+    "id": "hemingway-daiquiri",
+    "name": "Hemingway Daiquiri",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Also called the Papa Doble. No added sugar — the maraschino carries the sweetness against tart grapefruit and lime."
+  },
+  {
+    "id": "mary-pickford",
+    "name": "Mary Pickford",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "Named for the silent-film star. Shake hard so the pineapple juice froths properly before straining up."
+  },
+  {
+    "id": "bacardi-cocktail",
+    "name": "Bacardi Cocktail",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Historically required by a 1936 court ruling to be made with Bacardi brand rum specifically — a Daiquiri with grenadine in place of syrup."
+  },
+  {
+    "id": "el-presidente",
+    "name": "El Presidente",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange twist",
+    "notes": "Stirred, not shaken — this is a rum Martini relative, not a sour, even though the ingredient list looks sweet on paper."
+  },
+  {
+    "id": "casino",
+    "name": "Casino",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "One of the oldest gin sours on record, predating the Aviation by decades."
+  },
+  {
+    "id": "twentieth-century",
+    "name": "Twentieth Century",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lillet Blanc",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "White crème de cacao",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "The crème de cacao is used dry, not as a dessert note — this reads as a bright, citrus-forward gin sour despite the chocolate liqueur."
+  },
+  {
+    "id": "chrysanthemum",
+    "name": "Chrysanthemum",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dry vermouth",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Bénédictine",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Orange twist",
+    "notes": "No base spirit at all — vermouth is the base, which makes this a good low-ABV stirred option when a guest wants something lighter."
+  },
+  {
+    "id": "bijou",
+    "name": "Bijou",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Green Chartreuse",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "Equal parts, named for the \"jewel\" colors of its three spirits — gin (diamond), vermouth (ruby), Chartreuse (emerald)."
+  },
+  {
+    "id": "widows-kiss",
+    "name": "Widow's Kiss",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Applejack",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Bénédictine",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Yellow Chartreuse",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "Two liqueurs plus applejack, all stirred — deceptively strong for how sweet it tastes on the way down."
+  },
+  {
+    "id": "remember-the-maine",
+    "name": "Remember the Maine",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Cherry Heering",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "rinse"
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "A Manhattan variation named for the USS Maine, with cherry liqueur and an absinthe rinse standing in for plain bitters."
+  },
+  {
+    "id": "blood-and-sand",
+    "name": "Blood and Sand",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Scotch",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Cherry Heering",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange twist",
+    "notes": "Equal parts of four ingredients — shaken, not stirred, because the orange juice needs the aeration."
+  },
+  {
+    "id": "monkey-gland",
+    "name": "Monkey Gland",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "None",
+    "notes": "Named (crudely) for a 1920s rejuvenation fad. The anise dash is barely perceptible but rounds the orange and gin together."
+  },
+  {
+    "id": "corpse-reviver-no-1",
+    "name": "Corpse Reviver No. 1",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cognac",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Calvados",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "The stirred, spirit-forward sibling of the more famous No. 2 — meant as an actual hangover remedy, not a citrus-forward sour."
+  },
+  {
+    "id": "pink-lady",
+    "name": "Pink Lady",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": null,
+        "unit": "optional"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Dry-shake the egg white first, same technique as a Whiskey Sour, for the drink's signature pale pink foam."
+  },
+  {
+    "id": "caipiroska",
+    "name": "Caipiroska",
+    "family": "muddled",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 1
+      },
+      {
+        "name": "Sugar",
+        "amountOz": null,
+        "unit": "barspoon",
+        "spoonCount": 2
+      }
+    ],
+    "garnish": "None",
+    "notes": "The Caipirinha's vodka-based cousin — same muddle technique, cachaça swapped out for vodka."
+  },
+  {
+    "id": "caipirissima",
+    "name": "Caipirissima",
+    "family": "muddled",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 1
+      },
+      {
+        "name": "Sugar",
+        "amountOz": null,
+        "unit": "barspoon",
+        "spoonCount": 2
+      }
+    ],
+    "garnish": "None",
+    "notes": "Same build as a Caipirinha with white rum standing in for cachaça."
+  },
+  {
+    "id": "ti-punch",
+    "name": "Ti' Punch",
+    "family": "misc",
+    "glass": "rocks",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rhum agricole blanc",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Cane syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime wedge",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 1
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "From the French Caribbean — built to the guest's own taste at the table, with the lime squeezed (not juiced) directly into the glass."
+  },
+  {
+    "id": "batida",
+    "name": "Batida",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "blend",
+    "difficulty": 2,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "Cachaça",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweetened condensed milk",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Shredded coconut",
+    "notes": "Brazilian blended drink, endlessly variable — swap in puréed fruit like passion fruit or mango for the coconut and it's still a Batida."
+  },
+  {
+    "id": "pisco-punch",
+    "name": "Pisco Punch",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Pisco",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple gum syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple chunk",
+    "notes": "A Gold Rush-era San Francisco classic. Pineapple gum syrup (pineapple-infused syrup with gum arabic) is the ingredient nobody has on hand, so infuse it ahead of service."
+  },
+  {
+    "id": "rum-punch",
+    "name": "Rum Punch",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange slice and cherry",
+    "notes": "\"One of sour, two of sweet, three of strong, four of weak\" is the rhyme bartenders use to freehand this without a recipe card."
+  },
+  {
+    "id": "planters-punch",
+    "name": "Planter's Punch",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Orange slice, cherry, and mint",
+    "notes": "An older, simpler cousin of the modern Rum Punch — built around bitters instead of extra juice."
+  },
+  {
+    "id": "queens-park-swizzle",
+    "name": "Queen's Park Swizzle",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 10
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Mint bouquet",
+    "notes": "Built and swizzled with a swizzle stick spun between the palms rather than shaken, packing the glass with crushed ice as you go."
+  },
+  {
+    "id": "corn-n-oil",
+    "name": "Corn 'n' Oil",
+    "family": "tiki",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blackstrap rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "From Barbados — built directly in the glass, no shaking, so the blackstrap rum's heaviness sinks through the drink like \"oil.\""
+  },
+  {
+    "id": "piscola",
+    "name": "Piscola",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Pisco",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Cola",
+        "amountOz": 5,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "Chile's most-ordered drink by a wide margin — as simple as a Jack & Coke, just with pisco in place of whiskey."
+  },
+  {
+    "id": "cantarito",
+    "name": "Cantarito",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit soda",
+        "amountOz": 3,
+        "unit": "topWith"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Salt",
+        "amountOz": null,
+        "unit": "pinch"
+      }
+    ],
+    "garnish": "Salted rim, citrus wheel",
+    "notes": "Named for the small clay cup it's traditionally served in — a highball glass is the practical substitute behind most bars."
+  },
+  {
+    "id": "ranch-water",
+    "name": "Ranch Water",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lime wedge",
+    "notes": "A West Texas staple, traditionally built right in the mineral-water bottle with the tequila and lime added to it."
+  },
+  {
+    "id": "batanga",
+    "name": "Batanga",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Cola",
+        "amountOz": 4,
+        "unit": "topWith"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Salt",
+        "amountOz": null,
+        "unit": "pinch"
+      }
+    ],
+    "garnish": "Salted rim, lime wedge",
+    "notes": "Stir with a long knife blade, per its inventor's own signature move — a barspoon works fine if one isn't handy."
+  },
+  {
+    "id": "chilcano",
+    "name": "Chilcano",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Pisco",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger ale",
+        "amountOz": 4,
+        "unit": "topWith"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Peru's answer to the Moscow Mule — same shape, pisco and ginger ale standing in for vodka and ginger beer."
+  },
+  {
+    "id": "rum-swizzle",
+    "name": "Rum Swizzle",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Bermuda's national drink — swizzled with crushed ice until the glass frosts over, the same technique as a Queen's Park Swizzle."
+  },
+  {
+    "id": "suffering-bastard",
+    "name": "Suffering Bastard",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Brandy",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 3,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Cucumber spear and mint",
+    "notes": "Invented in Cairo as a hangover remedy for British troops — gin and brandy together is unusual, and that's the point."
+  },
+  {
+    "id": "fish-house-punch",
+    "name": "Fish House Punch",
+    "family": "misc",
+    "glass": "punchBowl",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cognac",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Peach brandy",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon wheel",
+    "notes": "A colonial Philadelphia punch dating to the 1730s, traditionally batched by the bowl — this app's servings scaler is the fast way to size it up for a party."
+  },
+  {
+    "id": "trinidad-sour",
+    "name": "Trinidad Sour",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Angostura bitters",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orgeat",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Rye whiskey",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Bitters as the base spirit, not a seasoning — 1.5 oz of Angostura looks like a typo the first time you read the recipe, but it isn't."
+  },
+  {
+    "id": "doctor-funk",
+    "name": "Doctor Funk",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Named for the missionary doctor said to have invented it in Samoa — the anise dash is a signature, not an optional garnish."
+  },
+  {
+    "id": "hotel-nacional-special",
+    "name": "Hotel Nacional Special",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Apricot liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "From Havana's Hotel Nacional. Apricot liqueur (not brandy proper) is what separates this from a plain rum-and-pineapple."
+  },
+  {
+    "id": "penicillin",
+    "name": "Penicillin",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blended Scotch",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey-ginger syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Islay single malt Scotch",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Candied ginger",
+    "notes": "Shake the blended Scotch base, strain over ice, then float the smoky Islay Scotch on top so you smell it before you taste it."
+  },
+  {
+    "id": "gold-rush",
+    "name": "Gold Rush",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "A Whiskey Sour with honey instead of simple syrup and no egg white — sometimes called a bourbon on-the-rocks Bee's Knees."
+  },
+  {
+    "id": "naked-and-famous",
+    "name": "Naked & Famous",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Mezcal",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Aperol",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Yellow Chartreuse",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts, a smoky answer to the Last Word — built the same way, with mezcal and Aperol standing in for gin and green Chartreuse."
+  },
+  {
+    "id": "oaxaca-old-fashioned",
+    "name": "Oaxaca Old Fashioned",
+    "family": "oldFashioned",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Reposado tequila",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Mezcal",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Agave syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "An Old Fashioned built on tequila with mezcal added for smoke — the mezcal is a seasoning here, not a co-base."
+  },
+  {
+    "id": "kentucky-buck",
+    "name": "Kentucky Buck",
+    "family": "mule",
+    "glass": "copperMug",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Sliced strawberry",
+    "notes": "A Kentucky Mule with lemon and bitters added — the bitters are what keep it from just being bourbon-and-ginger."
+  },
+  {
+    "id": "tommys-margarita",
+    "name": "Tommy's Margarita",
+    "family": "sour",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Agave syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Drop the triple sec, add agave — this became the house Margarita at most serious cocktail bars for a reason."
+  },
+  {
+    "id": "brooklyn",
+    "name": "Brooklyn",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Amaro",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Brandied cherry",
+    "notes": "Amer Picon is nearly impossible to find in the US; most bars substitute another orange-forward amaro and adjust to taste."
+  },
+  {
+    "id": "greenpoint",
+    "name": "Greenpoint",
+    "family": "manhattan",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "stir",
+    "difficulty": 2,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Yellow Chartreuse",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "A Brooklyn made rounder and easier to stock — yellow Chartreuse and extra bitters instead of Amer Picon."
+  },
+  {
+    "id": "elder-fashioned",
+    "name": "Elder Fashioned",
+    "family": "oldFashioned",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "St-Germain",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Lemon twist",
+    "notes": "St-Germain elderflower liqueur stands in for the sugar, giving a lighter, floral take on the Old Fashioned template."
+  },
+  {
+    "id": "gin-gin-mule",
+    "name": "Gin Gin Mule",
+    "family": "mule",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 6
+      },
+      {
+        "name": "Ginger beer",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Shake the gin, lime, syrup, and mint first, strain over fresh ice, then top with ginger beer — more cocktail than the average mule."
+  },
+  {
+    "id": "hugo-spritz",
+    "name": "Hugo Spritz",
+    "family": "spritz",
+    "glass": "wine",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Prosecco",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Elderflower liqueur",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "splash"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 4
+      }
+    ],
+    "garnish": "Mint sprig, lime wheel",
+    "notes": "Prosecco and elderflower liqueur built the same way as an Aperol Spritz — lighter and less bitter, popular across German-speaking Europe."
+  },
+  {
+    "id": "whiskey-smash",
+    "name": "Whiskey Smash",
+    "family": "muddled",
+    "glass": "rocks",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 2,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon wedges",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 4
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 8
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Whole lemon wedges are muddled directly in the shaker along with the mint, giving more body than a plain lemon-juice sour."
+  },
+  {
+    "id": "mezcal-negroni",
+    "name": "Mezcal Negroni",
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Mezcal",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Campari",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "Swap the gin in a Negroni for mezcal and the equal-parts build stays identical — just smokier."
+  },
+  {
+    "id": "cable-car",
+    "name": "Cable Car",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Spiced rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Cinnamon-sugar rim, lemon twist",
+    "notes": "A spiced-rum Sidecar, essentially — the cinnamon-sugar rim is what makes it taste like the drink rather than a generic rum sour."
+  },
+  {
+    "id": "final-ward",
+    "name": "Final Ward",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Rye whiskey",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Green Chartreuse",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "The Last Word rebuilt with rye and lemon instead of gin and lime — same equal-parts structure, different backbone."
+  },
+  {
+    "id": "bitter-giuseppe",
+    "name": "Bitter Giuseppe",
+    "family": "spritz",
+    "glass": "wine",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Campari",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dry vermouth",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Orange slice",
+    "notes": "A lower-proof spritz built around bitter amaro and vermouth instead of a base spirit — pours easily as a session aperitif."
+  },
+  {
+    "id": "air-mail",
+    "name": "Air Mail",
+    "family": "sour",
+    "glass": "flute",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Champagne",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shake the rum, lime, and honey, strain into the flute, then top with champagne — a rum-based sibling of the French 75."
+  },
+  {
+    "id": "pegu-club",
+    "name": "Pegu Club",
+    "family": "sour",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      },
+      {
+        "name": "Orange bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Lime wheel",
+    "notes": "Named for the officers' club in colonial Rangoon — two different bitters is deliberate, not a typo."
+  },
+  {
+    "id": "death-in-the-afternoon",
+    "name": "Death in the Afternoon",
+    "family": "spritz",
+    "glass": "flute",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Absinthe",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Champagne",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Hemingway's own recipe: \"pour one jigger absinthe, add iced champagne until it attains the proper opalescent milkiness.\" Pour the champagne slowly — absinthe louches on contact."
+  },
+  {
+    "id": "kingston-negroni",
+    "name": "Kingston Negroni",
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 1,
+    "tags": [
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "Jamaican rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Campari",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange peel, expressed",
+    "notes": "The gin in a Negroni swapped for a funky, high-ester Jamaican rum — pick one with real character or the swap doesn't register."
+  },
+  {
+    "id": "buttery-nipple",
+    "name": "Buttery Nipple",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "layer",
+    "difficulty": 2,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Butterscotch schnapps",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Layer by density — butterscotch schnapps first, Irish cream floated on top over the back of a barspoon."
+  },
+  {
+    "id": "alabama-slammer",
+    "name": "Alabama Slammer",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Amaretto",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Southern Comfort",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Sloe gin",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shaken with ice and strained — also served full-size over ice in a highball as a \"tall\" Slammer."
+  },
+  {
+    "id": "jager-bomb",
+    "name": "Jäger Bomb",
+    "family": "misc",
+    "glass": "rocks",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Jägermeister",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Energy drink",
+        "amountOz": 8,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Drop the chilled Jägermeister shot glass-and-all into the energy drink and slam immediately — the point is the reaction, not sipping."
+  },
+  {
+    "id": "red-headed-slut",
+    "name": "Red Headed Slut",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Peach schnapps",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Jägermeister",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shaken quickly with ice and strained — a fruitier, sweeter counterpoint to a straight Jägermeister shot."
+  },
+  {
+    "id": "slippery-nipple",
+    "name": "Slippery Nipple",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "layer",
+    "difficulty": 2,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Sambuca",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Sambuca poured first, Irish cream floated over a barspoon — the same layering technique as a Buttery Nipple with different liqueurs."
+  },
+  {
+    "id": "mind-eraser",
+    "name": "Mind Eraser",
+    "family": "shot",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "layer",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Straw",
+    "notes": "Built as three distinct layers over ice and drunk fast through a straw from the bottom up — that's the \"eraser\" part."
+  },
+  {
+    "id": "cement-mixer",
+    "name": "Cement Mixer",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Irish cream",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "A novelty shot — the lime juice curdles the Irish cream instantly in the mouth into a chewable lump. Warn first-timers."
+  },
+  {
+    "id": "duck-fart",
+    "name": "Duck Fart",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "layer",
+    "difficulty": 2,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Crown Royal",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Coffee liqueur first, Irish cream next, whisky floated last — three clean layers if poured slowly over a spoon."
+  },
+  {
+    "id": "surfer-on-acid",
+    "name": "Surfer on Acid",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Jägermeister",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut rum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shaken and strained — the pineapple and coconut round off the Jägermeister's bite more than most mixers manage."
+  },
+  {
+    "id": "three-wise-men",
+    "name": "Three Wise Men",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Jack Daniel's",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Johnnie Walker",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Jim Beam",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Three whiskeys, no mixer — a bar-brand-recognition shot more than a crafted recipe."
+  },
+  {
+    "id": "woo-woo",
+    "name": "Woo Woo",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Peach schnapps",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Cranberry juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shaken and strained; poured over ice in a rocks glass instead, it's the same drink as a full cocktail, just bigger."
+  },
+  {
+    "id": "melon-ball",
+    "name": "Melon Ball",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Midori",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Midori is the whole flavor here — it should taste distinctly of honeydew melon, not just look green."
+  },
+  {
+    "id": "blow-job",
+    "name": "Blow Job",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Irish cream",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Butterscotch schnapps",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Whipped cream",
+        "amountOz": 0.5,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Whipped cream cap",
+    "notes": "Built, then topped with a cap of whipped cream — served without hands, a novelty-bar staple."
+  },
+  {
+    "id": "chocolate-cake-shot",
+    "name": "Chocolate Cake Shot",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Frangelico",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Sugared lemon wedge, chased",
+    "notes": "Shaken and strained, then chased with a sugar-coated lemon wedge — the sugar and citrus combination is what actually tastes like cake, not the shot itself."
+  },
+  {
+    "id": "pickleback",
+    "name": "Pickleback",
+    "family": "shot",
+    "glass": "shot",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "shot"
+    ],
+    "ingredients": [
+      {
+        "name": "Irish whiskey",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pickle brine",
+        "amountOz": 1.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Two shots, back to back — whiskey first, brine immediately after. The brine's acidity and salt scrub the whiskey burn off the palate."
+  },
+  {
+    "id": "zombie",
+    "name": "Zombie",
+    "family": "tiki",
+    "glass": "tikiMug",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Dark rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Aged rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Three rums is standard here, not excess — the layered rum character is the entire point, and it's genuinely strong despite tasting like fruit juice."
+  },
+  {
+    "id": "scorpion-bowl",
+    "name": "Scorpion Bowl",
+    "family": "tiki",
+    "glass": "punchBowl",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Brandy",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Orgeat",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Gardenia or orchid, straws",
+    "notes": "Built to share — this is the drink the app's batch scaler exists for. Bump servings to size it up for the table rather than remixing the ratio by hand."
+  },
+  {
+    "id": "navy-grog",
+    "name": "Navy Grog",
+    "family": "tiki",
+    "glass": "tikiMug",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Dark rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Aged rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Three rums again, but drier and less sweet than a Zombie — grapefruit stands in for extra sugar."
+  },
+  {
+    "id": "fog-cutter",
+    "name": "Fog Cutter",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Brandy",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Gin",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Orgeat",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Sherry",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Three base spirits plus a sherry float — famously strong enough that Trader Vic warned \"let it get to you, quietly.\""
+  },
+  {
+    "id": "three-dots-and-a-dash",
+    "name": "Three Dots and a Dash",
+    "family": "tiki",
+    "glass": "tikiMug",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Gold rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Three brandied cherries and a pineapple spear",
+    "notes": "Named for its garnish — Morse code for \"V.\" The fruit skewer isn't optional; it's the whole joke."
+  },
+  {
+    "id": "beachcomber",
+    "name": "Beachcomber",
+    "family": "tiki",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Triple sec",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Maraschino liqueur",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "A tiki drink served up in a coupe rather than over ice — closer in structure to a Daiquiri variation than to a Zombie."
+  },
+  {
+    "id": "missionarys-downfall",
+    "name": "Missionary's Downfall",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "blend",
+    "difficulty": 2,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Peach brandy",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Mint leaves",
+        "amountOz": null,
+        "unit": "muddled",
+        "approxCount": 8
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Honey syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Blended with crushed ice until slushy — one of the few tiki drinks built around mint instead of falernum or orgeat."
+  },
+  {
+    "id": "saturn",
+    "name": "Saturn",
+    "family": "tiki",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Passion fruit syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orgeat",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon peel",
+    "notes": "An IBA official cocktail — a gin base is unusual for tiki, since most of the category runs on rum."
+  },
+  {
+    "id": "test-pilot",
+    "name": "Test Pilot",
+    "family": "tiki",
+    "glass": "tikiMug",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Aged rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Overproof rum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "A Donn Beach original — the overproof float on top is what gives it more kick than a Mai Tai."
+  },
+  {
+    "id": "151-swizzle",
+    "name": "151 Swizzle",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "crushed",
+    "method": "muddle",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Overproof rum",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 2
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "Swizzled, not shaken — the crushed ice does the dilution as you spin the swizzle stick, since a full shake would over-dilute this strong a pour."
+  },
+  {
+    "id": "bahama-mama",
+    "name": "Bahama Mama",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "Dark rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple wedge and cherry",
+    "notes": "A beach-bar staple built for volume — easy to batch by the pitcher for a group."
+  },
+  {
+    "id": "blue-hawaii",
+    "name": "Blue Hawaii",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "blend",
+    "difficulty": 1,
+    "tags": [
+      "tiki",
+      "modern"
+    ],
+    "ingredients": [
+      {
+        "name": "White rum",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Blue curaçao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 2,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple wedge and cherry",
+    "notes": "The blue curaçao is entirely for color — flavor-wise it's an orange liqueur, so don't expect it to taste \"blue.\""
+  },
+  {
+    "id": "chi-chi",
+    "name": "Chi-Chi",
+    "family": "tiki",
+    "glass": "hurricane",
+    "ice": "crushed",
+    "method": "blend",
+    "difficulty": 1,
+    "tags": [
+      "tiki"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Coconut cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 3,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Pineapple wedge and cherry",
+    "notes": "A Piña Colada with vodka instead of rum — otherwise an identical blend."
+  },
+  {
+    "id": "singapore-sling",
+    "name": "Singapore Sling",
+    "family": "tiki",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cherry Heering",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Bénédictine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange curaçao",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Pineapple juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Angostura bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Pineapple wedge and cherry",
+    "notes": "From Raffles Hotel in Singapore — nine ingredients is not a typo, and skipping any one of the liqueurs changes the drink noticeably."
+  },
+  {
+    "id": "jet-pilot",
+    "name": "Jet Pilot",
+    "family": "tiki",
+    "glass": "tikiMug",
+    "ice": "crushed",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "tiki",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Light rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Dark rum",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Overproof rum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Falernum",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Cinnamon syrup",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Absinthe",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 1
+      }
+    ],
+    "garnish": "Mint sprig",
+    "notes": "A Test Pilot relative with grapefruit and cinnamon added — another three-rum build where the overproof float carries the finish."
+  },
+  {
+    "id": "americano",
+    "name": "Americano",
+    "family": "spritz",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Campari",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Orange slice",
+    "notes": "Equal parts Campari and sweet vermouth, topped with soda — the Negroni's predecessor and, at half the ABV, still the better daytime order."
+  },
+  {
+    "id": "john-collins",
+    "name": "John Collins",
+    "family": "highball",
+    "glass": "collins",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 2,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lemon wheel and brandied cherry",
+    "notes": "Identical build to a Tom Collins with whiskey standing in for gin — same shake-strain-top structure."
+  },
+  {
+    "id": "horses-neck",
+    "name": "Horse's Neck",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Bourbon",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Ginger ale",
+        "amountOz": 5,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Long spiral lemon peel",
+    "notes": "The peel is the entire point of the drink's name — cut one long continuous spiral and drape it over the rim into the glass, don't just drop in a wedge."
+  },
+  {
+    "id": "shirley-temple",
+    "name": "Shirley Temple",
+    "family": "misc",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Ginger ale",
+        "amountOz": 6,
+        "unit": "topWith"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Maraschino cherry",
+    "notes": "The standard answer for a non-drinking guest or a kid at the bar — build the grenadine first so it sinks and swirls when stirred at the table."
+  },
+  {
+    "id": "arnold-palmer",
+    "name": "Arnold Palmer",
+    "family": "misc",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Lemonade",
+        "amountOz": 5,
+        "unit": "oz"
+      },
+      {
+        "name": "Iced tea",
+        "amountOz": 5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Lemon wheel",
+    "notes": "Half lemonade, half iced tea, named for the golfer who ordered it that way — add vodka or whiskey and it becomes a \"John Daly.\""
+  },
+  {
+    "id": "salty-dog",
+    "name": "Salty Dog",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Salted rim",
+    "notes": "Identical to a Greyhound with a salted rim added — the rim is the only difference between the two names."
+  },
+  {
+    "id": "greyhound",
+    "name": "Greyhound",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "well"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Grapefruit juice",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "No salt rim — add one and it becomes a Salty Dog, nothing else about the build changes."
+  },
+  {
+    "id": "gin-fizz",
+    "name": "Gin Fizz",
+    "family": "sour",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lemon wheel",
+    "notes": "Shake the first three hard, strain into the glass, then top with soda — a Tom Collins built up rather than long over fresh ice from the start."
+  },
+  {
+    "id": "ramos-gin-fizz",
+    "name": "Ramos Gin Fizz",
+    "family": "sour",
+    "glass": "collins",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 3,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Lime juice",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Egg white",
+        "amountOz": null,
+        "unit": "optional"
+      },
+      {
+        "name": "Orange flower water",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 3
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 0.25,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shake for a full two minutes minimum, longer than any other drink in this deck — the extended shake is what builds the signature marshmallow-thick foam."
+  },
+  {
+    "id": "sloe-gin-fizz",
+    "name": "Sloe Gin Fizz",
+    "family": "sour",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 2,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Sloe gin",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.75,
+        "unit": "oz"
+      },
+      {
+        "name": "Simple syrup",
+        "amountOz": 0.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Soda water",
+        "amountOz": 1,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Lemon wheel and cherry",
+    "notes": "Sloe gin is a liqueur, not a gin — sweeter and fruitier, so this fizz needs less added syrup than a plain Gin Fizz."
+  },
+  {
+    "id": "pimms-cup",
+    "name": "Pimm's Cup",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Pimm's No. 1",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemonade or ginger ale",
+        "amountOz": 4,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "Cucumber ribbon, mint, orange and strawberry slices",
+    "notes": "The fruit garnish is heavy by design — a proper Pimm's Cup is half garnish, and guests pick through it as they drink."
+  },
+  {
+    "id": "shandy",
+    "name": "Shandy",
+    "family": "misc",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Lager",
+        "amountOz": 6,
+        "unit": "topWith"
+      },
+      {
+        "name": "Lemonade",
+        "amountOz": 5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts beer and lemonade, called a Radler in Germany — same drink under a different name."
+  },
+  {
+    "id": "snakebite",
+    "name": "Snakebite",
+    "family": "misc",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Lager",
+        "amountOz": 5,
+        "unit": "topWith"
+      },
+      {
+        "name": "Hard cider",
+        "amountOz": 5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts lager and hard cider, built directly in the glass — ordered as a \"diesel\" in some UK pubs with a splash of blackcurrant added."
+  },
+  {
+    "id": "black-velvet",
+    "name": "Black Velvet",
+    "family": "spritz",
+    "glass": "wine",
+    "ice": "none",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Stout",
+        "amountOz": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "Champagne",
+        "amountOz": 3,
+        "unit": "topWith"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Pour the champagne first, then float the stout slowly over a spoon so the two layer rather than mix — an Irish-pub classic."
+  },
+  {
+    "id": "tequila-sunrise",
+    "name": "Tequila Sunrise",
+    "family": "highball",
+    "glass": "highball",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Blanco tequila",
+        "amountOz": 2,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange juice",
+        "amountOz": 4,
+        "unit": "topWith"
+      },
+      {
+        "name": "Grenadine",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Orange slice and cherry",
+    "notes": "Build tequila and orange juice first, then sink the grenadine down a barspoon so it settles at the bottom and rises like a sunrise — never stir it in."
+  },
+  {
+    "id": "grasshopper",
+    "name": "Grasshopper",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "White crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Green crème de menthe",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Equal parts of three ingredients, shaken hard to aerate the cream — tastes like a liquid thin-mint cookie."
+  },
+  {
+    "id": "golden-cadillac",
+    "name": "Golden Cadillac",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Galliano",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "White crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Same equal-parts structure as a Grasshopper, with Galliano's vanilla-anise standing in for the mint."
+  },
+  {
+    "id": "pink-squirrel",
+    "name": "Pink Squirrel",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Crème de noyaux",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "White crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Crème de noyaux is almond-flavored and naturally pink, which is the entire source of the drink's name and color."
+  },
+  {
+    "id": "alexander",
+    "name": "Alexander",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Gin",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Freshly grated nutmeg",
+    "notes": "The gin original that the Brandy Alexander later replaced with brandy — grate nutmeg over the foam the same way."
+  },
+  {
+    "id": "velvet-hammer",
+    "name": "Velvet Hammer",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Cointreau",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "White crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "No base spirit — two liqueurs and cream, which makes it deceptively easy to drink for its actual ABV."
+  },
+  {
+    "id": "nutty-irishman",
+    "name": "Nutty Irishman",
+    "family": "cream",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "build",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Frangelico",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Irish cream",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Built over ice rather than shaken — the two liqueurs already carry enough body without extra aeration."
+  },
+  {
+    "id": "toasted-almond",
+    "name": "Toasted Almond",
+    "family": "cream",
+    "glass": "rocks",
+    "ice": "cubed",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Amaretto",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "Shake and strain over fresh ice — amaretto and coffee liqueur together taste exactly like the drink's name promises."
+  },
+  {
+    "id": "separator",
+    "name": "Separator",
+    "family": "cream",
+    "glass": "coupe",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Brandy",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Coffee liqueur",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 1,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "None",
+    "notes": "A lesser-known Brandy Alexander relative built with coffee liqueur instead of crème de cacao."
+  },
+  {
+    "id": "chocolate-martini",
+    "name": "Chocolate Martini",
+    "family": "cream",
+    "glass": "martini",
+    "ice": "none",
+    "method": "shake",
+    "difficulty": 1,
+    "tags": [
+      "modern",
+      "classic"
+    ],
+    "ingredients": [
+      {
+        "name": "Vodka",
+        "amountOz": 1.5,
+        "unit": "oz"
+      },
+      {
+        "name": "Crème de cacao",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Heavy cream",
+        "amountOz": 0.5,
+        "unit": "oz"
+      }
+    ],
+    "garnish": "Chocolate shavings",
+    "notes": "Despite the name it's a cream cocktail, not a true Martini — there's no vermouth anywhere in it."
+  }
+]
