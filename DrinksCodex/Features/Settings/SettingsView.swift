@@ -14,13 +14,15 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section("Measurements") {
+            Section {
                 Picker("Units", selection: $unitRaw) {
                     ForEach(MeasurementUnit.allCases) { unit in
                         Text(unit == .oz ? "Ounces" : "Milliliters").tag(unit.rawValue)
                     }
                 }
                 .pickerStyle(.segmented)
+            } header: {
+                Text("Measurements")
             } footer: {
                 Text("Applies everywhere a drink's amounts are shown, scaled or not.")
             }
