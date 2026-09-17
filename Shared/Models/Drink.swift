@@ -77,6 +77,9 @@ enum DrinkMethod: String, Codable, CaseIterable {
 
 enum DrinkTag: String, Codable, CaseIterable, Identifiable {
     case well, classic, shot, tiki, modern
+    /// A drink made in the Build tab rather than shipped in `drinks.json` —
+    /// only ever set by `CustomDrink.asDrink()`.
+    case house
 
     var id: String { rawValue }
 

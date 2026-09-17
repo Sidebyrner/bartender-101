@@ -17,7 +17,8 @@ const ICE = ["cubed", "largeCube", "crushed", "none"];
 const METHODS = ["build", "shake", "stir", "muddle", "blend", "layer"];
 const UNITS = ["oz", "topWith", "dash", "barspoon", "rinse", "splash", "muddled",
   "pinch", "optional"];
-const TAGS = ["well", "classic", "shot", "tiki", "modern"];
+// "house" is reserved for drinks made in the app's Build tab.
+const TAGS = ["well", "classic", "shot", "tiki", "modern", "house"];
 
 // Units that legitimately carry no amountOz (garnish/seasoning-style additions).
 const AMOUNTLESS_UNITS = new Set(["dash", "barspoon", "rinse", "muddled", "pinch", "optional"]);

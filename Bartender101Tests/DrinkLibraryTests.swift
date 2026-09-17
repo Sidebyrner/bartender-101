@@ -91,3 +91,33 @@ final class DrinkLibraryTests: XCTestCase {
         XCTAssertTrue(distractors.allSatisfy { $0.family == .manhattan })
     }
 }
+
+@MainActor
+final class DrinkLibraryCustomDrinkTests: XCTestCase {
+    func testOnlyOnMenuHouseDrinksJoinTheDeck() {
+        let library = DrinkLibrary(deck: [Drink.stub(id: "negroni")])
+        let idea = CustomDrink(name: "Idea Drink", family: .sour, stage: .idea)
+        let menu = CustomDrink(name: "Menu Drink", family: .sour, stage: .onMenu)
+        library.setCustomDrinks([idea, menu])
+
+        XCTAssertEqual(Set(library.drinks.map(\.id)), ["negroni", menu.id])
+        XCTAssertEqual(library.drinks(in: .sour).map(\.id), [menu.id])
+        XCTAssertEqual(library.search("menu drink").map(\.id), [menu.id])
+        XCTAssertEqual(library.drink(id: idea.id)?.name, "Idea Drink", "test drinks still resolve by id")
+        XCTAssertEqual(library.drinks(matchingTags: [.house]).map(\.id), [menu.id])
+
+        library.setCustomDrinks([])
+        XCTAssertEqual(library.drinks.map(\.id), ["negroni"])
+        XCTAssertNil(library.drink(id: idea.id))
+    }
+
+    func testNameTakenChecksDeckAndOtherHouseDrinks() {
+        let library = DrinkLibrary(deck: [Drink.stub(id: "Negroni")])
+        let house = CustomDrink(name: "Garden Sour")
+        library.setCustomDrinks([house])
+        XCTAssertTrue(library.isNameTaken("negroni"))
+        XCTAssertTrue(library.isNameTaken(" garden sour "))
+        XCTAssertFalse(library.isNameTaken("Garden Sour", excluding: house.id))
+        XCTAssertFalse(library.isNameTaken(""))
+    }
+}

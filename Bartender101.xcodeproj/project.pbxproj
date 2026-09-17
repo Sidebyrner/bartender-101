@@ -35,19 +35,25 @@
 		8435122151834619EAB48A1A /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5B637340F8AE2AA8CE5CF2 /* Scheduler.swift */; };
 		8859313A8F48C4B68D8166FD /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8999A5372FD39535CC2C90A /* SchedulerTests.swift */; };
 		92B55ED6DE7B35663CB03DD5 /* BuildSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD55CAA3EE0F399F47D569 /* BuildSteps.swift */; };
+		9B303D818A2F716031B33062 /* CustomDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA095233AAC41C18DFB15C6C /* CustomDrink.swift */; };
 		9DA8007FB554596657B190A6 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C16B70A22B83B5F0F59C60 /* StatsView.swift */; };
 		AB4CBC1CC934806136FCE5BC /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB87DA42DFD783D0200037 /* TestHelpers.swift */; };
 		ABD49881418DD775A0831747 /* PourOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604842ADBF13AF1CC7E1BF23 /* PourOrderTests.swift */; };
+		B228192A08F7D51C5160B856 /* DrinkBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594787D428FF8A5915AEFDB /* DrinkBalance.swift */; };
 		B43622722C3145C1A03E265D /* StudyHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C201876B99594D4797FFA1 /* StudyHomeView.swift */; };
 		B7453A9CD82EB34E4BD09AD2 /* ReverseQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F6354B71A3BDC6EE1EF52A /* ReverseQuizView.swift */; };
 		C3C2FADBDCA129732BB1CC28 /* FuzzyMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E50AD02F1BE06E82C15DB1 /* FuzzyMatch.swift */; };
 		C7A3CAE86284356A5ADD99D9 /* PourOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EFE69D524968692ACEC8FA /* PourOrder.swift */; };
 		D05B96C45819057D9E97DE40 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4CFCC3C3C5EE7712AD53FA /* Drink.swift */; };
+		D75B8416E8EA496152415598 /* DrinkTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4CC18FC0B63B7CC0B540CF /* DrinkTemplates.swift */; };
 		DAA87D4B26EA0CEE7DE3EF87 /* DrinkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869999447CC0A65B53F2BD7 /* DrinkLibrary.swift */; };
+		DBC67A004C6ACD2AEA62974B /* CustomDrinkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022170E1243C6CEB246E790 /* CustomDrinkStore.swift */; };
 		E327F31F8EC06AAA66562EE1 /* ShiftLogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC77F68CD90F809290AABE /* ShiftLogStore.swift */; };
 		E3DCC66D3561F64A7A0B2836 /* Bartender101App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6116CA82D1862DEA4DA954C9 /* Bartender101App.swift */; };
 		E48D609991485E0BA706E7D5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84465784AE2064734EDB609 /* SettingsView.swift */; };
 		E9F5889E508ADF43DCB79B24 /* BuildStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9926A380E8242553C2B55699 /* BuildStepsTests.swift */; };
+		EFCB17938025500A465D7E81 /* CustomDrinkStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE7C76468E87AEE7D17040 /* CustomDrinkStoreTests.swift */; };
+		FFF379C857914219D7DD986B /* DrinkBalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F6603970149AFE5F2B0B8 /* DrinkBalanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +82,11 @@
 		498A3DC9F8E1977EAFC3483D /* ShiftLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLogTests.swift; sourceTree = "<group>"; };
 		49E50AD02F1BE06E82C15DB1 /* FuzzyMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyMatch.swift; sourceTree = "<group>"; };
 		4ABB87DA42DFD783D0200037 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		4C4CC18FC0B63B7CC0B540CF /* DrinkTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTemplates.swift; sourceTree = "<group>"; };
 		604842ADBF13AF1CC7E1BF23 /* PourOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PourOrderTests.swift; sourceTree = "<group>"; };
 		6116CA82D1862DEA4DA954C9 /* Bartender101App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bartender101App.swift; sourceTree = "<group>"; };
 		67D95F5CFBF8D2A35D7F595A /* RecipeScaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScaler.swift; sourceTree = "<group>"; };
+		7594787D428FF8A5915AEFDB /* DrinkBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkBalance.swift; sourceTree = "<group>"; };
 		7869999447CC0A65B53F2BD7 /* DrinkLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkLibrary.swift; sourceTree = "<group>"; };
 		812F312DE5CDF88CBEBDBFA0 /* MadeDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeDrink.swift; sourceTree = "<group>"; };
 		82C201876B99594D4797FFA1 /* StudyHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyHomeView.swift; sourceTree = "<group>"; };
@@ -93,14 +101,18 @@
 		ACDED31F4A955176F57E6683 /* GradeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeButtons.swift; sourceTree = "<group>"; };
 		BF4CFCC3C3C5EE7712AD53FA /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		C1168D4EDEDCE58825973D43 /* DrinkLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkLibraryTests.swift; sourceTree = "<group>"; };
+		C3BE7C76468E87AEE7D17040 /* CustomDrinkStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDrinkStoreTests.swift; sourceTree = "<group>"; };
 		C68506C3C6D8B607B462ADAE /* ShiftLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftLog.swift; sourceTree = "<group>"; };
-		D42D8470CA876007DD7CA19C /* Bartender101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bartender101.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39F6603970149AFE5F2B0B8 /* DrinkBalanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkBalanceTests.swift; sourceTree = "<group>"; };
+		D42D8470CA876007DD7CA19C /* Bartender101.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Bartender101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80589B1129A88444DBE0715 /* Measure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
 		D8999A5372FD39535CC2C90A /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
 		D99AF9D91CB603E1A7B96699 /* drinks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = drinks.json; sourceTree = "<group>"; };
+		DA095233AAC41C18DFB15C6C /* CustomDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDrink.swift; sourceTree = "<group>"; };
 		E3F6354B71A3BDC6EE1EF52A /* ReverseQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseQuizView.swift; sourceTree = "<group>"; };
 		E84465784AE2064734EDB609 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EF1185CDF0341D6A026642BA /* RecipeScalerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScalerTests.swift; sourceTree = "<group>"; };
+		F022170E1243C6CEB246E790 /* CustomDrinkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDrinkStore.swift; sourceTree = "<group>"; };
 		FBCA7358F38A77035D87A9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE5B637340F8AE2AA8CE5CF2 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		FF70A27BEA16E45F70F69462 /* ReviewSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSessionView.swift; sourceTree = "<group>"; };
@@ -111,8 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				1EBD55CAA3EE0F399F47D569 /* BuildSteps.swift */,
+				F022170E1243C6CEB246E790 /* CustomDrinkStore.swift */,
 				9CD373D9A78A4C4ABD184D4E /* Dilution.swift */,
+				7594787D428FF8A5915AEFDB /* DrinkBalance.swift */,
 				7869999447CC0A65B53F2BD7 /* DrinkLibrary.swift */,
+				4C4CC18FC0B63B7CC0B540CF /* DrinkTemplates.swift */,
 				49E50AD02F1BE06E82C15DB1 /* FuzzyMatch.swift */,
 				44EFE69D524968692ACEC8FA /* PourOrder.swift */,
 				67D95F5CFBF8D2A35D7F595A /* RecipeScaler.swift */,
@@ -128,7 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				9926A380E8242553C2B55699 /* BuildStepsTests.swift */,
+				C3BE7C76468E87AEE7D17040 /* CustomDrinkStoreTests.swift */,
 				15E41083B20D89C2D9B0B948 /* DilutionTests.swift */,
+				D39F6603970149AFE5F2B0B8 /* DrinkBalanceTests.swift */,
 				C1168D4EDEDCE58825973D43 /* DrinkLibraryTests.swift */,
 				863DFE8F2B7BF3CFBBFD407B /* MeasureTests.swift */,
 				604842ADBF13AF1CC7E1BF23 /* PourOrderTests.swift */,
@@ -151,6 +168,7 @@
 		27997F6E20F2B20D077B1B8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA095233AAC41C18DFB15C6C /* CustomDrink.swift */,
 				BF4CFCC3C3C5EE7712AD53FA /* Drink.swift */,
 				494B9860C20E37CDAAFB9160 /* Ingredient.swift */,
 				812F312DE5CDF88CBEBDBFA0 /* MadeDrink.swift */,
@@ -339,6 +357,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 268A1D2135A37D479F9BFB10 /* Build configuration list for PBXProject "Bartender101" */;
 			developmentRegion = en;
@@ -378,7 +398,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F5889E508ADF43DCB79B24 /* BuildStepsTests.swift in Sources */,
+				EFCB17938025500A465D7E81 /* CustomDrinkStoreTests.swift in Sources */,
 				4F12A0D4E553EC1488120BC7 /* DilutionTests.swift in Sources */,
+				FFF379C857914219D7DD986B /* DrinkBalanceTests.swift in Sources */,
 				74F03E942B37C1F46D0E748A /* DrinkLibraryTests.swift in Sources */,
 				2240BE8CF512FB0A4092FFB4 /* MeasureTests.swift in Sources */,
 				ABD49881418DD775A0831747 /* PourOrderTests.swift in Sources */,
@@ -396,11 +418,15 @@
 				6923FFCE65096F9EE891AB3C /* BarMode.swift in Sources */,
 				E3DCC66D3561F64A7A0B2836 /* Bartender101App.swift in Sources */,
 				92B55ED6DE7B35663CB03DD5 /* BuildSteps.swift in Sources */,
+				9B303D818A2F716031B33062 /* CustomDrink.swift in Sources */,
+				DBC67A004C6ACD2AEA62974B /* CustomDrinkStore.swift in Sources */,
 				079127B310BBA95BF5718A16 /* Dilution.swift in Sources */,
 				D05B96C45819057D9E97DE40 /* Drink.swift in Sources */,
+				B228192A08F7D51C5160B856 /* DrinkBalance.swift in Sources */,
 				42228628FAFD7EE812FABD21 /* DrinkCardView.swift in Sources */,
 				63F235E74D6AAD5265B648AD /* DrinkDetailView.swift in Sources */,
 				DAA87D4B26EA0CEE7DE3EF87 /* DrinkLibrary.swift in Sources */,
+				D75B8416E8EA496152415598 /* DrinkTemplates.swift in Sources */,
 				02211C318D7BFFD48E1D7338 /* FlashcardView.swift in Sources */,
 				C3C2FADBDCA129732BB1CC28 /* FuzzyMatch.swift in Sources */,
 				55DB23F29C9D106C33C027C2 /* GradeButtons.swift in Sources */,
@@ -511,7 +537,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = H9B7A5KQP3;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bartender 101";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -609,7 +634,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = H9B7A5KQP3;
 				INFOPLIST_KEY_CFBundleDisplayName = "Bartender 101";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
