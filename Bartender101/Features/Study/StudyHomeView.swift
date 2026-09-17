@@ -3,7 +3,7 @@ import SwiftUI
 /// Study home: how many cards are due, a streak counter, and the entry
 /// points into the three drills. This is the screen you open every time you
 /// sit down to study.
-struct HomeView: View {
+struct StudyHomeView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var reviewStore: ReviewStore
 
@@ -59,7 +59,7 @@ struct HomeView: View {
             }
             .padding(.top, 12)
         }
-        .navigationTitle("Bartender 101")
+        .navigationTitle("Study")
     }
 
     private var summaryCard: some View {

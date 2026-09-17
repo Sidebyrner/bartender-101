@@ -2,7 +2,7 @@ import SwiftUI
 
 /// The index card. Front shows just the name and family — enough to test
 /// yourself before peeking. Tap (or the chevron) flips it to the full spec.
-/// This one view is reused by Browse, Review, and as the "answer reveal" in
+/// This one view is reused by Flashcard, Review, and as the "answer reveal" in
 /// both quiz modes, so any spec formatting change only happens here.
 struct DrinkCardView: View {
     let drink: Drink

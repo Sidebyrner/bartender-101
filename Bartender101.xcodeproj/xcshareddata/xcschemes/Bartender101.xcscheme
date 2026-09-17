@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "1430"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      runPostActionsOnFailure = "NO">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAE78773BB895BB78EADAE14"
+               BlueprintIdentifier = "200821E9148CE3DE8355099D"
                BuildableName = "Bartender101.app"
                BlueprintName = "Bartender101"
                ReferencedContainer = "container:Bartender101.xcodeproj">
@@ -25,10 +26,10 @@
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3AAB3B60C4852E5A5E6A200"
+               BlueprintIdentifier = "8DC305B05A549B6E1F1C7319"
                BuildableName = "Bartender101Tests.xctest"
                BlueprintName = "Bartender101Tests"
                ReferencedContainer = "container:Bartender101.xcodeproj">
@@ -40,19 +41,32 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "NO">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "200821E9148CE3DE8355099D"
+            BuildableName = "Bartender101.app"
+            BlueprintName = "Bartender101"
+            ReferencedContainer = "container:Bartender101.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3AAB3B60C4852E5A5E6A200"
+               BlueprintIdentifier = "8DC305B05A549B6E1F1C7319"
                BuildableName = "Bartender101Tests.xctest"
                BlueprintName = "Bartender101Tests"
                ReferencedContainer = "container:Bartender101.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -68,12 +82,14 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAE78773BB895BB78EADAE14"
+            BlueprintIdentifier = "200821E9148CE3DE8355099D"
             BuildableName = "Bartender101.app"
             BlueprintName = "Bartender101"
             ReferencedContainer = "container:Bartender101.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,7 +101,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAE78773BB895BB78EADAE14"
+            BlueprintIdentifier = "200821E9148CE3DE8355099D"
             BuildableName = "Bartender101.app"
             BlueprintName = "Bartender101"
             ReferencedContainer = "container:Bartender101.xcodeproj">

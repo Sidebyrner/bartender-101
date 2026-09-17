@@ -1,11 +1,12 @@
 import SwiftUI
 
-/// Progress at a glance: overall accuracy, which drinks are still weak, and
-/// how coverage breaks down by family (so "well drinks only" week one has
-/// something to check off against).
+/// Progress at a glance: tonight's shift and past nights (from "Made it" on
+/// recipe pages), then study accuracy, which drinks are still weak, and how
+/// coverage breaks down by family.
 struct StatsView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var reviewStore: ReviewStore
+    @EnvironmentObject private var shiftLog: ShiftLogStore
 
     private var totalReviews: Int {
         reviewStore.states.values.reduce(0) { $0 + $1.totalReviews }
@@ -26,7 +27,28 @@ struct StatsView: View {
 
     var body: some View {
         List {
-            Section("Overview") {
+            Section {
+                if let tonight = shiftLog.tonight() {
+                    NavigationLink {
+                        NightDetailView(date: tonight.date)
+                    } label: {
+                        NightSummaryRow(night: tonight, title: "Tonight")
+                    }
+                } else {
+                    Text("Nothing logged tonight. Tap **Made it** on a recipe page after you make a drink.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+                if !shiftLog.entries.isEmpty {
+                    NavigationLink("Shift history") {
+                        ShiftHistoryView()
+                    }
+                }
+            } header: {
+                Text("Behind the bar")
+            }
+
+            Section("Study") {
                 LabeledContent("Cards reviewed") {
                     Text("\(reviewStore.states.count) / \(library.drinks.count)")
                 }

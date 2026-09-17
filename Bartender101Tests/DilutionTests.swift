@@ -1,5 +1,5 @@
 import XCTest
-@testable import DrinksCodex
+@testable import Bartender101
 
 final class DilutionTests: XCTestCase {
     func testPercentByMethod() {

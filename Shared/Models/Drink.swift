@@ -1,6 +1,6 @@
 import Foundation
 
-/// The family a drink belongs to. Drives grouping in Browse, distractor
+/// The family a drink belongs to. Drives filtering in Search, distractor
 /// selection in the speed drill (wrong answers come from the same family so
 /// the drill trains real discrimination), and the oz sanity check that also
 /// runs in `scripts/validate-drinks.js` — keep the raw values identical to

@@ -1,10 +1,10 @@
 import SwiftUI
 
 /// A single drink shown as one flippable index card, full screen. Reached
-/// from Browse; also where a review session's "reveal" pushes conceptually,
-/// though `ReviewSessionView` renders the card inline rather than pushing
-/// here so grading buttons can sit right below it.
-struct DrinkDetailView: View {
+/// from the recipe page's Flashcard button, for quizzing yourself on one
+/// drink outside a drill. `ReviewSessionView` renders the card inline rather
+/// than pushing here so grading buttons can sit right below it.
+struct FlashcardView: View {
     let drink: Drink
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @State private var isFlipped = false

@@ -6,6 +6,7 @@ import XCTest
 /// depends on `drinks.json` loading cleanly, and this project was written
 /// without ever compiling on the machine that wrote it, so this is the
 /// first real signal that the data survived the trip.
+@MainActor
 final class DrinkLibraryTests: XCTestCase {
     func testDeckDecodes() throws {
         let drinks = try DrinkLibrary.loadDrinks()
@@ -14,7 +15,7 @@ final class DrinkLibraryTests: XCTestCase {
 
     func testDeckHasExpectedSize() throws {
         let drinks = try DrinkLibrary.loadDrinks()
-        XCTAssertGreaterThanOrEqual(drinks.count, 60, "expected the ~62-drink working bar canon")
+        XCTAssertGreaterThanOrEqual(drinks.count, 180, "expected the full ~180-drink deck")
     }
 
     func testNoDuplicateIDs() throws {

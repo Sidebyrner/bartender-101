@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Validates Bartender101/Resources/drinks.json against the schema the Swift
+// Validates Shared/Resources/drinks.json against the schema the Swift
 // models (Models/Drink.swift, Models/Ingredient.swift) decode. Run with:
 //   node scripts/validate-drinks.js
 // Exits non-zero and prints every problem found on failure.

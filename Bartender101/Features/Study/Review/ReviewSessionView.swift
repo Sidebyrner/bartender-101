@@ -99,7 +99,7 @@ struct ReviewSessionView: View {
             if gradedCount == 0 {
                 Text("Nothing due right now")
                     .font(.title2.bold())
-                Text("Check back later, or study the full deck in Browse.")
+                Text("Check back later, or try Speed Drill or Name That Drink.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
