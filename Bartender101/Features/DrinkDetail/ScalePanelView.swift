@@ -57,6 +57,7 @@ struct ScalePanel: View {
 
                 Text("×\(Measure.ozFraction(servings))")
                     .font(metrics.buttonFont.monospacedDigit())
+                    .contentTransition(.numericText(value: servings))
                     .frame(minWidth: metrics.isOn ? 64 : 48)
                     .accessibilityLabel("\(Measure.ozFraction(servings)) servings")
 
@@ -82,21 +83,28 @@ struct ScalePanel: View {
                 Button(action: onMadeIt) {
                     HStack(spacing: 8) {
                         Image(systemName: justLogged ? "checkmark.circle.fill" : "checkmark.circle")
+                            .contentTransition(.symbolEffect(.replace))
+                            .symbolEffect(.bounce, value: madeTonight)
                         Text(justLogged ? "Logged" : "Made it")
+                            .contentTransition(.interpolate)
                         if madeTonight > 0 {
                             Text("· \(madeTonight) tonight")
                                 .fontWeight(.regular)
+                                .contentTransition(.numericText(value: Double(madeTonight)))
                         }
                     }
                     .font(metrics.buttonFont)
                     .lineLimit(1)
                     .minimumScaleFactor(0.7)
                     .frame(maxWidth: .infinity, minHeight: metrics.tapHeight)
-                    .background(RoundedRectangle(cornerRadius: 12, style: .continuous).fill(Color.green))
+                    .background(
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(LinearGradient(colors: [Color(red: 0.2, green: 0.72, blue: 0.38), Color(red: 0.13, green: 0.6, blue: 0.3)], startPoint: .top, endPoint: .bottom))
+                    )
                     .foregroundStyle(.white)
                     .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(.pressable(scale: 0.97))
                 .accessibilityHint("Logs this drink at the servings and units shown")
 
                 if justLogged {
@@ -108,6 +116,12 @@ struct ScalePanel: View {
         .padding(.horizontal)
         .padding(.vertical, 10)
         .background(.bar)
+        .animation(Theme.snap, value: servings)
+        .animation(Theme.snap, value: batchMode)
+        .animation(Theme.spring, value: justLogged)
+        .animation(Theme.snap, value: madeTonight)
+        .sensoryFeedback(.selection, trigger: servings)
+        .sensoryFeedback(.selection, trigger: unitRaw)
     }
 }
 
@@ -137,6 +151,6 @@ private struct BarButton: View {
             .foregroundStyle(isSelected ? Color.white : Color.primary)
             .contentShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable(scale: 0.94))
     }
 }

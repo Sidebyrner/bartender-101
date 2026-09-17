@@ -9,16 +9,20 @@ struct DrinkCardView: View {
     @Binding var isFlipped: Bool
     var unit: MeasurementUnit = .oz
 
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
     var body: some View {
         ZStack {
             cardFace(showBack: false)
                 .opacity(isFlipped ? 0 : 1)
             cardFace(showBack: true)
                 .opacity(isFlipped ? 1 : 0)
-                .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                .rotation3DEffect(.degrees(reduceMotion ? 0 : 180), axis: (x: 0, y: 1, z: 0))
         }
-        .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-        .animation(.easeInOut(duration: 0.35), value: isFlipped)
+        // A real card turn with a little perspective; a crossfade under Reduce Motion.
+        .rotation3DEffect(.degrees(isFlipped && !reduceMotion ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.4)
+        .animation(reduceMotion ? .easeInOut(duration: 0.2) : .spring(response: 0.55, dampingFraction: 0.78), value: isFlipped)
+        .sensoryFeedback(.impact(weight: .light), trigger: isFlipped)
         .onTapGesture { isFlipped.toggle() }
         .accessibilityAddTraits(.isButton)
         .accessibilityLabel(isFlipped ? "\(drink.name), spec shown. Tap to flip back." : "\(drink.name), tap to reveal spec.")
@@ -26,10 +30,17 @@ struct DrinkCardView: View {
 
     @ViewBuilder
     private func cardFace(showBack: Bool) -> some View {
-        RoundedRectangle(cornerRadius: 18, style: .continuous)
+        RoundedRectangle(cornerRadius: 22, style: .continuous)
             .fill(Color(.secondarySystemBackground))
+            .overlay(alignment: .top) {
+                // A thin amber rule across the top, like the edge of an index card.
+                Rectangle()
+                    .fill(Theme.accentGradient())
+                    .frame(height: 4)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
             .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                RoundedRectangle(cornerRadius: 22, style: .continuous)
                     .strokeBorder(Color.primary.opacity(0.08), lineWidth: 1)
             )
             .overlay {
@@ -49,13 +60,14 @@ struct DrinkCardView: View {
                 .font(.system(.title, design: .serif, weight: .bold))
                 .multilineTextAlignment(.center)
             Text(drink.family.displayName.uppercased())
-                .font(.caption)
+                .font(.caption.weight(.semibold))
                 .tracking(1.5)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Color.accentColor)
             Spacer()
             Label("Tap to reveal", systemImage: "hand.tap.fill")
                 .font(.caption)
                 .foregroundStyle(.tertiary)
+                .symbolEffect(.pulse, options: .repeating.speed(0.5), isActive: !reduceMotion)
         }
     }
 

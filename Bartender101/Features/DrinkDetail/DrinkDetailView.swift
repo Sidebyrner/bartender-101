@@ -91,6 +91,7 @@ struct DrinkDetailView: View {
                                 systemImage: "drop.fill",
                                 metrics: metrics
                             )
+                            .transition(.move(edge: .top).combined(with: .opacity))
                         }
                     }
                 }
@@ -135,6 +136,8 @@ struct DrinkDetailView: View {
             )
             .sensoryFeedback(.success, trigger: shiftLog.entries.count) { old, new in new > old }
         }
+        .animation(Theme.spring, value: servings)
+        .animation(Theme.spring, value: batchMode)
         .navigationTitle(spec.name)
         .navigationBarTitleDisplayMode(.inline)
         // The bottom bar needs the room; Back returns to the tabs.
@@ -225,12 +228,22 @@ struct DrinkDetailView: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: 8) {
             Text(spec.name)
-                .font(.system(size: barMode ? 40 : 30, weight: .bold, design: .serif))
-            Text("\(spec.family.displayName) · \(spec.method.displayName)")
-                .font(barMode ? .title3 : .subheadline)
-                .foregroundStyle(.secondary)
+                .font(.system(size: barMode ? 40 : 32, weight: .bold, design: .serif))
+            HStack(spacing: 6) {
+                if spec.tags.contains(.house) {
+                    Label("House", systemImage: "flask.fill")
+                        .font((barMode ? Font.body : .caption).weight(.bold))
+                        .padding(.horizontal, 9)
+                        .padding(.vertical, 4)
+                        .background(Capsule().fill(Color.accentColor))
+                        .foregroundStyle(.white)
+                }
+                Text("\(spec.family.displayName) · \(spec.method.displayName)")
+                    .font(barMode ? .title3 : .subheadline)
+                    .foregroundStyle(.secondary)
+            }
         }
     }
 
@@ -297,11 +310,12 @@ private struct PourRow: View {
                 .font(.system(size: metrics.isOn ? 18 : 14, weight: .bold, design: .rounded))
                 .foregroundStyle(.white)
                 .frame(width: metrics.isOn ? 32 : 24, height: metrics.isOn ? 32 : 24)
-                .background(Circle().fill(Color.accentColor))
+                .background(Circle().fill(Theme.accentGradient()))
                 .alignmentGuide(.firstTextBaseline) { $0[VerticalAlignment.center] + 6 }
 
             Text(amount)
                 .font(metrics.amountFont)
+                .contentTransition(.numericText())
                 .lineLimit(1)
                 .minimumScaleFactor(0.5)
                 .frame(width: metrics.amountColumnWidth, alignment: .leading)
@@ -352,7 +366,7 @@ private struct SpecTile: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(metrics.isOn ? 16 : 12)
-        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(Color(.secondarySystemBackground)))
+        .cardSurface(cornerRadius: 14)
         .accessibilityElement(children: .combine)
     }
 }

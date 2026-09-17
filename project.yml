@@ -37,6 +37,10 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.bartender101.Bartender101
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        # Signing team for running on a device; kept here so `xcodegen
+        # generate` doesn't wipe it. Change to your own team to build elsewhere.
+        DEVELOPMENT_TEAM: H9B7A5KQP3
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"

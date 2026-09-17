@@ -40,11 +40,14 @@ struct ReviewSessionView: View {
     private func sessionView(for drink: Drink) -> some View {
         VStack(spacing: 16) {
             ProgressView(value: Double(index), total: Double(max(queue.count, 1)))
+                .tint(.accentColor)
                 .padding(.horizontal)
+                .animation(Theme.spring, value: index)
 
             Text("\(index + 1) of \(queue.count)")
-                .font(.caption)
+                .font(.caption.monospacedDigit())
                 .foregroundStyle(.secondary)
+                .contentTransition(.numericText(value: Double(index)))
 
             Spacer(minLength: 0)
 
@@ -52,6 +55,12 @@ struct ReviewSessionView: View {
                 .frame(maxWidth: 420)
                 .frame(minHeight: 380)
                 .padding(.horizontal, 24)
+                // Each graded card slides away and the next one deals in.
+                .id(drink.id)
+                .transition(.asymmetric(
+                    insertion: .move(edge: .trailing).combined(with: .opacity),
+                    removal: .move(edge: .leading).combined(with: .opacity)
+                ))
 
             Spacer(minLength: 0)
 
@@ -61,20 +70,24 @@ struct ReviewSessionView: View {
                 }
                 .padding(.horizontal)
                 .padding(.bottom)
-                .transition(.opacity)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             } else {
                 Button {
                     isFlipped = true
                 } label: {
-                    Text("Reveal spec")
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 10)
+                    Label("Reveal spec", systemImage: "eye")
+                        .font(.headline)
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity, minHeight: 54)
+                        .background(Theme.accentGradient(), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.pressable)
                 .padding(.horizontal)
                 .padding(.bottom)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        .animation(Theme.spring, value: isFlipped)
     }
 
     private func handleGrade(_ grade: ReviewGrade, for drink: Drink) {
@@ -82,20 +95,37 @@ struct ReviewSessionView: View {
         gradedCount += 1
         if grade == .missed { missedCount += 1 }
 
-        isFlipped = false
-        if index + 1 < queue.count {
-            index += 1
-        } else {
-            sessionComplete = true
+        withAnimation(Theme.spring) {
+            isFlipped = false
+            if index + 1 < queue.count {
+                index += 1
+            } else {
+                sessionComplete = true
+            }
         }
     }
 
     private var summaryView: some View {
         VStack(spacing: 16) {
             Spacer()
-            Image(systemName: "checkmark.seal.fill")
-                .font(.system(size: 56))
-                .foregroundStyle(.green)
+            if gradedCount > 0 {
+                ProgressRing(progress: Double(gradedCount - missedCount) / Double(gradedCount), lineWidth: 14, tint: .green) {
+                    VStack(spacing: 0) {
+                        Text("\(gradedCount - missedCount)")
+                            .font(.system(size: 40, weight: .bold, design: .rounded))
+                        Text("of \(gradedCount) clean")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .frame(width: 150, height: 150)
+                .padding(.bottom, 8)
+            } else {
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.system(size: 64))
+                    .foregroundStyle(.green)
+                    .symbolEffect(.bounce, value: sessionComplete)
+            }
             if gradedCount == 0 {
                 Text("Nothing due right now")
                     .font(.title2.bold())
@@ -112,9 +142,19 @@ struct ReviewSessionView: View {
                     .foregroundStyle(.secondary)
             }
             Spacer()
-            Button("Done") { dismiss() }
-                .buttonStyle(.borderedProminent)
-                .padding(.bottom, 24)
+            Button {
+                dismiss()
+            } label: {
+                Text("Done")
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                    .frame(maxWidth: 280, minHeight: 50)
+                    .background(Theme.accentGradient(), in: Capsule())
+            }
+            .buttonStyle(.pressable)
+            .padding(.bottom, 24)
         }
+        .transition(.scale(scale: 0.95).combined(with: .opacity))
+        .sensoryFeedback(.success, trigger: sessionComplete)
     }
 }

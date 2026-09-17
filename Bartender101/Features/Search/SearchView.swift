@@ -36,8 +36,16 @@ struct SearchView: View {
                     DrinkDetailView(drink: drink)
                 } label: {
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(drink.name)
-                            .font(barMode ? .title2.bold() : .headline)
+                        HStack(spacing: 6) {
+                            Text(drink.name)
+                                .font(.system(barMode ? .title2 : .headline, design: .serif, weight: .bold))
+                            if drink.tags.contains(.house) {
+                                Image(systemName: "flask.fill")
+                                    .font(barMode ? .body : .caption)
+                                    .foregroundStyle(Color.accentColor)
+                                    .accessibilityLabel("House drink")
+                            }
+                        }
                         Text(drink.ingredientSummary)
                             .font(barMode ? .body : .caption)
                             .foregroundStyle(.secondary)
@@ -47,6 +55,7 @@ struct SearchView: View {
                 }
             }
             .listStyle(.plain)
+            .animation(Theme.spring, value: filtered.map(\.id))
             .scrollDismissesKeyboard(.immediately)
             .overlay {
                 if filtered.isEmpty {
@@ -55,17 +64,21 @@ struct SearchView: View {
             }
         }
         .dynamicTypeSize(metrics.dynamicTypeRange)
+        .sensoryFeedback(.selection, trigger: selectedFamily)
+        .sensoryFeedback(.selection, trigger: selectedTags)
+        .sensoryFeedback(.impact(weight: .light), trigger: barMode)
         .navigationTitle("Search")
         .navigationBarTitleDisplayMode(barMode ? .inline : .large)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    barMode.toggle()
+                    withAnimation(Theme.spring) { barMode.toggle() }
                 } label: {
                     // An HStack rather than a Label: toolbar buttons render a
                     // Label icon-only, and "Bar Mode" needs to be readable.
                     HStack(spacing: 6) {
                         Image(systemName: barMode ? "wineglass.fill" : "wineglass")
+                            .contentTransition(.symbolEffect(.replace))
                         Text("Bar Mode")
                     }
                     .font(.headline)
@@ -113,22 +126,28 @@ struct SearchView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 FilterChip(title: "All", isSelected: selectedFamily == nil && selectedTags.isEmpty, metrics: metrics) {
-                    selectedFamily = nil
-                    selectedTags = []
+                    withAnimation(Theme.snap) {
+                        selectedFamily = nil
+                        selectedTags = []
+                    }
                 }
                 ForEach(DrinkTag.allCases) { tag in
                     FilterChip(title: tag.displayName, isSelected: selectedTags.contains(tag), metrics: metrics) {
-                        if selectedTags.contains(tag) {
-                            selectedTags.remove(tag)
-                        } else {
-                            selectedTags.insert(tag)
+                        withAnimation(Theme.snap) {
+                            if selectedTags.contains(tag) {
+                                selectedTags.remove(tag)
+                            } else {
+                                selectedTags.insert(tag)
+                            }
                         }
                     }
                 }
                 Divider().frame(height: 20)
                 ForEach(DrinkFamily.allCases) { family in
                     FilterChip(title: family.displayName, isSelected: selectedFamily == family, metrics: metrics) {
-                        selectedFamily = (selectedFamily == family) ? nil : family
+                        withAnimation(Theme.snap) {
+                            selectedFamily = (selectedFamily == family) ? nil : family
+                        }
                     }
                 }
             }
@@ -156,6 +175,7 @@ private struct FilterChip: View {
                 .foregroundStyle(isSelected ? .white : .primary)
                 .contentShape(Capsule())
         }
-        .buttonStyle(.plain)
+        .buttonStyle(.pressable(scale: 0.93))
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }

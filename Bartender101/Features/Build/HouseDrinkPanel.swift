@@ -12,6 +12,7 @@ struct HouseDrinkPanel: View {
     @State private var showAddTasting = false
     @State private var menuProblems: [String] = []
     @State private var showMenuProblems = false
+    @State private var celebrations = 0
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -28,14 +29,19 @@ struct HouseDrinkPanel: View {
                 } label: {
                     HStack(spacing: 6) {
                         Image(systemName: drink.stage.systemImage)
+                            .contentTransition(.symbolEffect(.replace))
                         Text(drink.stage.displayName)
+                            .contentTransition(.interpolate)
                         Image(systemName: "chevron.up.chevron.down").font(.caption.weight(.bold))
                     }
                     .font(metrics.isOn ? .title3.weight(.semibold) : .subheadline.weight(.semibold))
                     .padding(.horizontal, 14)
                     .frame(minHeight: metrics.isOn ? 48 : 34)
-                    .background(Capsule().fill(Color.accentColor.opacity(0.15)))
+                    .background(Capsule().fill(drink.stage.tint.opacity(0.18)))
+                    .foregroundStyle(drink.stage == .shelved ? Color.secondary : Color.primary)
+                    .overlay { ConfettiBurst(trigger: celebrations) }
                 }
+                .animation(Theme.spring, value: drink.stage)
                 .accessibilityLabel("Stage: \(drink.stage.displayName)")
 
                 if let basedOn = drink.basedOnDrinkID.flatMap(library.drink(id:)) {
@@ -80,6 +86,7 @@ struct HouseDrinkPanel: View {
                 } else {
                     ForEach(drink.tastings.reversed()) { note in
                         TastingRow(note: note, metrics: metrics)
+                            .transition(.move(edge: .top).combined(with: .opacity))
                             .contextMenu {
                                 Button(role: .destructive) {
                                     customDrinks.removeTasting(id: drink.id, noteID: note.id)
@@ -91,8 +98,10 @@ struct HouseDrinkPanel: View {
                 }
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(Color(.secondarySystemBackground)))
+            .cardSurface(cornerRadius: 14)
+            .animation(Theme.spring, value: drink.tastings.count)
         }
+        .sensoryFeedback(.success, trigger: celebrations)
         .sheet(isPresented: $showAddTasting) {
             AddTastingSheet(drinkName: drink.displayName) { note in
                 customDrinks.addTasting(id: drink.id, note: note)
@@ -115,7 +124,10 @@ struct HouseDrinkPanel: View {
                 return
             }
         }
-        customDrinks.move(id: drink.id, to: stage)
+        withAnimation(Theme.spring) {
+            customDrinks.move(id: drink.id, to: stage)
+        }
+        if stage == .onMenu { celebrations += 1 }
     }
 }
 
@@ -178,17 +190,23 @@ private struct AddTastingSheet: View {
                     HStack(spacing: 14) {
                         ForEach(1...5, id: \.self) { star in
                             Button {
-                                rating = (rating == star) ? nil : star
+                                withAnimation(Theme.snap) {
+                                    rating = (rating == star) ? nil : star
+                                }
                             } label: {
                                 Image(systemName: star <= (rating ?? 0) ? "star.fill" : "star")
                                     .font(.title)
                                     .foregroundStyle(star <= (rating ?? 0) ? Color.yellow : Color.secondary)
+                                    .contentTransition(.symbolEffect(.replace))
+                                    .symbolEffect(.bounce, value: rating == star)
+                                    .scaleEffect(star <= (rating ?? 0) ? 1.1 : 1)
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("\(star) stars")
                         }
                     }
                     .frame(maxWidth: .infinity)
+                    .sensoryFeedback(.selection, trigger: rating)
                 }
             }
             .navigationTitle(drinkName)

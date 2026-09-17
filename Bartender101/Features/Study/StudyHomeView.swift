@@ -1,8 +1,8 @@
 import SwiftUI
 
-/// Study home: how many cards are due, a streak counter, and the entry
-/// points into the three drills. This is the screen you open every time you
-/// sit down to study.
+/// Study home: how much of the deck you've started, how many cards are due,
+/// and the entry points into the three drills. This is the screen you open
+/// every time you sit down to study, so the numbers lead.
 struct StudyHomeView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var reviewStore: ReviewStore
@@ -11,24 +11,29 @@ struct StudyHomeView: View {
         reviewStore.dueDrinks(from: library.drinks).count
     }
 
-    private var reviewedCount: Int {
-        reviewStore.states.count
+    private var startedCount: Int {
+        library.drinks.filter { reviewStore.states[$0.id] != nil }.count
+    }
+
+    private var coverage: Double {
+        library.drinks.isEmpty ? 0 : Double(startedCount) / Double(library.drinks.count)
     }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
-                summaryCard
+                heroCard
 
-                VStack(spacing: 14) {
+                VStack(spacing: 12) {
                     NavigationLink {
                         ReviewSessionView()
                     } label: {
                         DrillRow(
                             title: "Spaced Review",
-                            subtitle: dueCount > 0 ? "\(dueCount) card\(dueCount == 1 ? "" : "s") due" : "All caught up",
+                            subtitle: dueCount > 0 ? "Ready when you are" : "All caught up — nice",
                             systemImage: "brain.head.profile",
-                            tint: .blue
+                            tint: .accentColor,
+                            badge: dueCount > 0 ? dueCount : nil
                         )
                     }
                     .disabled(dueCount == 0)
@@ -40,7 +45,8 @@ struct StudyHomeView: View {
                             title: "Speed Drill",
                             subtitle: "Beat the clock on ingredients",
                             systemImage: "timer",
-                            tint: .orange
+                            tint: .orange,
+                            badge: nil
                         )
                     }
 
@@ -50,39 +56,57 @@ struct StudyHomeView: View {
                         DrillRow(
                             title: "Name That Drink",
                             subtitle: "Spec shown, you name it",
-                            systemImage: "arrow.uturn.left.circle.fill",
-                            tint: .purple
+                            systemImage: "text.magnifyingglass",
+                            tint: .purple,
+                            badge: nil
                         )
                     }
                 }
+                .buttonStyle(.pressable(scale: 0.98))
                 .padding(.horizontal)
             }
-            .padding(.top, 12)
+            .padding(.vertical, 12)
         }
+        .background(Color(.systemGroupedBackground))
         .navigationTitle("Study")
     }
 
-    private var summaryCard: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("\(library.drinks.count)")
-                    .font(.system(.largeTitle, design: .rounded, weight: .bold))
-                Text("drinks in the deck")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+    private var heroCard: some View {
+        HStack(spacing: 20) {
+            ProgressRing(progress: coverage, lineWidth: 12) {
+                VStack(spacing: 0) {
+                    Text(coverage, format: .percent.precision(.fractionLength(0)))
+                        .font(.system(.title2, design: .rounded, weight: .bold))
+                        .monospacedDigit()
+                    Text("started")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
-            Spacer()
-            VStack(alignment: .trailing, spacing: 4) {
-                Text("\(reviewedCount)")
-                    .font(.system(.largeTitle, design: .rounded, weight: .bold))
-                Text("cards started")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+            .frame(width: 104, height: 104)
+
+            VStack(alignment: .leading, spacing: 12) {
+                stat(value: startedCount, label: "of \(library.drinks.count) drinks started")
+                stat(value: dueCount, label: dueCount == 1 ? "card due now" : "cards due now")
             }
+            Spacer(minLength: 0)
         }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 16, style: .continuous).fill(Color(.secondarySystemBackground)))
+        .padding(20)
+        .cardSurface(cornerRadius: 22, elevated: true)
         .padding(.horizontal)
+        .animation(Theme.spring, value: dueCount)
+    }
+
+    private func stat(value: Int, label: String) -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("\(value)")
+                .font(.system(.title, design: .rounded, weight: .bold))
+                .monospacedDigit()
+                .contentTransition(.numericText(value: Double(value)))
+            Text(label)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
     }
 }
 
@@ -91,14 +115,13 @@ private struct DrillRow: View {
     let subtitle: String
     let systemImage: String
     let tint: Color
+    let badge: Int?
+
+    @Environment(\.isEnabled) private var isEnabled
 
     var body: some View {
         HStack(spacing: 14) {
-            Image(systemName: systemImage)
-                .font(.title2)
-                .foregroundStyle(.white)
-                .frame(width: 44, height: 44)
-                .background(tint, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            IconTile(systemImage: systemImage, tint: isEnabled ? tint : .gray, size: 48)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
@@ -110,11 +133,22 @@ private struct DrillRow: View {
             }
 
             Spacer()
+
+            if let badge {
+                Text("\(badge)")
+                    .font(.subheadline.weight(.bold).monospacedDigit())
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 9)
+                    .frame(minWidth: 28, minHeight: 28)
+                    .background(Capsule().fill(tint))
+                    .contentTransition(.numericText(value: Double(badge)))
+            }
             Image(systemName: "chevron.right")
                 .font(.footnote.weight(.semibold))
                 .foregroundStyle(.tertiary)
         }
-        .padding()
-        .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(Color(.secondarySystemBackground)))
+        .padding(14)
+        .cardSurface()
+        .contentShape(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous))
     }
 }

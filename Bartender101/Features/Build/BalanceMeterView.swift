@@ -25,6 +25,8 @@ struct BalanceMeterView: View {
                 Text(summary.totalOz > 0 ? Measure.label(oz: summary.totalOz, unit: unit) + " total" : "Nothing measured yet")
                     .font(.subheadline.weight(.semibold).monospacedDigit())
                     .foregroundStyle(summary.totalOz > 0 ? .primary : .secondary)
+                    .contentTransition(.numericText(value: summary.totalOz))
+                    .animation(Theme.snap, value: summary.totalOz)
             }
 
             GeometryReader { proxy in
@@ -63,8 +65,10 @@ struct BalanceMeterView: View {
                 Label(warning, systemImage: "exclamationmark.triangle.fill")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.orange)
+                    .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
+        .animation(Theme.spring, value: summary.warnings)
     }
 }
 

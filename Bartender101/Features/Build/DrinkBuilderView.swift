@@ -374,6 +374,7 @@ private struct IngredientRowEditor: View {
                 HStack {
                     Text(amountLabel)
                         .font(.title3.weight(.bold).monospacedDigit())
+                        .contentTransition(.numericText(value: row.amountOz))
                     Spacer()
                     Picker("Unit", selection: unitBinding) {
                         ForEach(IngredientUnit.allCases, id: \.self) { Text($0.pickerName).tag($0) }
@@ -398,7 +399,7 @@ private struct IngredientRowEditor: View {
                         ForEach(row.unit == .oz ? Self.ozChips : Self.topChips, id: \.self) { amount in
                             let selected = abs(row.amountOz - amount) < 0.001
                             Button {
-                                row.amountOz = amount
+                                withAnimation(Theme.snap) { row.amountOz = amount }
                             } label: {
                                 Text(Measure.label(oz: amount, unit: unit))
                                     .font(.subheadline.weight(.semibold).monospacedDigit())
@@ -410,7 +411,7 @@ private struct IngredientRowEditor: View {
                                     .foregroundStyle(selected ? .white : .primary)
                                     .contentShape(Capsule())
                             }
-                            .buttonStyle(.plain)
+                            .buttonStyle(.pressable(scale: 0.92))
                             .accessibilityLabel(Measure.label(oz: amount, unit: unit))
                             .accessibilityAddTraits(selected ? .isSelected : [])
                         }
@@ -420,14 +421,22 @@ private struct IngredientRowEditor: View {
 
             if let issue {
                 warning(issue.message, actionTitle: issue.fixLabel) {
-                    if let fix = issue.fix { row.replace(with: fix) }
+                    withAnimation(Theme.spring) {
+                        if let fix = issue.fix { row.replace(with: fix) }
+                    }
                 }
+                .transition(.move(edge: .top).combined(with: .opacity))
             }
             if let duplicateOf {
                 warning("Also listed as ingredient \(duplicateOf + 1)", actionTitle: "Combine", action: onCombine)
+                    .transition(.move(edge: .top).combined(with: .opacity))
             }
         }
         .padding(.vertical, 6)
+        .animation(Theme.spring, value: issue?.message)
+        .animation(Theme.snap, value: row.amountOz)
+        .sensoryFeedback(.selection, trigger: row.amountOz)
+        .sensoryFeedback(.warning, trigger: issue?.message) { _, new in new != nil }
     }
 
     private var swapButton: some View {

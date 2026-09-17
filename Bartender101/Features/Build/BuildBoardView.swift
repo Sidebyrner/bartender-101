@@ -12,6 +12,8 @@ struct BuildBoardView: View {
     @State private var showNewDrink = false
     @State private var blockedMove: BlockedMove?
     @State private var targetedStage: TestStage?
+    @State private var celebrations = 0
+    @State private var moves = 0
 
     private struct BlockedMove: Identifiable {
         let id = UUID()
@@ -24,16 +26,29 @@ struct BuildBoardView: View {
             if customDrinks.drinks.isEmpty {
                 ContentUnavailableView {
                     Label("No house drinks yet", systemImage: "flask")
+                        .symbolEffect(.pulse, options: .repeating.speed(0.4))
                 } description: {
                     Text("Start from a classic ratio or riff on a drink you know, then test it until it's ready for the menu.")
                 } actions: {
-                    Button("New Drink") { showNewDrink = true }
-                        .buttonStyle(.borderedProminent)
+                    Button {
+                        showNewDrink = true
+                    } label: {
+                        Label("New Drink", systemImage: "plus")
+                            .font(.headline)
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 22)
+                            .frame(minHeight: 48)
+                            .background(Theme.accentGradient(), in: Capsule())
+                    }
+                    .buttonStyle(.pressable)
                 }
             } else {
                 board
             }
         }
+        .overlay { ConfettiBurst(trigger: celebrations) }
+        .sensoryFeedback(.success, trigger: celebrations)
+        .sensoryFeedback(.impact(weight: .medium), trigger: moves)
         .navigationTitle("Build")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -42,6 +57,8 @@ struct BuildBoardView: View {
                 } label: {
                     Label("New Drink", systemImage: "plus.circle.fill")
                         .font(.title2)
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(Color.accentColor)
                 }
             }
         }
@@ -78,12 +95,21 @@ struct BuildBoardView: View {
         let drinks = customDrinks.drinks(in: stage)
         return VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Label(stage.displayName, systemImage: stage.systemImage)
-                    .font(.headline)
+                Label {
+                    Text(stage.displayName)
+                } icon: {
+                    Image(systemName: stage.systemImage)
+                        .foregroundStyle(stage.tint)
+                }
+                .font(.headline)
                 Spacer()
                 Text("\(drinks.count)")
-                    .font(.subheadline.weight(.semibold).monospacedDigit())
-                    .foregroundStyle(.secondary)
+                    .font(.subheadline.weight(.bold).monospacedDigit())
+                    .foregroundStyle(stage.tint)
+                    .padding(.horizontal, 8)
+                    .frame(minWidth: 26, minHeight: 22)
+                    .background(Capsule().fill(stage.tint.opacity(0.15)))
+                    .contentTransition(.numericText(value: Double(drinks.count)))
             }
             .padding(.horizontal, 4)
 
@@ -95,8 +121,13 @@ struct BuildBoardView: View {
                         } label: {
                             BoardCard(drink: drink)
                         }
-                        .buttonStyle(.plain)
-                        .draggable(drink.id)
+                        .buttonStyle(.pressable(scale: 0.97))
+                        .draggable(drink.id) {
+                            BoardCard(drink: drink)
+                                .frame(width: 240)
+                                .rotationEffect(.degrees(-3))
+                        }
+                        .transition(.scale(scale: 0.9).combined(with: .opacity))
                         .contextMenu { cardMenu(drink) }
                     }
                     if drinks.isEmpty {
@@ -114,8 +145,14 @@ struct BuildBoardView: View {
         .frame(maxHeight: .infinity, alignment: .top)
         .background(
             RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(targetedStage == stage ? Color.accentColor.opacity(0.15) : Color(.secondarySystemBackground))
+                .fill(targetedStage == stage ? stage.tint.opacity(0.16) : Color(.secondarySystemBackground))
         )
+        .overlay(
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .strokeBorder(stage.tint.opacity(targetedStage == stage ? 0.8 : 0), lineWidth: 2)
+        )
+        .scaleEffect(targetedStage == stage ? 1.01 : 1)
+        .animation(Theme.snap, value: targetedStage)
         .dropDestination(for: String.self) { ids, _ in
             for id in ids { attemptMove(id: id, to: stage) }
             return true
@@ -160,9 +197,12 @@ struct BuildBoardView: View {
                 return
             }
         }
-        withAnimation(.snappy) {
+        guard drink.stage != stage else { return }
+        withAnimation(Theme.spring) {
             customDrinks.move(id: id, to: stage)
         }
+        moves += 1
+        if stage == .onMenu { celebrations += 1 }
     }
 }
 
@@ -214,6 +254,13 @@ private struct BoardCard: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
         .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(Color(.systemBackground)))
+        .overlay(alignment: .leading) {
+            // A stage-colored edge, so a card's column reads at a glance even mid-drag.
+            UnevenRoundedRectangle(topLeadingRadius: 14, bottomLeadingRadius: 14)
+                .fill(drink.stage.tint)
+                .frame(width: 4)
+        }
+        .shadow(color: .black.opacity(0.06), radius: 6, y: 2)
         .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .accessibilityElement(children: .combine)
         .accessibilityHint("Long-press to move to another stage")
