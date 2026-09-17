@@ -13,11 +13,13 @@ struct SettingsView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var reviewStore: ReviewStore
     @EnvironmentObject private var shiftLog: ShiftLogStore
+    @EnvironmentObject private var customDrinks: CustomDrinkStore
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.speedDrillSeconds) private var speedDrillSeconds = 5
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
     @State private var showResetConfirm = false
     @State private var showClearLogConfirm = false
+    @State private var showDeleteHouseConfirm = false
 
     private let timerOptions = [3, 5, 8]
 
@@ -68,9 +70,19 @@ struct SettingsView: View {
                 Text("Deletes every drink logged with Made it, across all nights.")
             }
 
+            Section {
+                Button("Delete all house drinks", role: .destructive) {
+                    showDeleteHouseConfirm = true
+                }
+                .disabled(customDrinks.drinks.isEmpty)
+            } footer: {
+                Text("Deletes every drink made in Build, with its tasting log. Drinks already in the shift log stay there.")
+            }
+
             Section("About") {
                 LabeledContent("Deck version", value: "1.0")
                 LabeledContent("Drinks in the deck", value: "\(library.drinks.count)")
+                LabeledContent("House drinks", value: "\(customDrinks.drinks.count)")
                 LabeledContent("Cards started", value: "\(reviewStore.states.count)")
             }
         }
@@ -82,6 +94,18 @@ struct SettingsView: View {
         ) {
             Button("Reset Progress", role: .destructive) {
                 reviewStore.resetProgress()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone.")
+        }
+        .confirmationDialog(
+            "Delete all house drinks?",
+            isPresented: $showDeleteHouseConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete \(customDrinks.drinks.count) House Drinks", role: .destructive) {
+                customDrinks.deleteAll()
             }
             Button("Cancel", role: .cancel) {}
         } message: {

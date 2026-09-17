@@ -14,20 +14,39 @@ import UIKit
 struct DrinkDetailView: View {
     let drink: Drink
     @EnvironmentObject private var shiftLog: ShiftLogStore
+    @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
     @State private var servings: Double = 1
     @State private var batchMode = false
     @State private var showFlashcard = false
+    /// The spec open in the builder — a riff on this drink, or this house
+    /// drink (or a copy of it) being edited.
+    @State private var builderDrink: BuilderTarget?
+    @State private var showDeleteConfirm = false
     /// The entry just logged, while Undo is still offered.
     @State private var lastLogged: MadeDrink?
     @State private var undoTimeout: Task<Void, Never>?
+
+    private struct BuilderTarget: Identifiable {
+        let drink: CustomDrink
+        let isNew: Bool
+        var id: String { drink.id }
+    }
+
+    /// The house drink behind this page, if it is one. Read live from the
+    /// store so edits and stage moves show up without leaving the page.
+    private var house: CustomDrink? { customDrinks.drink(id: drink.id) }
+
+    /// What the page renders: the latest house spec, or the deck drink.
+    private var spec: Drink { house?.asDrink() ?? drink }
 
     private var unit: MeasurementUnit { MeasurementUnit(rawValue: unitRaw) ?? .oz }
     private var metrics: BarMetrics { BarMetrics(isOn: barMode) }
 
     private var staged: [(stage: PourStage, ingredient: RecipeScaler.ScaledIngredient)] {
-        PourOrder.ordered(RecipeScaler.scaledIngredients(for: drink, servings: servings), method: drink.method)
+        PourOrder.ordered(RecipeScaler.scaledIngredients(for: spec, servings: servings), method: spec.method)
     }
 
     private var rinses: [RecipeScaler.ScaledIngredient] { staged.filter { $0.stage == .glass }.map(\.ingredient) }
@@ -35,11 +54,11 @@ struct DrinkDetailView: View {
     private var finishes: [RecipeScaler.ScaledIngredient] { staged.filter { $0.stage == .finish }.map(\.ingredient) }
 
     private var batchWaterOz: Double {
-        Dilution.batchWaterOz(scaledIngredients: staged.map(\.ingredient), method: drink.method)
+        Dilution.batchWaterOz(scaledIngredients: staged.map(\.ingredient), method: spec.method)
     }
 
     private var hasGarnish: Bool {
-        let garnish = drink.garnish.trimmingCharacters(in: .whitespaces).lowercased()
+        let garnish = spec.garnish.trimmingCharacters(in: .whitespaces).lowercased()
         return !garnish.isEmpty && garnish != "none"
     }
 
@@ -47,6 +66,9 @@ struct DrinkDetailView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: barMode ? 28 : 20) {
                 header
+                if let house {
+                    HouseDrinkPanel(drink: house, metrics: metrics)
+                }
                 glassAndIce
 
                 section("Pour") {
@@ -60,7 +82,7 @@ struct DrinkDetailView: View {
 
                 section("Method") {
                     VStack(alignment: .leading, spacing: 10) {
-                        ForEach(BuildSteps.methodLines(for: drink), id: \.self) { line in
+                        ForEach(BuildSteps.methodLines(for: spec), id: \.self) { line in
                             StepLine(text: line, systemImage: "arrow.right", metrics: metrics)
                         }
                         if batchMode && batchWaterOz > 0 {
@@ -85,13 +107,13 @@ struct DrinkDetailView: View {
 
                 if hasGarnish {
                     section("Garnish") {
-                        StepLine(text: drink.garnish, systemImage: "leaf.fill", metrics: metrics)
+                        StepLine(text: spec.garnish, systemImage: "leaf.fill", metrics: metrics)
                     }
                 }
 
-                if !drink.notes.isEmpty {
+                if !spec.notes.isEmpty {
                     section("Notes") {
-                        Text(drink.notes)
+                        Text(spec.notes)
                             .font(barMode ? .title3 : .body)
                             .foregroundStyle(.secondary)
                     }
@@ -104,7 +126,7 @@ struct DrinkDetailView: View {
                 servings: $servings,
                 batchMode: $batchMode,
                 unitRaw: $unitRaw,
-                batchEligible: Dilution.percent(for: drink.method) > 0,
+                batchEligible: Dilution.percent(for: spec.method) > 0,
                 metrics: metrics,
                 madeTonight: madeTonight,
                 justLogged: lastLogged != nil,
@@ -113,7 +135,7 @@ struct DrinkDetailView: View {
             )
             .sensoryFeedback(.success, trigger: shiftLog.entries.count) { old, new in new > old }
         }
-        .navigationTitle(drink.name)
+        .navigationTitle(spec.name)
         .navigationBarTitleDisplayMode(.inline)
         // The bottom bar needs the room; Back returns to the tabs.
         .toolbar(.hidden, for: .tabBar)
@@ -125,9 +147,54 @@ struct DrinkDetailView: View {
                     Label("Flashcard", systemImage: "rectangle.on.rectangle.angled")
                 }
             }
+            ToolbarItem(placement: .topBarTrailing) {
+                if let house {
+                    Menu {
+                        Button {
+                            builderDrink = BuilderTarget(drink: house, isNew: false)
+                        } label: {
+                            Label("Edit", systemImage: "pencil")
+                        }
+                        Button {
+                            if let copy = customDrinks.duplicate(id: house.id) {
+                                builderDrink = BuilderTarget(drink: copy, isNew: false)
+                            }
+                        } label: {
+                            Label("Duplicate as New Version", systemImage: "plus.square.on.square")
+                        }
+                        Button(role: .destructive) {
+                            showDeleteConfirm = true
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                    } label: {
+                        Label("House drink", systemImage: "ellipsis.circle")
+                    }
+                } else {
+                    Button {
+                        builderDrink = BuilderTarget(drink: DrinkTemplates.riff(on: drink), isNew: true)
+                    } label: {
+                        Label("Riff on This", systemImage: "arrow.triangle.branch")
+                    }
+                }
+            }
+        }
+        .sheet(item: $builderDrink) { target in
+            NavigationStack {
+                DrinkBuilderView(drink: target.drink, isNew: target.isNew) {}
+            }
+        }
+        .confirmationDialog("Delete \(spec.name)?", isPresented: $showDeleteConfirm, titleVisibility: .visible) {
+            Button("Delete House Drink", role: .destructive) {
+                customDrinks.delete(id: drink.id)
+                dismiss()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Its tasting log goes with it. Drinks already in the shift log stay there.")
         }
         .navigationDestination(isPresented: $showFlashcard) {
-            FlashcardView(drink: drink)
+            FlashcardView(drink: spec)
         }
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear {
@@ -137,11 +204,11 @@ struct DrinkDetailView: View {
     }
 
     private var madeTonight: Int {
-        shiftLog.tonight()?.entries.filter { $0.drinkID == drink.id }.count ?? 0
+        shiftLog.tonight()?.entries.filter { $0.drinkID == spec.id }.count ?? 0
     }
 
     private func logMadeDrink() {
-        lastLogged = shiftLog.record(drink: drink, servings: servings, batchMode: batchMode, unit: unit)
+        lastLogged = shiftLog.record(drink: spec, servings: servings, batchMode: batchMode, unit: unit)
         undoTimeout?.cancel()
         undoTimeout = Task {
             try? await Task.sleep(for: .seconds(5))
@@ -159,9 +226,9 @@ struct DrinkDetailView: View {
 
     private var header: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(drink.name)
+            Text(spec.name)
                 .font(.system(size: barMode ? 40 : 30, weight: .bold, design: .serif))
-            Text("\(drink.family.displayName) · \(drink.method.displayName)")
+            Text("\(spec.family.displayName) · \(spec.method.displayName)")
                 .font(barMode ? .title3 : .subheadline)
                 .foregroundStyle(.secondary)
         }
@@ -170,8 +237,8 @@ struct DrinkDetailView: View {
     private var glassAndIce: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 12) {
-                SpecTile(label: "Glass", value: drink.glass.displayName, systemImage: "wineglass", metrics: metrics)
-                SpecTile(label: "Ice", value: drink.ice.displayName, systemImage: iceSymbol, metrics: metrics)
+                SpecTile(label: "Glass", value: spec.glass.displayName, systemImage: "wineglass", metrics: metrics)
+                SpecTile(label: "Ice", value: spec.ice.displayName, systemImage: iceSymbol, metrics: metrics)
             }
             ForEach(rinses) { rinse in
                 StepLine(text: "Rinse the glass with \(rinse.name.lowercased()), discard", systemImage: "drop", metrics: metrics)
@@ -180,7 +247,7 @@ struct DrinkDetailView: View {
     }
 
     private var iceSymbol: String {
-        switch drink.ice {
+        switch spec.ice {
         case .cubed, .largeCube: return "cube.fill"
         case .crushed: return "snowflake"
         case .none: return "xmark.circle"

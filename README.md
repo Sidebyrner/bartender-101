@@ -2,7 +2,8 @@
 
 A native iOS app for both halves of learning to bartend: looking a recipe up
 fast mid-shift — scaled to whatever size it needs to be — and memorizing
-recipes before one. One app, one ~180-drink deck, four tabs:
+recipes before one — plus a place to invent your own. One app, one ~180-drink
+deck, five tabs:
 
 - **Search** — the full deck, searchable by name or ingredient and filterable
   by tag and family. Tapping a drink opens its recipe page, built around
@@ -12,9 +13,12 @@ recipes before one. One app, one ~180-drink deck, four tabs:
   button flips the same drink into a study card.
 - **Study** — three drills (Spaced Review, Speed Drill, Name That Drink) for
   drilling recipes into muscle memory.
+- **Build** — invent house drinks: start from a family's classic ratio or riff
+  on any drink, watch a live balance meter, and move each idea across a
+  testing board (Idea → Testing → Dialed In → On the Menu) with a tasting log.
 - **Stats** — tonight's shift and past nights (drinks logged with **Made it**),
   plus study accuracy, weak drinks, per-family coverage.
-- **Settings** — oz/ml, speed-drill timer, reset progress.
+- **Settings** — oz/ml, speed-drill timer, reset progress, delete house drinks.
 
 Everything reads [`Shared/Resources/drinks.json`](Shared/Resources/drinks.json)
 and the pure model/data layer in [`Shared/`](Shared), so a future web build
@@ -95,7 +99,7 @@ Valid values for each enum field:
 | `glass` | `highball`, `collins`, `copperMug`, `rocks`, `coupe`, `martini`, `wine`, `flute`, `hurricane`, `julepCup`, `shot`, `irishCoffeeMug`, `tikiMug`, `punchBowl` |
 | `ice` | `cubed`, `largeCube`, `crushed`, `none` |
 | `method` | `build`, `shake`, `stir`, `muddle`, `blend`, `layer` |
-| `tags` | `well`, `classic`, `shot`, `tiki`, `modern` |
+| `tags` | `well`, `classic`, `shot`, `tiki`, `modern` (`house` is reserved for drinks made in Build) |
 | ingredient `unit` | `oz`, `topWith`, `dash`, `barspoon`, `rinse`, `splash`, `muddled`, `pinch`, `optional` |
 
 An ingredient with a non-`oz` unit can optionally carry `dashCount`,
@@ -125,14 +129,16 @@ scripts/validate-drinks.js
 
 Shared/                   Content and pure logic, no SwiftUI views
   Resources/drinks.json   The full deck
-  Models/                 Drink, Ingredient, Measure (oz/ml), ReviewState, MadeDrink
+  Models/                 Drink, Ingredient, Measure (oz/ml), ReviewState, MadeDrink,
+                           CustomDrink (house drinks + TestStage, TastingNote)
   Data/                   DrinkLibrary (load/search), ReviewStore (persistence),
                            Scheduler (spaced-repetition math), FuzzyMatch,
                            RecipeScaler (servings math), Dilution (batch water),
-                           PourOrder, BuildSteps, ShiftLog + ShiftLogStore
+                           PourOrder, BuildSteps, ShiftLog + ShiftLogStore,
+                           CustomDrinkStore, DrinkTemplates, DrinkBalance
 
 Bartender101/              The app
-  Bartender101App.swift    App entry point, tab layout (Search · Study · Stats · Settings)
+  Bartender101App.swift    App entry point, tab layout (Search · Study · Build · Stats · Settings)
   Components/              DrinkCardView (the flip card), GradeButtons
   Features/
     Search/                Searchable/filterable deck
@@ -142,13 +148,16 @@ Bartender101/              The app
       Review/              Spaced-repetition session
       SpeedDrill/          Timed multiple-choice drill
       Reverse/             Spec-to-name quiz
+    Build/                 Testing board, drink builder, balance meter,
+                            house-drink panel (stage + tasting log)
     Stats/                 Shift log (tonight, history, per-night detail),
                             accuracy, weak drinks, per-family coverage
     Settings/              oz/ml toggle, drill timer, reset progress
 
 Bartender101Tests/         DrinkLibraryTests, SchedulerTests, MeasureTests,
                            RecipeScalerTests, DilutionTests, PourOrderTests,
-                           BuildStepsTests, ShiftLogTests
+                           BuildStepsTests, ShiftLogTests, CustomDrinkStoreTests,
+                           DrinkBalanceTests
 ```
 
 `Scheduler.swift`, `FuzzyMatch.swift`, `RecipeScaler.swift`, and
@@ -194,6 +203,35 @@ every drink with its time and scale. A night runs until 4 AM, so a 1:30 AM
 drink counts toward the evening shift. The log is a JSON file in Application
 Support (`ShiftLogStore`); clear it from Settings.
 
+## Building house drinks
+
+The **Build** tab gets an idea out of your head and into the glass.
+
+- **Start somewhere** — tap **+** and pick a family's classic ratio (a sour
+  starts at 2 : ¾ : ¾, a Manhattan at 2 : 1 + bitters), riff on any drink in
+  the deck, or start blank. Any recipe page also has **Riff on this** in its
+  toolbar.
+- **Balance meter** — pinned above the editor, it splits the pour into
+  spirit, liqueur, sour, sweet, and long, shows the total, and flags rules of
+  thumb: a pour too big or small for its family, citrus or cream that's
+  stirred, a sour with no citrus, citrus with nothing sweet. Roles come from
+  the same word lists as `PourOrder`; the heuristics live in `DrinkBalance`
+  and are tested to stay quiet on the classics in the deck.
+- **Testing board** — one column per stage: Idea, Testing, Dialed In, On the
+  Menu, Shelved. Drag a card between columns, or long-press it for **Move
+  To**, **Duplicate as New Version**, and **Delete**. Cards show labels
+  ("summer menu"), tasting count, and average rating.
+- **Recipe page** — a house drink opens the normal recipe page (scaling,
+  batch water, pour order, **Made it**) with its stage, labels, and a
+  **tasting log** of dated notes with 1–5 star ratings on top. Edit it from
+  the toolbar menu.
+- **On the Menu** — only drinks at this stage join the deck: Search (under
+  the **House** filter), Study drills, and Stats. Moving a drink there needs a
+  unique name and complete amounts, the same basics the deck validator checks.
+
+House drinks are a JSON file in Application Support (`CustomDrinkStore`);
+clear them from Settings.
+
 ## Studying
 
 - **Spaced Review** — cards you miss come back sooner, cards you nail come
@@ -213,8 +251,6 @@ them:
 - **Ticket Rush** — a game mode where orders arrive on a timer and you build
   drinks against the clock. The natural next step toward a web game;
   `Scheduler` and the deck already support it.
-- **Custom cards** — an in-app editor for house specials, rather than
-  hand-editing `drinks.json`.
 - **Photos per drink** — a content/asset task orthogonal to the recipe
   scaler.
 - **The web build itself** — `Shared/Resources/drinks.json` and the
