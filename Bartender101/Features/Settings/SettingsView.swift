@@ -7,6 +7,8 @@ enum SettingsKeys {
     static let measurementUnit = "settings.measurementUnit"
     static let speedDrillSeconds = "settings.speedDrillSeconds"
     static let bartendingMode = "settings.bartendingMode"
+    static let buildLayout = "settings.buildLayout"
+    static let hasSeenIntro = "settings.hasSeenIntro"
 }
 
 struct SettingsView: View {
@@ -18,6 +20,7 @@ struct SettingsView: View {
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.speedDrillSeconds) private var speedDrillSeconds = 5
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
+    @AppStorage(SettingsKeys.hasSeenIntro) private var hasSeenIntro = false
     @State private var showResetConfirm = false
     @State private var showClearLogConfirm = false
     @State private var showDeleteHouseConfirm = false
@@ -88,6 +91,14 @@ struct SettingsView: View {
                 .disabled(photoStore.photos.isEmpty)
             } footer: {
                 Text("Deletes every drink photo saved in the app. Photos you shared or saved elsewhere aren't affected.")
+            }
+
+            Section {
+                Button {
+                    hasSeenIntro = false
+                } label: {
+                    Label("Show intro again", systemImage: "sparkles")
+                }
             }
 
             Section("About") {

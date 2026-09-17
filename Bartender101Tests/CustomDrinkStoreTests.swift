@@ -104,6 +104,24 @@ final class CustomDrinkStoreTests: XCTestCase {
         XCTAssertEqual(drink.menuProblems(nameTaken: false), [])
     }
 
+    func testStageProgression() {
+        XCTAssertEqual(TestStage.idea.next, .testing)
+        XCTAssertEqual(TestStage.testing.next, .dialedIn)
+        XCTAssertEqual(TestStage.dialedIn.next, .onMenu)
+        XCTAssertNil(TestStage.onMenu.next)
+        XCTAssertEqual(TestStage.shelved.next, .testing)
+        XCTAssertEqual(TestStage.allCases.filter(\.isInTheWorks), [.idea, .testing, .dialedIn])
+    }
+
+    func testMatchesQuery() {
+        let drink = CustomDrink(name: "Garden Sour", ingredients: [Ingredient("Crème de cassis", oz: 0.5)], labels: ["Summer Menu"])
+        XCTAssertTrue(drink.matches(query: ""))
+        XCTAssertTrue(drink.matches(query: "garden"))
+        XCTAssertTrue(drink.matches(query: "summer"))
+        XCTAssertTrue(drink.matches(query: "creme de"))
+        XCTAssertFalse(drink.matches(query: "negroni"))
+    }
+
     func testAsDrinkIsHouseTagged() {
         let drink = CustomDrink(name: "  ", family: .tiki).asDrink()
         XCTAssertEqual(drink.tags, [.house])

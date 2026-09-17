@@ -39,6 +39,8 @@ struct Bartender101App: App {
 /// points from Study — so the tab bar stays to the places you'd return to
 /// repeatedly: search, study, building house drinks, your stats, and settings.
 struct RootTabView: View {
+    @AppStorage(SettingsKeys.hasSeenIntro) private var hasSeenIntro = false
+
     var body: some View {
         TabView {
             NavigationStack { SearchView() }
@@ -47,7 +49,7 @@ struct RootTabView: View {
             NavigationStack { StudyHomeView() }
                 .tabItem { Label("Study", systemImage: "rectangle.stack.fill") }
 
-            NavigationStack { BuildBoardView() }
+            NavigationStack { BuildView() }
                 .tabItem { Label("Build", systemImage: "flask.fill") }
 
             NavigationStack { StatsView() }
@@ -55,6 +57,10 @@ struct RootTabView: View {
 
             NavigationStack { SettingsView() }
                 .tabItem { Label("Settings", systemImage: "gearshape.fill") }
+        }
+        // First launch (or "Show intro again" in Settings).
+        .fullScreenCover(isPresented: Binding(get: { !hasSeenIntro }, set: { if !$0 { hasSeenIntro = true } })) {
+            IntroView { hasSeenIntro = true }
         }
     }
 }

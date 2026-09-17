@@ -158,7 +158,9 @@ Bartender101/              The app
       Review/              Spaced-repetition session
       SpeedDrill/          Timed multiple-choice drill
       Reverse/             Spec-to-name quiz
-    Build/                 Testing board, drink builder, ingredient picker, balance meter,
+    Intro/                 First-launch intro
+    Build/                 Board + list layouts, New Drink button and sheet,
+                            drink builder, ingredient picker, balance meter,
                             house-drink panel (stage + tasting log)
     Photos/                Camera/library button, photo strip, full-screen viewer
     Stats/                 Shift log (tonight, history, per-night detail),
@@ -182,6 +184,13 @@ Study progress is persisted as a single JSON file in Application Support
 stays something you can inspect and reason about directly, and so the same
 `[String: ReviewState]` shape maps cleanly onto `localStorage` for a web
 build later. Preferences (unit, drill timer) live in `UserDefaults`.
+
+## First launch
+
+A short intro walks through the three things the app does — look it up,
+learn it, invent your own — each with a small live illustration, then sets
+units and Bartending Mode. Skip any time; bring it back from Settings →
+Show intro again.
 
 ## Looking a drink up
 
@@ -248,6 +257,14 @@ The **Build** tab gets an idea out of your head and into the glass.
   stirred, a sour with no citrus, citrus with nothing sweet. Roles come from
   the same word lists as `PourOrder`; the heuristics live in `DrinkBalance`
   and are tested to stay quiet on the classics in the deck.
+- **Board or list** — switch layouts from the Build toolbar (remembered).
+  The list shows everything **In the Works** by default (or On the Menu,
+  Shelved, All), grouped by stage with photo thumbnails, searchable by name,
+  label, or ingredient. Swipe right to advance a drink to its next stage,
+  left to delete.
+- **New Drink** — the glowing button floating over both layouts opens
+  "What are you making?": a classic ratio (grid of every family), a riff on
+  any drink, or a blank canvas.
 - **Testing board** — one column per stage: Idea, Testing, Dialed In, On the
   Menu, Shelved. Drag a card between columns, or long-press it for **Move
   To**, **Duplicate as New Version**, and **Delete**. Cards show labels

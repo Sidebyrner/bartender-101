@@ -31,6 +31,26 @@ enum TestStage: String, Codable, CaseIterable, Identifiable {
         case .shelved: return "archivebox"
         }
     }
+
+    /// Still being worked on — not yet on the menu, not set aside.
+    var isInTheWorks: Bool {
+        switch self {
+        case .idea, .testing, .dialedIn: return true
+        case .onMenu, .shelved: return false
+        }
+    }
+
+    /// The stage a drink usually moves to next, for one-swipe advancing.
+    /// A shelved drink comes back into testing; a drink on the menu is done.
+    var next: TestStage? {
+        switch self {
+        case .idea: return .testing
+        case .testing: return .dialedIn
+        case .dialedIn: return .onMenu
+        case .onMenu: return nil
+        case .shelved: return .testing
+        }
+    }
 }
 
 /// One tasting of a house drink in progress, e.g. "v2: dropped lime to ½,
@@ -111,6 +131,17 @@ struct CustomDrink: Codable, Identifiable, Hashable {
         self.basedOnDrinkID = basedOnDrinkID
         self.createdAt = createdAt
         self.updatedAt = updatedAt ?? createdAt
+    }
+
+    /// Whether `query` appears in the name, a label, or an ingredient,
+    /// ignoring case and accents. An empty query matches everything.
+    func matches(query: String) -> Bool {
+        let q = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !q.isEmpty else { return true }
+        let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
+        return displayName.range(of: q, options: options) != nil
+            || labels.contains { $0.range(of: q, options: options) != nil }
+            || ingredients.contains { $0.name.range(of: q, options: options) != nil }
     }
 
     /// The name shown on the board and recipe page, even before one is typed.

@@ -230,3 +230,40 @@ extension TestStage {
         }
     }
 }
+
+extension DrinkFamily {
+    /// An SF Symbol for each family, for tiles and pickers.
+    var systemImage: String {
+        switch self {
+        case .highball: return "takeoutbag.and.cup.and.straw"
+        case .mule: return "mug"
+        case .sour: return "circle.lefthalf.filled"
+        case .oldFashioned: return "cube"
+        case .martini: return "wineglass"
+        case .manhattan: return "moon.stars"
+        case .spritz: return "bubbles.and.sparkles"
+        case .tiki: return "sun.max"
+        case .muddled: return "leaf"
+        case .cream: return "birthday.cake"
+        case .shot: return "bolt"
+        case .misc: return "sparkles"
+        }
+    }
+
+    var tint: Color {
+        switch self {
+        case .highball: return .teal
+        case .mule: return .brown
+        case .sour: return .yellow
+        case .oldFashioned: return .orange
+        case .martini: return .indigo
+        case .manhattan: return .red
+        case .spritz: return .pink
+        case .tiki: return .green
+        case .muddled: return .mint
+        case .cream: return .purple
+        case .shot: return .blue
+        case .misc: return .gray
+        }
+    }
+}

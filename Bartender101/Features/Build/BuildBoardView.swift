@@ -1,79 +1,18 @@
 import SwiftUI
 import UIKit
 
-/// The Build tab: every house drink on a board with one column per testing
-/// stage. Drag a card to another column, or long-press it for Move To (more
-/// reliable one-handed behind the bar). Tapping a card opens its recipe
-/// page, where it can be made, logged, tasted, and edited. The + button
-/// starts a new drink from a family template, a riff on a deck drink, or
-/// nothing.
+/// The board layout of the Build tab: one column per testing stage. Drag a
+/// card to another column, or long-press it for Move To (more reliable
+/// one-handed behind the bar). Tapping a card opens its recipe page.
 struct BuildBoardView: View {
-    @EnvironmentObject private var library: DrinkLibrary
+    let actions: BuildActions
+
     @EnvironmentObject private var customDrinks: CustomDrinkStore
     @EnvironmentObject private var photoStore: PhotoStore
-    @State private var showNewDrink = false
-    @State private var blockedMove: BlockedMove?
     @State private var targetedStage: TestStage?
-    @State private var celebrations = 0
-    @State private var moves = 0
-
-    private struct BlockedMove: Identifiable {
-        let id = UUID()
-        let name: String
-        let problems: [String]
-    }
 
     var body: some View {
-        Group {
-            if customDrinks.drinks.isEmpty {
-                ContentUnavailableView {
-                    Label("No house drinks yet", systemImage: "flask")
-                        .symbolEffect(.pulse, options: .repeating.speed(0.4))
-                } description: {
-                    Text("Start from a classic ratio or riff on a drink you know, then test it until it's ready for the menu.")
-                } actions: {
-                    Button {
-                        showNewDrink = true
-                    } label: {
-                        Label("New Drink", systemImage: "plus")
-                            .font(.headline)
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 22)
-                            .frame(minHeight: 48)
-                            .background(Theme.accentGradient(), in: Capsule())
-                    }
-                    .buttonStyle(.pressable)
-                }
-            } else {
-                board
-            }
-        }
-        .overlay { ConfettiBurst(trigger: celebrations) }
-        .sensoryFeedback(.success, trigger: celebrations)
-        .sensoryFeedback(.impact(weight: .medium), trigger: moves)
-        .navigationTitle("Build")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    showNewDrink = true
-                } label: {
-                    Label("New Drink", systemImage: "plus.circle.fill")
-                        .font(.title2)
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(Color.accentColor)
-                }
-            }
-        }
-        .sheet(isPresented: $showNewDrink) {
-            NewDrinkSheet()
-        }
-        .alert(item: $blockedMove) { blocked in
-            Alert(
-                title: Text("\(blocked.name) isn't ready for the menu"),
-                message: Text(blocked.problems.joined(separator: "\n")),
-                dismissButton: .default(Text("OK"))
-            )
-        }
+        board
     }
 
     private var board: some View {
@@ -130,7 +69,7 @@ struct BuildBoardView: View {
                                 .rotationEffect(.degrees(-3))
                         }
                         .transition(.scale(scale: 0.9).combined(with: .opacity))
-                        .contextMenu { cardMenu(drink) }
+                        .contextMenu { DrinkCardMenu(drink: drink, actions: actions) }
                     }
                     if drinks.isEmpty {
                         Text("Drop a drink here")
@@ -139,7 +78,8 @@ struct BuildBoardView: View {
                             .frame(maxWidth: .infinity, minHeight: 120)
                     }
                 }
-                .padding(.bottom, 20)
+                // Room to scroll the last card clear of the New Drink button.
+                .padding(.bottom, 90)
             }
             .scrollIndicators(.hidden)
         }
@@ -156,7 +96,7 @@ struct BuildBoardView: View {
         .scaleEffect(targetedStage == stage ? 1.01 : 1)
         .animation(Theme.snap, value: targetedStage)
         .dropDestination(for: String.self) { ids, _ in
-            for id in ids { attemptMove(id: id, to: stage) }
+            for id in ids { actions.move(id, stage) }
             return true
         } isTargeted: { isTargeted in
             if isTargeted {
@@ -172,45 +112,6 @@ struct BuildBoardView: View {
         photoStore.photos(for: drink.id).first.map(photoStore.thumbnailURL(for:))
     }
 
-    @ViewBuilder
-    private func cardMenu(_ drink: CustomDrink) -> some View {
-        Menu("Move To") {
-            ForEach(TestStage.allCases.filter { $0 != drink.stage }) { stage in
-                Button {
-                    attemptMove(id: drink.id, to: stage)
-                } label: {
-                    Label(stage.displayName, systemImage: stage.systemImage)
-                }
-            }
-        }
-        Button {
-            customDrinks.duplicate(id: drink.id)
-        } label: {
-            Label("Duplicate as New Version", systemImage: "plus.square.on.square")
-        }
-        Button(role: .destructive) {
-            customDrinks.delete(id: drink.id)
-        } label: {
-            Label("Delete", systemImage: "trash")
-        }
-    }
-
-    private func attemptMove(id: String, to stage: TestStage) {
-        guard let drink = customDrinks.drink(id: id) else { return }
-        if stage == .onMenu {
-            let problems = library.menuProblems(for: drink)
-            guard problems.isEmpty else {
-                blockedMove = BlockedMove(name: drink.displayName, problems: problems)
-                return
-            }
-        }
-        guard drink.stage != stage else { return }
-        withAnimation(Theme.spring) {
-            customDrinks.move(id: id, to: stage)
-        }
-        moves += 1
-        if stage == .onMenu { celebrations += 1 }
-    }
 }
 
 private struct BoardCard: View {
@@ -294,81 +195,5 @@ private struct BoardCard: View {
             let loaded = await Task.detached(priority: .utility) { UIImage(contentsOfFile: coverURL.path) }.value
             withAnimation(.easeOut(duration: 0.2)) { cover = loaded }
         }
-    }
-}
-
-/// Where a new drink starts: a family's classic ratio, a copy of any drink in
-/// the deck, or an empty spec. Each path ends in `DrinkBuilderView`, and
-/// saving or cancelling there closes the whole sheet.
-struct NewDrinkSheet: View {
-    @Environment(\.dismiss) private var dismiss
-
-    var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    ForEach(DrinkFamily.allCases) { family in
-                        NavigationLink {
-                            DrinkBuilderView(drink: DrinkTemplates.template(for: family), isNew: true) { dismiss() }
-                        } label: {
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(family.displayName)
-                                Text(DrinkTemplates.template(for: family).asDrink().ingredientSummary)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                                    .lineLimit(1)
-                            }
-                        }
-                    }
-                } header: {
-                    Text("Start from a classic ratio")
-                }
-
-                Section {
-                    NavigationLink {
-                        RiffPickerView { dismiss() }
-                    } label: {
-                        Label("Riff on a drink", systemImage: "arrow.triangle.branch")
-                    }
-                    NavigationLink {
-                        DrinkBuilderView(drink: DrinkTemplates.blank(), isNew: true) { dismiss() }
-                    } label: {
-                        Label("Blank", systemImage: "square.dashed")
-                    }
-                }
-            }
-            .navigationTitle("New Drink")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
-                }
-            }
-        }
-    }
-}
-
-private struct RiffPickerView: View {
-    @EnvironmentObject private var library: DrinkLibrary
-    let onFinish: () -> Void
-    @State private var query = ""
-
-    var body: some View {
-        List(library.search(query).sorted { $0.name < $1.name }) { drink in
-            NavigationLink {
-                DrinkBuilderView(drink: DrinkTemplates.riff(on: drink), isNew: true, onFinish: onFinish)
-            } label: {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(drink.name)
-                    Text(drink.ingredientSummary)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(1)
-                }
-            }
-        }
-        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Drink or ingredient")
-        .navigationTitle("Riff on…")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
