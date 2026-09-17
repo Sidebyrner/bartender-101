@@ -1,4 +1,7 @@
-# Bartender 101
+# House Pour
+
+*Bartender's Book* — the app was called Bartender 101 during development; the
+Xcode project, target, and Swift types keep that internal name.
 
 A native iOS app for both halves of learning to bartend: looking a recipe up
 fast mid-shift — scaled to whatever size it needs to be — and memorizing
@@ -27,7 +30,7 @@ has one file and one set of pure functions to port.
 Built as plain SwiftUI, iOS 17+, zero third-party dependencies.
 
 > Drinks Codex used to be a separate app target in this repo. It was merged
-> into Bartender 101 so there's one app to open instead of two.
+> into this app so there's one app to open instead of two.
 
 ## Getting started
 
@@ -49,9 +52,9 @@ No signing setup, no Swift Package dependencies to resolve.
    **Signing & Capabilities** → choose your Apple ID under **Team**. A free
    Apple ID works; no paid developer account needed to run your own app on
    your own device.
-3. Change **Bundle Identifier** to something unique to you, e.g.
-   `com.yourname.Bartender101` — the default (`com.bartender101.Bartender101`)
-   will collide if anyone else has built this.
+3. The bundle identifier is `com.connorbyrne.housepour` (set in
+   `project.yml`). To build under your own team, change it and
+   `DEVELOPMENT_TEAM` there, then run `xcodegen generate`.
 4. Press **⌘R**. The first time, your iPhone will ask you to trust the
    developer certificate: **Settings → General → VPN & Device Management**.
 

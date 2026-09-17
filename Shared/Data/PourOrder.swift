@@ -112,7 +112,7 @@ enum PourOrder {
         "liqueur", "schnapps", "vermouth", "amaro", "aperol", "campari", "cointreau",
         "triple sec", "curaçao", "crème de", "chartreuse", "bénédictine", "drambuie",
         "frangelico", "galliano", "midori", "sambuca", "jägermeister", "amaretto",
-        "st-germain", "lillet", "sherry", "pimm's", "heering", "irish cream",
+        "st-germain", "lillet", "sherry", "pimm's", "heering", "irish cream", "cynar",
     ]
 
     /// Matched as whole words, so "gin" doesn't match "ginger".

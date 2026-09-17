@@ -125,7 +125,7 @@ struct BuildView: View {
                 Image(systemName: "flask.fill")
                     .font(.system(size: 62))
                     .foregroundStyle(Theme.accentGradient())
-                    .symbolEffect(.bounce, options: .repeating.speed(0.25))
+                    .modifier(RepeatingBounce())
             }
             VStack(spacing: 8) {
                 Text("Your drinks start here")
@@ -184,6 +184,18 @@ struct DrinkCardMenu: View {
             actions.requestDelete(drink)
         } label: {
             Label("Delete", systemImage: "trash")
+        }
+    }
+}
+
+/// A slow, repeating bounce. Repeating bounce needs iOS 18; iOS 17 gets a
+/// gentle pulse instead.
+private struct RepeatingBounce: ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 18.0, *) {
+            content.symbolEffect(.bounce, options: .repeating.speed(0.25))
+        } else {
+            content.symbolEffect(.pulse, options: .repeating.speed(0.5))
         }
     }
 }

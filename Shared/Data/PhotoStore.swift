@@ -13,8 +13,8 @@ final class PhotoStore: ObservableObject {
     /// Newest first.
     @Published private(set) var photos: [DrinkPhoto] = []
 
-    static let maxPixelSize = 2048
-    static let thumbnailPixelSize = 400
+    nonisolated static let maxPixelSize = 2048
+    nonisolated static let thumbnailPixelSize = 400
 
     let directory: URL
     private var indexURL: URL { directory.appendingPathComponent("photos.json") }

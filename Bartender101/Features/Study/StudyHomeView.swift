@@ -66,6 +66,7 @@ struct StudyHomeView: View {
                 .padding(.horizontal)
             }
             .padding(.vertical, 12)
+            .readableWidth()
         }
         .background(Color(.systemGroupedBackground))
         .navigationTitle("Study")

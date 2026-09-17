@@ -62,6 +62,7 @@ struct IntroView: View {
                 .animation(Theme.spring, value: page)
 
                 footer
+                    .readableWidth(520)
             }
         }
         .environment(\.colorScheme, .dark)
@@ -172,18 +173,24 @@ private struct WelcomePage: View {
             .accessibilityHidden(true)
 
             VStack(spacing: 12) {
-                Text("Bartender 101")
+                Text("House Pour")
                     .font(.system(size: 44, weight: .bold, design: .serif))
                 Text("Look it up. Learn it cold.\nInvent your own.")
                     .font(.title3)
                     .multilineTextAlignment(.center)
                     .foregroundStyle(.white.opacity(0.75))
+                Text("For adults of legal drinking age. Please drink responsibly.")
+                    .font(.footnote)
+                    .multilineTextAlignment(.center)
+                    .foregroundStyle(.white.opacity(0.5))
+                    .padding(.top, 8)
             }
             .modifier(PageEntrance(isActive: isActive))
             Spacer()
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 28)
+        .readableWidth(560)
         .onAppear {
             guard !reduceMotion else { return }
             withAnimation(.easeInOut(duration: 2.4).repeatForever(autoreverses: true)) { floating = true }
@@ -223,6 +230,7 @@ private struct FeaturePage<Illustration: View>: View {
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 28)
+        .readableWidth(560)
     }
 }
 
@@ -277,6 +285,7 @@ private struct SetupPage: View {
         }
         .foregroundStyle(.white)
         .padding(.horizontal, 28)
+        .readableWidth(560)
     }
 }
 

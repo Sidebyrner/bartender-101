@@ -78,6 +78,7 @@
 		E664187B82941E7682FF17CD /* ingredients.json in Resources */ = {isa = PBXBuildFile; fileRef = 934D787FADD3E7C328236652 /* ingredients.json */; };
 		E9F5889E508ADF43DCB79B24 /* BuildStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9926A380E8242553C2B55699 /* BuildStepsTests.swift */; };
 		EFCB17938025500A465D7E81 /* CustomDrinkStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BE7C76468E87AEE7D17040 /* CustomDrinkStoreTests.swift */; };
+		F395E5E4B1BA902ED636E76A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9C0A4DF2E8D13C34C3FD79E9 /* PrivacyInfo.xcprivacy */; };
 		FFF379C857914219D7DD986B /* DrinkBalanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F6603970149AFE5F2B0B8 /* DrinkBalanceTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		96BDE24C4969F40640E24B6F /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
 		9926A380E8242553C2B55699 /* BuildStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildStepsTests.swift; sourceTree = "<group>"; };
 		9AE6F281D81B12D3D6113C09 /* NewDrinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDrinkButton.swift; sourceTree = "<group>"; };
+		9C0A4DF2E8D13C34C3FD79E9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9CD373D9A78A4C4ABD184D4E /* Dilution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dilution.swift; sourceTree = "<group>"; };
 		9CF71DD2DC6BE8A4BF92B5CA /* ReviewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewStore.swift; sourceTree = "<group>"; };
 		9DBD1C42BE59B3CF655F310C /* ScalePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalePanelView.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				FBCA7358F38A77035D87A9B0 /* Assets.xcassets */,
 				6116CA82D1862DEA4DA954C9 /* Bartender101App.swift */,
+				9C0A4DF2E8D13C34C3FD79E9 /* PrivacyInfo.xcprivacy */,
 				F52A1219012F4A9DE604B958 /* Components */,
 				9F897032EA1906F26FEEB907 /* Features */,
 			);
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ABC589881322FADD67071CD /* Assets.xcassets in Resources */,
+				F395E5E4B1BA902ED636E76A /* PrivacyInfo.xcprivacy in Resources */,
 				7D40A6AA092538C006055EC5 /* drinks.json in Resources */,
 				E664187B82941E7682FF17CD /* ingredients.json in Resources */,
 			);
@@ -666,16 +670,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H9B7A5KQP3;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bartender 101";
+				INFOPLIST_KEY_CFBundleDisplayName = "House Pour";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of drinks you've made for your records.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.Bartender101;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorbyrne.housepour;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -690,7 +697,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.Bartender101Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorbyrne.housepour.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bartender101.app/Bartender101";
@@ -766,16 +773,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = H9B7A5KQP3;
-				INFOPLIST_KEY_CFBundleDisplayName = "Bartender 101";
+				INFOPLIST_KEY_CFBundleDisplayName = "House Pour";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of drinks you've made for your records.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.Bartender101;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorbyrne.housepour;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -790,7 +800,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bartender101.Bartender101Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.connorbyrne.housepour.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bartender101.app/Bartender101";

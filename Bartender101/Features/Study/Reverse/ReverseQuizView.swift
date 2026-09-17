@@ -38,6 +38,7 @@ struct ReverseQuizView: View {
             }
         }
         .navigationTitle("Name That Drink")
+        .readableWidth()
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {

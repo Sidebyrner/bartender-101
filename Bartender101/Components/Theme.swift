@@ -19,6 +19,17 @@ enum Theme {
     }
 }
 
+// MARK: - Readable width
+
+extension View {
+    /// Holds content to a comfortable reading width and centers it — a no-op
+    /// on iPhone, and keeps lines from stretching across a full iPad screen.
+    func readableWidth(_ maxWidth: CGFloat = 680) -> some View {
+        frame(maxWidth: maxWidth)
+            .frame(maxWidth: .infinity)
+    }
+}
+
 // MARK: - Card surface
 
 private struct CardSurface: ViewModifier {

@@ -60,6 +60,7 @@ struct NewDrinkSheet: View {
                 }
                 .buttonStyle(.pressable(scale: 0.97))
                 .padding(20)
+                .readableWidth()
             }
             .background(Color(.systemGroupedBackground))
             .navigationBarTitleDisplayMode(.inline)

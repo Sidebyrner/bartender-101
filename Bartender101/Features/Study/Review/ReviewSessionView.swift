@@ -29,6 +29,7 @@ struct ReviewSessionView: View {
             }
         }
         .navigationTitle("Spaced Review")
+        .readableWidth()
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if queue.isEmpty {

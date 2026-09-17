@@ -39,6 +39,7 @@ struct SpeedDrillView: View {
             }
         }
         .navigationTitle("Speed Drill")
+        .readableWidth()
         .navigationBarTitleDisplayMode(.inline)
         .onAppear(perform: startIfNeeded)
         .onReceive(timer) { _ in tick() }

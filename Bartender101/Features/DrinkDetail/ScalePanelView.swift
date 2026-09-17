@@ -114,6 +114,7 @@ struct ScalePanel: View {
             }
         }
         .padding(.horizontal)
+        .readableWidth()
         .padding(.vertical, 10)
         .background(.bar)
         .animation(Theme.snap, value: servings)

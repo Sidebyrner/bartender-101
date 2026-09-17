@@ -130,6 +130,7 @@ struct DrinkDetailView: View {
                 }
             }
             .padding()
+            .readableWidth()
         }
         .safeAreaInset(edge: .bottom) {
             ScalePanel(
