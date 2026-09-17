@@ -135,7 +135,7 @@ scripts/validate-drinks.js
 Shared/                   Content and pure logic, no SwiftUI views
   Resources/drinks.json   The full deck
   Resources/ingredients.json  The builder's ingredient catalog
-  Models/                 Drink, Ingredient, Measure (oz/ml), ReviewState, MadeDrink,
+  Models/                 Drink, Ingredient, Measure (oz/ml), ReviewState, MadeDrink, DrinkPhoto,
                            CustomDrink (house drinks + TestStage, TastingNote),
                            CatalogIngredient (+ IngredientCategory)
   Data/                   DrinkLibrary (load/search), ReviewStore (persistence),
@@ -144,7 +144,8 @@ Shared/                   Content and pure logic, no SwiftUI views
                            PourOrder, BuildSteps, ShiftLog + ShiftLogStore,
                            CustomDrinkStore, DrinkTemplates, DrinkBalance,
                            IngredientIndex (search), IngredientCatalog,
-                           IngredientChecks (unit + duplicate safeguards)
+                           IngredientChecks (unit + duplicate safeguards),
+                           PhotoStore (drink photos)
 
 Bartender101/              The app
   Bartender101App.swift    App entry point, tab layout (Search · Study · Build · Stats · Settings)
@@ -159,6 +160,7 @@ Bartender101/              The app
       Reverse/             Spec-to-name quiz
     Build/                 Testing board, drink builder, ingredient picker, balance meter,
                             house-drink panel (stage + tasting log)
+    Photos/                Camera/library button, photo strip, full-screen viewer
     Stats/                 Shift log (tonight, history, per-night detail),
                             accuracy, weak drinks, per-family coverage
     Settings/              oz/ml toggle, drill timer, reset progress
@@ -167,7 +169,7 @@ Bartender101Tests/         DrinkLibraryTests, SchedulerTests, MeasureTests,
                            RecipeScalerTests, DilutionTests, PourOrderTests,
                            BuildStepsTests, ShiftLogTests, CustomDrinkStoreTests,
                            DrinkBalanceTests, IngredientCatalogTests,
-                           IngredientChecksTests
+                           IngredientChecksTests, PhotoStoreTests
 ```
 
 `Scheduler.swift`, `FuzzyMatch.swift`, `RecipeScaler.swift`, and
@@ -260,6 +262,21 @@ The **Build** tab gets an idea out of your head and into the glass.
 
 House drinks are a JSON file in Application Support (`CustomDrinkStore`);
 clear them from Settings.
+
+## Drink photos
+
+Photos are optional and never prompted for. When a drink is worth a record,
+tap the **camera** button on its recipe page: **Take Photo** (on a device
+with a camera) or **Choose from Library** (the system picker — no library
+permission needed). Once a drink has photos, a **Your Photos** strip appears
+at the bottom of its recipe page; tap one for a full-screen viewer with
+swipe, pinch-to-zoom, **Share**, and **Delete**. A shift night's page in
+Stats shows the photos taken that night, and a house drink's card on the
+Build board shows its newest photo.
+
+Photos are saved downscaled (2048 px max) with small thumbnails, as JPEG
+files plus a `photos.json` index in Application Support (`PhotoStore`).
+Deleting a house drink keeps its photos; clear them from Settings.
 
 ## Studying
 

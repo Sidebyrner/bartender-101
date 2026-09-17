@@ -7,6 +7,7 @@ struct Bartender101App: App {
     @StateObject private var shiftLog = ShiftLogStore()
     @StateObject private var customDrinks = CustomDrinkStore()
     @StateObject private var ingredientCatalog = IngredientCatalog()
+    @StateObject private var photoStore = PhotoStore()
 
     var body: some Scene {
         WindowGroup {
@@ -16,6 +17,7 @@ struct Bartender101App: App {
                 .environmentObject(shiftLog)
                 .environmentObject(customDrinks)
                 .environmentObject(ingredientCatalog)
+                .environmentObject(photoStore)
                 // House drinks On the Menu join the deck everywhere, and the
                 // ingredient picker learns usual pours from the whole deck.
                 .onAppear {

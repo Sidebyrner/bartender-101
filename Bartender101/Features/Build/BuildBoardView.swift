@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// The Build tab: every house drink on a board with one column per testing
 /// stage. Drag a card to another column, or long-press it for Move To (more
@@ -9,6 +10,7 @@ import SwiftUI
 struct BuildBoardView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @EnvironmentObject private var photoStore: PhotoStore
     @State private var showNewDrink = false
     @State private var blockedMove: BlockedMove?
     @State private var targetedStage: TestStage?
@@ -119,11 +121,11 @@ struct BuildBoardView: View {
                         NavigationLink {
                             DrinkDetailView(drink: drink.asDrink())
                         } label: {
-                            BoardCard(drink: drink)
+                            BoardCard(drink: drink, coverURL: coverURL(for: drink))
                         }
                         .buttonStyle(.pressable(scale: 0.97))
                         .draggable(drink.id) {
-                            BoardCard(drink: drink)
+                            BoardCard(drink: drink, coverURL: coverURL(for: drink))
                                 .frame(width: 240)
                                 .rotationEffect(.degrees(-3))
                         }
@@ -163,6 +165,11 @@ struct BuildBoardView: View {
                 targetedStage = nil
             }
         }
+    }
+
+    /// The newest photo's thumbnail file for a house drink, if it has one.
+    private func coverURL(for drink: CustomDrink) -> URL? {
+        photoStore.photos(for: drink.id).first.map(photoStore.thumbnailURL(for:))
     }
 
     @ViewBuilder
@@ -208,6 +215,10 @@ struct BuildBoardView: View {
 
 private struct BoardCard: View {
     let drink: CustomDrink
+    /// Passed in rather than read from the environment, because drag
+    /// previews render outside the view hierarchy's environment.
+    var coverURL: URL?
+    @State private var cover: UIImage?
 
     private var averageRating: Double? {
         let ratings = drink.tastings.compactMap(\.rating)
@@ -217,12 +228,26 @@ private struct BoardCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(drink.displayName)
-                .font(.headline)
-                .foregroundStyle(.primary)
-            Text("\(drink.family.displayName) · \(drink.method.displayName)")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(drink.displayName)
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    Text("\(drink.family.displayName) · \(drink.method.displayName)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                Spacer(minLength: 6)
+                if let cover {
+                    Image(uiImage: cover)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .transition(.opacity)
+                        .accessibilityHidden(true)
+                }
+            }
             if !drink.ingredients.isEmpty {
                 Text(drink.asDrink().ingredientSummary)
                     .font(.subheadline)
@@ -264,6 +289,11 @@ private struct BoardCard: View {
         .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         .accessibilityElement(children: .combine)
         .accessibilityHint("Long-press to move to another stage")
+        .task(id: coverURL) {
+            guard let coverURL else { cover = nil; return }
+            let loaded = await Task.detached(priority: .utility) { UIImage(contentsOfFile: coverURL.path) }.value
+            withAnimation(.easeOut(duration: 0.2)) { cover = loaded }
+        }
     }
 }
 

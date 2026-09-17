@@ -35,6 +35,7 @@ struct NightDetailView: View {
     let date: Date
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var shiftLog: ShiftLogStore
+    @EnvironmentObject private var photoStore: PhotoStore
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
 
     private var night: ShiftLog.Night? { shiftLog.nights.first { $0.date == date } }
@@ -47,6 +48,13 @@ struct NightDetailView: View {
                     LabeledContent("Drinks logged", value: "\(night.drinkCount)")
                     LabeledContent("Servings", value: Measure.ozFraction(night.totalServings))
                     LabeledContent("Volume poured", value: Measure.label(oz: night.totalOz, unit: unit))
+                }
+
+                if !photoStore.photos(onShiftNight: date).isEmpty {
+                    Section("Photos") {
+                        PhotoStrip(scope: .shiftNight(date), height: 110, showsDrinkName: true)
+                            .listRowInsets(EdgeInsets(top: 10, leading: 16, bottom: 10, trailing: 16))
+                    }
                 }
 
                 Section("By drink") {

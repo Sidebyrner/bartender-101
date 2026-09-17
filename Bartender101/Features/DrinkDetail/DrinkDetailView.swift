@@ -15,6 +15,7 @@ struct DrinkDetailView: View {
     let drink: Drink
     @EnvironmentObject private var shiftLog: ShiftLogStore
     @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @EnvironmentObject private var photoStore: PhotoStore
     @Environment(\.dismiss) private var dismiss
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
@@ -119,6 +120,14 @@ struct DrinkDetailView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+
+                // Only once there's something to show — photos are optional.
+                if !photoStore.photos(for: spec.id).isEmpty {
+                    section("Your Photos") {
+                        PhotoStrip(scope: .drink(spec.id), height: barMode ? 150 : 120)
+                    }
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                }
             }
             .padding()
         }
@@ -196,6 +205,8 @@ struct DrinkDetailView: View {
         } message: {
             Text("Its tasting log goes with it. Drinks already in the shift log stay there.")
         }
+        .drinkPhotoButton(for: spec)
+        .animation(Theme.spring, value: photoStore.photos(for: spec.id).isEmpty)
         .navigationDestination(isPresented: $showFlashcard) {
             FlashcardView(drink: spec)
         }

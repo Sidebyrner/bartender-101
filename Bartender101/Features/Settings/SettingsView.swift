@@ -14,12 +14,14 @@ struct SettingsView: View {
     @EnvironmentObject private var reviewStore: ReviewStore
     @EnvironmentObject private var shiftLog: ShiftLogStore
     @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @EnvironmentObject private var photoStore: PhotoStore
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.speedDrillSeconds) private var speedDrillSeconds = 5
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
     @State private var showResetConfirm = false
     @State private var showClearLogConfirm = false
     @State private var showDeleteHouseConfirm = false
+    @State private var showDeletePhotosConfirm = false
 
     private let timerOptions = [3, 5, 8]
 
@@ -79,10 +81,20 @@ struct SettingsView: View {
                 Text("Deletes every drink made in Build, with its tasting log. Drinks already in the shift log stay there.")
             }
 
+            Section {
+                Button("Delete all photos", role: .destructive) {
+                    showDeletePhotosConfirm = true
+                }
+                .disabled(photoStore.photos.isEmpty)
+            } footer: {
+                Text("Deletes every drink photo saved in the app. Photos you shared or saved elsewhere aren't affected.")
+            }
+
             Section("About") {
                 LabeledContent("Deck version", value: "1.0")
                 LabeledContent("Drinks in the deck", value: "\(library.drinks.count)")
                 LabeledContent("House drinks", value: "\(customDrinks.drinks.count)")
+                LabeledContent("Drink photos", value: "\(photoStore.photos.count)")
                 LabeledContent("Cards started", value: "\(reviewStore.states.count)")
             }
         }
@@ -94,6 +106,18 @@ struct SettingsView: View {
         ) {
             Button("Reset Progress", role: .destructive) {
                 reviewStore.resetProgress()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone.")
+        }
+        .confirmationDialog(
+            "Delete all photos?",
+            isPresented: $showDeletePhotosConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete \(photoStore.photos.count) Photos", role: .destructive) {
+                photoStore.deleteAll()
             }
             Button("Cancel", role: .cancel) {}
         } message: {
