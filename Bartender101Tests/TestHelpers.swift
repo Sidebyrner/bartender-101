@@ -1,13 +1,18 @@
 import Foundation
 @testable import Bartender101
 
-/// Minimal in-memory drink for scheduler/library tests that don't need a
-/// real recipe — just a stable id and family to route through.
+/// Minimal in-memory drink for tests that don't need a real recipe — a
+/// stable id, family, and tags for scheduler/library tests, or a method and
+/// ingredient list for scaling/dilution math.
 extension Drink {
     static func stub(
-        id: String,
+        id: String = "test-drink",
         family: DrinkFamily = .highball,
-        tags: [DrinkTag] = [.well]
+        method: DrinkMethod = .build,
+        tags: [DrinkTag] = [.well],
+        ingredients: [Ingredient] = [
+            Ingredient(name: "Test Spirit", amountOz: 2, unit: .oz, dashCount: nil, approxCount: nil, spoonCount: nil)
+        ]
     ) -> Drink {
         Drink(
             id: id,
@@ -15,10 +20,10 @@ extension Drink {
             family: family,
             glass: .highball,
             ice: .cubed,
-            method: .build,
+            method: method,
             difficulty: 1,
             tags: tags,
-            ingredients: [Ingredient(name: "Test Spirit", amountOz: 2, unit: .oz, dashCount: nil, approxCount: nil, spoonCount: nil)],
+            ingredients: ingredients,
             garnish: "None",
             notes: "Test fixture drink, not part of the real deck."
         )

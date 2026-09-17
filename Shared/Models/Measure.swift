@@ -2,7 +2,7 @@ import Foundation
 
 /// The display unit chosen in Settings. Stored as a raw value in
 /// `UserDefaults` — see `SettingsView`.
-enum MeasurementUnit: String, CaseIterable, Identifiable {
+enum MeasurementUnit: String, Codable, CaseIterable, Identifiable {
     case oz
     case ml
 

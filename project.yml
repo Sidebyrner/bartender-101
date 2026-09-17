@@ -1,20 +1,17 @@
-# XcodeGen project definition — now the primary way to (re)generate the
-# project, not just a fallback. This repo has two application targets
-# sharing one folder of source files, and that shape is materially harder
-# to hand-edit correctly in project.pbxproj than the original single-target
-# project was (still written blind — no Mac available in this environment).
-# If Xcode reports the checked-in project is damaged, malformed, or won't
-# open, regenerate a known-good one instead of debugging the pbxproj by hand:
+# XcodeGen project definition — the primary way to (re)generate the
+# project. One app target (Bartender101) plus its unit tests. If Xcode
+# reports the checked-in project is damaged, malformed, or won't open,
+# regenerate a known-good one instead of debugging the pbxproj by hand:
 #
 #   brew install xcodegen
 #   xcodegen generate
 #
 # Nothing here needs updating when a drink or a Swift file is added later —
-# every target picks up its sources by directory, Shared/ included.
+# each target picks up its sources by directory, Shared/ included.
 
 name: Bartender101
 options:
-  bundleIdPrefix: com.bartender101
+  bundleIdPrefix: com.connorbyrne
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -39,11 +36,21 @@ targets:
       - path: Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.bartender101.Bartender101
+        PRODUCT_BUNDLE_IDENTIFIER: com.connorbyrne.housepour
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        # Signing team for running on a device; kept here so `xcodegen
+        # generate` doesn't wipe it. Change to your own team to build elsewhere.
+        DEVELOPMENT_TEAM: H9B7A5KQP3
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
         INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-        INFOPLIST_KEY_CFBundleDisplayName: "Bartender 101"
+        INFOPLIST_KEY_CFBundleDisplayName: "House Pour"
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.food-and-drink
+        # No custom encryption — skips the export-compliance prompt on upload.
+        INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
+        # iPad runs full screen (no Split View / Slide Over), portrait and landscape.
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        INFOPLIST_KEY_NSCameraUsageDescription: "Take photos of drinks you've made for your records."
 
   Bartender101Tests:
     type: bundle.unit-test
@@ -52,34 +59,9 @@ targets:
       - path: Bartender101Tests
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.bartender101.Bartender101Tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.connorbyrne.housepour.tests
     dependencies:
       - target: Bartender101
-
-  DrinksCodex:
-    type: application
-    platform: iOS
-    sources:
-      - path: DrinksCodex
-      - path: Shared
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.bartender101.DrinksCodex
-        INFOPLIST_KEY_UILaunchScreen_Generation: YES
-        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
-        INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
-        INFOPLIST_KEY_CFBundleDisplayName: "Drinks Codex"
-
-  DrinksCodexTests:
-    type: bundle.unit-test
-    platform: iOS
-    sources:
-      - path: DrinksCodexTests
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.bartender101.DrinksCodexTests
-    dependencies:
-      - target: DrinksCodex
 
 schemes:
   Bartender101:
@@ -96,16 +78,3 @@ schemes:
     archive:
       config: Release
 
-  DrinksCodex:
-    build:
-      targets:
-        DrinksCodex: all
-        DrinksCodexTests: [test]
-    run:
-      config: Debug
-    test:
-      config: Debug
-      targets:
-        - DrinksCodexTests
-    archive:
-      config: Release

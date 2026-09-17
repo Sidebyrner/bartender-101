@@ -6,6 +6,7 @@ import XCTest
 /// depends on `drinks.json` loading cleanly, and this project was written
 /// without ever compiling on the machine that wrote it, so this is the
 /// first real signal that the data survived the trip.
+@MainActor
 final class DrinkLibraryTests: XCTestCase {
     func testDeckDecodes() throws {
         let drinks = try DrinkLibrary.loadDrinks()
@@ -14,7 +15,7 @@ final class DrinkLibraryTests: XCTestCase {
 
     func testDeckHasExpectedSize() throws {
         let drinks = try DrinkLibrary.loadDrinks()
-        XCTAssertGreaterThanOrEqual(drinks.count, 60, "expected the ~62-drink working bar canon")
+        XCTAssertGreaterThanOrEqual(drinks.count, 180, "expected the full ~180-drink deck")
     }
 
     func testNoDuplicateIDs() throws {
@@ -88,5 +89,35 @@ final class DrinkLibraryTests: XCTestCase {
         // distractors should always be satisfiable from within it.
         let distractors = library.distractors(for: negroni, count: 3)
         XCTAssertTrue(distractors.allSatisfy { $0.family == .manhattan })
+    }
+}
+
+@MainActor
+final class DrinkLibraryCustomDrinkTests: XCTestCase {
+    func testOnlyOnMenuHouseDrinksJoinTheDeck() {
+        let library = DrinkLibrary(deck: [Drink.stub(id: "negroni")])
+        let idea = CustomDrink(name: "Idea Drink", family: .sour, stage: .idea)
+        let menu = CustomDrink(name: "Menu Drink", family: .sour, stage: .onMenu)
+        library.setCustomDrinks([idea, menu])
+
+        XCTAssertEqual(Set(library.drinks.map(\.id)), ["negroni", menu.id])
+        XCTAssertEqual(library.drinks(in: .sour).map(\.id), [menu.id])
+        XCTAssertEqual(library.search("menu drink").map(\.id), [menu.id])
+        XCTAssertEqual(library.drink(id: idea.id)?.name, "Idea Drink", "test drinks still resolve by id")
+        XCTAssertEqual(library.drinks(matchingTags: [.house]).map(\.id), [menu.id])
+
+        library.setCustomDrinks([])
+        XCTAssertEqual(library.drinks.map(\.id), ["negroni"])
+        XCTAssertNil(library.drink(id: idea.id))
+    }
+
+    func testNameTakenChecksDeckAndOtherHouseDrinks() {
+        let library = DrinkLibrary(deck: [Drink.stub(id: "Negroni")])
+        let house = CustomDrink(name: "Garden Sour")
+        library.setCustomDrinks([house])
+        XCTAssertTrue(library.isNameTaken("negroni"))
+        XCTAssertTrue(library.isNameTaken(" garden sour "))
+        XCTAssertFalse(library.isNameTaken("Garden Sour", excluding: house.id))
+        XCTAssertFalse(library.isNameTaken(""))
     }
 }

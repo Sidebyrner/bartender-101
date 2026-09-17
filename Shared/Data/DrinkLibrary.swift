@@ -5,30 +5,67 @@ enum DrinkLibraryError: Error {
     case decodingFailed(Error)
 }
 
-/// Loads and indexes the drink deck from `Resources/drinks.json`. Owns no
-/// mutable study state — that's `ReviewStore`'s job — this is read-only
-/// content plus lookup/search/filter helpers the feature views share.
+/// Loads and indexes the drink deck from `Resources/drinks.json`, merged with
+/// house drinks from the Build tab. Owns no mutable study state — that's
+/// `ReviewStore`'s job — this is read-only content plus lookup/search/filter
+/// helpers the feature views share.
 @MainActor
 final class DrinkLibrary: ObservableObject {
+    /// The deck plus house drinks that are on the menu — everything Search,
+    /// Study, and Stats treat as "the deck".
     @Published private(set) var drinks: [Drink] = []
     @Published private(set) var loadError: String?
 
+    private var deck: [Drink] = []
+    private var customDrinks: [CustomDrink] = []
+    /// Every drink by id, including house drinks still in testing, so a
+    /// shift-log row for a test pour still opens its recipe.
     private var byID: [String: Drink] = [:]
     private var byFamily: [DrinkFamily: [Drink]] = [:]
 
-    init() {
-        load()
+    init(deck: [Drink]? = nil) {
+        if let deck {
+            self.deck = deck
+            rebuildIndex()
+        } else {
+            load()
+        }
     }
 
     private func load() {
         do {
-            drinks = try Self.loadDrinks()
-            byID = Dictionary(uniqueKeysWithValues: drinks.map { ($0.id, $0) })
-            byFamily = Dictionary(grouping: drinks, by: \.family)
+            deck = try Self.loadDrinks()
         } catch {
             loadError = "Couldn't load the drink deck: \(error)"
-            drinks = []
+            deck = []
         }
+        rebuildIndex()
+    }
+
+    /// Replaces the house drinks merged into the deck. Called whenever
+    /// `CustomDrinkStore` changes.
+    func setCustomDrinks(_ all: [CustomDrink]) {
+        customDrinks = all
+        rebuildIndex()
+    }
+
+    private func rebuildIndex() {
+        let onMenu = customDrinks.filter { $0.stage == .onMenu }.map { $0.asDrink() }
+        drinks = deck + onMenu
+        byID = Dictionary(deck.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
+        for custom in customDrinks {
+            byID[custom.id] = custom.asDrink()
+        }
+        byFamily = Dictionary(grouping: drinks, by: \.family)
+    }
+
+    /// Whether `name` is already used by a deck drink or another house drink
+    /// (case-insensitive), ignoring the house drink with id `excluding`.
+    func isNameTaken(_ name: String, excluding id: String? = nil) -> Bool {
+        let key = name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard !key.isEmpty else { return false }
+        if deck.contains(where: { $0.name.lowercased() == key }) { return true }
+        return customDrinks.contains { $0.id != id && $0.name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }
     }
 
     static func loadDrinks() throws -> [Drink] {

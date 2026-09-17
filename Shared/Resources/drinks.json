@@ -24,7 +24,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Build in the glass over ice, add tonic last, one gentle lift with the barspoon. Stirring hard kills the carbonation."
+    "notes": "Fill the highball with ice before the gin goes in, then pour the tonic down the side. A single slow lift with the spoon mixes it without flattening the bubbles."
   },
   {
     "id": "vodka-soda",
@@ -50,7 +50,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "The template for every well highball: 2 oz spirit, top with mixer, citrus wedge. Learn this ratio and a dozen drinks come free."
+    "notes": "Measure the vodka rather than eyeballing it, since soda water hides nothing. Use a fresh, cold bottle of soda so the drink stays lively to the last sip."
   },
   {
     "id": "screwdriver",
@@ -76,7 +76,7 @@
       }
     ],
     "garnish": "Orange slice",
-    "notes": "Vodka and OJ. Add a splash of Galliano on top and it is a Harvey Wallbanger."
+    "notes": "Pour the vodka over ice first and top with orange juice so it mixes on its own. Fresh-squeezed juice makes a noticeable difference over juice from a carton."
   },
   {
     "id": "cuba-libre",
@@ -108,7 +108,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "A Rum & Coke becomes a Cuba Libre the moment fresh lime goes in. If a guest asks for the real thing, squeeze the lime."
+    "notes": "The lime juice is what separates this from an ordinary rum and cola. Add it before the cola, then give one gentle stir so the soda keeps its fizz."
   },
   {
     "id": "whiskey-ginger",
@@ -134,7 +134,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Ginger ale, not ginger beer. Swap in ginger beer and lime and you have built a Mule."
+    "notes": "Reach for ginger ale here; ginger beer is spicier and belongs in a mule. Top gently over the whiskey and ice, and squeeze the lime wedge in if the guest wants brightness."
   },
   {
     "id": "jack-and-coke",
@@ -160,7 +160,7 @@
       }
     ],
     "garnish": "Lime wedge, optional",
-    "notes": "Called by brand, so pour the brand. Substituting another whiskey without saying so is how you lose a regular."
+    "notes": "When a guest names the brand, pour that brand. If it's out of stock, tell them and offer a substitute instead of quietly swapping bottles."
   },
   {
     "id": "cape-codder",
@@ -186,7 +186,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Also ordered as a Vodka Cranberry. Add grapefruit and it is a Sea Breeze; add pineapple and it is a Bay Breeze."
+    "notes": "A two-ingredient build, so the ratio matters: keep the cranberry at about twice the vodka. Guests often order it simply as a vodka cranberry."
   },
   {
     "id": "sea-breeze",
@@ -217,7 +217,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Sea = grapefruit. Bay = pineapple. Same vodka-cranberry base, and mixing them up is the single most common breeze mistake."
+    "notes": "Grapefruit is the ingredient that makes it a Sea Breeze; pineapple would make it a Bay Breeze. Pour both juices over the vodka and ice, then stir briefly."
   },
   {
     "id": "bay-breeze",
@@ -248,7 +248,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Bay = pineapple. Drop the cranberry entirely and it is a Pineapple Screwdriver, not a breeze."
+    "notes": "Pineapple is the tell here, versus grapefruit in the Sea Breeze. Build over ice and give it a quick stir, since pineapple juice tends to settle toward the bottom."
   },
   {
     "id": "tom-collins",
@@ -284,7 +284,7 @@
       }
     ],
     "garnish": "Lemon wheel and brandied cherry",
-    "notes": "A gin sour lengthened with soda. Shake the first three, strain over fresh ice, then top. Never shake the soda."
+    "notes": "Shake only the gin, lemon, and syrup, strain over fresh ice in the collins glass, then add the soda. Soda in the shaker loses its fizz and can blow the tins apart."
   },
   {
     "id": "paloma",
@@ -321,7 +321,7 @@
       }
     ],
     "garnish": "Grapefruit wedge, salted rim",
-    "notes": "Mexico's actual everyday tequila drink, far more common there than the Margarita. Squeeze of salt in the build, not just on the rim."
+    "notes": "Put the pinch of salt into the drink itself as well as on the rim; it sharpens the grapefruit. Add the grapefruit soda last and stir just once."
   },
   {
     "id": "dark-n-stormy",
@@ -352,7 +352,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Build the ginger beer and lime first, then float the dark rum on top so it storms down through the glass. The name is trademarked to Gosling's."
+    "notes": "Add lime and ginger beer over ice first, then pour the dark rum slowly on top so it sits as a dark layer. Serve unstirred and let the guest mix it."
   },
   {
     "id": "moscow-mule",
@@ -384,7 +384,7 @@
       }
     ],
     "garnish": "Lime wedge and mint sprig",
-    "notes": "Ginger beer, not ginger ale. Swap the vodka for any spirit and it stays a mule: bourbon makes a Kentucky, tequila a Mexican, gin a London."
+    "notes": "Ginger beer brings the bite; ginger ale is too mild for a mule. The copper mug keeps it cold, but the drink works fine in a highball if mugs run out."
   },
   {
     "id": "kentucky-mule",
@@ -415,7 +415,7 @@
       }
     ],
     "garnish": "Lime wedge and mint sprig",
-    "notes": "Proof that the mule is a template, not a recipe. Same build, bourbon in the vodka's place."
+    "notes": "Built exactly like a Moscow Mule, with bourbon standing in for vodka. Bourbon's sweetness can soften the ginger, so choose a ginger beer with real heat."
   },
   {
     "id": "margarita",
@@ -446,7 +446,7 @@
       }
     ],
     "garnish": "Salted rim, lime wheel",
-    "notes": "2:1:1 tequila, triple sec, lime. Shake hard with ice, strain into a salt-rimmed rocks glass over fresh ice. Swap triple sec for agave + more lime and it's a Tommy's Margarita."
+    "notes": "Run lime around only part of the rim before salting, so guests can choose each sip. Shake hard, then strain over fresh cubes rather than the used shaker ice."
   },
   {
     "id": "daiquiri",
@@ -477,7 +477,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "2:1:0.75, the sour ratio in its purest form. Shake hard and long — this drink is about the shake, not the ingredients. Add pureed strawberry or peach and it becomes a fruit daiquiri."
+    "notes": "Three ingredients leave nowhere to hide, so measure the lime and syrup precisely. Shake hard until the tin is frosty and strain into a chilled coupe with no ice."
   },
   {
     "id": "whiskey-sour",
@@ -513,7 +513,7 @@
       }
     ],
     "garnish": "Brandied cherry and lemon peel",
-    "notes": "With egg white, dry-shake first (no ice) to build foam, then shake again with ice. Skip the dry shake and the foam never forms."
+    "notes": "If the guest wants egg white, shake without ice first to whip it, then add ice and shake again. Without egg, a single hard shake is all it needs."
   },
   {
     "id": "amaretto-sour",
@@ -549,7 +549,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "Less simple syrup than a whiskey sour since amaretto is already sweet. Same egg-white dry-shake technique if used."
+    "notes": "Amaretto is already sweet, so the syrup is cut to a quarter ounce. Adding the full whiskey-sour measure of syrup is the usual way this drink turns cloying."
   },
   {
     "id": "gimlet",
@@ -575,7 +575,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Traditionally Rose's lime cordial, not fresh lime juice — that's what separates it from a gin sour. A modern version uses fresh lime plus simple syrup instead."
+    "notes": "Lime cordial supplies both the sweetness and the acidity, so no separate syrup goes in. Shake hard and serve up in a chilled coupe."
   },
   {
     "id": "sidecar",
@@ -606,7 +606,7 @@
       }
     ],
     "garnish": "Sugared rim, lemon twist",
-    "notes": "A brandy Margarita, essentially — same shake-and-strain structure with cognac instead of tequila and lemon instead of lime."
+    "notes": "Coat just the outer edge of the coupe with sugar so it doesn't fall into the drink. Shake cognac, triple sec, and lemon with ice, then strain with no ice in the glass."
   },
   {
     "id": "cosmopolitan",
@@ -643,7 +643,7 @@
       }
     ],
     "garnish": "Lime wheel or flamed orange peel",
-    "notes": "The cranberry is for color and a hint of tartness, not to dominate — go easy on it or the drink turns into juice."
+    "notes": "Use a light hand with cranberry; it should turn the drink pink, not dominate it. If flaming the orange peel, hold it well clear of your face and the guest."
   },
   {
     "id": "lemon-drop",
@@ -679,7 +679,7 @@
       }
     ],
     "garnish": "Sugared rim, lemon twist",
-    "notes": "A vodka sour with a sugared rim. Also served as a shot — see the shots section for the smaller-format version."
+    "notes": "Sugar the rim ahead of time so it dries and stays put. The triple sec adds orange notes that a basic vodka sour lacks, so don't leave it out."
   },
   {
     "id": "pisco-sour",
@@ -720,7 +720,7 @@
       }
     ],
     "garnish": "Three dashes of bitters drawn through the foam",
-    "notes": "Always dry-shake the egg white first. The bitters go on top of the foam as a garnish pattern, not mixed in."
+    "notes": "Dry shake to build the egg-white foam, shake again with ice, and strain into a coupe. Add the bitters to the foam afterward and pull a pick through the drops."
   },
   {
     "id": "bees-knees",
@@ -751,7 +751,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "Honey syrup is 1:1 honey and hot water, stirred until dissolved — straight honey won't incorporate in a cold shake."
+    "notes": "Make the honey syrup ahead by thinning honey with warm water. Raw honey seizes up when it hits cold ingredients and ends up stuck to the ice."
   },
   {
     "id": "old-fashioned",
@@ -783,7 +783,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "The original cocktail template: spirit, sugar, bitters, ice. Muddle a sugar cube with bitters if no syrup is on hand, then build and stir."
+    "notes": "Stir the whiskey, syrup, and bitters with ice, then strain over one large cube in the rocks glass. Twist the orange peel over the top so its oils land on the surface."
   },
   {
     "id": "sazerac",
@@ -820,7 +820,7 @@
       }
     ],
     "garnish": "Lemon peel, expressed and discarded",
-    "notes": "Rinse a chilled rocks glass with absinthe and dump the excess before stirring the rest and straining in — served up, no ice in the glass."
+    "notes": "Coat a chilled rocks glass with absinthe and pour out the excess. Stir the rest with ice, strain in neat, then express the lemon peel and discard it."
   },
   {
     "id": "rusty-nail",
@@ -846,7 +846,7 @@
       }
     ],
     "garnish": "Lemon twist, optional",
-    "notes": "Just two spirits built over ice and stirred briefly in the glass. No syrup, no bitters — the Drambuie brings its own sweetness."
+    "notes": "Pour scotch and Drambuie straight over the ice in the rocks glass and stir a few times. Drambuie is sweet, so hold back on it rather than overpouring."
   },
   {
     "id": "dry-martini",
@@ -872,7 +872,7 @@
       }
     ],
     "garnish": "Lemon twist or olive",
-    "notes": "Stirred, never shaken — no juice or dairy means shaking only adds unwanted dilution and ice shards. \"Dry\" means less vermouth; ask before assuming a ratio."
+    "notes": "Stir, never shake, and keep stirring until it's very cold but not watered down. Ask how dry the guest likes it before you pour the vermouth."
   },
   {
     "id": "dirty-martini",
@@ -903,7 +903,7 @@
       }
     ],
     "garnish": "Olives, at least two",
-    "notes": "\"Dirty\" specifies olive brine added to the stir. Ask how dirty — more brine for guests who want it cloudier and saltier."
+    "notes": "Ask how dirty the guest likes it and adjust the brine. Use brine from a fresh jar of good olives and stir it with the spirit and vermouth."
   },
   {
     "id": "gibson",
@@ -929,7 +929,7 @@
       }
     ],
     "garnish": "Pickled cocktail onions",
-    "notes": "Identical build to a Dry Martini; the only difference is the garnish — onions instead of an olive or twist."
+    "notes": "It's made just like a dry martini, but with cocktail onions as the garnish in place of an olive or twist. Serving it with an olive is a common mix-up."
   },
   {
     "id": "vesper",
@@ -960,7 +960,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "The one martini-family drink that's shaken, per Bond's own order — no vermouth, Lillet Blanc stands in its place."
+    "notes": "Unlike most martini-style drinks, this one is shaken. Lillet Blanc takes the place of dry vermouth, so be sure to pour the right bottle."
   },
   {
     "id": "espresso-martini",
@@ -996,7 +996,7 @@
       }
     ],
     "garnish": "Three coffee beans",
-    "notes": "Shake hard and long — the foam cap on top comes entirely from the shake, there's no egg white or cream involved."
+    "notes": "Use freshly pulled espresso and shake hard; the crema is what forms the foam on top. Coffee that has cooled and gone stale gives a flat, foamless drink."
   },
   {
     "id": "manhattan",
@@ -1028,7 +1028,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "2:1 whiskey to sweet vermouth, stirred and strained up. The whiskey-forward sibling of the Negroni's equal-parts build."
+    "notes": "Stir rather than shake so the texture stays silky and clear. Keep the sweet vermouth in the fridge once opened, because stale vermouth dulls the drink."
   },
   {
     "id": "rob-roy",
@@ -1060,7 +1060,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "A Manhattan built with scotch instead of rye or bourbon — same 2:1 ratio, same stir and strain."
+    "notes": "Swap the whiskey in a Manhattan for scotch and you have a Rob Roy. A heavily peated scotch can overpower the vermouth, so a milder blend is a safer house pour."
   },
   {
     "id": "negroni",
@@ -1091,7 +1091,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "Equal parts, stirred, served over one large cube. No citrus in the mix, so it's always stirred rather than shaken."
+    "notes": "Measure all three ingredients exactly, stir with ice, and strain over one large cube. Rub the expressed orange peel along the rim before dropping it in."
   },
   {
     "id": "boulevardier",
@@ -1122,7 +1122,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "A Negroni with bourbon standing in for the gin, and slightly whiskey-forward rather than dead equal parts."
+    "notes": "Pour extra bourbon so the whiskey isn't buried by the Campari and vermouth. Stir and strain over a large cube, then express orange peel over the top."
   },
   {
     "id": "vieux-carre",
@@ -1170,7 +1170,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "New Orleans' answer to the Manhattan — five ingredients, still just built by stirring everything over ice and straining."
+    "notes": "Six ingredients go into this one, so set out every bottle before you start. The Bénédictine is only a quarter ounce, and pouring too much makes the drink too sweet."
   },
   {
     "id": "aperol-spritz",
@@ -1202,7 +1202,7 @@
       }
     ],
     "garnish": "Orange slice",
-    "notes": "3-2-1: prosecco, Aperol, soda, built in that order over ice so the bubbles aren't beaten flat by pouring spirit on top of them."
+    "notes": "Start with prosecco over ice, add Aperol, and finish with a splash of soda. The Aperol sinks and blends in, so one light stir is plenty."
   },
   {
     "id": "mimosa",
@@ -1228,7 +1228,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts, poured gently to preserve carbonation. Pour the juice first so the sparkling wine's fizz doesn't get knocked down by the pour."
+    "notes": "Chill the sparkling wine and the juice so no ice is needed. Pour slowly into a tilted flute to keep foam from running over the rim."
   },
   {
     "id": "bellini",
@@ -1254,7 +1254,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Purée goes in the flute first, then top slowly with prosecco and give one gentle stir to combine without losing the fizz."
+    "notes": "Put the peach purée into the flute first, then add prosecco slowly while stirring lightly. If you pour too quickly, the purée foams up and spills over."
   },
   {
     "id": "french-75",
@@ -1290,7 +1290,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "Shake the gin, lemon, and syrup, strain into the flute, then top with champagne — the only spritz-family drink built on a proper shaken sour base."
+    "notes": "Shake gin, lemon, and syrup, strain into the flute, then top with champagne. Adding the sparkling wine to the shaker is a mistake that ruins the bubbles."
   },
   {
     "id": "kir-royale",
@@ -1316,7 +1316,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Cassis first, then top with champagne. Swap champagne for still white wine and drop the \"Royale\" and it's a plain Kir."
+    "notes": "Put the cassis in first and top with cold champagne; the wine mixes it on the way in. Too much cassis quickly turns it syrupy."
   },
   {
     "id": "mai-tai",
@@ -1353,7 +1353,7 @@
       }
     ],
     "garnish": "Mint sprig and spent lime shell",
-    "notes": "Shake with crushed ice and dump the whole thing into the glass (do not strain). Orgeat is the almond syrup that gives it the signature nutty backbone."
+    "notes": "Shake with crushed ice and pour everything into the glass without straining. Tuck the spent lime shell next to the mint sprig for the traditional look."
   },
   {
     "id": "pina-colada",
@@ -1384,7 +1384,7 @@
       }
     ],
     "garnish": "Pineapple wedge and cherry",
-    "notes": "Blended, not shaken — everything goes in the blender with crushed ice until smooth and pourable."
+    "notes": "Blend rum, coconut cream, and pineapple juice with crushed ice until thick but still pourable. Stir the coconut cream well first, since it separates in the can."
   },
   {
     "id": "painkiller",
@@ -1420,7 +1420,7 @@
       }
     ],
     "garnish": "Freshly grated nutmeg",
-    "notes": "Shake and pour unstrained over crushed ice. The nutmeg grated fresh on top is non-negotiable for this one."
+    "notes": "Shake with crushed ice and pour everything into the glass without straining. Grate fresh nutmeg over the top at the end; pre-ground nutmeg won't have the same aroma."
   },
   {
     "id": "hurricane",
@@ -1461,7 +1461,7 @@
       }
     ],
     "garnish": "Orange slice and cherry",
-    "notes": "Two rums, shaken hard and poured into a hurricane glass over fresh ice — invented at Pat O'Brien's in New Orleans."
+    "notes": "Shake both rums with the passion fruit syrup, lime, and simple syrup, then strain into a hurricane glass filled with fresh cubes. It is a strong drink, so keep the pour measured."
   },
   {
     "id": "jungle-bird",
@@ -1503,7 +1503,7 @@
       }
     ],
     "garnish": "Pineapple wedge",
-    "notes": "The rare tiki drink built around a bittering agent — the Campari cuts the pineapple sweetness instead of just adding more fruit."
+    "notes": "Campari's bitterness balances the rum and pineapple, so measure it carefully. Shake hard to foam the pineapple juice, then strain over fresh cubes."
   },
   {
     "id": "mojito",
@@ -1545,7 +1545,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Press mint gently to release oils — do not shred it, that releases bitter chlorophyll. Build in the glass, top with soda, swizzle rather than stir."
+    "notes": "Press the mint lightly with the lime and syrup; shredding the leaves makes the drink bitter. Add rum and crushed ice, then top with a little soda."
   },
   {
     "id": "caipirinha",
@@ -1578,7 +1578,7 @@
       }
     ],
     "garnish": "None, lime wheel optional",
-    "notes": "Muddle whole lime wedges with sugar directly in the glass before adding cachaça and crushed ice — no juicing, the muddle does the work."
+    "notes": "Muddle the lime pieces with sugar right in the glass to draw out both juice and peel oil. Add cachaça and crushed ice, and serve without straining."
   },
   {
     "id": "bloody-mary",
@@ -1626,7 +1626,7 @@
       }
     ],
     "garnish": "Celery stalk, lime wedge, olives",
-    "notes": "Roll (pour between two glasses) rather than shake — shaking makes the tomato juice foam and separate."
+    "notes": "Build it in the highball and stir well so the seasonings don't settle at the bottom. Taste it with a straw before garnishing, since tomato juices vary in salt."
   },
   {
     "id": "long-island-iced-tea",
@@ -1682,7 +1682,7 @@
       }
     ],
     "garnish": "Lemon wedge",
-    "notes": "Five spirits at a half ounce each, shaken with lemon and syrup, strained over ice, topped with a splash of cola for color. No cola-heavy pour — it should taste like a sour, not a soda."
+    "notes": "Pour everything except the cola over ice in the highball and stir, then add just a splash of cola. Too much cola hides the sour notes and the drink loses balance."
   },
   {
     "id": "mint-julep",
@@ -1714,7 +1714,7 @@
       }
     ],
     "garnish": "Large mint bouquet",
-    "notes": "Muddle mint with syrup only (no bourbon yet) to avoid bruising, then pack the cup with crushed ice and pour bourbon over, swizzling until the cup frosts."
+    "notes": "Muddle the mint gently in the syrup, then add bourbon and pack the cup with crushed ice. Put the mint sprigs right beside the straw so the aroma comes through with each sip."
   },
   {
     "id": "white-russian",
@@ -1745,7 +1745,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Build vodka and coffee liqueur over ice, then float the cream gently on top by pouring over the back of a spoon rather than stirring it in."
+    "notes": "Pour vodka and coffee liqueur over ice, then add the cream last. Some guests like it layered and others want it stirred, so ask before stirring it in."
   },
   {
     "id": "mudslide",
@@ -1781,7 +1781,7 @@
       }
     ],
     "garnish": "Chocolate syrup drizzle",
-    "notes": "Shaken and strained rather than built, so all four ingredients fully combine instead of layering like a White Russian."
+    "notes": "Shaking combines the two cream ingredients with the spirits evenly. Drizzle chocolate syrup inside the glass before adding ice so the pattern shows."
   },
   {
     "id": "brandy-alexander",
@@ -1812,7 +1812,7 @@
       }
     ],
     "garnish": "Freshly grated nutmeg",
-    "notes": "Shake hard with ice to aerate the cream, then strain up. Grate nutmeg over the foam right before serving."
+    "notes": "Shake hard to give the cream a light, airy texture, and strain into a chilled coupe with no ice. Grate nutmeg over the top just before serving."
   },
   {
     "id": "kamikaze",
@@ -1843,7 +1843,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Equal parts, shaken hard with ice and strained into a shot glass — a shot-format Margarita relative without the salt or tequila."
+    "notes": "Vodka, triple sec, and lime go in equal parts. Shake it cold and strain into shot glasses; one shaker batch can serve several people if you scale up evenly."
   },
   {
     "id": "lemon-drop-shot",
@@ -1874,7 +1874,7 @@
       }
     ],
     "garnish": "Sugared rim, lemon wedge",
-    "notes": "Shake and strain into a sugar-rimmed shot glass, served with a sugar-coated lemon wedge to bite after."
+    "notes": "Coat the shot glass rim with sugar and dip the lemon wedge in sugar too. Guests drink the shot and bite the lemon right after."
   },
   {
     "id": "washington-apple",
@@ -1905,7 +1905,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shake with ice and strain — the whiskey, apple schnapps, and cranberry balance is what makes it taste like a candy apple."
+    "notes": "Shake with ice until very cold and strain into the shot glass. Measure the cranberry carefully, because too much makes it taste like juice instead of candy apple."
   },
   {
     "id": "green-tea-shot",
@@ -1936,7 +1936,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Contains no actual tea — the whiskey and peach schnapps combination just turns the color of green tea when shaken and strained."
+    "notes": "There is no tea in it; the name comes from its pale green color. Shake hard with ice and strain, and use a decent sour mix since it makes up part of the flavor."
   },
   {
     "id": "b-52",
@@ -1967,7 +1967,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Layered by density, heaviest first: coffee liqueur, then Irish cream, then orange liqueur poured slowly over the back of a barspoon so each layer floats distinct."
+    "notes": "Build it heaviest to lightest: coffee liqueur, then Irish cream, then orange liqueur. Pour each over the back of a spoon so the layers stay separate."
   },
   {
     "id": "michelada",
@@ -2010,7 +2010,7 @@
       }
     ],
     "garnish": "Tajín-salted rim, lime wedge",
-    "notes": "Rim the glass with salt and Tajín, build the seasonings and lime first, then top slowly with beer to avoid excess foam."
+    "notes": "Rim the glass with salt and Tajín, add lime and seasonings over ice, then pour the lager slowly. Pouring the beer too quickly makes it foam over."
   },
   {
     "id": "irish-coffee",
@@ -2047,7 +2047,7 @@
       }
     ],
     "garnish": "Lightly whipped cream float",
-    "notes": "Pre-heat the mug with hot water first. Whip the cream just to soft, pourable peaks and float it over the back of a spoon so it sits on top rather than mixing in."
+    "notes": "Warm the mug with hot water before building, and stir the sugar into the coffee and whiskey until dissolved. Pour the loosely whipped cream gently over a spoon so it rests on top."
   },
   {
     "id": "aviation",
@@ -2083,7 +2083,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "Crème de violette should be a whisper, not a flood — too much turns the drink purple and perfumey instead of pale grey-blue."
+    "notes": "Measure the violette carefully; a heavy hand makes the drink taste soapy and pushes the color toward purple. Shake hard and strain into a chilled coupe, then express the lemon twist."
   },
   {
     "id": "clover-club",
@@ -2119,7 +2119,7 @@
       }
     ],
     "garnish": "Three raspberries",
-    "notes": "Dry-shake with the egg white first to build foam, then shake again with ice — same two-step technique as a Whiskey Sour."
+    "notes": "If using egg white, shake once without ice to foam it, then again with ice. Double-strain so raspberry seeds and ice shards stay out of the coupe."
   },
   {
     "id": "last-word",
@@ -2156,7 +2156,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts of four ingredients — the easiest classic to remember and the hardest to keep in stock, since green Chartreuse is the one bottle every bar runs out of."
+    "notes": "All four ingredients go in at the same measure, so jigger each one precisely. A sloppy pour of Chartreuse or maraschino quickly throws off the balance."
   },
   {
     "id": "corpse-reviver-no-2",
@@ -2197,7 +2197,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "\"Four of these taken in swift succession will unrevive the corpse again\" — Harry Craddock's own warning. The absinthe rinse coats the glass and gets dumped, never measured in."
+    "notes": "Swirl a small amount of absinthe around the chilled coupe and discard the excess before straining in. Too much absinthe will bury the Lillet and orange liqueur."
   },
   {
     "id": "paper-plane",
@@ -2234,7 +2234,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts, a 2010s cocktail already inducted into the modern canon. Amaro Nonino specifically is not swappable without changing the drink noticeably."
+    "notes": "An equal-parts bourbon sour that relies on Amaro Nonino and Aperol for its bittersweet edge. Substituting a different amaro changes the drink more than you might expect."
   },
   {
     "id": "southside",
@@ -2271,7 +2271,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Mint is muddled gently, then shaken with the rest and double-strained so no leaf fragments make it into the glass."
+    "notes": "Press the mint lightly rather than grinding it, since shredded leaves turn bitter. Double-strain into the coupe so no green flecks end up in the drink."
   },
   {
     "id": "bramble",
@@ -2308,7 +2308,7 @@
       }
     ],
     "garnish": "Blackberry and lemon wheel",
-    "notes": "Shake the gin, lemon, and syrup, strain over crushed ice, then drizzle the blackberry liqueur on top so it bleeds through the drink rather than mixing in."
+    "notes": "Shake the gin, lemon, and syrup, then strain over a mound of crushed ice in a rocks glass. Pour the crème de mûre last so it trickles down through the ice."
   },
   {
     "id": "white-lady",
@@ -2339,7 +2339,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Essentially a gin Sidecar. Some versions add egg white for texture — dry-shake first if you do."
+    "notes": "Built like a Sidecar but with gin as the base, so use a clean, dry gin and fresh lemon. Shake well and serve up with no garnish."
   },
   {
     "id": "between-the-sheets",
@@ -2375,7 +2375,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "Equal parts of three spirits plus lemon — a Sidecar with rum added, and stronger than the short ingredient list suggests."
+    "notes": "Cognac and white rum share the base with triple sec and lemon in equal measures. It drinks lighter than it is, so pour it as a standard-size serving."
   },
   {
     "id": "jack-rose",
@@ -2406,7 +2406,7 @@
       }
     ],
     "garnish": "Lemon wheel",
-    "notes": "Use real pomegranate grenadine, not corn-syrup bar syrup — both the color and the flavor fall flat with the fake stuff."
+    "notes": "Grenadine made from real pomegranate gives this applejack sour its color and tartness. Bright red commercial syrups mostly add sugar and artificial flavor."
   },
   {
     "id": "ward-8",
@@ -2442,7 +2442,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "A Whiskey Sour with orange juice added and grenadine standing in for simple syrup."
+    "notes": "Rye whiskey with lemon, a bit of orange juice, and grenadine for sweetness. Keep the grenadine to a quarter ounce, or the drink tips from tart to syrupy."
   },
   {
     "id": "hemingway-daiquiri",
@@ -2478,7 +2478,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Also called the Papa Doble. No added sugar — the maraschino carries the sweetness against tart grapefruit and lime."
+    "notes": "There is no simple syrup here; maraschino provides the only sweetness against lime and grapefruit. Expect a dry, sharp drink, and check the balance before adding sugar."
   },
   {
     "id": "mary-pickford",
@@ -2514,7 +2514,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "Named for the silent-film star. Shake hard so the pineapple juice froths properly before straining up."
+    "notes": "Pineapple juice foams nicely when shaken vigorously, giving the drink a light head. Keep the grenadine and maraschino small so the rum and pineapple stay in front."
   },
   {
     "id": "bacardi-cocktail",
@@ -2545,7 +2545,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Historically required by a 1936 court ruling to be made with Bacardi brand rum specifically — a Daiquiri with grenadine in place of syrup."
+    "notes": "Think of it as a Daiquiri that uses grenadine in place of simple syrup, which turns it pink. Use a light, crisp white rum and fresh lime."
   },
   {
     "id": "el-presidente",
@@ -2581,7 +2581,7 @@
       }
     ],
     "garnish": "Orange twist",
-    "notes": "Stirred, not shaken — this is a rum Martini relative, not a sour, even though the ingredient list looks sweet on paper."
+    "notes": "Stir this one; there is no juice in the recipe, so shaking only clouds it. Use a dry vermouth that is fresh, since an oxidized bottle flattens the drink."
   },
   {
     "id": "casino",
@@ -2618,7 +2618,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "One of the oldest gin sours on record, predating the Aviation by decades."
+    "notes": "A dry gin sour with only a touch of maraschino and a couple dashes of orange bitters. Keep the lemon measured, since there is no syrup to cushion it."
   },
   {
     "id": "twentieth-century",
@@ -2654,7 +2654,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "The crème de cacao is used dry, not as a dessert note — this reads as a bright, citrus-forward gin sour despite the chocolate liqueur."
+    "notes": "Use white crème de cacao, not dark, so the drink stays pale and the cocoa stays in the background. Shake with lemon and Lillet for a crisp finish."
   },
   {
     "id": "chrysanthemum",
@@ -2686,7 +2686,7 @@
       }
     ],
     "garnish": "Orange twist",
-    "notes": "No base spirit at all — vermouth is the base, which makes this a good low-ABV stirred option when a guest wants something lighter."
+    "notes": "Dry vermouth forms the base, so use a fresh, refrigerated bottle. Stir and strain into a chilled coupe; it is a good pick for a guest who wants something lower in alcohol."
   },
   {
     "id": "bijou",
@@ -2723,7 +2723,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "Equal parts, named for the \"jewel\" colors of its three spirits — gin (diamond), vermouth (ruby), Chartreuse (emerald)."
+    "notes": "Three equal parts of gin, sweet vermouth, and green Chartreuse, stirred with a dash of orange bitters. Stir long enough for proper dilution, since the Chartreuse is potent."
   },
   {
     "id": "widows-kiss",
@@ -2760,7 +2760,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "Two liqueurs plus applejack, all stirred — deceptively strong for how sweet it tastes on the way down."
+    "notes": "Applejack carries two herbal liqueurs here, so the drink tastes sweet but is quite strong. Stir well for dilution and serve up in a chilled coupe."
   },
   {
     "id": "remember-the-maine",
@@ -2796,7 +2796,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "A Manhattan variation named for the USS Maine, with cherry liqueur and an absinthe rinse standing in for plain bitters."
+    "notes": "Treat it like a Manhattan with a quarter ounce of cherry liqueur and an absinthe-rinsed glass. Stir the rest, then strain into the rinsed, chilled coupe."
   },
   {
     "id": "blood-and-sand",
@@ -2832,7 +2832,7 @@
       }
     ],
     "garnish": "Orange twist",
-    "notes": "Equal parts of four ingredients — shaken, not stirred, because the orange juice needs the aeration."
+    "notes": "Because it contains orange juice, this equal-parts Scotch drink is shaken rather than stirred. Fresh orange juice makes a noticeable difference over carton juice."
   },
   {
     "id": "monkey-gland",
@@ -2869,7 +2869,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Named (crudely) for a 1920s rejuvenation fad. The anise dash is barely perceptible but rounds the orange and gin together."
+    "notes": "Gin and orange juice sweetened with a little grenadine, plus two dashes of absinthe. Keep the absinthe to dashes; it should add depth without dominating."
   },
   {
     "id": "corpse-reviver-no-1",
@@ -2900,7 +2900,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "The stirred, spirit-forward sibling of the more famous No. 2 — meant as an actual hangover remedy, not a citrus-forward sour."
+    "notes": "Unlike the gin-based No. 2, this version has no citrus. Stir the cognac, calvados, and sweet vermouth until cold and strain into a chilled coupe."
   },
   {
     "id": "pink-lady",
@@ -2936,7 +2936,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Dry-shake the egg white first, same technique as a Whiskey Sour, for the drink's signature pale pink foam."
+    "notes": "Gin, grenadine, and lemon, with optional egg white for body. If you add the egg, shake without ice first to build foam, then shake again with ice."
   },
   {
     "id": "caipiroska",
@@ -2969,7 +2969,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "The Caipirinha's vodka-based cousin — same muddle technique, cachaça swapped out for vodka."
+    "notes": "Muddle lime pieces with sugar in the rocks glass to release juice and peel oils, then add vodka and crushed ice. Avoid mashing the white pith too hard."
   },
   {
     "id": "caipirissima",
@@ -3002,7 +3002,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Same build as a Caipirinha with white rum standing in for cachaça."
+    "notes": "Handle it like a Caipirinha: press the lime with sugar in the glass, add white rum, and pack with crushed ice. Stir to dissolve any leftover sugar."
   },
   {
     "id": "ti-punch",
@@ -3034,7 +3034,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "From the French Caribbean — built to the guest's own taste at the table, with the lime squeezed (not juiced) directly into the glass."
+    "notes": "Press a lime wedge in the glass with a little cane syrup to release its juice and oils, then add the agricole rhum. It is served without ice, so the spirit stays front and center."
   },
   {
     "id": "batida",
@@ -3070,7 +3070,7 @@
       }
     ],
     "garnish": "Shredded coconut",
-    "notes": "Brazilian blended drink, endlessly variable — swap in puréed fruit like passion fruit or mango for the coconut and it's still a Batida."
+    "notes": "Blend the cachaça, coconut cream, condensed milk, and lime with crushed ice until smooth. Go easy on the condensed milk; it sweetens quickly."
   },
   {
     "id": "pisco-punch",
@@ -3101,7 +3101,7 @@
       }
     ],
     "garnish": "Pineapple chunk",
-    "notes": "A Gold Rush-era San Francisco classic. Pineapple gum syrup (pineapple-infused syrup with gum arabic) is the ingredient nobody has on hand, so infuse it ahead of service."
+    "notes": "The pineapple gum syrup is the key ingredient and has to be made ahead of time. Shake it with pisco and lime, and strain into a chilled coupe."
   },
   {
     "id": "rum-punch",
@@ -3143,7 +3143,7 @@
       }
     ],
     "garnish": "Orange slice and cherry",
-    "notes": "\"One of sour, two of sweet, three of strong, four of weak\" is the rhyme bartenders use to freehand this without a recipe card."
+    "notes": "Shake the rum with orange, pineapple, lime, and grenadine, then strain into a hurricane glass over fresh cubed ice. Taste the juices first, since their sweetness varies."
   },
   {
     "id": "planters-punch",
@@ -3186,7 +3186,7 @@
       }
     ],
     "garnish": "Orange slice, cherry, and mint",
-    "notes": "An older, simpler cousin of the modern Rum Punch — built around bitters instead of extra juice."
+    "notes": "Shake the dark rum, lime, syrup, and bitters, strain over ice in a collins glass, and finish with soda. Add the soda last so it keeps its fizz."
   },
   {
     "id": "queens-park-swizzle",
@@ -3230,7 +3230,7 @@
       }
     ],
     "garnish": "Mint bouquet",
-    "notes": "Built and swizzled with a swizzle stick spun between the palms rather than shaken, packing the glass with crushed ice as you go."
+    "notes": "Muddle the mint gently in the glass, add rum, lime, and syrup, then fill with crushed ice and churn with a swizzle stick. Dash the bitters on top to form a layer."
   },
   {
     "id": "corn-n-oil",
@@ -3268,7 +3268,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "From Barbados — built directly in the glass, no shaking, so the blackstrap rum's heaviness sinks through the drink like \"oil.\""
+    "notes": "Build it over cubed ice in a rocks glass and give it a short stir. Blackstrap rum is heavy and molasses-rich, so the falernum and lime are there to lift it."
   },
   {
     "id": "piscola",
@@ -3295,7 +3295,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "Chile's most-ordered drink by a wide margin — as simple as a Jack & Coke, just with pisco in place of whiskey."
+    "notes": "Pour pisco over ice in a highball glass and top with cola. The ratio is a matter of taste, so ask the guest how strong they want it."
   },
   {
     "id": "cantarito",
@@ -3336,7 +3336,7 @@
       }
     ],
     "garnish": "Salted rim, citrus wheel",
-    "notes": "Named for the small clay cup it's traditionally served in — a highball glass is the practical substitute behind most bars."
+    "notes": "Salt the rim before building, then add tequila, citrus juices, and a pinch of salt over ice. Top with grapefruit soda last and stir gently once."
   },
   {
     "id": "ranch-water",
@@ -3368,7 +3368,7 @@
       }
     ],
     "garnish": "Lime wedge",
-    "notes": "A West Texas staple, traditionally built right in the mineral-water bottle with the tequila and lime added to it."
+    "notes": "Build tequila and lime over ice in a highball and top with a crisp, highly carbonated soda water. Its appeal is how dry and light it is, so skip any sweetener."
   },
   {
     "id": "batanga",
@@ -3404,7 +3404,7 @@
       }
     ],
     "garnish": "Salted rim, lime wedge",
-    "notes": "Stir with a long knife blade, per its inventor's own signature move — a barspoon works fine if one isn't handy."
+    "notes": "Salt the rim, add tequila, lime, and salt over ice, then top with cola. Stir gently so the carbonation survives."
   },
   {
     "id": "chilcano",
@@ -3441,7 +3441,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Peru's answer to the Moscow Mule — same shape, pisco and ginger ale standing in for vodka and ginger beer."
+    "notes": "Build the pisco and lime over ice, top with ginger ale, and finish with bitters. Ginger ale keeps it softer and less spicy than a drink made with ginger beer."
   },
   {
     "id": "rum-swizzle",
@@ -3449,7 +3449,7 @@
     "family": "tiki",
     "glass": "collins",
     "ice": "crushed",
-    "method": "muddle",
+    "method": "build",
     "difficulty": 2,
     "tags": [
       "tiki",
@@ -3484,7 +3484,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Bermuda's national drink — swizzled with crushed ice until the glass frosts over, the same technique as a Queen's Park Swizzle."
+    "notes": "Combine the rum, lime, syrup, and bitters over crushed ice and spin a swizzle stick until the glass frosts. Finish with a short splash of soda."
   },
   {
     "id": "suffering-bastard",
@@ -3527,7 +3527,7 @@
       }
     ],
     "garnish": "Cucumber spear and mint",
-    "notes": "Invented in Cairo as a hangover remedy for British troops — gin and brandy together is unusual, and that's the point."
+    "notes": "Shake the gin, brandy, lime, and bitters, strain into a collins glass over ice, and top with ginger beer. Don't shake the ginger beer, or it will lose its fizz."
   },
   {
     "id": "fish-house-punch",
@@ -3568,7 +3568,7 @@
       }
     ],
     "garnish": "Lemon wheel",
-    "notes": "A colonial Philadelphia punch dating to the 1730s, traditionally batched by the bowl — this app's servings scaler is the fast way to size it up for a party."
+    "notes": "Rum, cognac, and peach brandy form a strong base, so taste for balance when making a big batch. Chill the punch bowl ahead of time and keep it well stocked with cubed ice."
   },
   {
     "id": "trinidad-sour",
@@ -3604,7 +3604,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Bitters as the base spirit, not a seasoning — 1.5 oz of Angostura looks like a typo the first time you read the recipe, but it isn't."
+    "notes": "The Angostura really is poured by the ounce; rye plays only a supporting role. Orgeat and lemon tame the bitterness, so measure them accurately."
   },
   {
     "id": "doctor-funk",
@@ -3647,7 +3647,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Named for the missionary doctor said to have invented it in Samoa — the anise dash is a signature, not an optional garnish."
+    "notes": "Shake the dark rum, lime, grenadine, and absinthe, strain into a collins glass over ice, and top with soda. Keep the absinthe to two dashes."
   },
   {
     "id": "hotel-nacional-special",
@@ -3683,7 +3683,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "From Havana's Hotel Nacional. Apricot liqueur (not brandy proper) is what separates this from a plain rum-and-pineapple."
+    "notes": "White rum and pineapple get depth from apricot liqueur and a sharp edge from lime. Shake hard for a frothy texture and serve up in a coupe."
   },
   {
     "id": "penicillin",
@@ -3720,7 +3720,7 @@
       }
     ],
     "garnish": "Candied ginger",
-    "notes": "Shake the blended Scotch base, strain over ice, then float the smoky Islay Scotch on top so you smell it before you taste it."
+    "notes": "Shake the blended Scotch, lemon, and honey-ginger syrup, strain over ice, then gently float the Islay malt on top. Don't stir after floating."
   },
   {
     "id": "gold-rush",
@@ -3752,7 +3752,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "A Whiskey Sour with honey instead of simple syrup and no egg white — sometimes called a bourbon on-the-rocks Bee's Knees."
+    "notes": "Honey syrup replaces simple syrup in this bourbon sour. Thin the honey with warm water first, since straight honey seizes up on contact with cold ice."
   },
   {
     "id": "naked-and-famous",
@@ -3788,7 +3788,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts, a smoky answer to the Last Word — built the same way, with mezcal and Aperol standing in for gin and green Chartreuse."
+    "notes": "An equal-parts shaken drink of mezcal, Aperol, yellow Chartreuse, and lime. Choose a mezcal that isn't overly smoky, or it will flatten the other three."
   },
   {
     "id": "oaxaca-old-fashioned",
@@ -3825,7 +3825,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "An Old Fashioned built on tequila with mezcal added for smoke — the mezcal is a seasoning here, not a co-base."
+    "notes": "Reposado tequila carries the drink; the half ounce of mezcal is there for smoky accent. Stir over ice, strain onto a large cube, and express orange peel over the top."
   },
   {
     "id": "kentucky-buck",
@@ -3862,7 +3862,7 @@
       }
     ],
     "garnish": "Sliced strawberry",
-    "notes": "A Kentucky Mule with lemon and bitters added — the bitters are what keep it from just being bourbon-and-ginger."
+    "notes": "Build the bourbon, lemon, and bitters over ice in a copper mug and top with ginger beer. Add the strawberry garnish last so it doesn't sink."
   },
   {
     "id": "tommys-margarita",
@@ -3894,7 +3894,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Drop the triple sec, add agave — this became the house Margarita at most serious cocktail bars for a reason."
+    "notes": "This version has no orange liqueur; agave syrup sweetens it and lets the tequila come through. Shake and strain over fresh ice in a rocks glass."
   },
   {
     "id": "brooklyn",
@@ -3931,7 +3931,7 @@
       }
     ],
     "garnish": "Brandied cherry",
-    "notes": "Amer Picon is nearly impossible to find in the US; most bars substitute another orange-forward amaro and adjust to taste."
+    "notes": "A rye and dry vermouth drink with maraschino and a couple of dashes of amaro. Since the traditional amer is hard to find, pick a bittersweet, orange-leaning amaro."
   },
   {
     "id": "greenpoint",
@@ -3969,7 +3969,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "A Brooklyn made rounder and easier to stock — yellow Chartreuse and extra bitters instead of Amer Picon."
+    "notes": "Close in structure to a Manhattan, with sweet vermouth and a quarter ounce of yellow Chartreuse. Stir, strain into a coupe, and use a lemon twist rather than a cherry."
   },
   {
     "id": "elder-fashioned",
@@ -4001,7 +4001,7 @@
       }
     ],
     "garnish": "Lemon twist",
-    "notes": "St-Germain elderflower liqueur stands in for the sugar, giving a lighter, floral take on the Old Fashioned template."
+    "notes": "St-Germain takes the place of sugar, so don't add extra sweetener. Stir with bitters and strain over a large cube, then express the lemon twist over the glass."
   },
   {
     "id": "gin-gin-mule",
@@ -4043,7 +4043,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Shake the gin, lime, syrup, and mint first, strain over fresh ice, then top with ginger beer — more cocktail than the average mule."
+    "notes": "Shake the gin, lime, syrup, and mint, then strain into a highball over fresh ice and top with ginger beer. Double-strain to keep mint bits out."
   },
   {
     "id": "hugo-spritz",
@@ -4080,7 +4080,7 @@
       }
     ],
     "garnish": "Mint sprig, lime wheel",
-    "notes": "Prosecco and elderflower liqueur built the same way as an Aperol Spritz — lighter and less bitter, popular across German-speaking Europe."
+    "notes": "Press the mint lightly in the wine glass, add ice and elderflower liqueur, then pour the prosecco and a splash of soda. Stir gently to keep the bubbles."
   },
   {
     "id": "whiskey-smash",
@@ -4119,7 +4119,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Whole lemon wedges are muddled directly in the shaker along with the mint, giving more body than a plain lemon-juice sour."
+    "notes": "Muddle the lemon wedges and mint firmly to release juice and peel oils, then add bourbon and syrup over crushed ice. The peel oils give it more depth than juice alone."
   },
   {
     "id": "mezcal-negroni",
@@ -4150,7 +4150,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "Swap the gin in a Negroni for mezcal and the equal-parts build stays identical — just smokier."
+    "notes": "Equal parts mezcal, Campari, and sweet vermouth, stirred and strained over a large cube. A milder mezcal keeps the smoke from overwhelming the Campari."
   },
   {
     "id": "cable-car",
@@ -4181,7 +4181,7 @@
       }
     ],
     "garnish": "Cinnamon-sugar rim, lemon twist",
-    "notes": "A spiced-rum Sidecar, essentially — the cinnamon-sugar rim is what makes it taste like the drink rather than a generic rum sour."
+    "notes": "Prepare the cinnamon-sugar rim before shaking so the drink goes out cold. Spiced rum and orange curaçao with lemon make it a Sidecar-style sour."
   },
   {
     "id": "final-ward",
@@ -4217,38 +4217,44 @@
       }
     ],
     "garnish": "None",
-    "notes": "The Last Word rebuilt with rye and lemon instead of gin and lime — same equal-parts structure, different backbone."
+    "notes": "Four equal measures, but rye and lemon replace the gin and lime of a Last Word. Shake hard and double strain into a chilled coupe; the rye should still come through the Chartreuse."
   },
   {
     "id": "bitter-giuseppe",
     "name": "Bitter Giuseppe",
-    "family": "spritz",
-    "glass": "wine",
-    "ice": "cubed",
-    "method": "build",
-    "difficulty": 1,
+    "family": "manhattan",
+    "glass": "rocks",
+    "ice": "largeCube",
+    "method": "stir",
+    "difficulty": 2,
     "tags": [
       "modern"
     ],
     "ingredients": [
       {
-        "name": "Campari",
-        "amountOz": 1.5,
-        "unit": "oz"
-      },
-      {
-        "name": "Dry vermouth",
-        "amountOz": 1.5,
-        "unit": "oz"
-      },
-      {
-        "name": "Soda water",
+        "name": "Cynar",
         "amountOz": 2,
-        "unit": "topWith"
+        "unit": "oz"
+      },
+      {
+        "name": "Sweet vermouth",
+        "amountOz": 1,
+        "unit": "oz"
+      },
+      {
+        "name": "Lemon juice",
+        "amountOz": 0.25,
+        "unit": "oz"
+      },
+      {
+        "name": "Orange bitters",
+        "amountOz": null,
+        "unit": "dash",
+        "dashCount": 4
       }
     ],
-    "garnish": "Orange slice",
-    "notes": "A lower-proof spritz built around bitter amaro and vermouth instead of a base spirit — pours easily as a session aperitif."
+    "garnish": "Lemon peel, expressed",
+    "notes": "An amaro-forward stirred drink with Cynar as the base instead of a spirit. The small squeeze of lemon brightens it, so stir briefly and keep it cold."
   },
   {
     "id": "air-mail",
@@ -4285,7 +4291,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shake the rum, lime, and honey, strain into the flute, then top with champagne — a rum-based sibling of the French 75."
+    "notes": "Shake only the rum, lime and honey syrup, strain into the flute, then add champagne last. Thin stiff honey with warm water first or it will clump in the shaker."
   },
   {
     "id": "pegu-club",
@@ -4328,7 +4334,7 @@
       }
     ],
     "garnish": "Lime wheel",
-    "notes": "Named for the officers' club in colonial Rangoon — two different bitters is deliberate, not a typo."
+    "notes": "A gin sour sharpened with curaçao and both Angostura and orange bitters. Keep the lime at half an ounce so the curaçao and bitters are not buried; serve up in a chilled coupe."
   },
   {
     "id": "death-in-the-afternoon",
@@ -4354,7 +4360,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Hemingway's own recipe: \"pour one jigger absinthe, add iced champagne until it attains the proper opalescent milkiness.\" Pour the champagne slowly — absinthe louches on contact."
+    "notes": "Put the absinthe in the flute first, then add well-chilled champagne a little at a time. The mix clouds as the wine goes in, and a slow pour keeps it from foaming over."
   },
   {
     "id": "kingston-negroni",
@@ -4385,7 +4391,7 @@
       }
     ],
     "garnish": "Orange peel, expressed",
-    "notes": "The gin in a Negroni swapped for a funky, high-ester Jamaican rum — pick one with real character or the swap doesn't register."
+    "notes": "Stir with ice and strain over one large cube, then express orange peel on top. A mild white rum gets lost against Campari, so reach for a pungent Jamaican bottle."
   },
   {
     "id": "buttery-nipple",
@@ -4411,7 +4417,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Layer by density — butterscotch schnapps first, Irish cream floated on top over the back of a barspoon."
+    "notes": "Butterscotch schnapps goes in first because it is heavier; ease the Irish cream on top off the back of a spoon. Pour too fast and the two blur together."
   },
   {
     "id": "alabama-slammer",
@@ -4447,7 +4453,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shaken with ice and strained — also served full-size over ice in a highball as a \"tall\" Slammer."
+    "notes": "Four half-ounce parts, shaken briefly with ice and strained into a shot glass. Remember sloe gin is a sweet plum-like liqueur, which gives the shot its red tint."
   },
   {
     "id": "jager-bomb",
@@ -4473,7 +4479,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Drop the chilled Jägermeister shot glass-and-all into the energy drink and slam immediately — the point is the reaction, not sipping."
+    "notes": "Pour the energy drink into the rocks glass without ice, then drop in a shot of cold Jägermeister. Use a sturdy glass and leave headroom so it does not splash out."
   },
   {
     "id": "red-headed-slut",
@@ -4504,7 +4510,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shaken quickly with ice and strained — a fruitier, sweeter counterpoint to a straight Jägermeister shot."
+    "notes": "Keep the peach schnapps, cranberry and Jägermeister cold and shake them only briefly before straining. Equal half-ounce parts; the fruit juice softens the herbal liqueur."
   },
   {
     "id": "slippery-nipple",
@@ -4530,7 +4536,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Sambuca poured first, Irish cream floated over a barspoon — the same layering technique as a Buttery Nipple with different liqueurs."
+    "notes": "Sambuca sits on the bottom, with Irish cream laid gently over it using a spoon. Same technique as a Buttery Nipple, but with an anise base instead of butterscotch."
   },
   {
     "id": "mind-eraser",
@@ -4561,7 +4567,7 @@
       }
     ],
     "garnish": "Straw",
-    "notes": "Built as three distinct layers over ice and drunk fast through a straw from the bottom up — that's the \"eraser\" part."
+    "notes": "Start with ice in the rocks glass, add vodka, float coffee liqueur carefully, then top with soda so the layers stay apart. Serve with a straw so it is sipped from the bottom."
   },
   {
     "id": "cement-mixer",
@@ -4587,7 +4593,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "A novelty shot — the lime juice curdles the Irish cream instantly in the mouth into a chewable lump. Warn first-timers."
+    "notes": "Pour the Irish cream, then add the lime juice right before serving. The acid curdles the cream almost immediately, which is the intended effect, so tell the guest what to expect."
   },
   {
     "id": "duck-fart",
@@ -4602,11 +4608,6 @@
     ],
     "ingredients": [
       {
-        "name": "Crown Royal",
-        "amountOz": 0.5,
-        "unit": "oz"
-      },
-      {
         "name": "Coffee liqueur",
         "amountOz": 0.5,
         "unit": "oz"
@@ -4615,10 +4616,15 @@
         "name": "Irish cream",
         "amountOz": 0.5,
         "unit": "oz"
+      },
+      {
+        "name": "Crown Royal",
+        "amountOz": 0.5,
+        "unit": "oz"
       }
     ],
     "garnish": "None",
-    "notes": "Coffee liqueur first, Irish cream next, whisky floated last — three clean layers if poured slowly over a spoon."
+    "notes": "Coffee liqueur goes down first, Irish cream is spooned over it, and the Crown Royal is floated on top. Pour each layer slowly so the whisky stays on the surface."
   },
   {
     "id": "surfer-on-acid",
@@ -4649,7 +4655,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shaken and strained — the pineapple and coconut round off the Jägermeister's bite more than most mixers manage."
+    "notes": "Shake the Jägermeister, coconut rum and pineapple juice hard with ice and strain. A good shake gives the pineapple a light foam on top of the shot."
   },
   {
     "id": "three-wise-men",
@@ -4680,7 +4686,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Three whiskeys, no mixer — a bar-brand-recognition shot more than a crafted recipe."
+    "notes": "Build equal parts of the three named whiskeys straight into the shot glass with no ice or mixer. Nothing hides a bad pour here, so measure each part."
   },
   {
     "id": "woo-woo",
@@ -4711,7 +4717,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shaken and strained; poured over ice in a rocks glass instead, it's the same drink as a full cocktail, just bigger."
+    "notes": "Equal parts vodka, peach schnapps and cranberry, shaken with ice and strained. If it tastes syrupy, the cranberry is probably a sweetened cocktail blend rather than juice."
   },
   {
     "id": "melon-ball",
@@ -4742,7 +4748,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Midori is the whole flavor here — it should taste distinctly of honeydew melon, not just look green."
+    "notes": "Shake the vodka, Midori and pineapple juice with ice and strain into a shot glass. Chill it well, since a warm melon liqueur shot tastes cloying."
   },
   {
     "id": "blow-job",
@@ -4773,7 +4779,7 @@
       }
     ],
     "garnish": "Whipped cream cap",
-    "notes": "Built, then topped with a cap of whipped cream — served without hands, a novelty-bar staple."
+    "notes": "Pour the Irish cream and butterscotch schnapps into the shot glass, then finish with a small dome of whipped cream. Add the cream right before handing it over."
   },
   {
     "id": "chocolate-cake-shot",
@@ -4799,7 +4805,7 @@
       }
     ],
     "garnish": "Sugared lemon wedge, chased",
-    "notes": "Shaken and strained, then chased with a sugar-coated lemon wedge — the sugar and citrus combination is what actually tastes like cake, not the shot itself."
+    "notes": "Shake the vodka and Frangelico with ice and strain. Hand it over with a lemon wedge rolled in sugar; the guest bites the lemon right after the shot."
   },
   {
     "id": "pickleback",
@@ -4825,7 +4831,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Two shots, back to back — whiskey first, brine immediately after. The brine's acidity and salt scrub the whiskey burn off the palate."
+    "notes": "Pour two separate shots, one of Irish whiskey and one of pickle brine, served side by side. Chill the brine and use a clean, plain dill brine rather than a sweet one."
   },
   {
     "id": "zombie",
@@ -4878,7 +4884,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Three rums is standard here, not excess — the layered rum character is the entire point, and it's genuinely strong despite tasting like fruit juice."
+    "notes": "Shake everything, including the dash of absinthe, and pour over crushed ice in a tiki mug. It carries four ounces of rum, so consider a one-per-guest limit."
   },
   {
     "id": "scorpion-bowl",
@@ -4920,7 +4926,7 @@
       }
     ],
     "garnish": "Gardenia or orchid, straws",
-    "notes": "Built to share — this is the drink the app's batch scaler exists for. Bump servings to size it up for the table rather than remixing the ratio by hand."
+    "notes": "Shake the rum, brandy, juices and orgeat, then pour over crushed ice in the bowl with several straws. Use the batch scaler to multiply servings instead of guessing ratios."
   },
   {
     "id": "navy-grog",
@@ -4967,7 +4973,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Three rums again, but drier and less sweet than a Zombie — grapefruit stands in for extra sugar."
+    "notes": "Three rums balanced by lime, grapefruit and honey syrup, shaken and poured over crushed ice. Warm the honey syrup slightly if it has thickened so it blends evenly."
   },
   {
     "id": "fog-cutter",
@@ -5019,7 +5025,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Three base spirits plus a sherry float — famously strong enough that Trader Vic warned \"let it get to you, quietly.\""
+    "notes": "Shake the three spirits with orange, lemon and orgeat, pour over crushed ice, then float the sherry on top. It is stronger than its juice-heavy taste suggests."
   },
   {
     "id": "three-dots-and-a-dash",
@@ -5067,7 +5073,7 @@
       }
     ],
     "garnish": "Three brandied cherries and a pineapple spear",
-    "notes": "Named for its garnish — Morse code for \"V.\" The fruit skewer isn't optional; it's the whole joke."
+    "notes": "The garnish spells the name: three cherries and one pineapple spear on a pick, like the Morse letter V. Shake the rest and serve over crushed ice in a tiki mug."
   },
   {
     "id": "beachcomber",
@@ -5104,7 +5110,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "A tiki drink served up in a coupe rather than over ice — closer in structure to a Daiquiri variation than to a Zombie."
+    "notes": "Essentially a Daiquiri boosted with triple sec and a little maraschino. Go easy on the maraschino, as a quarter ounce is plenty; shake and serve up without ice."
   },
   {
     "id": "missionarys-downfall",
@@ -5151,7 +5157,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Blended with crushed ice until slushy — one of the few tiki drinks built around mint instead of falernum or orgeat."
+    "notes": "Add the mint leaves directly to the blender with the other ingredients and crushed ice, and blend until the mint is fine and the drink is smooth. Pour into a hurricane glass."
   },
   {
     "id": "saturn",
@@ -5193,7 +5199,7 @@
       }
     ],
     "garnish": "Lemon peel",
-    "notes": "An IBA official cocktail — a gin base is unusual for tiki, since most of the category runs on rum."
+    "notes": "A gin-based tiki drink using passion fruit, orgeat and falernum. Shake hard, strain into a chilled coupe with no ice, and twist a lemon peel over the top."
   },
   {
     "id": "test-pilot",
@@ -5241,7 +5247,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "A Donn Beach original — the overproof float on top is what gives it more kick than a Mai Tai."
+    "notes": "Shake the aged and overproof rum together with lime, falernum, curaçao and bitters, then pour over crushed ice. Measure the overproof carefully since it adds a lot of strength."
   },
   {
     "id": "151-swizzle",
@@ -5249,7 +5255,7 @@
     "family": "tiki",
     "glass": "collins",
     "ice": "crushed",
-    "method": "muddle",
+    "method": "build",
     "difficulty": 3,
     "tags": [
       "tiki",
@@ -5279,7 +5285,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "Swizzled, not shaken — the crushed ice does the dilution as you spin the swizzle stick, since a full shake would over-dilute this strong a pour."
+    "notes": "Combine the ingredients in the collins glass over crushed ice and work them together with a swizzle stick or barspoon until the glass frosts. Top with more ice as it settles."
   },
   {
     "id": "bahama-mama",
@@ -5320,7 +5326,7 @@
       }
     ],
     "garnish": "Pineapple wedge and cherry",
-    "notes": "A beach-bar staple built for volume — easy to batch by the pitcher for a group."
+    "notes": "Shake the rums, orange and pineapple juice and grenadine together, then pour over crushed ice. Easy to scale up by the pitcher for a group."
   },
   {
     "id": "blue-hawaii",
@@ -5357,7 +5363,7 @@
       }
     ],
     "garnish": "Pineapple wedge and cherry",
-    "notes": "The blue curaçao is entirely for color — flavor-wise it's an orange liqueur, so don't expect it to taste \"blue.\""
+    "notes": "Blend everything with crushed ice until smooth. Blue curaçao is an orange liqueur, so the color is striking but the flavor stays citrus, pineapple and coconut."
   },
   {
     "id": "chi-chi",
@@ -5388,7 +5394,7 @@
       }
     ],
     "garnish": "Pineapple wedge and cherry",
-    "notes": "A Piña Colada with vodka instead of rum — otherwise an identical blend."
+    "notes": "Blend vodka, coconut cream and pineapple juice with crushed ice until thick. Mix the coconut cream before measuring, as it separates in the can."
   },
   {
     "id": "singapore-sling",
@@ -5451,7 +5457,7 @@
       }
     ],
     "garnish": "Pineapple wedge and cherry",
-    "notes": "From Raffles Hotel in Singapore — nine ingredients is not a typo, and skipping any one of the liqueurs changes the drink noticeably."
+    "notes": "Shake everything except the soda, strain over cubed ice in a collins glass, and finish with soda. Measure the quarter-ounce liqueurs precisely; small changes shift the balance."
   },
   {
     "id": "jet-pilot",
@@ -5509,7 +5515,7 @@
       }
     ],
     "garnish": "Mint sprig",
-    "notes": "A Test Pilot relative with grapefruit and cinnamon added — another three-rum build where the overproof float carries the finish."
+    "notes": "Shake all the rums with the juices, falernum, cinnamon syrup and absinthe, then pour over crushed ice. Grapefruit and cinnamon are what set it apart from a Test Pilot."
   },
   {
     "id": "americano",
@@ -5540,7 +5546,7 @@
       }
     ],
     "garnish": "Orange slice",
-    "notes": "Equal parts Campari and sweet vermouth, topped with soda — the Negroni's predecessor and, at half the ABV, still the better daytime order."
+    "notes": "Campari and sweet vermouth in equal parts over ice, lengthened with soda. Think of it as a lighter, bubbly Negroni with soda where the gin would be."
   },
   {
     "id": "john-collins",
@@ -5576,7 +5582,7 @@
       }
     ],
     "garnish": "Lemon wheel and brandied cherry",
-    "notes": "Identical build to a Tom Collins with whiskey standing in for gin — same shake-strain-top structure."
+    "notes": "Shake the bourbon, lemon and simple syrup, strain over fresh ice in a collins glass, and top with soda. Add the soda after straining so it keeps its fizz."
   },
   {
     "id": "horses-neck",
@@ -5602,7 +5608,7 @@
       }
     ],
     "garnish": "Long spiral lemon peel",
-    "notes": "The peel is the entire point of the drink's name — cut one long continuous spiral and drape it over the rim into the glass, don't just drop in a wedge."
+    "notes": "Peel a lemon in one unbroken spiral and hang it inside the highball before adding ice. Then pour the bourbon and top with ginger ale."
   },
   {
     "id": "shirley-temple",
@@ -5628,7 +5634,7 @@
       }
     ],
     "garnish": "Maraschino cherry",
-    "notes": "The standard answer for a non-drinking guest or a kid at the bar — build the grenadine first so it sinks and swirls when stirred at the table."
+    "notes": "Fill the highball with ice and ginger ale, then pour the grenadine in last so it drifts down through the glass. Add the cherry on top."
   },
   {
     "id": "arnold-palmer",
@@ -5654,7 +5660,7 @@
       }
     ],
     "garnish": "Lemon wheel",
-    "notes": "Half lemonade, half iced tea, named for the golfer who ordered it that way — add vodka or whiskey and it becomes a \"John Daly.\""
+    "notes": "Equal parts lemonade and unsweetened iced tea over ice. If the lemonade is very sweet, lean slightly toward more tea rather than adding lemon juice."
   },
   {
     "id": "salty-dog",
@@ -5681,7 +5687,7 @@
       }
     ],
     "garnish": "Salted rim",
-    "notes": "Identical to a Greyhound with a salted rim added — the rim is the only difference between the two names."
+    "notes": "Salt only the outside rim of the highball so the salt does not fall into the drink. Otherwise it is vodka and grapefruit juice built over ice."
   },
   {
     "id": "greyhound",
@@ -5707,7 +5713,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "No salt rim — add one and it becomes a Salty Dog, nothing else about the build changes."
+    "notes": "Two parts grapefruit to one part vodka, built over ice with no rim. Fresh grapefruit juice makes a clear difference in a drink this simple."
   },
   {
     "id": "gin-fizz",
@@ -5743,7 +5749,7 @@
       }
     ],
     "garnish": "Lemon wheel",
-    "notes": "Shake the first three hard, strain into the glass, then top with soda — a Tom Collins built up rather than long over fresh ice from the start."
+    "notes": "Shake the gin, lemon and syrup hard, strain over fresh ice in a highball, then add soda. The hard shake gives the drink a lively texture before the soda goes in."
   },
   {
     "id": "ramos-gin-fizz",
@@ -5800,7 +5806,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shake for a full two minutes minimum, longer than any other drink in this deck — the extended shake is what builds the signature marshmallow-thick foam."
+    "notes": "Dry shake first if using egg white, then shake a long time with ice to build foam. Strain into a collins glass with no ice and add the soda gently so the foam rises."
   },
   {
     "id": "sloe-gin-fizz",
@@ -5836,7 +5842,7 @@
       }
     ],
     "garnish": "Lemon wheel and cherry",
-    "notes": "Sloe gin is a liqueur, not a gin — sweeter and fruitier, so this fizz needs less added syrup than a plain Gin Fizz."
+    "notes": "Sloe gin brings its own sweetness, so this uses less syrup than a standard Gin Fizz. Shake, strain over ice in a highball, and top with soda."
   },
   {
     "id": "pimms-cup",
@@ -5862,7 +5868,7 @@
       }
     ],
     "garnish": "Cucumber ribbon, mint, orange and strawberry slices",
-    "notes": "The fruit garnish is heavy by design — a proper Pimm's Cup is half garnish, and guests pick through it as they drink."
+    "notes": "Build the Pimm's over ice, top with lemonade or ginger ale, and load it with cucumber, mint, orange and strawberry. The fresh fruit adds as much flavor as the liqueur."
   },
   {
     "id": "shandy",
@@ -5888,7 +5894,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts beer and lemonade, called a Radler in Germany — same drink under a different name."
+    "notes": "Pour the lager first, tilting the glass to control the head, then add lemonade. The ratio is close to half and half, so adjust to taste."
   },
   {
     "id": "snakebite",
@@ -5914,7 +5920,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts lager and hard cider, built directly in the glass — ordered as a \"diesel\" in some UK pubs with a splash of blackcurrant added."
+    "notes": "Pour the lager and hard cider in equal amounts into the highball over ice. Pour slowly, as both are carbonated and the head builds up quickly."
   },
   {
     "id": "black-velvet",
@@ -5940,7 +5946,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Pour the champagne first, then float the stout slowly over a spoon so the two layer rather than mix — an Irish-pub classic."
+    "notes": "Pour the stout into the wine glass first, then top slowly with champagne. Let the foam settle between pours so it does not overflow."
   },
   {
     "id": "tequila-sunrise",
@@ -5971,7 +5977,7 @@
       }
     ],
     "garnish": "Orange slice and cherry",
-    "notes": "Build tequila and orange juice first, then sink the grenadine down a barspoon so it settles at the bottom and rises like a sunrise — never stir it in."
+    "notes": "Build the tequila and orange juice over ice, then pour the grenadine gently so it sinks to the bottom. Do not stir; the gradient is the look of the drink."
   },
   {
     "id": "grasshopper",
@@ -6002,7 +6008,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Equal parts of three ingredients, shaken hard to aerate the cream — tastes like a liquid thin-mint cookie."
+    "notes": "Equal parts crème de cacao, green crème de menthe and cream. Shake hard with ice to aerate the cream, then strain into a chilled coupe."
   },
   {
     "id": "golden-cadillac",
@@ -6033,7 +6039,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Same equal-parts structure as a Grasshopper, with Galliano's vanilla-anise standing in for the mint."
+    "notes": "Galliano replaces the crème de menthe of a Grasshopper, giving vanilla and anise instead of mint. Shake firmly and strain into a coupe with no ice."
   },
   {
     "id": "pink-squirrel",
@@ -6064,7 +6070,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Crème de noyaux is almond-flavored and naturally pink, which is the entire source of the drink's name and color."
+    "notes": "Crème de noyaux brings the pink color and an almond-like flavor. Shake it with the crème de cacao and cream, then strain up into a chilled coupe."
   },
   {
     "id": "alexander",
@@ -6095,7 +6101,7 @@
       }
     ],
     "garnish": "Freshly grated nutmeg",
-    "notes": "The gin original that the Brandy Alexander later replaced with brandy — grate nutmeg over the foam the same way."
+    "notes": "Gin, crème de cacao and cream shaken hard and strained into a coupe. Grate fresh nutmeg over the top; pre-ground nutmeg lacks aroma."
   },
   {
     "id": "velvet-hammer",
@@ -6126,7 +6132,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "No base spirit — two liqueurs and cream, which makes it deceptively easy to drink for its actual ABV."
+    "notes": "Cointreau and white crème de cacao with cream and no base spirit. Shake hard and strain up; it tastes gentle but still contains two liqueurs."
   },
   {
     "id": "nutty-irishman",
@@ -6157,7 +6163,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Built over ice rather than shaken — the two liqueurs already carry enough body without extra aeration."
+    "notes": "Pour the Frangelico, Irish cream and heavy cream over ice in a rocks glass and give a quick stir. No shaking is needed for this build."
   },
   {
     "id": "toasted-almond",
@@ -6193,7 +6199,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "Shake and strain over fresh ice — amaretto and coffee liqueur together taste exactly like the drink's name promises."
+    "notes": "Shake the vodka, amaretto, coffee liqueur and cream with ice, then strain into a rocks glass over fresh cubes. Shaking blends the cream fully."
   },
   {
     "id": "separator",
@@ -6224,7 +6230,7 @@
       }
     ],
     "garnish": "None",
-    "notes": "A lesser-known Brandy Alexander relative built with coffee liqueur instead of crème de cacao."
+    "notes": "Brandy, coffee liqueur and cream shaken and strained into a coupe. It resembles a Brandy Alexander, but coffee liqueur takes the place of crème de cacao."
   },
   {
     "id": "chocolate-martini",
@@ -6256,6 +6262,6 @@
       }
     ],
     "garnish": "Chocolate shavings",
-    "notes": "Despite the name it's a cream cocktail, not a true Martini — there's no vermouth anywhere in it."
+    "notes": "Shake vodka, crème de cacao and cream until very cold, then strain into a chilled martini glass. Add the chocolate shavings after the drink is poured."
   }
 ]

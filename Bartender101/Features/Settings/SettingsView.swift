@@ -6,25 +6,47 @@ import SwiftUI
 enum SettingsKeys {
     static let measurementUnit = "settings.measurementUnit"
     static let speedDrillSeconds = "settings.speedDrillSeconds"
+    static let bartendingMode = "settings.bartendingMode"
+    static let buildLayout = "settings.buildLayout"
+    static let hasSeenIntro = "settings.hasSeenIntro"
 }
 
 struct SettingsView: View {
+    @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var reviewStore: ReviewStore
+    @EnvironmentObject private var shiftLog: ShiftLogStore
+    @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @EnvironmentObject private var photoStore: PhotoStore
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.speedDrillSeconds) private var speedDrillSeconds = 5
+    @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
+    @AppStorage(SettingsKeys.hasSeenIntro) private var hasSeenIntro = false
     @State private var showResetConfirm = false
+    @State private var showClearLogConfirm = false
+    @State private var showDeleteHouseConfirm = false
+    @State private var showDeletePhotosConfirm = false
 
     private let timerOptions = [3, 5, 8]
 
     var body: some View {
         Form {
-            Section("Measurements") {
+            Section {
+                Toggle("Bartending Mode", isOn: $barMode)
+            } footer: {
+                Text("Big text and big buttons on Search and recipe pages, for reading your phone behind the bar. Also on the Search page's toolbar.")
+            }
+
+            Section {
                 Picker("Units", selection: $unitRaw) {
                     ForEach(MeasurementUnit.allCases) { unit in
                         Text(unit == .oz ? "Ounces" : "Milliliters").tag(unit.rawValue)
                     }
                 }
                 .pickerStyle(.segmented)
+            } header: {
+                Text("Measurements")
+            } footer: {
+                Text("Applies everywhere a drink's amounts are shown, scaled or not.")
             }
 
             Section("Speed Drill") {
@@ -44,8 +66,46 @@ struct SettingsView: View {
                 Text("Clears every card's spaced-repetition history. The drink deck itself is unaffected.")
             }
 
+            Section {
+                Button("Clear shift log", role: .destructive) {
+                    showClearLogConfirm = true
+                }
+                .disabled(shiftLog.entries.isEmpty)
+            } footer: {
+                Text("Deletes every drink logged with Made it, across all nights.")
+            }
+
+            Section {
+                Button("Delete all house drinks", role: .destructive) {
+                    showDeleteHouseConfirm = true
+                }
+                .disabled(customDrinks.drinks.isEmpty)
+            } footer: {
+                Text("Deletes every drink made in Build, with its tasting log. Drinks already in the shift log stay there.")
+            }
+
+            Section {
+                Button("Delete all photos", role: .destructive) {
+                    showDeletePhotosConfirm = true
+                }
+                .disabled(photoStore.photos.isEmpty)
+            } footer: {
+                Text("Deletes every drink photo saved in the app. Photos you shared or saved elsewhere aren't affected.")
+            }
+
+            Section {
+                Button {
+                    hasSeenIntro = false
+                } label: {
+                    Label("Show intro again", systemImage: "sparkles")
+                }
+            }
+
             Section("About") {
                 LabeledContent("Deck version", value: "1.0")
+                LabeledContent("Drinks in the deck", value: "\(library.drinks.count)")
+                LabeledContent("House drinks", value: "\(customDrinks.drinks.count)")
+                LabeledContent("Drink photos", value: "\(photoStore.photos.count)")
                 LabeledContent("Cards started", value: "\(reviewStore.states.count)")
             }
         }
@@ -57,6 +117,42 @@ struct SettingsView: View {
         ) {
             Button("Reset Progress", role: .destructive) {
                 reviewStore.resetProgress()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone.")
+        }
+        .confirmationDialog(
+            "Delete all photos?",
+            isPresented: $showDeletePhotosConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete \(photoStore.photos.count) Photos", role: .destructive) {
+                photoStore.deleteAll()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone.")
+        }
+        .confirmationDialog(
+            "Delete all house drinks?",
+            isPresented: $showDeleteHouseConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete \(customDrinks.drinks.count) House Drinks", role: .destructive) {
+                customDrinks.deleteAll()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This cannot be undone.")
+        }
+        .confirmationDialog(
+            "Clear shift log?",
+            isPresented: $showClearLogConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Clear \(shiftLog.entries.count) Logged Drinks", role: .destructive) {
+                shiftLog.clearAll()
             }
             Button("Cancel", role: .cancel) {}
         } message: {

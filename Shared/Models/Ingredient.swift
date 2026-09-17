@@ -57,7 +57,24 @@ struct Ingredient: Codable, Identifiable, Hashable {
         case .pinch: return "Pinch"
         case .optional: return "Optional"
         case .dash: return "Dash"
+        case .barspoon: return "Barspoon"
         case .oz: return nil
+        }
+    }
+}
+
+extension IngredientUnit {
+    var pickerName: String {
+        switch self {
+        case .oz: return "oz"
+        case .topWith: return "Top with"
+        case .dash: return "Dashes"
+        case .barspoon: return "Barspoons"
+        case .rinse: return "Rinse"
+        case .splash: return "Splash"
+        case .muddled: return "Muddled"
+        case .pinch: return "Pinch"
+        case .optional: return "Optional"
         }
     }
 }

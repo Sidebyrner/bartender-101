@@ -1,0 +1,1999 @@
+[
+  {
+    "id": "vodka",
+    "name": "Vodka",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "citron-vodka",
+    "name": "Citron vodka",
+    "category": "spirits",
+    "aliases": [
+      "lemon vodka"
+    ]
+  },
+  {
+    "id": "vanilla-vodka",
+    "name": "Vanilla vodka",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "gin",
+    "name": "Gin",
+    "category": "spirits",
+    "aliases": [
+      "london dry gin",
+      "dry gin"
+    ]
+  },
+  {
+    "id": "old-tom-gin",
+    "name": "Old Tom gin",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "plymouth-gin",
+    "name": "Plymouth gin",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "navy-strength-gin",
+    "name": "Navy strength gin",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "genever",
+    "name": "Genever",
+    "category": "spirits",
+    "aliases": [
+      "jenever"
+    ]
+  },
+  {
+    "id": "vodka-or-gin",
+    "name": "Vodka or gin",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "white-rum",
+    "name": "White rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "light-rum",
+    "name": "Light rum",
+    "category": "spirits",
+    "aliases": [
+      "silver rum"
+    ]
+  },
+  {
+    "id": "gold-rum",
+    "name": "Gold rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "aged-rum",
+    "name": "Aged rum",
+    "category": "spirits",
+    "aliases": [
+      "añejo rum"
+    ]
+  },
+  {
+    "id": "dark-rum",
+    "name": "Dark rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "blackstrap-rum",
+    "name": "Blackstrap rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "spiced-rum",
+    "name": "Spiced rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "jamaican-rum",
+    "name": "Jamaican rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "demerara-rum",
+    "name": "Demerara rum",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "overproof-rum",
+    "name": "Overproof rum",
+    "category": "spirits",
+    "aliases": [
+      "151 rum"
+    ]
+  },
+  {
+    "id": "gosling-s-black-seal-rum",
+    "name": "Gosling's Black Seal rum",
+    "category": "spirits",
+    "aliases": [
+      "goslings"
+    ]
+  },
+  {
+    "id": "rhum-agricole-blanc",
+    "name": "Rhum agricole blanc",
+    "category": "spirits",
+    "aliases": [
+      "agricole"
+    ]
+  },
+  {
+    "id": "cachaca",
+    "name": "Cachaça",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "batavia-arrack",
+    "name": "Batavia arrack",
+    "category": "spirits",
+    "aliases": [
+      "arrack"
+    ]
+  },
+  {
+    "id": "blanco-tequila",
+    "name": "Blanco tequila",
+    "category": "spirits",
+    "aliases": [
+      "silver tequila",
+      "tequila",
+      "plata tequila"
+    ]
+  },
+  {
+    "id": "reposado-tequila",
+    "name": "Reposado tequila",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "anejo-tequila",
+    "name": "Añejo tequila",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "mezcal",
+    "name": "Mezcal",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "sotol",
+    "name": "Sotol",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "whiskey",
+    "name": "Whiskey",
+    "category": "spirits",
+    "aliases": [
+      "whisky"
+    ]
+  },
+  {
+    "id": "bourbon",
+    "name": "Bourbon",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "rye-whiskey",
+    "name": "Rye whiskey",
+    "category": "spirits",
+    "aliases": [
+      "rye"
+    ]
+  },
+  {
+    "id": "bourbon-or-rye",
+    "name": "Bourbon or rye",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "rye-or-bourbon",
+    "name": "Rye or bourbon",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "tennessee-whiskey",
+    "name": "Tennessee whiskey",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "jack-daniel-s",
+    "name": "Jack Daniel's",
+    "category": "spirits",
+    "aliases": [
+      "jack daniels"
+    ]
+  },
+  {
+    "id": "jim-beam",
+    "name": "Jim Beam",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "irish-whiskey",
+    "name": "Irish whiskey",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "jameson-irish-whiskey",
+    "name": "Jameson Irish whiskey",
+    "category": "spirits",
+    "aliases": [
+      "jameson"
+    ]
+  },
+  {
+    "id": "scotch",
+    "name": "Scotch",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "blended-scotch",
+    "name": "Blended Scotch",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "islay-single-malt-scotch",
+    "name": "Islay single malt Scotch",
+    "category": "spirits",
+    "aliases": [
+      "islay scotch",
+      "laphroaig"
+    ]
+  },
+  {
+    "id": "johnnie-walker",
+    "name": "Johnnie Walker",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "canadian-whisky",
+    "name": "Canadian whisky",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "crown-royal",
+    "name": "Crown Royal",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "japanese-whisky",
+    "name": "Japanese whisky",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "brandy",
+    "name": "Brandy",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "cognac",
+    "name": "Cognac",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "armagnac",
+    "name": "Armagnac",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "applejack",
+    "name": "Applejack",
+    "category": "spirits",
+    "aliases": [
+      "apple brandy"
+    ]
+  },
+  {
+    "id": "calvados",
+    "name": "Calvados",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "pisco",
+    "name": "Pisco",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "pear-brandy",
+    "name": "Pear brandy",
+    "category": "spirits",
+    "aliases": [
+      "poire williams"
+    ]
+  },
+  {
+    "id": "kirschwasser",
+    "name": "Kirschwasser",
+    "category": "spirits",
+    "aliases": [
+      "kirsch"
+    ]
+  },
+  {
+    "id": "grappa",
+    "name": "Grappa",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "aquavit",
+    "name": "Aquavit",
+    "category": "spirits",
+    "aliases": [
+      "akvavit"
+    ]
+  },
+  {
+    "id": "shochu",
+    "name": "Shochu",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "soju",
+    "name": "Soju",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "baijiu",
+    "name": "Baijiu",
+    "category": "spirits",
+    "aliases": []
+  },
+  {
+    "id": "absinthe",
+    "name": "Absinthe",
+    "category": "liqueurs",
+    "aliases": [],
+    "defaultUnit": "rinse"
+  },
+  {
+    "id": "pastis",
+    "name": "Pastis",
+    "category": "liqueurs",
+    "aliases": [
+      "pernod",
+      "ricard"
+    ]
+  },
+  {
+    "id": "sambuca",
+    "name": "Sambuca",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "ouzo",
+    "name": "Ouzo",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "amaretto",
+    "name": "Amaretto",
+    "category": "liqueurs",
+    "aliases": [
+      "disaronno"
+    ]
+  },
+  {
+    "id": "apricot-liqueur",
+    "name": "Apricot liqueur",
+    "category": "liqueurs",
+    "aliases": [
+      "apricot brandy"
+    ]
+  },
+  {
+    "id": "blue-curacao",
+    "name": "Blue curaçao",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "orange-curacao",
+    "name": "Orange curaçao",
+    "category": "liqueurs",
+    "aliases": [
+      "dry curaçao"
+    ]
+  },
+  {
+    "id": "triple-sec",
+    "name": "Triple sec",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "cointreau",
+    "name": "Cointreau",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "orange-liqueur",
+    "name": "Orange liqueur",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "grand-marnier",
+    "name": "Grand Marnier",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "butterscotch-schnapps",
+    "name": "Butterscotch schnapps",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "peach-schnapps",
+    "name": "Peach schnapps",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "sour-apple-schnapps",
+    "name": "Sour apple schnapps",
+    "category": "liqueurs",
+    "aliases": [
+      "apple pucker"
+    ]
+  },
+  {
+    "id": "peach-brandy",
+    "name": "Peach brandy",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "benedictine",
+    "name": "Bénédictine",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "cherry-heering",
+    "name": "Cherry Heering",
+    "category": "liqueurs",
+    "aliases": [
+      "heering",
+      "cherry liqueur"
+    ]
+  },
+  {
+    "id": "coffee-liqueur",
+    "name": "Coffee liqueur",
+    "category": "liqueurs",
+    "aliases": [
+      "kahlua"
+    ]
+  },
+  {
+    "id": "creme-de-cacao",
+    "name": "Crème de cacao",
+    "category": "liqueurs",
+    "aliases": [
+      "chocolate liqueur"
+    ]
+  },
+  {
+    "id": "white-creme-de-cacao",
+    "name": "White crème de cacao",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "creme-de-cassis",
+    "name": "Crème de cassis",
+    "category": "liqueurs",
+    "aliases": [
+      "cassis"
+    ]
+  },
+  {
+    "id": "creme-de-mure",
+    "name": "Crème de mûre",
+    "category": "liqueurs",
+    "aliases": [
+      "blackberry liqueur"
+    ]
+  },
+  {
+    "id": "creme-de-noyaux",
+    "name": "Crème de noyaux",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "creme-de-violette",
+    "name": "Crème de violette",
+    "category": "liqueurs",
+    "aliases": [
+      "violet liqueur"
+    ]
+  },
+  {
+    "id": "creme-de-banane",
+    "name": "Crème de banane",
+    "category": "liqueurs",
+    "aliases": [
+      "banana liqueur"
+    ]
+  },
+  {
+    "id": "creme-de-peche",
+    "name": "Crème de pêche",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "green-creme-de-menthe",
+    "name": "Green crème de menthe",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "white-creme-de-menthe",
+    "name": "White crème de menthe",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "drambuie",
+    "name": "Drambuie",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "elderflower-liqueur",
+    "name": "Elderflower liqueur",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "st-germain",
+    "name": "St-Germain",
+    "category": "liqueurs",
+    "aliases": [
+      "saint germain"
+    ]
+  },
+  {
+    "id": "frangelico",
+    "name": "Frangelico",
+    "category": "liqueurs",
+    "aliases": [
+      "hazelnut liqueur"
+    ]
+  },
+  {
+    "id": "galliano",
+    "name": "Galliano",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "green-chartreuse",
+    "name": "Green Chartreuse",
+    "category": "liqueurs",
+    "aliases": [
+      "chartreuse"
+    ]
+  },
+  {
+    "id": "yellow-chartreuse",
+    "name": "Yellow Chartreuse",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "irish-cream",
+    "name": "Irish cream",
+    "category": "liqueurs",
+    "aliases": [
+      "baileys"
+    ]
+  },
+  {
+    "id": "maraschino-liqueur",
+    "name": "Maraschino liqueur",
+    "category": "liqueurs",
+    "aliases": [
+      "maraschino",
+      "luxardo"
+    ]
+  },
+  {
+    "id": "midori",
+    "name": "Midori",
+    "category": "liqueurs",
+    "aliases": [
+      "melon liqueur"
+    ]
+  },
+  {
+    "id": "southern-comfort",
+    "name": "Southern Comfort",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "sloe-gin",
+    "name": "Sloe gin",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "coconut-rum",
+    "name": "Coconut rum",
+    "category": "liqueurs",
+    "aliases": [
+      "malibu"
+    ]
+  },
+  {
+    "id": "pimm-s-no-1",
+    "name": "Pimm's No. 1",
+    "category": "liqueurs",
+    "aliases": [
+      "pimms",
+      "pimm's"
+    ]
+  },
+  {
+    "id": "chambord",
+    "name": "Chambord",
+    "category": "liqueurs",
+    "aliases": [
+      "raspberry liqueur"
+    ]
+  },
+  {
+    "id": "licor-43",
+    "name": "Licor 43",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "allspice-dram",
+    "name": "Allspice dram",
+    "category": "liqueurs",
+    "aliases": [
+      "pimento dram"
+    ]
+  },
+  {
+    "id": "ancho-reyes",
+    "name": "Ancho Reyes",
+    "category": "liqueurs",
+    "aliases": [
+      "chile liqueur"
+    ]
+  },
+  {
+    "id": "ginger-liqueur",
+    "name": "Ginger liqueur",
+    "category": "liqueurs",
+    "aliases": [
+      "domaine de canton"
+    ]
+  },
+  {
+    "id": "pear-liqueur",
+    "name": "Pear liqueur",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "limoncello",
+    "name": "Limoncello",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "strega",
+    "name": "Strega",
+    "category": "liqueurs",
+    "aliases": []
+  },
+  {
+    "id": "falernum",
+    "name": "Falernum",
+    "category": "liqueurs",
+    "aliases": [
+      "velvet falernum"
+    ]
+  },
+  {
+    "id": "sweet-vermouth",
+    "name": "Sweet vermouth",
+    "category": "vermouthAmari",
+    "aliases": [
+      "rosso vermouth",
+      "red vermouth",
+      "carpano antica"
+    ]
+  },
+  {
+    "id": "dry-vermouth",
+    "name": "Dry vermouth",
+    "category": "vermouthAmari",
+    "aliases": [
+      "french vermouth"
+    ]
+  },
+  {
+    "id": "blanc-vermouth",
+    "name": "Blanc vermouth",
+    "category": "vermouthAmari",
+    "aliases": [
+      "bianco vermouth"
+    ]
+  },
+  {
+    "id": "punt-e-mes",
+    "name": "Punt e Mes",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "lillet-blanc",
+    "name": "Lillet Blanc",
+    "category": "vermouthAmari",
+    "aliases": [
+      "lillet"
+    ]
+  },
+  {
+    "id": "cocchi-americano",
+    "name": "Cocchi Americano",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "dubonnet-rouge",
+    "name": "Dubonnet Rouge",
+    "category": "vermouthAmari",
+    "aliases": [
+      "dubonnet"
+    ]
+  },
+  {
+    "id": "bonal",
+    "name": "Bonal",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "sherry",
+    "name": "Sherry",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "fino-sherry",
+    "name": "Fino sherry",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "amontillado-sherry",
+    "name": "Amontillado sherry",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "oloroso-sherry",
+    "name": "Oloroso sherry",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "pedro-ximenez-sherry",
+    "name": "Pedro Ximénez sherry",
+    "category": "vermouthAmari",
+    "aliases": [
+      "px sherry",
+      "pedro ximenez"
+    ]
+  },
+  {
+    "id": "ruby-port",
+    "name": "Ruby port",
+    "category": "vermouthAmari",
+    "aliases": [
+      "port"
+    ]
+  },
+  {
+    "id": "tawny-port",
+    "name": "Tawny port",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "madeira",
+    "name": "Madeira",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "campari",
+    "name": "Campari",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "aperol",
+    "name": "Aperol",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "select-aperitivo",
+    "name": "Select Aperitivo",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "amaro",
+    "name": "Amaro",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "amaro-nonino",
+    "name": "Amaro Nonino",
+    "category": "vermouthAmari",
+    "aliases": [
+      "nonino"
+    ]
+  },
+  {
+    "id": "amaro-montenegro",
+    "name": "Amaro Montenegro",
+    "category": "vermouthAmari",
+    "aliases": [
+      "montenegro"
+    ]
+  },
+  {
+    "id": "averna",
+    "name": "Averna",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "cynar",
+    "name": "Cynar",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "fernet-branca",
+    "name": "Fernet-Branca",
+    "category": "vermouthAmari",
+    "aliases": [
+      "fernet"
+    ]
+  },
+  {
+    "id": "braulio",
+    "name": "Braulio",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "ramazzotti",
+    "name": "Ramazzotti",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "suze",
+    "name": "Suze",
+    "category": "vermouthAmari",
+    "aliases": []
+  },
+  {
+    "id": "jagermeister",
+    "name": "Jägermeister",
+    "category": "vermouthAmari",
+    "aliases": [
+      "jager"
+    ]
+  },
+  {
+    "id": "lime-juice",
+    "name": "Lime juice",
+    "category": "citrus",
+    "aliases": [
+      "fresh lime juice"
+    ]
+  },
+  {
+    "id": "lemon-juice",
+    "name": "Lemon juice",
+    "category": "citrus",
+    "aliases": [
+      "lemon",
+      "fresh lemon juice"
+    ]
+  },
+  {
+    "id": "lime",
+    "name": "Lime",
+    "category": "citrus",
+    "aliases": []
+  },
+  {
+    "id": "lime-wedge",
+    "name": "Lime wedge",
+    "category": "citrus",
+    "aliases": [
+      "lime wedges"
+    ]
+  },
+  {
+    "id": "lemon-wedges",
+    "name": "Lemon wedges",
+    "category": "citrus",
+    "aliases": [
+      "lemon wedge"
+    ]
+  },
+  {
+    "id": "yuzu-juice",
+    "name": "Yuzu juice",
+    "category": "citrus",
+    "aliases": [
+      "yuzu"
+    ]
+  },
+  {
+    "id": "sour-mix",
+    "name": "Sour mix",
+    "category": "citrus",
+    "aliases": [
+      "sweet and sour"
+    ]
+  },
+  {
+    "id": "citric-acid-solution",
+    "name": "Citric acid solution",
+    "category": "citrus",
+    "aliases": [
+      "acid solution"
+    ]
+  },
+  {
+    "id": "verjus",
+    "name": "Verjus",
+    "category": "citrus",
+    "aliases": []
+  },
+  {
+    "id": "simple-syrup",
+    "name": "Simple syrup",
+    "category": "syrups",
+    "aliases": [
+      "sugar syrup",
+      "1:1 syrup"
+    ]
+  },
+  {
+    "id": "rich-simple-syrup",
+    "name": "Rich simple syrup",
+    "category": "syrups",
+    "aliases": [
+      "2:1 syrup",
+      "rich syrup"
+    ]
+  },
+  {
+    "id": "demerara-syrup",
+    "name": "Demerara syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "cane-syrup",
+    "name": "Cane syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "agave-syrup",
+    "name": "Agave syrup",
+    "category": "syrups",
+    "aliases": [
+      "agave nectar",
+      "agave"
+    ]
+  },
+  {
+    "id": "honey-syrup",
+    "name": "Honey syrup",
+    "category": "syrups",
+    "aliases": [
+      "honey"
+    ]
+  },
+  {
+    "id": "honey-ginger-syrup",
+    "name": "Honey-ginger syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "maple-syrup",
+    "name": "Maple syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "ginger-syrup",
+    "name": "Ginger syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "cinnamon-syrup",
+    "name": "Cinnamon syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "vanilla-syrup",
+    "name": "Vanilla syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "hibiscus-syrup",
+    "name": "Hibiscus syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "raspberry-syrup",
+    "name": "Raspberry syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "strawberry-syrup",
+    "name": "Strawberry syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "passion-fruit-syrup",
+    "name": "Passion fruit syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "pineapple-gum-syrup",
+    "name": "Pineapple gum syrup",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "grenadine",
+    "name": "Grenadine",
+    "category": "syrups",
+    "aliases": [
+      "pomegranate syrup"
+    ]
+  },
+  {
+    "id": "orgeat",
+    "name": "Orgeat",
+    "category": "syrups",
+    "aliases": [
+      "almond syrup"
+    ]
+  },
+  {
+    "id": "lime-cordial",
+    "name": "Lime cordial",
+    "category": "syrups",
+    "aliases": [
+      "roses lime"
+    ]
+  },
+  {
+    "id": "cream-of-coconut",
+    "name": "Cream of coconut",
+    "category": "syrups",
+    "aliases": [
+      "coco lopez"
+    ]
+  },
+  {
+    "id": "brown-sugar",
+    "name": "Brown sugar",
+    "category": "syrups",
+    "aliases": [],
+    "defaultUnit": "barspoon",
+    "defaultCount": 1
+  },
+  {
+    "id": "sugar",
+    "name": "Sugar",
+    "category": "syrups",
+    "aliases": [
+      "sugar cube",
+      "superfine sugar"
+    ],
+    "defaultUnit": "barspoon",
+    "defaultCount": 1
+  },
+  {
+    "id": "white-peach-puree",
+    "name": "White peach purée",
+    "category": "syrups",
+    "aliases": [
+      "peach puree"
+    ]
+  },
+  {
+    "id": "mango-puree",
+    "name": "Mango purée",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "passion-fruit-puree",
+    "name": "Passion fruit purée",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "strawberry-puree",
+    "name": "Strawberry purée",
+    "category": "syrups",
+    "aliases": []
+  },
+  {
+    "id": "oleo-saccharum",
+    "name": "Oleo saccharum",
+    "category": "syrups",
+    "aliases": [
+      "oleo"
+    ]
+  },
+  {
+    "id": "orange-juice",
+    "name": "Orange juice",
+    "category": "juices",
+    "aliases": [
+      "oj",
+      "fresh orange juice"
+    ]
+  },
+  {
+    "id": "pineapple-juice",
+    "name": "Pineapple juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "cranberry-juice",
+    "name": "Cranberry juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "grapefruit-juice",
+    "name": "Grapefruit juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "tomato-juice",
+    "name": "Tomato juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "apple-juice",
+    "name": "Apple juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "blood-orange-juice",
+    "name": "Blood orange juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "pomegranate-juice",
+    "name": "Pomegranate juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "watermelon-juice",
+    "name": "Watermelon juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "cucumber-juice",
+    "name": "Cucumber juice",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "lemonade",
+    "name": "Lemonade",
+    "category": "juices",
+    "aliases": []
+  },
+  {
+    "id": "soda-water",
+    "name": "Soda water",
+    "category": "mixers",
+    "aliases": [
+      "club soda",
+      "sparkling water",
+      "seltzer"
+    ]
+  },
+  {
+    "id": "tonic-water",
+    "name": "Tonic water",
+    "category": "mixers",
+    "aliases": [
+      "tonic"
+    ]
+  },
+  {
+    "id": "ginger-beer",
+    "name": "Ginger beer",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "ginger-ale",
+    "name": "Ginger ale",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "cola",
+    "name": "Cola",
+    "category": "mixers",
+    "aliases": [
+      "coke",
+      "coca-cola"
+    ]
+  },
+  {
+    "id": "lemon-lime-soda",
+    "name": "Lemon-lime soda",
+    "category": "mixers",
+    "aliases": [
+      "sprite",
+      "7up"
+    ]
+  },
+  {
+    "id": "grapefruit-soda",
+    "name": "Grapefruit soda",
+    "category": "mixers",
+    "aliases": [
+      "squirt",
+      "jarritos"
+    ]
+  },
+  {
+    "id": "bitter-lemon",
+    "name": "Bitter lemon",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "root-beer",
+    "name": "Root beer",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "cream-soda",
+    "name": "Cream soda",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "lemonade-or-ginger-ale",
+    "name": "Lemonade or ginger ale",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "energy-drink",
+    "name": "Energy drink",
+    "category": "mixers",
+    "aliases": [
+      "red bull"
+    ]
+  },
+  {
+    "id": "iced-tea",
+    "name": "Iced tea",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "hot-coffee",
+    "name": "Hot coffee",
+    "category": "mixers",
+    "aliases": [
+      "coffee"
+    ]
+  },
+  {
+    "id": "fresh-espresso",
+    "name": "Fresh espresso",
+    "category": "mixers",
+    "aliases": [
+      "espresso"
+    ]
+  },
+  {
+    "id": "cold-brew-coffee",
+    "name": "Cold brew coffee",
+    "category": "mixers",
+    "aliases": [
+      "cold brew"
+    ]
+  },
+  {
+    "id": "hot-water",
+    "name": "Hot water",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "hot-chocolate",
+    "name": "Hot chocolate",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "coconut-water",
+    "name": "Coconut water",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "kombucha",
+    "name": "Kombucha",
+    "category": "mixers",
+    "aliases": []
+  },
+  {
+    "id": "champagne",
+    "name": "Champagne",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "champagne-or-sparkling-wine",
+    "name": "Champagne or sparkling wine",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "prosecco",
+    "name": "Prosecco",
+    "category": "wineBeer",
+    "aliases": [
+      "sparkling wine"
+    ]
+  },
+  {
+    "id": "cava",
+    "name": "Cava",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "dry-white-wine",
+    "name": "Dry white wine",
+    "category": "wineBeer",
+    "aliases": [
+      "white wine"
+    ]
+  },
+  {
+    "id": "red-wine",
+    "name": "Red wine",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "rose",
+    "name": "Rosé",
+    "category": "wineBeer",
+    "aliases": [
+      "rose wine"
+    ]
+  },
+  {
+    "id": "lambrusco",
+    "name": "Lambrusco",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "sake",
+    "name": "Sake",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "lager",
+    "name": "Lager",
+    "category": "wineBeer",
+    "aliases": [
+      "beer",
+      "pilsner"
+    ]
+  },
+  {
+    "id": "mexican-lager",
+    "name": "Mexican lager",
+    "category": "wineBeer",
+    "aliases": [
+      "corona",
+      "modelo",
+      "tecate"
+    ]
+  },
+  {
+    "id": "stout",
+    "name": "Stout",
+    "category": "wineBeer",
+    "aliases": [
+      "guinness"
+    ]
+  },
+  {
+    "id": "ipa",
+    "name": "IPA",
+    "category": "wineBeer",
+    "aliases": []
+  },
+  {
+    "id": "wheat-beer",
+    "name": "Wheat beer",
+    "category": "wineBeer",
+    "aliases": [
+      "hefeweizen"
+    ]
+  },
+  {
+    "id": "hard-cider",
+    "name": "Hard cider",
+    "category": "wineBeer",
+    "aliases": [
+      "cider"
+    ]
+  },
+  {
+    "id": "angostura-bitters",
+    "name": "Angostura bitters",
+    "category": "bitters",
+    "aliases": [
+      "angostura",
+      "aromatic bitters",
+      "ango"
+    ]
+  },
+  {
+    "id": "orange-bitters",
+    "name": "Orange bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "peychaud-s-bitters",
+    "name": "Peychaud's bitters",
+    "category": "bitters",
+    "aliases": [
+      "peychauds",
+      "peychaud"
+    ]
+  },
+  {
+    "id": "chocolate-bitters",
+    "name": "Chocolate bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "mole-bitters",
+    "name": "Mole bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "grapefruit-bitters",
+    "name": "Grapefruit bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "celery-bitters",
+    "name": "Celery bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "cherry-bitters",
+    "name": "Cherry bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "black-walnut-bitters",
+    "name": "Black walnut bitters",
+    "category": "bitters",
+    "aliases": [
+      "walnut bitters"
+    ]
+  },
+  {
+    "id": "tiki-bitters",
+    "name": "Tiki bitters",
+    "category": "bitters",
+    "aliases": []
+  },
+  {
+    "id": "egg-white",
+    "name": "Egg white",
+    "category": "dairyEgg",
+    "aliases": [],
+    "defaultUnit": "oz",
+    "defaultOz": 0.75
+  },
+  {
+    "id": "whole-egg",
+    "name": "Whole egg",
+    "category": "dairyEgg",
+    "aliases": [],
+    "defaultUnit": "oz",
+    "defaultOz": 1.5
+  },
+  {
+    "id": "egg-yolk",
+    "name": "Egg yolk",
+    "category": "dairyEgg",
+    "aliases": [],
+    "defaultUnit": "oz",
+    "defaultOz": 0.5
+  },
+  {
+    "id": "aquafaba",
+    "name": "Aquafaba",
+    "category": "dairyEgg",
+    "aliases": [
+      "vegan egg white"
+    ],
+    "defaultUnit": "oz",
+    "defaultOz": 0.75
+  },
+  {
+    "id": "heavy-cream",
+    "name": "Heavy cream",
+    "category": "dairyEgg",
+    "aliases": [
+      "cream",
+      "double cream"
+    ]
+  },
+  {
+    "id": "half-and-half",
+    "name": "Half-and-half",
+    "category": "dairyEgg",
+    "aliases": []
+  },
+  {
+    "id": "whole-milk",
+    "name": "Whole milk",
+    "category": "dairyEgg",
+    "aliases": [
+      "milk"
+    ]
+  },
+  {
+    "id": "oat-milk",
+    "name": "Oat milk",
+    "category": "dairyEgg",
+    "aliases": []
+  },
+  {
+    "id": "coconut-milk",
+    "name": "Coconut milk",
+    "category": "dairyEgg",
+    "aliases": []
+  },
+  {
+    "id": "coconut-cream",
+    "name": "Coconut cream",
+    "category": "dairyEgg",
+    "aliases": []
+  },
+  {
+    "id": "sweetened-condensed-milk",
+    "name": "Sweetened condensed milk",
+    "category": "dairyEgg",
+    "aliases": [
+      "condensed milk"
+    ]
+  },
+  {
+    "id": "whipped-cream",
+    "name": "Whipped cream",
+    "category": "dairyEgg",
+    "aliases": [],
+    "defaultUnit": "optional"
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "category": "dairyEgg",
+    "aliases": [],
+    "defaultUnit": "barspoon",
+    "defaultCount": 1
+  },
+  {
+    "id": "vanilla-ice-cream",
+    "name": "Vanilla ice cream",
+    "category": "dairyEgg",
+    "aliases": [
+      "ice cream"
+    ]
+  },
+  {
+    "id": "mint-leaves",
+    "name": "Mint leaves",
+    "category": "herbsFruit",
+    "aliases": [
+      "mint"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 8
+  },
+  {
+    "id": "basil-leaves",
+    "name": "Basil leaves",
+    "category": "herbsFruit",
+    "aliases": [
+      "basil"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 6
+  },
+  {
+    "id": "sage-leaves",
+    "name": "Sage leaves",
+    "category": "herbsFruit",
+    "aliases": [
+      "sage"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 3
+  },
+  {
+    "id": "rosemary-sprig",
+    "name": "Rosemary sprig",
+    "category": "herbsFruit",
+    "aliases": [
+      "rosemary"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 1
+  },
+  {
+    "id": "thyme-sprig",
+    "name": "Thyme sprig",
+    "category": "herbsFruit",
+    "aliases": [
+      "thyme"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 2
+  },
+  {
+    "id": "cucumber-slices",
+    "name": "Cucumber slices",
+    "category": "herbsFruit",
+    "aliases": [
+      "cucumber"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 3
+  },
+  {
+    "id": "ginger-slices",
+    "name": "Ginger slices",
+    "category": "herbsFruit",
+    "aliases": [
+      "fresh ginger"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 2
+  },
+  {
+    "id": "jalapeno-slices",
+    "name": "Jalapeño slices",
+    "category": "herbsFruit",
+    "aliases": [
+      "jalapeno"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 2
+  },
+  {
+    "id": "strawberries",
+    "name": "Strawberries",
+    "category": "herbsFruit",
+    "aliases": [
+      "strawberry"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 2
+  },
+  {
+    "id": "raspberries",
+    "name": "Raspberries",
+    "category": "herbsFruit",
+    "aliases": [
+      "raspberry"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 5
+  },
+  {
+    "id": "blackberries",
+    "name": "Blackberries",
+    "category": "herbsFruit",
+    "aliases": [
+      "blackberry"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 4
+  },
+  {
+    "id": "blueberries",
+    "name": "Blueberries",
+    "category": "herbsFruit",
+    "aliases": [
+      "blueberry"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 8
+  },
+  {
+    "id": "pineapple-chunks",
+    "name": "Pineapple chunks",
+    "category": "herbsFruit",
+    "aliases": [
+      "pineapple"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 2
+  },
+  {
+    "id": "orange-slice",
+    "name": "Orange slice",
+    "category": "herbsFruit",
+    "aliases": [
+      "orange"
+    ],
+    "defaultUnit": "muddled",
+    "defaultCount": 1
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "salt-and-pepper",
+    "name": "Salt and pepper",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "salt-and-tajin",
+    "name": "Salt and Tajín",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "tajin",
+    "name": "Tajín",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "celery-salt",
+    "name": "Celery salt",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "saline-solution",
+    "name": "Saline solution",
+    "category": "seasoning",
+    "aliases": [
+      "saline"
+    ],
+    "defaultUnit": "dash",
+    "defaultCount": 2
+  },
+  {
+    "id": "hot-sauce",
+    "name": "Hot sauce",
+    "category": "seasoning",
+    "aliases": [
+      "tabasco"
+    ],
+    "defaultUnit": "dash",
+    "defaultCount": 2
+  },
+  {
+    "id": "worcestershire-sauce",
+    "name": "Worcestershire sauce",
+    "category": "seasoning",
+    "aliases": [
+      "worcestershire"
+    ],
+    "defaultUnit": "dash",
+    "defaultCount": 2
+  },
+  {
+    "id": "horseradish",
+    "name": "Horseradish",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "barspoon",
+    "defaultCount": 1
+  },
+  {
+    "id": "olive-brine",
+    "name": "Olive brine",
+    "category": "seasoning",
+    "aliases": [
+      "olive juice"
+    ],
+    "defaultUnit": "oz",
+    "defaultOz": 0.25
+  },
+  {
+    "id": "pickle-brine",
+    "name": "Pickle brine",
+    "category": "seasoning",
+    "aliases": [
+      "pickle juice"
+    ],
+    "defaultUnit": "oz",
+    "defaultOz": 1.0
+  },
+  {
+    "id": "orange-flower-water",
+    "name": "Orange flower water",
+    "category": "seasoning",
+    "aliases": [
+      "orange blossom water"
+    ],
+    "defaultUnit": "dash",
+    "defaultCount": 2
+  },
+  {
+    "id": "rose-water",
+    "name": "Rose water",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "dash",
+    "defaultCount": 2
+  },
+  {
+    "id": "vanilla-extract",
+    "name": "Vanilla extract",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "dash",
+    "defaultCount": 1
+  },
+  {
+    "id": "ground-cinnamon",
+    "name": "Ground cinnamon",
+    "category": "seasoning",
+    "aliases": [
+      "cinnamon"
+    ],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "grated-nutmeg",
+    "name": "Grated nutmeg",
+    "category": "seasoning",
+    "aliases": [
+      "nutmeg"
+    ],
+    "defaultUnit": "pinch"
+  },
+  {
+    "id": "chili-flakes",
+    "name": "Chili flakes",
+    "category": "seasoning",
+    "aliases": [],
+    "defaultUnit": "pinch"
+  }
+]
