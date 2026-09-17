@@ -101,10 +101,57 @@ for (const d of drinks) {
   }
 }
 
+// --- ingredients.json: the builder's ingredient catalog ---------------------
+
+const INGREDIENTS_PATH = path.join(__dirname, "..", "Shared", "Resources", "ingredients.json");
+// Keep in sync with IngredientCategory in Shared/Models/CatalogIngredient.swift.
+const CATEGORIES = ["spirits", "liqueurs", "vermouthAmari", "citrus", "syrups", "juices",
+  "mixers", "wineBeer", "bitters", "dairyEgg", "herbsFruit", "seasoning"];
+
+// Same folding as IngredientIndex.normalize: case, accents, punctuation.
+function normalize(s) {
+  return s.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+let catalog = [];
+try {
+  catalog = JSON.parse(fs.readFileSync(INGREDIENTS_PATH, "utf8"));
+} catch (e) {
+  fail(`ingredients.json is missing or not valid JSON: ${e.message}`);
+}
+
+const catalogKeys = new Map();
+const catalogIds = new Set();
+for (const ing of catalog) {
+  const where = `[ingredients.json ${ing.id || ing.name || "?"}]`;
+  if (!ing.id || catalogIds.has(ing.id)) fail(`${where} missing or duplicate id`);
+  catalogIds.add(ing.id);
+  if (!ing.name) fail(`${where} missing name`);
+  if (!CATEGORIES.includes(ing.category)) fail(`${where} invalid category "${ing.category}"`);
+  if (ing.defaultUnit !== undefined && !UNITS.includes(ing.defaultUnit)) {
+    fail(`${where} invalid defaultUnit "${ing.defaultUnit}"`);
+  }
+  for (const key of [ing.name, ...(ing.aliases || [])]) {
+    const k = normalize(key || "");
+    if (catalogKeys.has(k)) fail(`${where} "${key}" also names ${catalogKeys.get(k)}`);
+    catalogKeys.set(k, ing.name);
+  }
+}
+
+for (const d of drinks) {
+  for (const ing of d.ingredients || []) {
+    if (ing.name && !catalogKeys.has(normalize(ing.name))) {
+      fail(`[${d.id}] ingredient "${ing.name}" isn't in ingredients.json (add it or an alias)`);
+    }
+  }
+}
+
 if (errors.length > 0) {
-  console.error(`FAILED: ${errors.length} problem(s) in drinks.json\n`);
+  console.error(`FAILED: ${errors.length} problem(s) in drinks.json / ingredients.json\n`);
   for (const e of errors) console.error(" -", e);
   process.exit(1);
 }
 
 console.log(`OK: ${drinks.length} drinks validated (unique ids, valid enums, ingredient amounts, oz sanity).`);
+console.log(`OK: ${catalog.length} catalog ingredients validated (categories, units, unique names and aliases, deck coverage).`);

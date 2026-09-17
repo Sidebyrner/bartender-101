@@ -68,19 +68,6 @@ final class DrinkLibrary: ObservableObject {
         return customDrinks.contains { $0.id != id && $0.name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == key }
     }
 
-    /// Every distinct ingredient name in the deck and house drinks, sorted —
-    /// suggestions for the builder's ingredient field.
-    var ingredientNames: [String] {
-        var seen = Set<String>()
-        var names: [String] = []
-        for ingredient in (deck + customDrinks.map { $0.asDrink() }).flatMap(\.ingredients) {
-            let key = ingredient.name.lowercased()
-            guard !key.isEmpty, seen.insert(key).inserted else { continue }
-            names.append(ingredient.name)
-        }
-        return names.sorted()
-    }
-
     static func loadDrinks() throws -> [Drink] {
         guard let url = Bundle.main.url(forResource: "drinks", withExtension: "json") else {
             throw DrinkLibraryError.resourceNotFound

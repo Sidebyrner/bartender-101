@@ -114,6 +114,11 @@ After editing, validate the file before opening Xcode:
 node scripts/validate-drinks.js
 ```
 
+Every ingredient name must also be in
+[`Shared/Resources/ingredients.json`](Shared/Resources/ingredients.json) —
+add a new entry (with a `category` and any `aliases`) or an alias on an
+existing one. The script checks that too.
+
 This checks for duplicate ids/names, invalid enum values, missing amounts,
 and that each drink's total pour is roughly sane for its family (catches,
 e.g., a highball accidentally speced like a shot). It's the same check this
@@ -129,13 +134,17 @@ scripts/validate-drinks.js
 
 Shared/                   Content and pure logic, no SwiftUI views
   Resources/drinks.json   The full deck
+  Resources/ingredients.json  The builder's ingredient catalog
   Models/                 Drink, Ingredient, Measure (oz/ml), ReviewState, MadeDrink,
-                           CustomDrink (house drinks + TestStage, TastingNote)
+                           CustomDrink (house drinks + TestStage, TastingNote),
+                           CatalogIngredient (+ IngredientCategory)
   Data/                   DrinkLibrary (load/search), ReviewStore (persistence),
                            Scheduler (spaced-repetition math), FuzzyMatch,
                            RecipeScaler (servings math), Dilution (batch water),
                            PourOrder, BuildSteps, ShiftLog + ShiftLogStore,
-                           CustomDrinkStore, DrinkTemplates, DrinkBalance
+                           CustomDrinkStore, DrinkTemplates, DrinkBalance,
+                           IngredientIndex (search), IngredientCatalog,
+                           IngredientChecks (unit + duplicate safeguards)
 
 Bartender101/              The app
   Bartender101App.swift    App entry point, tab layout (Search · Study · Build · Stats · Settings)
@@ -148,7 +157,7 @@ Bartender101/              The app
       Review/              Spaced-repetition session
       SpeedDrill/          Timed multiple-choice drill
       Reverse/             Spec-to-name quiz
-    Build/                 Testing board, drink builder, balance meter,
+    Build/                 Testing board, drink builder, ingredient picker, balance meter,
                             house-drink panel (stage + tasting log)
     Stats/                 Shift log (tonight, history, per-night detail),
                             accuracy, weak drinks, per-family coverage
@@ -157,7 +166,8 @@ Bartender101/              The app
 Bartender101Tests/         DrinkLibraryTests, SchedulerTests, MeasureTests,
                            RecipeScalerTests, DilutionTests, PourOrderTests,
                            BuildStepsTests, ShiftLogTests, CustomDrinkStoreTests,
-                           DrinkBalanceTests
+                           DrinkBalanceTests, IngredientCatalogTests,
+                           IngredientChecksTests
 ```
 
 `Scheduler.swift`, `FuzzyMatch.swift`, `RecipeScaler.swift`, and
@@ -211,6 +221,25 @@ The **Build** tab gets an idea out of your head and into the glass.
   starts at 2 : ¾ : ¾, a Manhattan at 2 : 1 + bitters), riff on any drink in
   the deck, or start blank. Any recipe page also has **Riff on this** in its
   toolbar.
+- **Ingredient picker** — ingredients are picked, not typed into the row.
+  **Add ingredient** (or tapping any row) opens a full-screen picker over a
+  curated catalog (`Shared/Resources/ingredients.json`, ~275 bar staples with
+  categories and aliases like "OJ" and "Kahlúa"). Search forgives typos and
+  accents ("lime jiuce", "creme de cassis"); an empty search shows recents and
+  every shelf. Picking fills in the ingredient's usual pour, learned from the
+  deck (lime juice → ¾ oz, Angostura → 2 dashes, soda → top with).
+  - **Swapping** a row asks **Replace** or **Back** and says what happens to
+    the pour. Template stand-ins ("Choose a spirit") open on the right shelf
+    and fill in without asking.
+  - **Already in the drink?** The picker offers **Combine**, **Add Anyway**,
+    or **Back**, and the builder flags any repeated row with **Combine**.
+  - **Not on the shelf?** "Did you mean…" comes first; adding a new
+    ingredient asks which shelf it belongs on and saves it for next time.
+    Text that's only the start of a known name can't be added as new.
+  - **Rows** have one-tap amount chips, a unit menu, and a warning with a
+    one-tap **Fix** for units that don't fit (2 oz of bitters, "top with"
+    gin, muddled soda). Deleting a row offers **Undo**.
+  - A drink can't go **On the Menu** while a template stand-in is left in it.
 - **Balance meter** — pinned above the editor, it splits the pour into
   spirit, liqueur, sour, sweet, and long, shows the total, and flags rules of
   thumb: a pour too big or small for its family, citrus or cream that's

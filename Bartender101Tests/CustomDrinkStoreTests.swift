@@ -92,6 +92,18 @@ final class CustomDrinkStoreTests: XCTestCase {
         XCTAssertEqual(drink.menuProblems(nameTaken: false), [])
     }
 
+    func testTemplateStandInsBlockTheMenu() {
+        var drink = DrinkTemplates.template(for: .sour)
+        drink.name = "Stand-in Sour"
+        XCTAssertEqual(drink.menuProblems(nameTaken: false), [
+            "Choose a spirit for \"Base spirit\"",
+            "Choose a citrus for \"Lemon or lime juice\"",
+        ])
+        drink.ingredients[0] = Ingredient("Mezcal", oz: 2)
+        drink.ingredients[1] = Ingredient("Lime juice", oz: 0.75)
+        XCTAssertEqual(drink.menuProblems(nameTaken: false), [])
+    }
+
     func testAsDrinkIsHouseTagged() {
         let drink = CustomDrink(name: "  ", family: .tiki).asDrink()
         XCTAssertEqual(drink.tags, [.house])

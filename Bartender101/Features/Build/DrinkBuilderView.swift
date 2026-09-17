@@ -8,6 +8,7 @@ import SwiftUI
 struct DrinkBuilderView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @EnvironmentObject private var customDrinks: CustomDrinkStore
+    @EnvironmentObject private var catalog: IngredientCatalog
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @Environment(\.dismiss) private var dismiss
 
@@ -18,7 +19,15 @@ struct DrinkBuilderView: View {
     @State private var draft: CustomDrink
     @State private var rows: [IngredientDraft]
     @State private var newLabel = ""
-    @FocusState private var focusedRow: UUID?
+    @State private var picker: PickerRequest?
+    /// The line just swiped away, while Undo is offered.
+    @State private var removed: (row: IngredientDraft, position: Int)?
+    @State private var undoTimeout: Task<Void, Never>?
+
+    private struct PickerRequest: Identifiable {
+        let id = UUID()
+        let mode: IngredientPickerMode
+    }
 
     private let isNew: Bool
 
@@ -41,7 +50,7 @@ struct DrinkBuilderView: View {
     }
 
     private var summary: DrinkBalance.Summary {
-        DrinkBalance.summary(for: rows.map(\.ingredient), family: draft.family, method: draft.method)
+        DrinkBalance.summary(for: rows.map(\.ingredient), family: draft.family, method: draft.method, category: catalog.category(for:))
     }
 
     private var menuProblems: [String] {
@@ -49,6 +58,19 @@ struct DrinkBuilderView: View {
         var drink = draft
         drink.ingredients = rows.map(\.ingredient)
         return library.menuProblems(for: drink)
+    }
+
+    private var duplicateGroups: [[Int]] {
+        IngredientChecks.duplicateGroups(in: rows.map(\.ingredient), index: catalog.index)
+    }
+
+    /// For a line that repeats an earlier one, the earlier line's position.
+    private func firstCopy(of position: Int) -> Int? {
+        duplicateGroups.first { $0.contains(position) && $0.first != position }?.first
+    }
+
+    private var hasUnnamedRow: Bool {
+        rows.contains { $0.name.trimmingCharacters(in: .whitespaces).isEmpty }
     }
 
     var body: some View {
@@ -80,27 +102,32 @@ struct DrinkBuilderView: View {
             }
 
             Section {
+                // Bindings by element rather than by index, so deleting a
+                // row can never leave a view holding a stale position.
                 ForEach($rows) { $row in
+                    let position = rows.firstIndex { $0.id == row.id } ?? 0
                     IngredientRowEditor(
                         row: $row,
+                        category: catalog.category(for: row.name),
                         unit: unit,
-                        suggestions: suggestions(for: row),
-                        focusedRow: $focusedRow
+                        duplicateOf: firstCopy(of: position),
+                        onSwap: { swap(rowID: row.id) },
+                        onCombine: { combine(rowID: row.id) }
                     )
                 }
-                .onDelete { rows.remove(atOffsets: $0) }
+                .onDelete(perform: remove)
 
                 Button {
-                    let row = IngredientDraft()
-                    rows.append(row)
-                    focusedRow = row.id
+                    picker = PickerRequest(mode: .add)
                 } label: {
                     Label("Add ingredient", systemImage: "plus.circle.fill")
+                        .font(.headline)
+                        .frame(minHeight: 36)
                 }
             } header: {
                 Text("Ingredients")
             } footer: {
-                Text("Swipe to delete. Pour order on the recipe page is worked out for you.")
+                Text("Tap an ingredient to swap it. Swipe left to delete. Pour order on the recipe page is worked out for you.")
             }
 
             Section("Finish") {
@@ -163,6 +190,25 @@ struct DrinkBuilderView: View {
                 .padding(.vertical, 10)
                 .background(.bar)
         }
+        .safeAreaInset(edge: .bottom) {
+            if let removed {
+                HStack {
+                    Text("Removed \(removed.row.name.isEmpty ? "ingredient" : removed.row.name)")
+                        .lineLimit(1)
+                    Spacer()
+                    Button("Undo", action: undoRemove)
+                        .fontWeight(.semibold)
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 14, style: .continuous).fill(.regularMaterial))
+                .padding(.horizontal)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+            }
+        }
+        .sheet(item: $picker) { request in
+            IngredientPickerSheet(mode: request.mode, existing: rows.map(\.ingredient), onResult: apply)
+        }
+        .onDisappear { undoTimeout?.cancel() }
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle(isNew ? "New Drink" : "Edit Drink")
         .navigationBarTitleDisplayMode(.inline)
@@ -176,7 +222,7 @@ struct DrinkBuilderView: View {
                     finish()
                 }
                 .fontWeight(.semibold)
-                .disabled(!menuProblems.isEmpty)
+                .disabled(!menuProblems.isEmpty || hasUnnamedRow)
             }
         }
     }
@@ -195,18 +241,57 @@ struct DrinkBuilderView: View {
         newLabel = ""
     }
 
-    /// Up to four known ingredient names matching what's typed in the row
-    /// that has focus.
-    private func suggestions(for row: IngredientDraft) -> [String] {
-        guard focusedRow == row.id else { return [] }
-        let query = row.name.trimmingCharacters(in: .whitespaces).lowercased()
-        guard query.count >= 2 else { return [] }
-        return Array(
-            library.ingredientNames
-                .filter { $0.lowercased().contains(query) && $0.lowercased() != query }
-                .sorted { $0.lowercased().hasPrefix(query) && !$1.lowercased().hasPrefix(query) }
-                .prefix(4)
-        )
+    private func apply(_ result: IngredientPickerResult) {
+        withAnimation(.snappy) {
+            switch result {
+            case .append(let ingredient):
+                rows.append(IngredientDraft(ingredient))
+            case .update(let position, let ingredient):
+                guard rows.indices.contains(position) else { return }
+                rows[position].replace(with: ingredient)
+            }
+        }
+    }
+
+    private func swap(rowID: UUID) {
+        guard let position = rows.firstIndex(where: { $0.id == rowID }) else { return }
+        picker = PickerRequest(mode: .replace(position: position))
+    }
+
+    /// Folds a repeated line into its first copy.
+    private func combine(rowID: UUID) {
+        guard let position = rows.firstIndex(where: { $0.id == rowID }),
+              let first = firstCopy(of: position) else { return }
+        let merged = IngredientChecks.combine(rows[first].ingredient, rows[position].ingredient)
+        withAnimation(.snappy) {
+            rows[first].replace(with: merged)
+            rows.remove(at: position)
+        }
+    }
+
+    private func remove(at offsets: IndexSet) {
+        guard let position = offsets.first else { return }
+        let row = rows[position]
+        withAnimation(.snappy) {
+            rows.remove(atOffsets: offsets)
+            removed = (row, position)
+        }
+        undoTimeout?.cancel()
+        undoTimeout = Task {
+            // Longer than Made it's undo: a delete is easier to do by accident.
+            try? await Task.sleep(for: .seconds(8))
+            guard !Task.isCancelled else { return }
+            withAnimation { removed = nil }
+        }
+    }
+
+    private func undoRemove() {
+        guard let removed else { return }
+        undoTimeout?.cancel()
+        withAnimation(.snappy) {
+            rows.insert(removed.row, at: min(removed.position, rows.count))
+            self.removed = nil
+        }
     }
 }
 
@@ -249,72 +334,181 @@ struct IngredientDraft: Identifiable, Hashable {
     }
 
     var hasCount: Bool { unit == .dash || unit == .muddled || unit == .barspoon }
-}
 
-extension IngredientUnit {
-    var pickerName: String {
-        switch self {
-        case .oz: return "oz"
-        case .topWith: return "Top with"
-        case .dash: return "Dashes"
-        case .barspoon: return "Barspoons"
-        case .rinse: return "Rinse"
-        case .splash: return "Splash"
-        case .muddled: return "Muddled"
-        case .pinch: return "Pinch"
-        case .optional: return "Optional"
-        }
+    /// Takes on another ingredient's name and pour, keeping this row's
+    /// identity so the list doesn't animate it as a new row.
+    mutating func replace(with ingredient: Ingredient) {
+        let fresh = IngredientDraft(ingredient)
+        name = fresh.name
+        amountOz = fresh.amountOz
+        unit = fresh.unit
+        count = fresh.count
     }
 }
 
 private struct IngredientRowEditor: View {
     @Binding var row: IngredientDraft
+    let category: IngredientCategory?
     let unit: MeasurementUnit
-    let suggestions: [String]
-    var focusedRow: FocusState<UUID?>.Binding
+    /// Position of an earlier line with the same ingredient, if this repeats it.
+    let duplicateOf: Int?
+    let onSwap: () -> Void
+    let onCombine: () -> Void
+
+    private static let ozChips: [Double] = [0.25, 0.5, 0.75, 1, 1.5, 2]
+    private static let topChips: [Double] = [1, 2, 3, 4, 5, 6]
+
+    private var placeholderCategory: IngredientCategory? { DrinkTemplates.placeholderCategory(for: row.name) }
+    private var isUnnamed: Bool { row.name.trimmingCharacters(in: .whitespaces).isEmpty }
+    private var needsChoice: Bool { placeholderCategory != nil || isUnnamed }
+
+    private var issue: IngredientChecks.UnitIssue? {
+        IngredientChecks.unitIssue(for: row.ingredient, category: category)
+    }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                TextField("Ingredient", text: $row.name)
-                    .focused(focusedRow, equals: row.id)
-                    .textInputAutocapitalization(.sentences)
-                    .autocorrectionDisabled()
-                Picker("Unit", selection: $row.unit) {
-                    ForEach(IngredientUnit.allCases, id: \.self) { Text($0.pickerName).tag($0) }
-                }
-                .labelsHidden()
-                .fixedSize()
-            }
+        VStack(alignment: .leading, spacing: 10) {
+            swapButton
 
-            if !suggestions.isEmpty {
-                ScrollView(.horizontal, showsIndicators: false) {
+            if !needsChoice {
+                HStack {
+                    Text(amountLabel)
+                        .font(.title3.weight(.bold).monospacedDigit())
+                    Spacer()
+                    Picker("Unit", selection: unitBinding) {
+                        ForEach(IngredientUnit.allCases, id: \.self) { Text($0.pickerName).tag($0) }
+                    }
+                    .labelsHidden()
+                    .fixedSize()
+                    if row.unit.expectsAmount {
+                        Stepper("Amount", value: $row.amountOz, in: 0.25...32, step: 0.25)
+                            .labelsHidden()
+                            .fixedSize()
+                    } else if row.hasCount {
+                        Stepper("Count", value: $row.count, in: 1...30)
+                            .labelsHidden()
+                            .fixedSize()
+                    }
+                }
+
+                if row.unit.expectsAmount {
+                    // Equal widths, no scrolling, so every chip — including
+                    // the selected one — is always on screen.
                     HStack(spacing: 6) {
-                        ForEach(suggestions, id: \.self) { suggestion in
-                            Button(suggestion) {
-                                row.name = suggestion
-                                focusedRow.wrappedValue = nil
+                        ForEach(row.unit == .oz ? Self.ozChips : Self.topChips, id: \.self) { amount in
+                            let selected = abs(row.amountOz - amount) < 0.001
+                            Button {
+                                row.amountOz = amount
+                            } label: {
+                                Text(Measure.label(oz: amount, unit: unit))
+                                    .font(.subheadline.weight(.semibold).monospacedDigit())
+                                    .lineLimit(1)
+                                    .minimumScaleFactor(0.6)
+                                    .padding(.horizontal, 4)
+                                    .frame(maxWidth: .infinity, minHeight: 40)
+                                    .background(Capsule().fill(selected ? Color.accentColor : Color(.tertiarySystemFill)))
+                                    .foregroundStyle(selected ? .white : .primary)
+                                    .contentShape(Capsule())
                             }
-                            .font(.caption.weight(.medium))
-                            .buttonStyle(.bordered)
-                            .buttonBorderShape(.capsule)
+                            .buttonStyle(.plain)
+                            .accessibilityLabel(Measure.label(oz: amount, unit: unit))
+                            .accessibilityAddTraits(selected ? .isSelected : [])
                         }
                     }
                 }
             }
 
-            if row.unit.expectsAmount {
-                Stepper(value: $row.amountOz, in: 0.25...32, step: 0.25) {
-                    Text(Measure.label(oz: row.amountOz, unit: unit))
-                        .font(.title3.weight(.bold).monospacedDigit())
-                }
-            } else if row.hasCount {
-                Stepper(value: $row.count, in: 1...30) {
-                    Text(row.ingredient.countLabel ?? "")
-                        .font(.title3.weight(.bold).monospacedDigit())
+            if let issue {
+                warning(issue.message, actionTitle: issue.fixLabel) {
+                    if let fix = issue.fix { row.replace(with: fix) }
                 }
             }
+            if let duplicateOf {
+                warning("Also listed as ingredient \(duplicateOf + 1)", actionTitle: "Combine", action: onCombine)
+            }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, 6)
+    }
+
+    private var swapButton: some View {
+        Button(action: onSwap) {
+            HStack(spacing: 12) {
+                Image(systemName: (category ?? placeholderCategory)?.systemImage ?? "questionmark")
+                    .frame(width: 34, height: 34)
+                    .background(Circle().fill(((category ?? placeholderCategory)?.flavorRole.color ?? .gray).opacity(0.2)))
+                    .foregroundStyle(.primary)
+                VStack(alignment: .leading, spacing: 2) {
+                    if needsChoice {
+                        Text(placeholderCategory?.choosePrompt ?? "Choose an ingredient")
+                            .font(.body.weight(.semibold))
+                            .foregroundStyle(Color.accentColor)
+                        if !isUnnamed {
+                            Text("Template: \(row.name)")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    } else {
+                        Text(row.name)
+                            .font(.body.weight(.semibold))
+                            .foregroundStyle(.primary)
+                        Text(category?.displayName ?? "Not on the shelf yet")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                Spacer()
+                Image(systemName: needsChoice ? "chevron.right" : "arrow.left.arrow.right")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Color.accentColor)
+            }
+            .padding(needsChoice ? 10 : 0)
+            .background {
+                if needsChoice {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .strokeBorder(Color.accentColor, style: StrokeStyle(lineWidth: 1.5, dash: [5, 4]))
+                }
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(needsChoice ? (placeholderCategory?.choosePrompt ?? "Choose an ingredient") : "\(row.name), \(amountLabel)")
+        .accessibilityHint(needsChoice ? "Opens the ingredient picker" : "Swap for a different ingredient")
+    }
+
+    private var amountLabel: String {
+        if row.unit == .oz { return Measure.label(oz: row.amountOz, unit: unit) }
+        if row.unit == .topWith { return "Top with \(Measure.label(oz: row.amountOz, unit: unit))" }
+        if row.unit == .splash { return "Splash (\(Measure.label(oz: row.amountOz, unit: unit)))" }
+        return row.ingredient.countLabel ?? ""
+    }
+
+    /// Switching units starts count units at a sensible count rather than
+    /// whatever number was left over from another unit.
+    private var unitBinding: Binding<IngredientUnit> {
+        Binding(get: { row.unit }, set: { newUnit in
+            guard newUnit != row.unit else { return }
+            if newUnit == .dash { row.count = 2 } else if newUnit == .muddled { row.count = 4 } else if newUnit == .barspoon { row.count = 1 }
+            row.unit = newUnit
+        })
+    }
+
+    private func warning(_ message: String, actionTitle: String?, action: @escaping () -> Void) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 8) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .foregroundStyle(.orange)
+            Text(message)
+                .font(.subheadline)
+                .foregroundStyle(.orange)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 4)
+            if let actionTitle {
+                Button(actionTitle, action: action)
+                    .font(.subheadline.weight(.semibold))
+                    .buttonStyle(.bordered)
+                    .tint(.orange)
+                    .buttonBorderShape(.capsule)
+                    .fixedSize()
+            }
+        }
     }
 }

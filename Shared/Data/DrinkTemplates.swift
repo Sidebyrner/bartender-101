@@ -5,6 +5,21 @@ import Foundation
 /// a riff is a copy of a deck drink to change. Pure, so every template is
 /// checked against its family's oz band and `DrinkBalance` in tests.
 enum DrinkTemplates {
+    /// Generic names templates use for "fill this in", and the shelf to pick
+    /// the real ingredient from. The builder shows these as "Choose a
+    /// spirit" prompts, and a drink can't go on the menu with one left.
+    static let placeholders: [String: IngredientCategory] = [
+        "base spirit": .spirits,
+        "mixer": .mixers,
+        "liqueur": .liqueurs,
+        "bitter liqueur": .vermouthAmari,
+        "lemon or lime juice": .citrus,
+    ]
+
+    static func placeholderCategory(for name: String) -> IngredientCategory? {
+        placeholders[name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()]
+    }
+
     static func template(for family: DrinkFamily) -> CustomDrink {
         switch family {
         case .highball:
@@ -83,7 +98,7 @@ enum DrinkTemplates {
 
     /// An empty spec with sensible pickers, for starting from nothing.
     static func blank() -> CustomDrink {
-        CustomDrink(ingredients: [Ingredient("", oz: 1)])
+        CustomDrink()
     }
 
     /// A copy of a deck (or house) drink to change, remembering where it came

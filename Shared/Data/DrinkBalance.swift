@@ -68,7 +68,31 @@ enum DrinkBalance {
         func oz(_ role: FlavorRole) -> Double { ozByRole[role] ?? 0 }
     }
 
-    static func role(name: String, unit: IngredientUnit) -> FlavorRole {
+    /// Looks an ingredient name up in the bundled catalog, treating
+    /// template stand-ins ("Base spirit") as their category.
+    static func bundledCategory(for name: String) -> IngredientCategory? {
+        DrinkTemplates.placeholderCategory(for: name) ?? IngredientIndex.bundled.resolve(name)?.category
+    }
+
+    /// The balance role for an ingredient. The unit wins for dashes, rinses,
+    /// and muddles; otherwise a known category decides, and the word lists
+    /// cover names the catalog doesn't know.
+    static func role(
+        name: String,
+        unit: IngredientUnit,
+        category: (String) -> IngredientCategory? = DrinkBalance.bundledCategory(for:)
+    ) -> FlavorRole {
+        switch unit {
+        case .dash, .rinse, .barspoon, .pinch, .muddled: return .accent
+        case .oz, .topWith, .splash, .optional: break
+        }
+        if let known = category(name) { return known.flavorRole }
+        return wordListRole(name: name, unit: unit)
+    }
+
+    /// Role from ingredient-name keywords alone, for names not in the
+    /// catalog. Built on `PourOrder`'s word lists.
+    static func wordListRole(name: String, unit: IngredientUnit) -> FlavorRole {
         let lower = name.lowercased()
         switch unit {
         case .dash, .rinse, .barspoon, .pinch, .muddled: return .accent
@@ -96,13 +120,18 @@ enum DrinkBalance {
         }
     }
 
-    static func summary(for ingredients: [Ingredient], family: DrinkFamily, method: DrinkMethod) -> Summary {
+    static func summary(
+        for ingredients: [Ingredient],
+        family: DrinkFamily,
+        method: DrinkMethod,
+        category: (String) -> IngredientCategory? = DrinkBalance.bundledCategory(for:)
+    ) -> Summary {
         var ozByRole: [FlavorRole: Double] = [:]
         var present = Set<FlavorRole>()
         var totalOz = 0.0
 
         for ingredient in ingredients where !ingredient.name.trimmingCharacters(in: .whitespaces).isEmpty {
-            let role = role(name: ingredient.name, unit: ingredient.unit)
+            let role = role(name: ingredient.name, unit: ingredient.unit, category: category)
             present.insert(role)
             if let oz = ingredient.amountOz, oz > 0 {
                 totalOz += oz

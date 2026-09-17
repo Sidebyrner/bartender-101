@@ -152,6 +152,11 @@ struct CustomDrink: Codable, Identifiable, Hashable {
         if ingredients.contains(where: { $0.name.trimmingCharacters(in: .whitespaces).isEmpty }) {
             problems.append("Every ingredient needs a name")
         }
+        for ingredient in ingredients {
+            if let category = DrinkTemplates.placeholderCategory(for: ingredient.name) {
+                problems.append("\(category.choosePrompt) for \"\(ingredient.name)\"")
+            }
+        }
         if ingredients.contains(where: { $0.unit.expectsAmount && ($0.amountOz ?? 0) <= 0 }) {
             problems.append("Measured ingredients need an amount")
         }

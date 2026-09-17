@@ -6,6 +6,7 @@ struct Bartender101App: App {
     @StateObject private var reviewStore = ReviewStore()
     @StateObject private var shiftLog = ShiftLogStore()
     @StateObject private var customDrinks = CustomDrinkStore()
+    @StateObject private var ingredientCatalog = IngredientCatalog()
 
     var body: some Scene {
         WindowGroup {
@@ -14,9 +15,18 @@ struct Bartender101App: App {
                 .environmentObject(reviewStore)
                 .environmentObject(shiftLog)
                 .environmentObject(customDrinks)
-                // House drinks On the Menu join the deck everywhere.
-                .onAppear { library.setCustomDrinks(customDrinks.drinks) }
-                .onReceive(customDrinks.$drinks) { library.setCustomDrinks($0) }
+                .environmentObject(ingredientCatalog)
+                // House drinks On the Menu join the deck everywhere, and the
+                // ingredient picker learns usual pours from the whole deck.
+                .onAppear {
+                    library.setCustomDrinks(customDrinks.drinks)
+                    ingredientCatalog.learn(fromDeck: library.drinks)
+                    ingredientCatalog.learn(fromHouseDrinks: customDrinks.drinks)
+                }
+                .onReceive(customDrinks.$drinks) { drinks in
+                    library.setCustomDrinks(drinks)
+                    ingredientCatalog.learn(fromHouseDrinks: drinks)
+                }
         }
     }
 }
