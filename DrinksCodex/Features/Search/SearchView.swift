@@ -1,14 +1,20 @@
 import SwiftUI
 
-/// The full encyclopedia, searchable and filterable by family and tag. Same
-/// interaction language as Bartender101's Browse, but tapping a result goes
-/// straight to the full spec — there's no flip-to-reveal here, since this
-/// app is a fast reference rather than a memorization drill.
+/// The full encyclopedia, searchable and filterable by family and tag.
+///
+/// Built as a `NavigationSplitView` rather than a `NavigationStack`: on iPhone
+/// it collapses to ordinary push navigation (identical to the old behavior),
+/// and on iPad it becomes a sidebar plus a detail pane — which is the right
+/// shape for a bar-top reference where you keep the list up and flip between
+/// drinks. One code path, no size-class branching.
 struct SearchView: View {
     @EnvironmentObject private var library: DrinkLibrary
     @State private var query = ""
     @State private var selectedFamily: DrinkFamily?
     @State private var selectedTags: Set<DrinkTag> = []
+    /// Bound to the drink's `id`, not the drink itself — `List(_:selection:)`
+    /// over `Identifiable` data selects by ID.
+    @State private var selectedID: Drink.ID?
 
     private var filtered: [Drink] {
         var results = library.search(query)
@@ -22,13 +28,11 @@ struct SearchView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            filterBar
+        NavigationSplitView {
+            VStack(spacing: 0) {
+                filterBar
 
-            List(filtered) { drink in
-                NavigationLink {
-                    DrinkDetailView(drink: drink)
-                } label: {
+                List(filtered, selection: $selectedID) { drink in
                     VStack(alignment: .leading, spacing: 2) {
                         Text(drink.name).font(.headline)
                         Text(drink.ingredientSummary)
@@ -37,16 +41,22 @@ struct SearchView: View {
                             .lineLimit(1)
                     }
                 }
-            }
-            .listStyle(.plain)
-            .overlay {
-                if filtered.isEmpty {
-                    ContentUnavailableView.search(text: query)
+                .listStyle(.plain)
+                .overlay {
+                    if filtered.isEmpty {
+                        DeckStateView(loadError: library.loadError, query: query)
+                    }
                 }
             }
+            .searchable(text: $query, prompt: "Search drinks or ingredients")
+            .navigationTitle("Drinks Codex")
+        } detail: {
+            if let selectedID, let drink = library.drink(id: selectedID) {
+                DrinkDetailView(drink: drink)
+            } else {
+                NoSelectionView()
+            }
         }
-        .searchable(text: $query, prompt: "Search drinks or ingredients")
-        .navigationTitle("Drinks Codex")
     }
 
     private var filterBar: some View {

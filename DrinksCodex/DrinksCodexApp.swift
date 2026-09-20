@@ -18,7 +18,10 @@ struct DrinksCodexApp: App {
 struct RootTabView: View {
     var body: some View {
         TabView {
-            NavigationStack { SearchView() }
+            // No NavigationStack wrapper — SearchView is a
+            // NavigationSplitView, which collapses to a stack on iPhone by
+            // itself. Nesting it in one would break the iPad sidebar.
+            SearchView()
                 .tabItem { Label("Search", systemImage: "magnifyingglass") }
 
             NavigationStack { SettingsView() }

@@ -142,6 +142,8 @@ Shared/                   Compiled into BOTH app targets — one copy of the
   Data/                   DrinkLibrary (load/search), ReviewStore (persistence),
                            Scheduler (spaced-repetition math), FuzzyMatch,
                            RecipeScaler (servings math), Dilution (batch water)
+  Components/             DeckStateView (empty vs. load-error state),
+                           NoSelectionView (iPad empty detail pane)
 
 Bartender101/              Bartender101-only: the study app
   Bartender101App.swift    App entry point, tab layout
@@ -205,6 +207,32 @@ built around one core mechanic: resizing a recipe on the spot.
   adds a calculated water line based on the drink's method (stir, shake,
   muddle each dilute differently; built and blended drinks take none).
 - **oz⇄ml toggle** — applies to the scaled amount, not just the base recipe.
+
+## Visual QA
+
+Both apps ship for iPhone and iPad. `Browse` (Bartender 101) and `Search`
+(Drinks Codex) are `NavigationSplitView`s, so they collapse to ordinary push
+navigation on iPhone and become a sidebar plus detail pane on iPad from a
+single code path.
+
+To capture screenshots across a simulator matrix:
+
+```
+scripts/visual-qa.sh              # interactive: you navigate, it captures
+scripts/visual-qa.sh --auto       # launch screens only, no prompts
+scripts/visual-qa.sh --device SE  # one device (SE | MAX | IPAD)
+scripts/visual-qa.sh --app codex  # one app (b101 | codex)
+```
+
+It resolves simulators by name pattern (so it survives Xcode's yearly device
+renames), pins the status bar to 9:41, and captures each screen in light/dark
+× default/accessibility-extra-large by toggling the *running* app rather than
+relaunching. Output lands in `qa-screenshots/<device>/<app>/`.
+
+Landscape needs Accessibility permission for your terminal, since `simctl`
+has no rotate command and the script drives the Simulator UI via AppleScript.
+If that permission isn't granted the script says so and skips landscape
+rather than silently reporting it as covered.
 
 ## Not built yet
 

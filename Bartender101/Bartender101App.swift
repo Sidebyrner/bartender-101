@@ -24,7 +24,10 @@ struct RootTabView: View {
             NavigationStack { HomeView() }
                 .tabItem { Label("Home", systemImage: "house.fill") }
 
-            NavigationStack { BrowseListView() }
+            // No NavigationStack wrapper — BrowseListView is a
+            // NavigationSplitView, which collapses to a stack on iPhone by
+            // itself. Nesting it in one would break the iPad sidebar.
+            BrowseListView()
                 .tabItem { Label("Browse", systemImage: "rectangle.stack.fill") }
 
             NavigationStack { StatsView() }

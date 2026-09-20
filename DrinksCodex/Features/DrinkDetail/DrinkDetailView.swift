@@ -45,6 +45,11 @@ struct DrinkDetailView: View {
                 }
             }
             .padding()
+            // Caps the line length on an iPad detail pane — the notes and
+            // ingredient rows otherwise stretch to a full 13" width, which is
+            // well past a comfortable reading measure.
+            .frame(maxWidth: 700)
+            .frame(maxWidth: .infinity)
         }
         .navigationTitle(drink.name)
         .navigationBarTitleDisplayMode(.inline)

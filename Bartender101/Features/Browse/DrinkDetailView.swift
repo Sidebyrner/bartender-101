@@ -15,7 +15,10 @@ struct DrinkDetailView: View {
         VStack {
             Spacer()
             DrinkCardView(drink: drink, isFlipped: $isFlipped, unit: unit)
-                .frame(maxWidth: 420)
+                // 560 rather than 420 so the card fills an iPad detail pane
+                // instead of floating in it. On iPhone the horizontal padding
+                // below binds first, so this cap never applies there.
+                .frame(maxWidth: 560)
                 .frame(minHeight: 420)
                 .padding(.horizontal, 24)
             Spacer()
