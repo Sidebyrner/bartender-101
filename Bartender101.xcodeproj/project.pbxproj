@@ -70,6 +70,7 @@
 		DAA87D4B26EA0CEE7DE3EF87 /* DrinkLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7869999447CC0A65B53F2BD7 /* DrinkLibrary.swift */; };
 		DBC67A004C6ACD2AEA62974B /* CustomDrinkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022170E1243C6CEB246E790 /* CustomDrinkStore.swift */; };
 		E0101C1699F00B3712109B8F /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDCDA5C19E63C9FE899D36 /* CameraPicker.swift */; };
+		E04307D0A5FF266A1C0C5A4C /* BarMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9DFADCCA6246B4BF18F1C4 /* BarMetricsTests.swift */; };
 		E13D048B67A7E928D500CE07 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478AE589A8132192D0F78D29 /* Theme.swift */; };
 		E327F31F8EC06AAA66562EE1 /* ShiftLogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAC77F68CD90F809290AABE /* ShiftLogStore.swift */; };
 		E3DCC66D3561F64A7A0B2836 /* Bartender101App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6116CA82D1862DEA4DA954C9 /* Bartender101App.swift */; };
@@ -168,6 +169,7 @@
 		FBCA7358F38A77035D87A9B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE5B637340F8AE2AA8CE5CF2 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
 		FF70A27BEA16E45F70F69462 /* ReviewSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewSessionView.swift; sourceTree = "<group>"; };
+		FF9DFADCCA6246B4BF18F1C4 /* BarMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarMetricsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -198,6 +200,7 @@
 		086AB8B8BE7FE1A0E3BE83D0 /* Bartender101Tests */ = {
 			isa = PBXGroup;
 			children = (
+				FF9DFADCCA6246B4BF18F1C4 /* BarMetricsTests.swift */,
 				9926A380E8242553C2B55699 /* BuildStepsTests.swift */,
 				C3BE7C76468E87AEE7D17040 /* CustomDrinkStoreTests.swift */,
 				15E41083B20D89C2D9B0B948 /* DilutionTests.swift */,
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04307D0A5FF266A1C0C5A4C /* BarMetricsTests.swift in Sources */,
 				E9F5889E508ADF43DCB79B24 /* BuildStepsTests.swift in Sources */,
 				EFCB17938025500A465D7E81 /* CustomDrinkStoreTests.swift in Sources */,
 				4F12A0D4E553EC1488120BC7 /* DilutionTests.swift in Sources */,
@@ -675,7 +679,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of drinks you've made for your records.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -778,7 +781,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of drinks you've made for your records.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				"INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

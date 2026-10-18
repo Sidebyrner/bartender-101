@@ -12,8 +12,9 @@ struct SearchView: View {
     @State private var selectedFamily: DrinkFamily?
     @State private var selectedTags: Set<DrinkTag> = []
     @FocusState private var searchFocused: Bool
+    @Environment(\.dynamicTypeSize) private var typeSize
 
-    private var metrics: BarMetrics { BarMetrics(isOn: barMode) }
+    private var metrics: BarMetrics { BarMetrics(isOn: barMode, typeSize: typeSize) }
 
     private var filtered: [Drink] {
         var results = library.search(query)
@@ -46,10 +47,13 @@ struct SearchView: View {
                                     .accessibilityLabel("House drink")
                             }
                         }
+                        // The ingredient list is the reason to read the row, so
+                        // it gets more lines as the text grows rather than
+                        // truncating to nothing at accessibility sizes.
                         Text(drink.ingredientSummary)
                             .font(barMode ? .body : .caption)
                             .foregroundStyle(.secondary)
-                            .lineLimit(barMode ? 2 : 1)
+                            .lineLimit(typeSize.isAccessibilitySize ? 4 : (barMode ? 2 : 1))
                     }
                     .padding(.vertical, barMode ? 8 : 0)
                 }
@@ -63,6 +67,9 @@ struct SearchView: View {
                 }
             }
         }
+        // Rows run the full width of an iPad otherwise, stranding the chevron
+        // several hundred points from the name it belongs to.
+        .readableWidth()
         .dynamicTypeSize(metrics.dynamicTypeRange)
         .sensoryFeedback(.selection, trigger: selectedFamily)
         .sensoryFeedback(.selection, trigger: selectedTags)
@@ -76,15 +83,20 @@ struct SearchView: View {
                 } label: {
                     // An HStack rather than a Label: toolbar buttons render a
                     // Label icon-only, and "Bar Mode" needs to be readable.
+                    // At accessibility sizes the words would crowd out the
+                    // title, so the glass stands on its own there.
                     HStack(spacing: 6) {
                         Image(systemName: barMode ? "wineglass.fill" : "wineglass")
                             .contentTransition(.symbolEffect(.replace))
-                        Text("Bar Mode")
+                        if !typeSize.isAccessibilitySize {
+                            Text("Bar Mode")
+                                .lineLimit(1)
+                        }
                     }
                     .font(.headline)
                     .foregroundStyle(barMode ? Color.accentColor : Color.secondary)
-                    .fixedSize()
                 }
+                .accessibilityLabel("Bar Mode")
                 .accessibilityValue(barMode ? "On" : "Off")
             }
         }
@@ -167,8 +179,8 @@ private struct FilterChip: View {
         Button(action: action) {
             Text(title)
                 .font(metrics.isOn ? .body.weight(.semibold) : .caption.weight(.medium))
-                .padding(.horizontal, metrics.isOn ? 16 : 12)
-                .frame(minHeight: metrics.isOn ? 48 : 30)
+                .padding(.horizontal, metrics.scaledControl(metrics.isOn ? 16 : 12))
+                .frame(minHeight: metrics.scaledControl(metrics.isOn ? 48 : 30))
                 .background(
                     Capsule().fill(isSelected ? Color.accentColor : Color(.secondarySystemBackground))
                 )

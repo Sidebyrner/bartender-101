@@ -25,6 +25,10 @@ struct StatsView: View {
         reviewStore.weakDrinks(from: library.drinks)
     }
 
+    /// Whether anything has been studied yet — before that there is no
+    /// coverage to draw, only empty tracks.
+    private var hasAnyProgress: Bool { !reviewStore.states.isEmpty }
+
     var body: some View {
         List {
             Section {
@@ -78,8 +82,12 @@ struct StatsView: View {
                 }
             }
 
+            // A family with nothing in it has no coverage to report, and before
+            // the first review every bar would be an identical empty track —
+            // a dozen grey lines that read as a broken screen rather than a
+            // fresh one. The counts still say what's in the deck.
             Section("By family") {
-                ForEach(DrinkFamily.allCases) { family in
+                ForEach(DrinkFamily.allCases.filter { !library.drinks(in: $0).isEmpty }) { family in
                     let drinksInFamily = library.drinks(in: family)
                     let started = drinksInFamily.filter { reviewStore.states[$0.id] != nil }.count
                     VStack(alignment: .leading, spacing: 6) {
@@ -90,12 +98,23 @@ struct StatsView: View {
                                 .font(.caption.monospacedDigit())
                                 .foregroundStyle(.secondary)
                         }
-                        CoverageBar(fraction: drinksInFamily.isEmpty ? 0 : Double(started) / Double(drinksInFamily.count))
+                        if hasAnyProgress {
+                            CoverageBar(fraction: Double(started) / Double(drinksInFamily.count))
+                        }
                     }
                     .padding(.vertical, 2)
+                    // The bar itself is decoration (it's accessibilityHidden),
+                    // so the row has to carry the coverage for VoiceOver.
+                    .accessibilityElement(children: .combine)
+                    .accessibilityLabel(family.displayName)
+                    .accessibilityValue("\(started) of \(drinksInFamily.count) started")
                 }
             }
         }
+        // Same as Settings: readable column, full-width background.
+        .scrollContentBackground(.hidden)
+        .readableWidth()
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
         .navigationTitle("Stats")
     }
 
@@ -103,7 +122,7 @@ struct StatsView: View {
     /// and tonight's count.
     private var overview: some View {
         HStack(spacing: 18) {
-            ProgressRing(progress: accuracy ?? 0, lineWidth: 12, tint: .green) {
+            ProgressRing(progress: accuracy ?? 0, lineWidth: 12) {
                 VStack(spacing: 0) {
                     if let accuracy {
                         Text(accuracy, format: .percent.precision(.fractionLength(0)))

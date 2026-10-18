@@ -28,6 +28,11 @@ struct SettingsView: View {
 
     private let timerOptions = [3, 5, 8]
 
+    /// The pages served from `/docs` via GitHub Pages. The privacy policy is
+    /// also the URL in App Store Connect — the two have to agree.
+    static let privacyPolicyURL = URL(string: "https://sidebyrner.github.io/bartender-101/privacy.html")!
+    static let supportURL = URL(string: "https://sidebyrner.github.io/bartender-101/support.html")!
+
     var body: some View {
         Form {
             Section {
@@ -37,12 +42,7 @@ struct SettingsView: View {
             }
 
             Section {
-                Picker("Units", selection: $unitRaw) {
-                    ForEach(MeasurementUnit.allCases) { unit in
-                        Text(unit == .oz ? "Ounces" : "Milliliters").tag(unit.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
+                UnitPicker(unitRaw: $unitRaw)
             } header: {
                 Text("Measurements")
             } footer: {
@@ -108,7 +108,26 @@ struct SettingsView: View {
                 LabeledContent("Drink photos", value: "\(photoStore.photos.count)")
                 LabeledContent("Cards started", value: "\(reviewStore.states.count)")
             }
+
+            // App Review guideline 5.1.1(i) wants the privacy policy reachable
+            // from inside the app, not just from the store listing.
+            Section {
+                Link(destination: Self.privacyPolicyURL) {
+                    Label("Privacy Policy", systemImage: "hand.raised")
+                }
+                Link(destination: Self.supportURL) {
+                    Label("Support", systemImage: "questionmark.circle")
+                }
+            } footer: {
+                Text("House Pour collects nothing and sends nothing anywhere. Everything you make stays on this device.")
+            }
         }
+        // Hold the rows to a readable column on iPad, but let the grouped
+        // background run the full width — clamping it too leaves a seam down
+        // either side of the form.
+        .scrollContentBackground(.hidden)
+        .readableWidth()
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
         .navigationTitle("Settings")
         .confirmationDialog(
             "Reset all progress?",

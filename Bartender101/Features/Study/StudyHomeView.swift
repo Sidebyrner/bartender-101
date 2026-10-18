@@ -57,7 +57,9 @@ struct StudyHomeView: View {
                             title: "Name That Drink",
                             subtitle: "Spec shown, you name it",
                             systemImage: "text.magnifyingglass",
-                            tint: .purple,
+                            // Warm, like the other two drills — a cool purple
+                            // reads as a stray next to the amber system.
+                            tint: Color(red: 0.78, green: 0.35, blue: 0.16),
                             badge: nil
                         )
                     }
@@ -151,5 +153,10 @@ private struct DrillRow: View {
         .padding(14)
         .cardSurface()
         .contentShape(RoundedRectangle(cornerRadius: Theme.cornerRadius, style: .continuous))
+        // One row, one VoiceOver stop — otherwise the icon, title, subtitle,
+        // badge and chevron each announce separately.
+        .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityValue(badge.map { "\($0) due" } ?? "")
     }
 }

@@ -175,6 +175,7 @@ private struct RiffPickerView: View {
     @EnvironmentObject private var library: DrinkLibrary
     let onFinish: () -> Void
     @State private var query = ""
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     var body: some View {
         List(library.search(query).sorted { $0.name < $1.name }) { drink in
@@ -189,7 +190,7 @@ private struct RiffPickerView: View {
                         Text(drink.ingredientSummary)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                            .lineLimit(1)
+                            .lineLimit(typeSize.isAccessibilitySize ? 3 : 1)
                     }
                 }
             }

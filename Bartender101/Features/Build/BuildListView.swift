@@ -182,6 +182,7 @@ struct BuildListView: View {
 private struct BuildListRow: View {
     let drink: CustomDrink
     let cover: DrinkPhoto?
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     private var averageRating: Double? {
         let ratings = drink.tastings.compactMap(\.rating)
@@ -212,7 +213,7 @@ private struct BuildListRow: View {
                     Text(drink.asDrink().ingredientSummary)
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
-                        .lineLimit(1)
+                        .lineLimit(typeSize.isAccessibilitySize ? 3 : 1)
                 }
                 if !drink.labels.isEmpty {
                     FlowLayout(spacing: 4) {

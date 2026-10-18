@@ -258,11 +258,7 @@ private struct SetupPage: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Label("Measure in", systemImage: "ruler")
                         .font(.headline)
-                    Picker("Units", selection: $unitRaw) {
-                        Text("Ounces").tag(MeasurementUnit.oz.rawValue)
-                        Text("Milliliters").tag(MeasurementUnit.ml.rawValue)
-                    }
-                    .pickerStyle(.segmented)
+                    UnitPicker(unitRaw: $unitRaw)
                 }
                 .padding(18)
                 .background(RoundedRectangle(cornerRadius: 18, style: .continuous).fill(.white.opacity(0.08)))
@@ -365,12 +361,15 @@ private struct LookUpIllustration: View {
 /// A mini flashcard that turns over and back.
 private struct StudyIllustration: View {
     let isActive: Bool
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var flipped = false
 
     var body: some View {
         VStack(spacing: 18) {
-            ZStack {
+            FlipCard(
+                isFlipped: flipped,
+                animation: .spring(response: 0.6, dampingFraction: 0.8),
+                reduceMotionAnimation: .easeInOut(duration: 0.25)
+            ) {
                 cardFace {
                     VStack(spacing: 8) {
                         Text("Negroni")
@@ -381,8 +380,7 @@ private struct StudyIllustration: View {
                             .foregroundStyle(Color.accentColor)
                     }
                 }
-                .opacity(flipped ? 0 : 1)
-
+            } back: {
                 cardFace {
                     VStack(alignment: .leading, spacing: 8) {
                         ForEach(["1 oz  Gin", "1 oz  Campari", "1 oz  Sweet vermouth"], id: \.self) { line in
@@ -393,10 +391,7 @@ private struct StudyIllustration: View {
                             .foregroundStyle(.white.opacity(0.6))
                     }
                 }
-                .opacity(flipped ? 1 : 0)
-                .rotation3DEffect(.degrees(reduceMotion ? 0 : 180), axis: (x: 0, y: 1, z: 0))
             }
-            .rotation3DEffect(.degrees(flipped && !reduceMotion ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.4)
             .frame(width: 250, height: 170)
 
             HStack(spacing: 8) {
@@ -416,9 +411,8 @@ private struct StudyIllustration: View {
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(2))
                 guard !Task.isCancelled else { return }
-                withAnimation(reduceMotion ? .easeInOut(duration: 0.25) : .spring(response: 0.6, dampingFraction: 0.8)) {
-                    flipped.toggle()
-                }
+                // FlipCard owns the turn, Reduce Motion crossfade included.
+                flipped.toggle()
             }
         }
     }
