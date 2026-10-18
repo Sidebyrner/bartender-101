@@ -6,6 +6,8 @@ import SwiftUI
 struct BalanceMeterView: View {
     let summary: DrinkBalance.Summary
     let unit: MeasurementUnit
+    /// How the proportions compare with the family, when there's enough to say.
+    var ratio: InventionHelpers.RatioCheck? = nil
 
     /// Roles drawn in the bar, in pour-logic order. Accents carry no volume.
     private static let barRoles: [FlavorRole] = [.spirit, .modifier, .sour, .sweet, .dairy, .lengthener, .other]
@@ -61,6 +63,11 @@ struct BalanceMeterView: View {
                 }
             }
 
+            if let ratio {
+                RatioCheckView(check: ratio)
+                    .transition(.opacity)
+            }
+
             ForEach(summary.warnings, id: \.self) { warning in
                 Label(warning, systemImage: "exclamationmark.triangle.fill")
                     .font(.caption.weight(.medium))
@@ -69,6 +76,7 @@ struct BalanceMeterView: View {
             }
         }
         .animation(Theme.spring, value: summary.warnings)
+        .animation(Theme.spring, value: ratio)
     }
 }
 

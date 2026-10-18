@@ -118,6 +118,11 @@ struct SettingsView: View {
                 Link(destination: Self.supportURL) {
                     Label("Support", systemImage: "questionmark.circle")
                 }
+                NavigationLink {
+                    AcknowledgementsView()
+                } label: {
+                    Label("Acknowledgements", systemImage: "text.book.closed")
+                }
             } footer: {
                 Text("House Pour collects nothing and sends nothing anywhere. Everything you make stays on this device.")
             }
@@ -178,4 +183,40 @@ struct SettingsView: View {
             Text("This cannot be undone.")
         }
     }
+}
+
+/// Credits for bundled third-party data, with the license text it requires.
+private struct AcknowledgementsView: View {
+    var body: some View {
+        List {
+            Section {
+                Text("The builder's pairing ideas, ratio checks, documented riffs, and close matches draw on recipes from Bar Assistant's open recipe data.")
+                Link(destination: URL(string: "https://github.com/bar-assistant/data")!) {
+                    Label("bar-assistant/data on GitHub", systemImage: "safari")
+                }
+            } header: {
+                Text("Bar Assistant")
+            }
+            Section("License") {
+                Text(Self.mitLicense)
+                    .font(.footnote.monospaced())
+                    .foregroundStyle(.secondary)
+                    .textSelection(.enabled)
+            }
+        }
+        .navigationTitle("Acknowledgements")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private static let mitLicense = """
+    MIT License
+
+    Copyright (c) 2026 Bar Assistant
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    """
 }

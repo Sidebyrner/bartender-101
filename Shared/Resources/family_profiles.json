@@ -1,0 +1,422 @@
+{
+ "highball": {
+  "drinks": 69,
+  "roles": {
+   "spirit": {
+    "low": 0.048,
+    "median": 0.281,
+    "high": 0.32
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0,
+    "high": 0.167
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0.077
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0.571,
+    "median": 0.615,
+    "high": 0.692
+   }
+  }
+ },
+ "mule": {
+  "drinks": 16,
+  "roles": {
+   "spirit": {
+    "low": 0.282,
+    "median": 0.308,
+    "high": 0.311
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0,
+    "high": 0.083
+   },
+   "sour": {
+    "low": 0.084,
+    "median": 0.111,
+    "high": 0.126
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0.051
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0.444,
+    "median": 0.48,
+    "high": 0.586
+   }
+  }
+ },
+ "sour": {
+  "drinks": 196,
+  "roles": {
+   "spirit": {
+    "low": 0.333,
+    "median": 0.462,
+    "high": 0.557
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0.133,
+    "high": 0.288
+   },
+   "sour": {
+    "low": 0.154,
+    "median": 0.2,
+    "high": 0.231
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0.125,
+    "high": 0.167
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0.136
+   }
+  }
+ },
+ "oldFashioned": {
+  "drinks": 21,
+  "roles": {
+   "spirit": {
+    "low": 0.8,
+    "median": 0.833,
+    "high": 0.889
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0.111,
+    "high": 0.167
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   }
+  }
+ },
+ "martini": {
+  "drinks": 32,
+  "roles": {
+   "spirit": {
+    "low": 0.475,
+    "median": 0.608,
+    "high": 0.673
+   },
+   "modifier": {
+    "low": 0.299,
+    "median": 0.339,
+    "high": 0.5
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   }
+  }
+ },
+ "manhattan": {
+  "drinks": 113,
+  "roles": {
+   "spirit": {
+    "low": 0.333,
+    "median": 0.5,
+    "high": 0.667
+   },
+   "modifier": {
+    "low": 0.333,
+    "median": 0.455,
+    "high": 0.667
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   }
+  }
+ },
+ "spritz": {
+  "drinks": 31,
+  "roles": {
+   "spirit": {
+    "low": 0,
+    "median": 0.089,
+    "high": 0.222
+   },
+   "modifier": {
+    "low": 0.088,
+    "median": 0.15,
+    "high": 0.303
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0.111
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0.093
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0.433,
+    "median": 0.533,
+    "high": 0.697
+   }
+  }
+ },
+ "tiki": {
+  "drinks": 45,
+  "roles": {
+   "spirit": {
+    "low": 0.25,
+    "median": 0.375,
+    "high": 0.533
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0.083,
+    "high": 0.19
+   },
+   "sour": {
+    "low": 0.091,
+    "median": 0.143,
+    "high": 0.2
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0.048,
+    "high": 0.133
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0.235,
+    "high": 0.48
+   }
+  }
+ },
+ "muddled": {
+  "drinks": 17,
+  "roles": {
+   "spirit": {
+    "low": 0.444,
+    "median": 0.8,
+    "high": 0.889
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0,
+    "high": 0.083
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0.167
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0.105,
+    "high": 0.167
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   }
+  }
+ },
+ "cream": {
+  "drinks": 15,
+  "roles": {
+   "spirit": {
+    "low": 0,
+    "median": 0.267,
+    "high": 0.381
+   },
+   "modifier": {
+    "low": 0.333,
+    "median": 0.571,
+    "high": 0.667
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "dairy": {
+    "low": 0.167,
+    "median": 0.25,
+    "high": 0.333
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   }
+  }
+ },
+ "shot": {
+  "drinks": 21,
+  "roles": {
+   "spirit": {
+    "low": 0,
+    "median": 0.333,
+    "high": 0.5
+   },
+   "modifier": {
+    "low": 0.333,
+    "median": 0.667,
+    "high": 0.75
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0
+   },
+   "lengthener": {
+    "low": 0,
+    "median": 0,
+    "high": 0.25
+   }
+  }
+ },
+ "misc": {
+  "drinks": 64,
+  "roles": {
+   "spirit": {
+    "low": 0,
+    "median": 0.238,
+    "high": 0.385
+   },
+   "modifier": {
+    "low": 0,
+    "median": 0.083,
+    "high": 0.25
+   },
+   "sour": {
+    "low": 0,
+    "median": 0,
+    "high": 0.115
+   },
+   "sweet": {
+    "low": 0,
+    "median": 0.083,
+    "high": 0.121
+   },
+   "dairy": {
+    "low": 0,
+    "median": 0,
+    "high": 0.086
+   },
+   "lengthener": {
+    "low": 0.181,
+    "median": 0.369,
+    "high": 0.552
+   }
+  }
+ }
+}

@@ -1,0 +1,3627 @@
+{
+ "Absinthe": {
+  "recipes": 34,
+  "partners": [
+   {
+    "name": "Dry vermouth",
+    "together": 7,
+    "score": 0.354
+   },
+   {
+    "name": "Grenadine",
+    "together": 6,
+    "score": 0.291
+   },
+   {
+    "name": "Lillet Blanc",
+    "together": 3,
+    "score": 0.22
+   },
+   {
+    "name": "Falernum",
+    "together": 3,
+    "score": 0.187
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 5,
+    "score": 0.176
+   },
+   {
+    "name": "Peychaud's bitters",
+    "together": 3,
+    "score": 0.153
+   },
+   {
+    "name": "Dark rum",
+    "together": 4,
+    "score": 0.145
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 4,
+    "score": 0.121
+   },
+   {
+    "name": "Gin",
+    "together": 9,
+    "score": 0.107
+   },
+   {
+    "name": "Simple syrup",
+    "together": 9,
+    "score": 0.104
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 3,
+    "score": 0.085
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 5,
+    "score": 0.066
+   },
+   {
+    "name": "Orange bitters",
+    "together": 3,
+    "score": 0.032
+   },
+   {
+    "name": "Soda water",
+    "together": 4,
+    "score": 0.015
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 0.008
+   }
+  ]
+ },
+ "Agave syrup": {
+  "recipes": 11,
+  "partners": [
+   {
+    "name": "Mezcal",
+    "together": 5,
+    "score": 1.092
+   },
+   {
+    "name": "Reposado tequila",
+    "together": 3,
+    "score": 0.993
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 4,
+    "score": 0.911
+   },
+   {
+    "name": "Lime juice",
+    "together": 7,
+    "score": 0.715
+   }
+  ]
+ },
+ "Aged rum": {
+  "recipes": 6,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 5,
+    "score": 1.26
+   }
+  ]
+ },
+ "Amaretto": {
+  "recipes": 13,
+  "partners": [
+   {
+    "name": "Egg white",
+    "together": 3,
+    "score": 0.605
+   },
+   {
+    "name": "Simple syrup",
+    "together": 5,
+    "score": 0.359
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.294
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.13
+   }
+  ]
+ },
+ "Amaro Montenegro": {
+  "recipes": 15,
+  "partners": [
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.436
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.186
+   },
+   {
+    "name": "Soda water",
+    "together": 3,
+    "score": 0.178
+   },
+   {
+    "name": "Simple syrup",
+    "together": 4,
+    "score": 0.108
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.071
+   }
+  ]
+ },
+ "Amaro Nonino": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 1.837
+   }
+  ]
+ },
+ "Ancho Reyes": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 1.02
+   }
+  ]
+ },
+ "Angostura bitters": {
+  "recipes": 100,
+  "partners": [
+   {
+    "name": "Sweet vermouth",
+    "together": 23,
+    "score": 0.251
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 16,
+    "score": 0.211
+   },
+   {
+    "name": "Bourbon",
+    "together": 13,
+    "score": 0.111
+   },
+   {
+    "name": "Applejack",
+    "together": 8,
+    "score": 0.097
+   },
+   {
+    "name": "Simple syrup",
+    "together": 26,
+    "score": 0.095
+   },
+   {
+    "name": "Brandy",
+    "together": 6,
+    "score": 0.087
+   },
+   {
+    "name": "Maple syrup",
+    "together": 4,
+    "score": 0.084
+   },
+   {
+    "name": "Orange curaçao",
+    "together": 6,
+    "score": 0.081
+   },
+   {
+    "name": "Averna",
+    "together": 5,
+    "score": 0.077
+   },
+   {
+    "name": "Dark rum",
+    "together": 9,
+    "score": 0.076
+   },
+   {
+    "name": "Bénédictine",
+    "together": 5,
+    "score": 0.065
+   },
+   {
+    "name": "Ginger beer",
+    "together": 6,
+    "score": 0.061
+   },
+   {
+    "name": "Crème de banane",
+    "together": 3,
+    "score": 0.058
+   },
+   {
+    "name": "Demerara syrup",
+    "together": 5,
+    "score": 0.055
+   },
+   {
+    "name": "Orange bitters",
+    "together": 10,
+    "score": 0.054
+   }
+  ]
+ },
+ "Aperol": {
+  "recipes": 27,
+  "partners": [
+   {
+    "name": "Mezcal",
+    "together": 7,
+    "score": 0.413
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 4,
+    "score": 0.253
+   },
+   {
+    "name": "Soda water",
+    "together": 6,
+    "score": 0.232
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 3,
+    "score": 0.203
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 4,
+    "score": 0.179
+   },
+   {
+    "name": "Bourbon",
+    "together": 4,
+    "score": 0.155
+   },
+   {
+    "name": "Lemon juice",
+    "together": 8,
+    "score": 0.115
+   },
+   {
+    "name": "Lime juice",
+    "together": 9,
+    "score": 0.063
+   }
+  ]
+ },
+ "Applejack": {
+  "recipes": 22,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 8,
+    "score": 0.443
+   },
+   {
+    "name": "Demerara syrup",
+    "together": 3,
+    "score": 0.346
+   },
+   {
+    "name": "Yellow Chartreuse",
+    "together": 3,
+    "score": 0.334
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 3,
+    "score": 0.046
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.001
+   }
+  ]
+ },
+ "Apricot liqueur": {
+  "recipes": 7,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 4,
+    "score": 0.865
+   }
+  ]
+ },
+ "Averna": {
+  "recipes": 11,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.7
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 3,
+    "score": 0.57
+   },
+   {
+    "name": "Lemon juice",
+    "together": 3,
+    "score": 0.073
+   }
+  ]
+ },
+ "Blanc vermouth": {
+  "recipes": 16,
+  "partners": [
+   {
+    "name": "Suze",
+    "together": 4,
+    "score": 0.83
+   },
+   {
+    "name": "Orange bitters",
+    "together": 3,
+    "score": 0.271
+   },
+   {
+    "name": "Gin",
+    "together": 4,
+    "score": 0.08
+   }
+  ]
+ },
+ "Blanco tequila": {
+  "recipes": 41,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 26,
+    "score": 0.709
+   },
+   {
+    "name": "Salt",
+    "together": 3,
+    "score": 0.26
+   },
+   {
+    "name": "Agave syrup",
+    "together": 4,
+    "score": 0.244
+   },
+   {
+    "name": "Cola",
+    "together": 3,
+    "score": 0.201
+   },
+   {
+    "name": "Ginger syrup",
+    "together": 3,
+    "score": 0.12
+   },
+   {
+    "name": "Aperol",
+    "together": 4,
+    "score": 0.118
+   },
+   {
+    "name": "Mezcal",
+    "together": 6,
+    "score": 0.112
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 4,
+    "score": 0.108
+   },
+   {
+    "name": "Cointreau",
+    "together": 3,
+    "score": 0.058
+   },
+   {
+    "name": "Honey syrup",
+    "together": 3,
+    "score": 0.054
+   },
+   {
+    "name": "Orange juice",
+    "together": 3,
+    "score": 0.028
+   },
+   {
+    "name": "Simple syrup",
+    "together": 9,
+    "score": 0.027
+   },
+   {
+    "name": "Soda water",
+    "together": 5,
+    "score": 0.022
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.001
+   }
+  ]
+ },
+ "Bourbon": {
+  "recipes": 46,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 13,
+    "score": 0.242
+   },
+   {
+    "name": "Lemon juice",
+    "together": 16,
+    "score": 0.215
+   },
+   {
+    "name": "Amaro Nonino",
+    "together": 3,
+    "score": 0.2
+   },
+   {
+    "name": "Demerara syrup",
+    "together": 4,
+    "score": 0.164
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 5,
+    "score": 0.132
+   },
+   {
+    "name": "Mint leaves",
+    "together": 4,
+    "score": 0.091
+   },
+   {
+    "name": "Aperol",
+    "together": 4,
+    "score": 0.091
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 3,
+    "score": 0.09
+   },
+   {
+    "name": "Peychaud's bitters",
+    "together": 3,
+    "score": 0.085
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 7,
+    "score": 0.076
+   },
+   {
+    "name": "Ginger beer",
+    "together": 3,
+    "score": 0.074
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 3,
+    "score": 0.069
+   },
+   {
+    "name": "Simple syrup",
+    "together": 11,
+    "score": 0.059
+   },
+   {
+    "name": "Grenadine",
+    "together": 4,
+    "score": 0.055
+   },
+   {
+    "name": "Cointreau",
+    "together": 3,
+    "score": 0.041
+   }
+  ]
+ },
+ "Brandy": {
+  "recipes": 14,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 6,
+    "score": 0.624
+   },
+   {
+    "name": "Orgeat",
+    "together": 3,
+    "score": 0.48
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.234
+   },
+   {
+    "name": "Gin",
+    "together": 3,
+    "score": 0.021
+   }
+  ]
+ },
+ "Bénédictine": {
+  "recipes": 13,
+  "partners": [
+   {
+    "name": "Dry vermouth",
+    "together": 4,
+    "score": 0.708
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 4,
+    "score": 0.697
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.5
+   },
+   {
+    "name": "Orange bitters",
+    "together": 3,
+    "score": 0.403
+   },
+   {
+    "name": "Gin",
+    "together": 3,
+    "score": 0.048
+   }
+  ]
+ },
+ "Campari": {
+  "recipes": 62,
+  "partners": [
+   {
+    "name": "Sweet vermouth",
+    "together": 21,
+    "score": 0.559
+   },
+   {
+    "name": "Gin",
+    "together": 19,
+    "score": 0.189
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 9,
+    "score": 0.176
+   },
+   {
+    "name": "Jamaican rum",
+    "together": 5,
+    "score": 0.144
+   },
+   {
+    "name": "Saline solution",
+    "together": 4,
+    "score": 0.132
+   },
+   {
+    "name": "Prosecco",
+    "together": 5,
+    "score": 0.116
+   },
+   {
+    "name": "Tonic water",
+    "together": 4,
+    "score": 0.088
+   },
+   {
+    "name": "Fernet-Branca",
+    "together": 3,
+    "score": 0.079
+   },
+   {
+    "name": "Mezcal",
+    "together": 8,
+    "score": 0.076
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 3,
+    "score": 0.046
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 4,
+    "score": 0.033
+   },
+   {
+    "name": "Cynar",
+    "together": 4,
+    "score": 0.033
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 6,
+    "score": 0.03
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 4,
+    "score": 0.03
+   },
+   {
+    "name": "Egg white",
+    "together": 3,
+    "score": 0.018
+   }
+  ]
+ },
+ "Champagne": {
+  "recipes": 14,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.249
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.234
+   },
+   {
+    "name": "Simple syrup",
+    "together": 3,
+    "score": 0.019
+   }
+  ]
+ },
+ "Cherry Heering": {
+  "recipes": 8,
+  "partners": [
+   {
+    "name": "Scotch",
+    "together": 3,
+    "score": 1.293
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 3,
+    "score": 0.849
+   },
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 0.135
+   }
+  ]
+ },
+ "Chocolate bitters": {
+  "recipes": 7,
+  "partners": [
+   {
+    "name": "Mezcal",
+    "together": 3,
+    "score": 0.994
+   }
+  ]
+ },
+ "Cinnamon syrup": {
+  "recipes": 13,
+  "partners": [
+   {
+    "name": "Grapefruit juice",
+    "together": 3,
+    "score": 0.542
+   },
+   {
+    "name": "Dark rum",
+    "together": 3,
+    "score": 0.509
+   },
+   {
+    "name": "Lime juice",
+    "together": 7,
+    "score": 0.475
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.301
+   },
+   {
+    "name": "Lemon juice",
+    "together": 4,
+    "score": 0.136
+   }
+  ]
+ },
+ "Cocchi Americano": {
+  "recipes": 7,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 4,
+    "score": 0.865
+   }
+  ]
+ },
+ "Coconut cream": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Pineapple juice",
+    "together": 4,
+    "score": 2.685
+   }
+  ]
+ },
+ "Coconut water": {
+  "recipes": 6,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 0.388
+   }
+  ]
+ },
+ "Coffee liqueur": {
+  "recipes": 30,
+  "partners": [
+   {
+    "name": "Irish cream",
+    "together": 4,
+    "score": 0.433
+   },
+   {
+    "name": "Vodka",
+    "together": 7,
+    "score": 0.419
+   },
+   {
+    "name": "Heavy cream",
+    "together": 5,
+    "score": 0.349
+   },
+   {
+    "name": "Fresh espresso",
+    "together": 3,
+    "score": 0.3
+   },
+   {
+    "name": "Bourbon",
+    "together": 5,
+    "score": 0.202
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 3,
+    "score": 0.2
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 4,
+    "score": 0.141
+   },
+   {
+    "name": "Orange bitters",
+    "together": 4,
+    "score": 0.127
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.084
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.061
+   }
+  ]
+ },
+ "Cognac": {
+  "recipes": 19,
+  "partners": [
+   {
+    "name": "Sweet vermouth",
+    "together": 6,
+    "score": 0.49
+   },
+   {
+    "name": "Triple sec",
+    "together": 3,
+    "score": 0.45
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 3,
+    "score": 0.205
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.198
+   },
+   {
+    "name": "Lemon juice",
+    "together": 6,
+    "score": 0.151
+   }
+  ]
+ },
+ "Cointreau": {
+  "recipes": 27,
+  "partners": [
+   {
+    "name": "Lillet Blanc",
+    "together": 3,
+    "score": 0.314
+   },
+   {
+    "name": "Lemon juice",
+    "together": 10,
+    "score": 0.263
+   },
+   {
+    "name": "Orgeat",
+    "together": 3,
+    "score": 0.144
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.116
+   },
+   {
+    "name": "Gin",
+    "together": 7,
+    "score": 0.097
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 0.088
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.07
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 0.047
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.045
+   },
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.022
+   },
+   {
+    "name": "Lime juice",
+    "together": 8,
+    "score": 0.006
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 3,
+    "score": 0.005
+   }
+  ]
+ },
+ "Cola": {
+  "recipes": 7,
+  "partners": [
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 1.175
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 1.016
+   }
+  ]
+ },
+ "Cranberry juice": {
+  "recipes": 8,
+  "partners": [
+   {
+    "name": "Vodka",
+    "together": 5,
+    "score": 2.011
+   }
+  ]
+ },
+ "Cream of coconut": {
+  "recipes": 3,
+  "partners": [
+   {
+    "name": "Pineapple juice",
+    "together": 3,
+    "score": 3.678
+   }
+  ]
+ },
+ "Crème de banane": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 1.165
+   }
+  ]
+ },
+ "Crème de cacao": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Heavy cream",
+    "together": 3,
+    "score": 2.365
+   }
+  ]
+ },
+ "Cucumber slices": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Mint leaves",
+    "together": 4,
+    "score": 1.298
+   },
+   {
+    "name": "Ginger beer",
+    "together": 3,
+    "score": 1.001
+   },
+   {
+    "name": "Simple syrup",
+    "together": 6,
+    "score": 0.944
+   },
+   {
+    "name": "Lime juice",
+    "together": 7,
+    "score": 0.882
+   },
+   {
+    "name": "Gin",
+    "together": 4,
+    "score": 0.4
+   }
+  ]
+ },
+ "Cynar": {
+  "recipes": 29,
+  "partners": [
+   {
+    "name": "Mezcal",
+    "together": 9,
+    "score": 0.575
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 7,
+    "score": 0.281
+   },
+   {
+    "name": "Orange bitters",
+    "together": 5,
+    "score": 0.229
+   },
+   {
+    "name": "Jamaican rum",
+    "together": 3,
+    "score": 0.222
+   },
+   {
+    "name": "Orange curaçao",
+    "together": 3,
+    "score": 0.222
+   },
+   {
+    "name": "St-Germain",
+    "together": 3,
+    "score": 0.118
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 3,
+    "score": 0.072
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.07
+   }
+  ]
+ },
+ "Dark rum": {
+  "recipes": 32,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 21,
+    "score": 0.766
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 9,
+    "score": 0.52
+   },
+   {
+    "name": "Falernum",
+    "together": 5,
+    "score": 0.46
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 9,
+    "score": 0.238
+   },
+   {
+    "name": "Orange juice",
+    "together": 5,
+    "score": 0.23
+   },
+   {
+    "name": "Cinnamon syrup",
+    "together": 3,
+    "score": 0.207
+   },
+   {
+    "name": "Simple syrup",
+    "together": 10,
+    "score": 0.198
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 4,
+    "score": 0.183
+   },
+   {
+    "name": "Absinthe",
+    "together": 4,
+    "score": 0.154
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 3,
+    "score": 0.149
+   },
+   {
+    "name": "Grenadine",
+    "together": 4,
+    "score": 0.144
+   },
+   {
+    "name": "White rum",
+    "together": 5,
+    "score": 0.143
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 3,
+    "score": 0.052
+   }
+  ]
+ },
+ "Demerara syrup": {
+  "recipes": 15,
+  "partners": [
+   {
+    "name": "Applejack",
+    "together": 3,
+    "score": 0.508
+   },
+   {
+    "name": "Bourbon",
+    "together": 4,
+    "score": 0.504
+   },
+   {
+    "name": "Mint leaves",
+    "together": 3,
+    "score": 0.449
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.364
+   },
+   {
+    "name": "Lemon juice",
+    "together": 4,
+    "score": 0.063
+   }
+  ]
+ },
+ "Drambuie": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Scotch",
+    "together": 3,
+    "score": 2.475
+   }
+  ]
+ },
+ "Dry vermouth": {
+  "recipes": 40,
+  "partners": [
+   {
+    "name": "Orange bitters",
+    "together": 11,
+    "score": 0.55
+   },
+   {
+    "name": "Gin",
+    "together": 15,
+    "score": 0.34
+   },
+   {
+    "name": "Absinthe",
+    "together": 7,
+    "score": 0.301
+   },
+   {
+    "name": "Campari",
+    "together": 9,
+    "score": 0.274
+   },
+   {
+    "name": "Navy strength gin",
+    "together": 3,
+    "score": 0.269
+   },
+   {
+    "name": "Bénédictine",
+    "together": 4,
+    "score": 0.23
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 6,
+    "score": 0.206
+   },
+   {
+    "name": "Irish whiskey",
+    "together": 3,
+    "score": 0.17
+   },
+   {
+    "name": "Scotch",
+    "together": 4,
+    "score": 0.154
+   },
+   {
+    "name": "Suze",
+    "together": 3,
+    "score": 0.119
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 4,
+    "score": 0.064
+   },
+   {
+    "name": "Grenadine",
+    "together": 3,
+    "score": 0.031
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 5,
+    "score": 0.027
+   }
+  ]
+ },
+ "Egg white": {
+  "recipes": 24,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 15,
+    "score": 0.915
+   },
+   {
+    "name": "Simple syrup",
+    "together": 13,
+    "score": 0.773
+   },
+   {
+    "name": "Orange flower water",
+    "together": 3,
+    "score": 0.592
+   },
+   {
+    "name": "Lime juice",
+    "together": 12,
+    "score": 0.388
+   },
+   {
+    "name": "Gin",
+    "together": 9,
+    "score": 0.34
+   },
+   {
+    "name": "Amaretto",
+    "together": 3,
+    "score": 0.328
+   },
+   {
+    "name": "Heavy cream",
+    "together": 3,
+    "score": 0.21
+   },
+   {
+    "name": "Green Chartreuse",
+    "together": 3,
+    "score": 0.196
+   },
+   {
+    "name": "Soda water",
+    "together": 4,
+    "score": 0.105
+   },
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.046
+   }
+  ]
+ },
+ "Falernum": {
+  "recipes": 13,
+  "partners": [
+   {
+    "name": "Overproof rum",
+    "together": 4,
+    "score": 1.481
+   },
+   {
+    "name": "Dark rum",
+    "together": 5,
+    "score": 1.132
+   },
+   {
+    "name": "Lime juice",
+    "together": 10,
+    "score": 1.074
+   },
+   {
+    "name": "Absinthe",
+    "together": 3,
+    "score": 0.489
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 0.341
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.301
+   }
+  ]
+ },
+ "Fernet-Branca": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.489
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 3,
+    "score": 0.443
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.282
+   },
+   {
+    "name": "Simple syrup",
+    "together": 3,
+    "score": 0.172
+   },
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 0.011
+   }
+  ]
+ },
+ "Fresh espresso": {
+  "recipes": 8,
+  "partners": [
+   {
+    "name": "Coffee liqueur",
+    "together": 3,
+    "score": 1.125
+   },
+   {
+    "name": "Simple syrup",
+    "together": 4,
+    "score": 0.655
+   }
+  ]
+ },
+ "Gin": {
+  "recipes": 128,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 46,
+    "score": 0.239
+   },
+   {
+    "name": "Orange bitters",
+    "together": 18,
+    "score": 0.145
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 15,
+    "score": 0.106
+   },
+   {
+    "name": "Tonic water",
+    "together": 9,
+    "score": 0.105
+   },
+   {
+    "name": "Lillet Blanc",
+    "together": 7,
+    "score": 0.099
+   },
+   {
+    "name": "Campari",
+    "together": 19,
+    "score": 0.091
+   },
+   {
+    "name": "St-Germain",
+    "together": 11,
+    "score": 0.075
+   },
+   {
+    "name": "Simple syrup",
+    "together": 31,
+    "score": 0.064
+   },
+   {
+    "name": "Egg white",
+    "together": 9,
+    "score": 0.064
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 11,
+    "score": 0.049
+   },
+   {
+    "name": "Apricot liqueur",
+    "together": 4,
+    "score": 0.047
+   },
+   {
+    "name": "Cocchi Americano",
+    "together": 4,
+    "score": 0.047
+   },
+   {
+    "name": "Raspberry syrup",
+    "together": 3,
+    "score": 0.045
+   },
+   {
+    "name": "Mint leaves",
+    "together": 8,
+    "score": 0.035
+   },
+   {
+    "name": "Cucumber slices",
+    "together": 4,
+    "score": 0.031
+   }
+  ]
+ },
+ "Ginger beer": {
+  "recipes": 19,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 16,
+    "score": 1.286
+   },
+   {
+    "name": "Cucumber slices",
+    "together": 3,
+    "score": 0.527
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 6,
+    "score": 0.321
+   },
+   {
+    "name": "St-Germain",
+    "together": 3,
+    "score": 0.277
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.179
+   },
+   {
+    "name": "Mezcal",
+    "together": 3,
+    "score": 0.139
+   },
+   {
+    "name": "Gin",
+    "together": 4,
+    "score": 0.016
+   }
+  ]
+ },
+ "Ginger syrup": {
+  "recipes": 15,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 9,
+    "score": 0.623
+   },
+   {
+    "name": "Soda water",
+    "together": 5,
+    "score": 0.543
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.436
+   },
+   {
+    "name": "St-Germain",
+    "together": 3,
+    "score": 0.419
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 0.328
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.186
+   }
+  ]
+ },
+ "Grapefruit juice": {
+  "recipes": 29,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 15,
+    "score": 0.426
+   },
+   {
+    "name": "Saline solution",
+    "together": 3,
+    "score": 0.282
+   },
+   {
+    "name": "Soda water",
+    "together": 7,
+    "score": 0.281
+   },
+   {
+    "name": "Cinnamon syrup",
+    "together": 3,
+    "score": 0.243
+   },
+   {
+    "name": "Aperol",
+    "together": 4,
+    "score": 0.236
+   },
+   {
+    "name": "Vodka",
+    "together": 5,
+    "score": 0.234
+   },
+   {
+    "name": "Reposado tequila",
+    "together": 3,
+    "score": 0.232
+   },
+   {
+    "name": "Dark rum",
+    "together": 4,
+    "score": 0.202
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 4,
+    "score": 0.153
+   },
+   {
+    "name": "Simple syrup",
+    "together": 8,
+    "score": 0.125
+   },
+   {
+    "name": "White rum",
+    "together": 4,
+    "score": 0.102
+   },
+   {
+    "name": "Absinthe",
+    "together": 3,
+    "score": 0.099
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 3,
+    "score": 0.087
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.07
+   },
+   {
+    "name": "Gin",
+    "together": 6,
+    "score": 0.01
+   }
+  ]
+ },
+ "Green Chartreuse": {
+  "recipes": 27,
+  "partners": [
+   {
+    "name": "Maraschino liqueur",
+    "together": 7,
+    "score": 0.561
+   },
+   {
+    "name": "Lime juice",
+    "together": 15,
+    "score": 0.515
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 3,
+    "score": 0.239
+   },
+   {
+    "name": "Egg white",
+    "together": 3,
+    "score": 0.174
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 4,
+    "score": 0.068
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 3,
+    "score": 0.056
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 0.047
+   },
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.022
+   }
+  ]
+ },
+ "Grenadine": {
+  "recipes": 36,
+  "partners": [
+   {
+    "name": "Orange juice",
+    "together": 8,
+    "score": 0.44
+   },
+   {
+    "name": "Absinthe",
+    "together": 6,
+    "score": 0.275
+   },
+   {
+    "name": "White rum",
+    "together": 7,
+    "score": 0.239
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 6,
+    "score": 0.182
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 5,
+    "score": 0.155
+   },
+   {
+    "name": "Lemon juice",
+    "together": 11,
+    "score": 0.132
+   },
+   {
+    "name": "Dark rum",
+    "together": 4,
+    "score": 0.128
+   },
+   {
+    "name": "Bourbon",
+    "together": 4,
+    "score": 0.07
+   },
+   {
+    "name": "Lime juice",
+    "together": 12,
+    "score": 0.063
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 7,
+    "score": 0.061
+   },
+   {
+    "name": "Soda water",
+    "together": 5,
+    "score": 0.051
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 3,
+    "score": 0.035
+   }
+  ]
+ },
+ "Heavy cream": {
+  "recipes": 25,
+  "partners": [
+   {
+    "name": "White crème de cacao",
+    "together": 5,
+    "score": 0.736
+   },
+   {
+    "name": "Crème de cacao",
+    "together": 3,
+    "score": 0.473
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 5,
+    "score": 0.419
+   },
+   {
+    "name": "Simple syrup",
+    "together": 8,
+    "score": 0.213
+   },
+   {
+    "name": "Egg white",
+    "together": 3,
+    "score": 0.201
+   },
+   {
+    "name": "Vodka",
+    "together": 4,
+    "score": 0.2
+   },
+   {
+    "name": "Soda water",
+    "together": 3,
+    "score": 0.019
+   }
+  ]
+ },
+ "Honey syrup": {
+  "recipes": 28,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 12,
+    "score": 0.394
+   },
+   {
+    "name": "White rum",
+    "together": 6,
+    "score": 0.294
+   },
+   {
+    "name": "Scotch",
+    "together": 3,
+    "score": 0.176
+   },
+   {
+    "name": "Lime juice",
+    "together": 11,
+    "score": 0.168
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 4,
+    "score": 0.124
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.105
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 0.079
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.062
+   }
+  ]
+ },
+ "Hot sauce": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 1.02
+   }
+  ]
+ },
+ "Irish cream": {
+  "recipes": 9,
+  "partners": [
+   {
+    "name": "Coffee liqueur",
+    "together": 4,
+    "score": 1.442
+   }
+  ]
+ },
+ "Irish whiskey": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Dry vermouth",
+    "together": 3,
+    "score": 0.679
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 3,
+    "score": 0.443
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.282
+   },
+   {
+    "name": "Simple syrup",
+    "together": 3,
+    "score": 0.172
+   }
+  ]
+ },
+ "Islay single malt Scotch": {
+  "recipes": 16,
+  "partners": [
+   {
+    "name": "Green Chartreuse",
+    "together": 3,
+    "score": 0.404
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 3,
+    "score": 0.375
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 3,
+    "score": 0.318
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 4,
+    "score": 0.303
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.259
+   },
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.179
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.17
+   }
+  ]
+ },
+ "Jamaican rum": {
+  "recipes": 15,
+  "partners": [
+   {
+    "name": "Orgeat",
+    "together": 5,
+    "score": 0.96
+   },
+   {
+    "name": "Campari",
+    "together": 5,
+    "score": 0.594
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 5,
+    "score": 0.543
+   },
+   {
+    "name": "Cynar",
+    "together": 3,
+    "score": 0.428
+   },
+   {
+    "name": "Mezcal",
+    "together": 3,
+    "score": 0.244
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.071
+   }
+  ]
+ },
+ "Lemon juice": {
+  "recipes": 145,
+  "partners": [
+   {
+    "name": "Simple syrup",
+    "together": 53,
+    "score": 0.314
+   },
+   {
+    "name": "Gin",
+    "together": 46,
+    "score": 0.211
+   },
+   {
+    "name": "Egg white",
+    "together": 15,
+    "score": 0.151
+   },
+   {
+    "name": "Orgeat",
+    "together": 13,
+    "score": 0.088
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 10,
+    "score": 0.079
+   },
+   {
+    "name": "Honey syrup",
+    "together": 12,
+    "score": 0.076
+   },
+   {
+    "name": "Bourbon",
+    "together": 16,
+    "score": 0.068
+   },
+   {
+    "name": "Orange juice",
+    "together": 13,
+    "score": 0.06
+   },
+   {
+    "name": "Cointreau",
+    "together": 10,
+    "score": 0.049
+   },
+   {
+    "name": "Lillet Blanc",
+    "together": 5,
+    "score": 0.039
+   },
+   {
+    "name": "White crème de cacao",
+    "together": 5,
+    "score": 0.039
+   },
+   {
+    "name": "Triple sec",
+    "together": 6,
+    "score": 0.038
+   },
+   {
+    "name": "St-Germain",
+    "together": 10,
+    "score": 0.038
+   },
+   {
+    "name": "Soda water",
+    "together": 19,
+    "score": 0.037
+   },
+   {
+    "name": "Grenadine",
+    "together": 11,
+    "score": 0.033
+   }
+  ]
+ },
+ "Lillet Blanc": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 7,
+    "score": 1.265
+   },
+   {
+    "name": "Cointreau",
+    "together": 3,
+    "score": 0.849
+   },
+   {
+    "name": "Absinthe",
+    "together": 3,
+    "score": 0.749
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.571
+   }
+  ]
+ },
+ "Lime": {
+  "recipes": 3,
+  "partners": [
+   {
+    "name": "Sugar",
+    "together": 3,
+    "score": 7
+   }
+  ]
+ },
+ "Lime juice": {
+  "recipes": 187,
+  "partners": [
+   {
+    "name": "White rum",
+    "together": 34,
+    "score": 0.206
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 26,
+    "score": 0.155
+   },
+   {
+    "name": "Simple syrup",
+    "together": 53,
+    "score": 0.139
+   },
+   {
+    "name": "Ginger beer",
+    "together": 16,
+    "score": 0.131
+   },
+   {
+    "name": "Dark rum",
+    "together": 21,
+    "score": 0.131
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 26,
+    "score": 0.116
+   },
+   {
+    "name": "Soda water",
+    "together": 31,
+    "score": 0.103
+   },
+   {
+    "name": "Mint leaves",
+    "together": 16,
+    "score": 0.087
+   },
+   {
+    "name": "Falernum",
+    "together": 10,
+    "score": 0.075
+   },
+   {
+    "name": "Green Chartreuse",
+    "together": 15,
+    "score": 0.074
+   },
+   {
+    "name": "Mezcal",
+    "together": 24,
+    "score": 0.074
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 15,
+    "score": 0.066
+   },
+   {
+    "name": "Egg white",
+    "together": 12,
+    "score": 0.05
+   },
+   {
+    "name": "Overproof rum",
+    "together": 6,
+    "score": 0.05
+   },
+   {
+    "name": "Ginger syrup",
+    "together": 9,
+    "score": 0.05
+   }
+  ]
+ },
+ "Maple syrup": {
+  "recipes": 6,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 1.395
+   },
+   {
+    "name": "Lemon juice",
+    "together": 3,
+    "score": 0.571
+   }
+  ]
+ },
+ "Maraschino liqueur": {
+  "recipes": 37,
+  "partners": [
+   {
+    "name": "Green Chartreuse",
+    "together": 7,
+    "score": 0.41
+   },
+   {
+    "name": "Orange bitters",
+    "together": 7,
+    "score": 0.276
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 6,
+    "score": 0.223
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 6,
+    "score": 0.217
+   },
+   {
+    "name": "Gin",
+    "together": 11,
+    "score": 0.17
+   },
+   {
+    "name": "White rum",
+    "together": 6,
+    "score": 0.157
+   },
+   {
+    "name": "Lime juice",
+    "together": 14,
+    "score": 0.141
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 3,
+    "score": 0.138
+   },
+   {
+    "name": "Absinthe",
+    "together": 4,
+    "score": 0.111
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 3,
+    "score": 0.068
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 5,
+    "score": 0.044
+   }
+  ]
+ },
+ "Mezcal": {
+  "recipes": 55,
+  "partners": [
+   {
+    "name": "Cynar",
+    "together": 9,
+    "score": 0.303
+   },
+   {
+    "name": "Lime juice",
+    "together": 24,
+    "score": 0.252
+   },
+   {
+    "name": "Agave syrup",
+    "together": 5,
+    "score": 0.218
+   },
+   {
+    "name": "Aperol",
+    "together": 7,
+    "score": 0.203
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 8,
+    "score": 0.13
+   },
+   {
+    "name": "Reposado tequila",
+    "together": 4,
+    "score": 0.126
+   },
+   {
+    "name": "Chocolate bitters",
+    "together": 3,
+    "score": 0.126
+   },
+   {
+    "name": "Amaro Montenegro",
+    "together": 4,
+    "score": 0.119
+   },
+   {
+    "name": "Orange curaçao",
+    "together": 4,
+    "score": 0.119
+   },
+   {
+    "name": "Ginger syrup",
+    "together": 4,
+    "score": 0.119
+   },
+   {
+    "name": "Orgeat",
+    "together": 5,
+    "score": 0.091
+   },
+   {
+    "name": "Campari",
+    "together": 8,
+    "score": 0.085
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 6,
+    "score": 0.084
+   },
+   {
+    "name": "Jamaican rum",
+    "together": 3,
+    "score": 0.066
+   },
+   {
+    "name": "Suze",
+    "together": 3,
+    "score": 0.061
+   }
+  ]
+ },
+ "Mint leaves": {
+  "recipes": 27,
+  "partners": [
+   {
+    "name": "Simple syrup",
+    "together": 15,
+    "score": 0.813
+   },
+   {
+    "name": "Lime juice",
+    "together": 16,
+    "score": 0.605
+   },
+   {
+    "name": "Cucumber slices",
+    "together": 4,
+    "score": 0.481
+   },
+   {
+    "name": "White rum",
+    "together": 7,
+    "score": 0.427
+   },
+   {
+    "name": "Demerara syrup",
+    "together": 3,
+    "score": 0.249
+   },
+   {
+    "name": "Soda water",
+    "together": 6,
+    "score": 0.232
+   },
+   {
+    "name": "Gin",
+    "together": 8,
+    "score": 0.168
+   },
+   {
+    "name": "Bourbon",
+    "together": 4,
+    "score": 0.155
+   },
+   {
+    "name": "St-Germain",
+    "together": 3,
+    "score": 0.138
+   }
+  ]
+ },
+ "Navy strength gin": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Dry vermouth",
+    "together": 3,
+    "score": 2.689
+   }
+  ]
+ },
+ "Orange bitters": {
+  "recipes": 44,
+  "partners": [
+   {
+    "name": "Dry vermouth",
+    "together": 11,
+    "score": 0.5
+   },
+   {
+    "name": "Gin",
+    "together": 18,
+    "score": 0.422
+   },
+   {
+    "name": "Yellow Chartreuse",
+    "together": 5,
+    "score": 0.248
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 10,
+    "score": 0.245
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 7,
+    "score": 0.232
+   },
+   {
+    "name": "Cynar",
+    "together": 5,
+    "score": 0.151
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 6,
+    "score": 0.149
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 10,
+    "score": 0.123
+   },
+   {
+    "name": "Bénédictine",
+    "together": 3,
+    "score": 0.119
+   },
+   {
+    "name": "Blanc vermouth",
+    "together": 3,
+    "score": 0.099
+   },
+   {
+    "name": "Peychaud's bitters",
+    "together": 3,
+    "score": 0.093
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 4,
+    "score": 0.087
+   },
+   {
+    "name": "Bourbon",
+    "together": 4,
+    "score": 0.031
+   },
+   {
+    "name": "Absinthe",
+    "together": 3,
+    "score": 0.025
+   }
+  ]
+ },
+ "Orange curaçao": {
+  "recipes": 15,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 6,
+    "score": 0.542
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.436
+   },
+   {
+    "name": "Cynar",
+    "together": 3,
+    "score": 0.428
+   },
+   {
+    "name": "Lime juice",
+    "together": 6,
+    "score": 0.181
+   }
+  ]
+ },
+ "Orange flower water": {
+  "recipes": 3,
+  "partners": [
+   {
+    "name": "Egg white",
+    "together": 3,
+    "score": 4.737
+   },
+   {
+    "name": "Simple syrup",
+    "together": 3,
+    "score": 2.311
+   },
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 1.775
+   }
+  ]
+ },
+ "Orange juice": {
+  "recipes": 36,
+  "partners": [
+   {
+    "name": "Grenadine",
+    "together": 8,
+    "score": 0.44
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 7,
+    "score": 0.256
+   },
+   {
+    "name": "Lemon juice",
+    "together": 13,
+    "score": 0.243
+   },
+   {
+    "name": "Orgeat",
+    "together": 5,
+    "score": 0.224
+   },
+   {
+    "name": "Dark rum",
+    "together": 5,
+    "score": 0.205
+   },
+   {
+    "name": "Gin",
+    "together": 9,
+    "score": 0.08
+   },
+   {
+    "name": "White rum",
+    "together": 4,
+    "score": 0.047
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 0.032
+   },
+   {
+    "name": "Vodka",
+    "together": 3,
+    "score": 0.026
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.022
+   }
+  ]
+ },
+ "Orgeat": {
+  "recipes": 29,
+  "partners": [
+   {
+    "name": "Jamaican rum",
+    "together": 5,
+    "score": 0.496
+   },
+   {
+    "name": "Lemon juice",
+    "together": 13,
+    "score": 0.441
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 7,
+    "score": 0.393
+   },
+   {
+    "name": "Orange juice",
+    "together": 5,
+    "score": 0.279
+   },
+   {
+    "name": "Brandy",
+    "together": 3,
+    "score": 0.232
+   },
+   {
+    "name": "Mezcal",
+    "together": 5,
+    "score": 0.173
+   },
+   {
+    "name": "Lime juice",
+    "together": 11,
+    "score": 0.143
+   },
+   {
+    "name": "Cointreau",
+    "together": 3,
+    "score": 0.134
+   },
+   {
+    "name": "White rum",
+    "together": 4,
+    "score": 0.102
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.024
+   },
+   {
+    "name": "Gin",
+    "together": 6,
+    "score": 0.01
+   },
+   {
+    "name": "Campari",
+    "together": 3,
+    "score": 0.01
+   }
+  ]
+ },
+ "Overproof rum": {
+  "recipes": 7,
+  "partners": [
+   {
+    "name": "Falernum",
+    "together": 4,
+    "score": 2.751
+   },
+   {
+    "name": "Lime juice",
+    "together": 6,
+    "score": 1.331
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.624
+   }
+  ]
+ },
+ "Passion fruit syrup": {
+  "recipes": 20,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 10,
+    "score": 0.571
+   },
+   {
+    "name": "Lime juice",
+    "together": 10,
+    "score": 0.388
+   },
+   {
+    "name": "Soda water",
+    "together": 5,
+    "score": 0.303
+   },
+   {
+    "name": "Aperol",
+    "together": 3,
+    "score": 0.275
+   },
+   {
+    "name": "Dark rum",
+    "together": 3,
+    "score": 0.238
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.159
+   },
+   {
+    "name": "White rum",
+    "together": 3,
+    "score": 0.129
+   }
+  ]
+ },
+ "Pear brandy": {
+  "recipes": 8,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 3,
+    "score": 0.273
+   }
+  ]
+ },
+ "Peychaud's bitters": {
+  "recipes": 17,
+  "partners": [
+   {
+    "name": "Rye whiskey",
+    "together": 4,
+    "score": 0.442
+   },
+   {
+    "name": "Absinthe",
+    "together": 3,
+    "score": 0.306
+   },
+   {
+    "name": "Simple syrup",
+    "together": 6,
+    "score": 0.285
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 5,
+    "score": 0.268
+   },
+   {
+    "name": "Orange bitters",
+    "together": 3,
+    "score": 0.24
+   },
+   {
+    "name": "Bourbon",
+    "together": 3,
+    "score": 0.229
+   }
+  ]
+ },
+ "Pineapple gum syrup": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 1.02
+   }
+  ]
+ },
+ "Pineapple juice": {
+  "recipes": 50,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 26,
+    "score": 0.432
+   },
+   {
+    "name": "Dark rum",
+    "together": 9,
+    "score": 0.333
+   },
+   {
+    "name": "Coconut cream",
+    "together": 4,
+    "score": 0.268
+   },
+   {
+    "name": "Orgeat",
+    "together": 7,
+    "score": 0.228
+   },
+   {
+    "name": "Cream of coconut",
+    "together": 3,
+    "score": 0.221
+   },
+   {
+    "name": "White rum",
+    "together": 9,
+    "score": 0.202
+   },
+   {
+    "name": "Orange juice",
+    "together": 7,
+    "score": 0.184
+   },
+   {
+    "name": "Mezcal",
+    "together": 8,
+    "score": 0.143
+   },
+   {
+    "name": "Cherry Heering",
+    "together": 3,
+    "score": 0.136
+   },
+   {
+    "name": "Grenadine",
+    "together": 6,
+    "score": 0.131
+   },
+   {
+    "name": "Honey syrup",
+    "together": 4,
+    "score": 0.07
+   },
+   {
+    "name": "Prosecco",
+    "together": 3,
+    "score": 0.061
+   },
+   {
+    "name": "Campari",
+    "together": 6,
+    "score": 0.037
+   },
+   {
+    "name": "Green Chartreuse",
+    "together": 3,
+    "score": 0.03
+   },
+   {
+    "name": "Vodka",
+    "together": 4,
+    "score": 0.02
+   }
+  ]
+ },
+ "Pisco": {
+  "recipes": 6,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 4,
+    "score": 0.793
+   }
+  ]
+ },
+ "Prosecco": {
+  "recipes": 19,
+  "partners": [
+   {
+    "name": "Soda water",
+    "together": 8,
+    "score": 0.828
+   },
+   {
+    "name": "Campari",
+    "together": 5,
+    "score": 0.379
+   },
+   {
+    "name": "Vodka",
+    "together": 3,
+    "score": 0.195
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 3,
+    "score": 0.16
+   }
+  ]
+ },
+ "Raspberry syrup": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 3,
+    "score": 1.43
+   }
+  ]
+ },
+ "Reposado tequila": {
+  "recipes": 14,
+  "partners": [
+   {
+    "name": "Agave syrup",
+    "together": 3,
+    "score": 0.78
+   },
+   {
+    "name": "Mezcal",
+    "together": 4,
+    "score": 0.495
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 3,
+    "score": 0.48
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.249
+   }
+  ]
+ },
+ "Rhum agricole blanc": {
+  "recipes": 6,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 3,
+    "score": 0.388
+   }
+  ]
+ },
+ "Rye whiskey": {
+  "recipes": 41,
+  "partners": [
+   {
+    "name": "Angostura bitters",
+    "together": 16,
+    "score": 0.515
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 12,
+    "score": 0.422
+   },
+   {
+    "name": "Bénédictine",
+    "together": 4,
+    "score": 0.221
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 6,
+    "score": 0.196
+   },
+   {
+    "name": "Peychaud's bitters",
+    "together": 4,
+    "score": 0.183
+   },
+   {
+    "name": "Orange bitters",
+    "together": 6,
+    "score": 0.159
+   },
+   {
+    "name": "Averna",
+    "together": 3,
+    "score": 0.153
+   },
+   {
+    "name": "Absinthe",
+    "together": 5,
+    "score": 0.146
+   },
+   {
+    "name": "Grenadine",
+    "together": 5,
+    "score": 0.136
+   },
+   {
+    "name": "Yellow Chartreuse",
+    "together": 3,
+    "score": 0.113
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 4,
+    "score": 0.103
+   },
+   {
+    "name": "Cognac",
+    "together": 3,
+    "score": 0.095
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 4,
+    "score": 0.063
+   },
+   {
+    "name": "Cynar",
+    "together": 3,
+    "score": 0.051
+   },
+   {
+    "name": "Dark rum",
+    "together": 3,
+    "score": 0.04
+   }
+  ]
+ },
+ "Saline solution": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.818
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 3,
+    "score": 0.818
+   },
+   {
+    "name": "Lime juice",
+    "together": 6,
+    "score": 0.623
+   }
+  ]
+ },
+ "Salt": {
+  "recipes": 4,
+  "partners": [
+   {
+    "name": "Blanco tequila",
+    "together": 3,
+    "score": 2.662
+   },
+   {
+    "name": "Lime juice",
+    "together": 4,
+    "score": 1.775
+   }
+  ]
+ },
+ "Scotch": {
+  "recipes": 22,
+  "partners": [
+   {
+    "name": "Drambuie",
+    "together": 3,
+    "score": 0.563
+   },
+   {
+    "name": "Cherry Heering",
+    "together": 3,
+    "score": 0.47
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 4,
+    "score": 0.28
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 5,
+    "score": 0.245
+   },
+   {
+    "name": "Honey syrup",
+    "together": 3,
+    "score": 0.224
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 6,
+    "score": 0.219
+   },
+   {
+    "name": "Lemon juice",
+    "together": 6,
+    "score": 0.073
+   }
+  ]
+ },
+ "Sherry": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 3,
+    "score": 0.175
+   }
+  ]
+ },
+ "Simple syrup": {
+  "recipes": 129,
+  "partners": [
+   {
+    "name": "Lemon juice",
+    "together": 53,
+    "score": 0.353
+   },
+   {
+    "name": "Lime juice",
+    "together": 53,
+    "score": 0.202
+   },
+   {
+    "name": "Soda water",
+    "together": 26,
+    "score": 0.182
+   },
+   {
+    "name": "Mint leaves",
+    "together": 15,
+    "score": 0.17
+   },
+   {
+    "name": "Egg white",
+    "together": 13,
+    "score": 0.144
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 26,
+    "score": 0.074
+   },
+   {
+    "name": "Cucumber slices",
+    "together": 6,
+    "score": 0.073
+   },
+   {
+    "name": "White rum",
+    "together": 16,
+    "score": 0.072
+   },
+   {
+    "name": "Gin",
+    "together": 31,
+    "score": 0.064
+   },
+   {
+    "name": "Whole egg",
+    "together": 4,
+    "score": 0.062
+   },
+   {
+    "name": "Orange flower water",
+    "together": 3,
+    "score": 0.054
+   },
+   {
+    "name": "Dark rum",
+    "together": 10,
+    "score": 0.049
+   },
+   {
+    "name": "Fresh espresso",
+    "together": 4,
+    "score": 0.041
+   },
+   {
+    "name": "Heavy cream",
+    "together": 8,
+    "score": 0.041
+   },
+   {
+    "name": "Peychaud's bitters",
+    "together": 6,
+    "score": 0.038
+   }
+  ]
+ },
+ "Soda water": {
+  "recipes": 69,
+  "partners": [
+   {
+    "name": "Simple syrup",
+    "together": 26,
+    "score": 0.34
+   },
+   {
+    "name": "Lime juice",
+    "together": 31,
+    "score": 0.279
+   },
+   {
+    "name": "Prosecco",
+    "together": 8,
+    "score": 0.228
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 7,
+    "score": 0.118
+   },
+   {
+    "name": "Ginger syrup",
+    "together": 5,
+    "score": 0.118
+   },
+   {
+    "name": "Aperol",
+    "together": 6,
+    "score": 0.091
+   },
+   {
+    "name": "Mint leaves",
+    "together": 6,
+    "score": 0.091
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 5,
+    "score": 0.088
+   },
+   {
+    "name": "St-Germain",
+    "together": 6,
+    "score": 0.078
+   },
+   {
+    "name": "Lemon juice",
+    "together": 19,
+    "score": 0.077
+   },
+   {
+    "name": "Whiskey",
+    "together": 3,
+    "score": 0.071
+   },
+   {
+    "name": "Amaro Montenegro",
+    "together": 3,
+    "score": 0.039
+   },
+   {
+    "name": "Egg white",
+    "together": 4,
+    "score": 0.036
+   },
+   {
+    "name": "Grenadine",
+    "together": 5,
+    "score": 0.026
+   },
+   {
+    "name": "Blanco tequila",
+    "together": 5,
+    "score": 0.013
+   }
+  ]
+ },
+ "St-Germain": {
+  "recipes": 30,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 11,
+    "score": 0.321
+   },
+   {
+    "name": "Ginger syrup",
+    "together": 3,
+    "score": 0.209
+   },
+   {
+    "name": "Lemon juice",
+    "together": 10,
+    "score": 0.186
+   },
+   {
+    "name": "Soda water",
+    "together": 6,
+    "score": 0.178
+   },
+   {
+    "name": "Ginger beer",
+    "together": 3,
+    "score": 0.175
+   },
+   {
+    "name": "Mint leaves",
+    "together": 3,
+    "score": 0.125
+   },
+   {
+    "name": "Cynar",
+    "together": 3,
+    "score": 0.114
+   },
+   {
+    "name": "Lime juice",
+    "together": 9,
+    "score": 0.011
+   }
+  ]
+ },
+ "Sugar": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Lime",
+    "together": 3,
+    "score": 4.2
+   }
+  ]
+ },
+ "Suze": {
+  "recipes": 16,
+  "partners": [
+   {
+    "name": "Blanc vermouth",
+    "together": 4,
+    "score": 0.83
+   },
+   {
+    "name": "Dry vermouth",
+    "together": 3,
+    "score": 0.297
+   },
+   {
+    "name": "Mezcal",
+    "together": 3,
+    "score": 0.211
+   },
+   {
+    "name": "Gin",
+    "together": 5,
+    "score": 0.201
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 3,
+    "score": 0.049
+   },
+   {
+    "name": "Lemon juice",
+    "together": 4,
+    "score": 0.036
+   }
+  ]
+ },
+ "Sweet vermouth": {
+  "recipes": 69,
+  "partners": [
+   {
+    "name": "Campari",
+    "together": 21,
+    "score": 0.503
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 23,
+    "score": 0.364
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 12,
+    "score": 0.251
+   },
+   {
+    "name": "Orange bitters",
+    "together": 10,
+    "score": 0.156
+   },
+   {
+    "name": "Cognac",
+    "together": 6,
+    "score": 0.135
+   },
+   {
+    "name": "Cynar",
+    "together": 7,
+    "score": 0.118
+   },
+   {
+    "name": "Jamaican rum",
+    "together": 5,
+    "score": 0.118
+   },
+   {
+    "name": "Scotch",
+    "together": 5,
+    "score": 0.078
+   },
+   {
+    "name": "Yellow Chartreuse",
+    "together": 4,
+    "score": 0.07
+   },
+   {
+    "name": "Islay single malt Scotch",
+    "together": 4,
+    "score": 0.07
+   },
+   {
+    "name": "Fernet-Branca",
+    "together": 3,
+    "score": 0.064
+   },
+   {
+    "name": "Irish whiskey",
+    "together": 3,
+    "score": 0.064
+   },
+   {
+    "name": "Bourbon",
+    "together": 7,
+    "score": 0.05
+   },
+   {
+    "name": "Absinthe",
+    "together": 5,
+    "score": 0.032
+   },
+   {
+    "name": "Green Chartreuse",
+    "together": 4,
+    "score": 0.027
+   }
+  ]
+ },
+ "Tonic water": {
+  "recipes": 16,
+  "partners": [
+   {
+    "name": "Gin",
+    "together": 9,
+    "score": 0.839
+   },
+   {
+    "name": "Campari",
+    "together": 4,
+    "score": 0.342
+   }
+  ]
+ },
+ "Triple sec": {
+  "recipes": 14,
+  "partners": [
+   {
+    "name": "Cognac",
+    "together": 3,
+    "score": 0.611
+   },
+   {
+    "name": "Vodka",
+    "together": 4,
+    "score": 0.597
+   },
+   {
+    "name": "White rum",
+    "together": 4,
+    "score": 0.51
+   },
+   {
+    "name": "Lemon juice",
+    "together": 6,
+    "score": 0.394
+   },
+   {
+    "name": "Lime juice",
+    "together": 7,
+    "score": 0.388
+   },
+   {
+    "name": "Simple syrup",
+    "together": 3,
+    "score": 0.019
+   }
+  ]
+ },
+ "Vodka": {
+  "recipes": 43,
+  "partners": [
+   {
+    "name": "Cranberry juice",
+    "together": 5,
+    "score": 0.374
+   },
+   {
+    "name": "Coffee liqueur",
+    "together": 7,
+    "score": 0.292
+   },
+   {
+    "name": "Triple sec",
+    "together": 4,
+    "score": 0.194
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 5,
+    "score": 0.158
+   },
+   {
+    "name": "Heavy cream",
+    "together": 4,
+    "score": 0.116
+   },
+   {
+    "name": "Prosecco",
+    "together": 3,
+    "score": 0.086
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 4,
+    "score": 0.023
+   },
+   {
+    "name": "Orange juice",
+    "together": 3,
+    "score": 0.022
+   }
+  ]
+ },
+ "Whiskey": {
+  "recipes": 9,
+  "partners": [
+   {
+    "name": "Soda water",
+    "together": 3,
+    "score": 0.543
+   },
+   {
+    "name": "Simple syrup",
+    "together": 4,
+    "score": 0.507
+   },
+   {
+    "name": "Lemon juice",
+    "together": 4,
+    "score": 0.432
+   }
+  ]
+ },
+ "White crème de cacao": {
+  "recipes": 10,
+  "partners": [
+   {
+    "name": "Heavy cream",
+    "together": 5,
+    "score": 1.839
+   },
+   {
+    "name": "Lemon juice",
+    "together": 5,
+    "score": 0.571
+   },
+   {
+    "name": "Gin",
+    "together": 3,
+    "score": 0.175
+   }
+  ]
+ },
+ "White rum": {
+  "recipes": 53,
+  "partners": [
+   {
+    "name": "Lime juice",
+    "together": 34,
+    "score": 0.728
+   },
+   {
+    "name": "Mint leaves",
+    "together": 7,
+    "score": 0.217
+   },
+   {
+    "name": "Pineapple juice",
+    "together": 9,
+    "score": 0.19
+   },
+   {
+    "name": "Simple syrup",
+    "together": 16,
+    "score": 0.176
+   },
+   {
+    "name": "Grenadine",
+    "together": 7,
+    "score": 0.163
+   },
+   {
+    "name": "Honey syrup",
+    "together": 6,
+    "score": 0.155
+   },
+   {
+    "name": "Triple sec",
+    "together": 4,
+    "score": 0.135
+   },
+   {
+    "name": "Cola",
+    "together": 3,
+    "score": 0.134
+   },
+   {
+    "name": "Maraschino liqueur",
+    "together": 6,
+    "score": 0.11
+   },
+   {
+    "name": "Dark rum",
+    "together": 5,
+    "score": 0.086
+   },
+   {
+    "name": "Falernum",
+    "together": 3,
+    "score": 0.084
+   },
+   {
+    "name": "Grapefruit juice",
+    "together": 4,
+    "score": 0.056
+   },
+   {
+    "name": "Orgeat",
+    "together": 4,
+    "score": 0.056
+   },
+   {
+    "name": "Passion fruit syrup",
+    "together": 3,
+    "score": 0.049
+   },
+   {
+    "name": "Orange juice",
+    "together": 4,
+    "score": 0.032
+   }
+  ]
+ },
+ "Whole egg": {
+  "recipes": 5,
+  "partners": [
+   {
+    "name": "Simple syrup",
+    "together": 4,
+    "score": 1.591
+   }
+  ]
+ },
+ "Yellow Chartreuse": {
+  "recipes": 16,
+  "partners": [
+   {
+    "name": "Orange bitters",
+    "together": 5,
+    "score": 0.683
+   },
+   {
+    "name": "Applejack",
+    "together": 3,
+    "score": 0.459
+   },
+   {
+    "name": "Sweet vermouth",
+    "together": 4,
+    "score": 0.303
+   },
+   {
+    "name": "Rye whiskey",
+    "together": 3,
+    "score": 0.291
+   },
+   {
+    "name": "Gin",
+    "together": 5,
+    "score": 0.201
+   },
+   {
+    "name": "Angostura bitters",
+    "together": 4,
+    "score": 0.17
+   },
+   {
+    "name": "Lemon juice",
+    "together": 4,
+    "score": 0.036
+   }
+  ]
+ }
+}
