@@ -120,6 +120,7 @@ private struct BoardCard: View {
     /// previews render outside the view hierarchy's environment.
     var coverURL: URL?
     @State private var cover: UIImage?
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     private var averageRating: Double? {
         let ratings = drink.tastings.compactMap(\.rating)
@@ -150,10 +151,13 @@ private struct BoardCard: View {
                 }
             }
             if !drink.ingredients.isEmpty {
+                // A board column is narrow, so this stays tighter than the
+                // list's cap — enough to keep the spec legible without the
+                // card swallowing the column.
                 Text(drink.asDrink().ingredientSummary)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-                    .lineLimit(2)
+                    .lineLimit(typeSize.isAccessibilitySize ? 3 : 2)
             }
             if !drink.labels.isEmpty {
                 FlowLayout(spacing: 4) {

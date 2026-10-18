@@ -28,6 +28,11 @@ struct SettingsView: View {
 
     private let timerOptions = [3, 5, 8]
 
+    /// The pages served from `/docs` via GitHub Pages. The privacy policy is
+    /// also the URL in App Store Connect — the two have to agree.
+    static let privacyPolicyURL = URL(string: "https://sidebyrner.github.io/bartender-101/privacy.html")!
+    static let supportURL = URL(string: "https://sidebyrner.github.io/bartender-101/support.html")!
+
     var body: some View {
         Form {
             Section {
@@ -37,12 +42,7 @@ struct SettingsView: View {
             }
 
             Section {
-                Picker("Units", selection: $unitRaw) {
-                    ForEach(MeasurementUnit.allCases) { unit in
-                        Text(unit == .oz ? "Ounces" : "Milliliters").tag(unit.rawValue)
-                    }
-                }
-                .pickerStyle(.segmented)
+                UnitPicker(unitRaw: $unitRaw)
             } header: {
                 Text("Measurements")
             } footer: {
@@ -108,7 +108,31 @@ struct SettingsView: View {
                 LabeledContent("Drink photos", value: "\(photoStore.photos.count)")
                 LabeledContent("Cards started", value: "\(reviewStore.states.count)")
             }
+
+            // App Review guideline 5.1.1(i) wants the privacy policy reachable
+            // from inside the app, not just from the store listing.
+            Section {
+                Link(destination: Self.privacyPolicyURL) {
+                    Label("Privacy Policy", systemImage: "hand.raised")
+                }
+                Link(destination: Self.supportURL) {
+                    Label("Support", systemImage: "questionmark.circle")
+                }
+                NavigationLink {
+                    AcknowledgementsView()
+                } label: {
+                    Label("Acknowledgements", systemImage: "text.book.closed")
+                }
+            } footer: {
+                Text("House Pour collects nothing and sends nothing anywhere. Everything you make stays on this device.")
+            }
         }
+        // Hold the rows to a readable column on iPad, but let the grouped
+        // background run the full width — clamping it too leaves a seam down
+        // either side of the form.
+        .scrollContentBackground(.hidden)
+        .readableWidth()
+        .background(Color(.systemGroupedBackground).ignoresSafeArea())
         .navigationTitle("Settings")
         .confirmationDialog(
             "Reset all progress?",
@@ -159,4 +183,40 @@ struct SettingsView: View {
             Text("This cannot be undone.")
         }
     }
+}
+
+/// Credits for bundled third-party data, with the license text it requires.
+private struct AcknowledgementsView: View {
+    var body: some View {
+        List {
+            Section {
+                Text("The builder's pairing ideas, ratio checks, documented riffs, and close matches draw on recipes from Bar Assistant's open recipe data.")
+                Link(destination: URL(string: "https://github.com/bar-assistant/data")!) {
+                    Label("bar-assistant/data on GitHub", systemImage: "safari")
+                }
+            } header: {
+                Text("Bar Assistant")
+            }
+            Section("License") {
+                Text(Self.mitLicense)
+                    .font(.footnote.monospaced())
+                    .foregroundStyle(.secondary)
+                    .textSelection(.enabled)
+            }
+        }
+        .navigationTitle("Acknowledgements")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+
+    private static let mitLicense = """
+    MIT License
+
+    Copyright (c) 2026 Bar Assistant
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    """
 }

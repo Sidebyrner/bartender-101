@@ -31,11 +31,19 @@ struct ScalePanel: View {
 
     var body: some View {
         VStack(spacing: 8) {
-            HStack(spacing: 8) {
-                ForEach(Self.presets, id: \.title) { preset in
-                    BarButton(title: preset.title, isSelected: !batchMode && servings == preset.servings, metrics: metrics) {
-                        batchMode = false
-                        servings = preset.servings
+            // Four big buttons stop fitting on one line well before the text
+            // reaches the largest sizes, and minimumScaleFactor would quietly
+            // shrink them back rather than let them wrap.
+            let presetRow = metrics.stacksPourRow && batchEligible
+                ? AnyLayout(VStackLayout(spacing: 8))
+                : AnyLayout(HStackLayout(spacing: 8))
+            presetRow {
+                HStack(spacing: 8) {
+                    ForEach(Self.presets, id: \.title) { preset in
+                        BarButton(title: preset.title, isSelected: !batchMode && servings == preset.servings, metrics: metrics) {
+                            batchMode = false
+                            servings = preset.servings
+                        }
                     }
                 }
                 if batchEligible {
@@ -48,26 +56,33 @@ struct ScalePanel: View {
                 }
             }
 
-            HStack(spacing: 8) {
-                BarButton(systemImage: "minus", isSelected: false, metrics: metrics) {
-                    servings = max(Self.servingsRange.lowerBound, servings - 0.5)
+            // The stepper and the unit switch share a row until the buttons
+            // get big enough to run off the screen, then take one each.
+            let controls = metrics.stacksPourRow
+                ? AnyLayout(VStackLayout(spacing: 8))
+                : AnyLayout(HStackLayout(spacing: 8))
+            controls {
+                HStack(spacing: 8) {
+                    BarButton(systemImage: "minus", isSelected: false, metrics: metrics) {
+                        servings = max(Self.servingsRange.lowerBound, servings - 0.5)
+                    }
+                    .disabled(servings <= Self.servingsRange.lowerBound)
+                    .accessibilityLabel("Fewer servings")
+
+                    Text("×\(Measure.ozFraction(servings))")
+                        .font(metrics.buttonFont.monospacedDigit())
+                        .contentTransition(.numericText(value: servings))
+                        .frame(minWidth: metrics.scaledControl(metrics.isOn ? 64 : 48))
+                        .accessibilityLabel("\(Measure.ozFraction(servings)) servings")
+
+                    BarButton(systemImage: "plus", isSelected: false, metrics: metrics) {
+                        servings = min(Self.servingsRange.upperBound, servings + 0.5)
+                    }
+                    .disabled(servings >= Self.servingsRange.upperBound)
+                    .accessibilityLabel("More servings")
+
+                    Spacer(minLength: 8)
                 }
-                .disabled(servings <= Self.servingsRange.lowerBound)
-                .accessibilityLabel("Fewer servings")
-
-                Text("×\(Measure.ozFraction(servings))")
-                    .font(metrics.buttonFont.monospacedDigit())
-                    .contentTransition(.numericText(value: servings))
-                    .frame(minWidth: metrics.isOn ? 64 : 48)
-                    .accessibilityLabel("\(Measure.ozFraction(servings)) servings")
-
-                BarButton(systemImage: "plus", isSelected: false, metrics: metrics) {
-                    servings = min(Self.servingsRange.upperBound, servings + 0.5)
-                }
-                .disabled(servings >= Self.servingsRange.upperBound)
-                .accessibilityLabel("More servings")
-
-                Spacer(minLength: 8)
 
                 HStack(spacing: 0) {
                     ForEach(MeasurementUnit.allCases) { option in
@@ -76,7 +91,9 @@ struct ScalePanel: View {
                         }
                     }
                 }
-                .frame(width: metrics.isOn ? 150 : 116)
+                // Exact width while it shares the row; full width on its own.
+                .frame(width: metrics.stacksPourRow ? nil : metrics.scaledControl(metrics.isOn ? 150 : 116))
+                .frame(maxWidth: metrics.stacksPourRow ? .infinity : nil)
             }
 
             HStack(spacing: 8) {
@@ -109,7 +126,7 @@ struct ScalePanel: View {
 
                 if justLogged {
                     BarButton(title: "Undo", systemImage: "arrow.uturn.backward", isSelected: false, metrics: metrics, action: onUndo)
-                        .frame(width: metrics.isOn ? 130 : 100)
+                        .frame(width: metrics.scaledControl(metrics.isOn ? 130 : 100))
                 }
             }
         }

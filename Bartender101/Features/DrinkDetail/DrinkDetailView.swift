@@ -17,6 +17,7 @@ struct DrinkDetailView: View {
     @EnvironmentObject private var customDrinks: CustomDrinkStore
     @EnvironmentObject private var photoStore: PhotoStore
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.dynamicTypeSize) private var typeSize
     @AppStorage(SettingsKeys.measurementUnit) private var unitRaw = MeasurementUnit.oz.rawValue
     @AppStorage(SettingsKeys.bartendingMode) private var barMode = true
     @State private var servings: Double = 1
@@ -44,7 +45,7 @@ struct DrinkDetailView: View {
     private var spec: Drink { house?.asDrink() ?? drink }
 
     private var unit: MeasurementUnit { MeasurementUnit(rawValue: unitRaw) ?? .oz }
-    private var metrics: BarMetrics { BarMetrics(isOn: barMode) }
+    private var metrics: BarMetrics { BarMetrics(isOn: barMode, typeSize: typeSize) }
 
     private var staged: [(stage: PourStage, ingredient: RecipeScaler.ScaledIngredient)] {
         PourOrder.ordered(RecipeScaler.scaledIngredients(for: spec, servings: servings), method: spec.method)
@@ -146,6 +147,10 @@ struct DrinkDetailView: View {
             )
             .sensoryFeedback(.success, trigger: shiftLog.entries.count) { old, new in new > old }
         }
+        // Bartending Mode sets a text-size floor for the whole page — the
+        // pinned bar included, which is why this sits outside the safe-area
+        // inset rather than on the scroll view.
+        .dynamicTypeSize(metrics.dynamicTypeRange)
         .animation(Theme.spring, value: servings)
         .animation(Theme.spring, value: batchMode)
         .navigationTitle(spec.name)
@@ -242,7 +247,7 @@ struct DrinkDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text(spec.name)
-                .font(.system(size: barMode ? 40 : 32, weight: .bold, design: .serif))
+                .font(metrics.titleFont)
             HStack(spacing: 6) {
                 if spec.tags.contains(.house) {
                     Label("House", systemImage: "flask.fill")
@@ -261,7 +266,12 @@ struct DrinkDetailView: View {
 
     private var glassAndIce: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 12) {
+            // Side by side while two tiles still fit; stacked at accessibility
+            // sizes, where "Crushed" alone is wider than half the screen.
+            let tiles = metrics.stacksPourRow
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12))
+                : AnyLayout(HStackLayout(spacing: 12))
+            tiles {
                 SpecTile(label: "Glass", value: spec.glass.displayName, systemImage: "wineglass", metrics: metrics)
                 SpecTile(label: "Ice", value: spec.ice.displayName, systemImage: iceSymbol, metrics: metrics)
             }
@@ -319,25 +329,37 @@ private struct PourRow: View {
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 12) {
             Text("\(step)")
-                .font(.system(size: metrics.isOn ? 18 : 14, weight: .bold, design: .rounded))
+                .font(metrics.stepBadgeFont)
                 .foregroundStyle(.white)
-                .frame(width: metrics.isOn ? 32 : 24, height: metrics.isOn ? 32 : 24)
+                .frame(width: metrics.stepBadgeSize, height: metrics.stepBadgeSize)
                 .background(Circle().fill(Theme.accentGradient()))
-                .alignmentGuide(.firstTextBaseline) { $0[VerticalAlignment.center] + 6 }
+                .alignmentGuide(.firstTextBaseline) { $0[VerticalAlignment.center] + metrics.scaled(6) }
 
-            Text(amount)
-                .font(metrics.amountFont)
-                .contentTransition(.numericText())
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .frame(width: metrics.amountColumnWidth, alignment: .leading)
+            // Amount beside the ingredient while a column that wide still
+            // leaves room to read it; stacked at accessibility sizes, where a
+            // fixed column would only shrink the amount back down again. One
+            // set of children either way, so the amount keeps its identity —
+            // and its numeric transition — across the switch.
+            let layout = metrics.stacksPourRow
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: 2))
+                : AnyLayout(HStackLayout(alignment: .firstTextBaseline, spacing: 12))
 
-            Text(name)
-                .font(metrics.ingredientFont)
-                .fixedSize(horizontal: false, vertical: true)
-            Spacer(minLength: 0)
+            layout {
+                Text(amount)
+                    .font(metrics.amountFont)
+                    .contentTransition(.numericText())
+                    .lineLimit(metrics.stacksPourRow ? nil : 1)
+                    .minimumScaleFactor(metrics.stacksPourRow ? 1 : 0.5)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(width: metrics.stacksPourRow ? nil : metrics.amountColumnWidth, alignment: .leading)
+
+                Text(name)
+                    .font(metrics.ingredientFont)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(.vertical, metrics.isOn ? 12 : 8)
+        .padding(.vertical, metrics.rowPadding)
         .accessibilityElement(children: .combine)
     }
 }
@@ -372,12 +394,14 @@ private struct SpecTile: View {
                 .font(metrics.sectionLabelFont)
                 .foregroundStyle(Color.accentColor)
             Text(value)
-                .font(metrics.isOn ? .system(size: 26, weight: .bold) : .title3.weight(.semibold))
+                .font(metrics.tileValueFont)
                 .lineLimit(2)
                 .minimumScaleFactor(0.7)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(metrics.isOn ? 16 : 12)
+        // Damped: padding that grew at the full text rate would push a pair of
+        // tiles past the screen before the text itself did.
+        .padding(metrics.scaledControl(metrics.isOn ? 16 : 12))
         .cardSurface(cornerRadius: 14)
         .accessibilityElement(children: .combine)
     }

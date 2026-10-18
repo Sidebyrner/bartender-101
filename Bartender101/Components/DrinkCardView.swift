@@ -12,16 +12,14 @@ struct DrinkCardView: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        ZStack {
+        // A real card turn with a little perspective; a crossfade under Reduce
+        // Motion. FlipCard swaps the faces at 90°, so the back never shows
+        // through the front mirrored.
+        FlipCard(isFlipped: isFlipped) {
             cardFace(showBack: false)
-                .opacity(isFlipped ? 0 : 1)
+        } back: {
             cardFace(showBack: true)
-                .opacity(isFlipped ? 1 : 0)
-                .rotation3DEffect(.degrees(reduceMotion ? 0 : 180), axis: (x: 0, y: 1, z: 0))
         }
-        // A real card turn with a little perspective; a crossfade under Reduce Motion.
-        .rotation3DEffect(.degrees(isFlipped && !reduceMotion ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.4)
-        .animation(reduceMotion ? .easeInOut(duration: 0.2) : .spring(response: 0.55, dampingFraction: 0.78), value: isFlipped)
         .sensoryFeedback(.impact(weight: .light), trigger: isFlipped)
         .onTapGesture { isFlipped.toggle() }
         .accessibilityAddTraits(.isButton)

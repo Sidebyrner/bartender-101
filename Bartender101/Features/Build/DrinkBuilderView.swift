@@ -23,6 +23,9 @@ struct DrinkBuilderView: View {
     /// The line just swiped away, while Undo is offered.
     @State private var removed: (row: IngredientDraft, position: Int)?
     @State private var undoTimeout: Task<Void, Never>?
+    /// Ideas from the reference recipes, recomputed when the ingredients change.
+    @State private var suggestions: [InventionHelpers.Suggestion] = []
+    @State private var matches: [InventionHelpers.Match] = []
 
     private struct PickerRequest: Identifiable {
         let id = UUID()
@@ -51,6 +54,10 @@ struct DrinkBuilderView: View {
 
     private var summary: DrinkBalance.Summary {
         DrinkBalance.summary(for: rows.map(\.ingredient), family: draft.family, method: draft.method, category: catalog.category(for:))
+    }
+
+    private var ratioCheck: InventionHelpers.RatioCheck? {
+        InventionHelpers.ratioCheck(summary: summary, family: draft.family)
     }
 
     private var menuProblems: [String] {
@@ -130,6 +137,45 @@ struct DrinkBuilderView: View {
                 Text("Tap an ingredient to swap it. Swipe left to delete. Pour order on the recipe page is worked out for you.")
             }
 
+            if !suggestions.isEmpty {
+                Section {
+                    PairingChipsRow(suggestions: suggestions, onAdd: addSuggestion)
+                } header: {
+                    Text("Often paired with")
+                } footer: {
+                    Text("What published recipes tend to use alongside what's already in the glass — a starting point, not a taste guarantee.")
+                }
+            }
+
+            if !matches.isEmpty {
+                Section {
+                    ForEach(matches) { match in
+                        NavigationLink {
+                            ReferenceDrinkView(drink: match.drink, reference: match.reference)
+                        } label: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(match.drink.name)
+                                        .font(.system(.body, design: .serif, weight: .semibold))
+                                    Text(match.drink.ingredientSummary)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                        .lineLimit(1)
+                                }
+                                Spacer()
+                                Text("\(match.percent)% alike")
+                                    .font(.subheadline.weight(.semibold).monospacedDigit())
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                } header: {
+                    Text("Close to")
+                } footer: {
+                    Text("Existing drinks with a similar spec — worth a look before you name it.")
+                }
+            }
+
             Section("Finish") {
                 TextField("Garnish", text: $draft.garnish)
                 TextField("Notes — what you're going for", text: $draft.notes, axis: .vertical)
@@ -185,7 +231,7 @@ struct DrinkBuilderView: View {
             }
         }
         .safeAreaInset(edge: .top, spacing: 0) {
-            BalanceMeterView(summary: summary, unit: unit)
+            BalanceMeterView(summary: summary, unit: unit, ratio: ratioCheck)
                 .padding(.horizontal)
                 .padding(.vertical, 10)
                 .background(.bar)
@@ -209,6 +255,7 @@ struct DrinkBuilderView: View {
             IngredientPickerSheet(mode: request.mode, existing: rows.map(\.ingredient), onResult: apply)
         }
         .onDisappear { undoTimeout?.cancel() }
+        .task(id: rows.map(\.ingredient)) { refreshIdeas() }
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle(isNew ? "New Drink" : "Edit Drink")
         .navigationBarTitleDisplayMode(.inline)
@@ -251,6 +298,21 @@ struct DrinkBuilderView: View {
                 rows[position].replace(with: ingredient)
             }
         }
+    }
+
+    private func refreshIdeas() {
+        let ingredients = rows.map(\.ingredient)
+        withAnimation(.snappy) {
+            suggestions = InventionHelpers.pairings(for: ingredients, index: catalog.index)
+            matches = InventionHelpers.closeMatches(for: ingredients, deck: library.drinks, excludingID: draft.id, index: catalog.index)
+        }
+    }
+
+    /// Adds a suggested ingredient at the pour the catalog would start it at.
+    private func addSuggestion(_ name: String) {
+        guard let entry = catalog.index.resolve(name) else { return }
+        catalog.noteUsed(entry)
+        apply(.append(catalog.defaults(for: entry).ingredient(named: entry.name)))
     }
 
     private func swap(rowID: UUID) {

@@ -175,11 +175,19 @@ private struct RiffPickerView: View {
     @EnvironmentObject private var library: DrinkLibrary
     let onFinish: () -> Void
     @State private var query = ""
+    /// Documented riffs per deck drink, worked out once when the list opens.
+    @State private var riffsByID: [String: [ReferenceDrink]] = [:]
+    @Environment(\.dynamicTypeSize) private var typeSize
 
     var body: some View {
         List(library.search(query).sorted { $0.name < $1.name }) { drink in
+            let riffs = riffsByID[drink.id] ?? []
             NavigationLink {
-                DrinkBuilderView(drink: DrinkTemplates.riff(on: drink), isNew: true, onFinish: onFinish)
+                if riffs.isEmpty {
+                    DrinkBuilderView(drink: DrinkTemplates.riff(on: drink), isNew: true, onFinish: onFinish)
+                } else {
+                    RiffStartView(drink: drink, riffs: riffs, onFinish: onFinish)
+                }
             } label: {
                 HStack(spacing: 12) {
                     IconTile(systemImage: drink.family.systemImage, tint: drink.family.tint, size: 36)
@@ -189,13 +197,67 @@ private struct RiffPickerView: View {
                         Text(drink.ingredientSummary)
                             .font(.caption)
                             .foregroundStyle(.secondary)
-                            .lineLimit(1)
+                            .lineLimit(typeSize.isAccessibilitySize ? 3 : 1)
+                    }
+                    if !riffs.isEmpty {
+                        Spacer(minLength: 4)
+                        Text("\(riffs.count) riff\(riffs.count == 1 ? "" : "s")")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.purple)
                     }
                 }
             }
         }
         .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Drink or ingredient")
+        .task {
+            guard riffsByID.isEmpty else { return }
+            riffsByID = Dictionary(library.drinks.map { ($0.id, InventionHelpers.riffs(of: $0)) }, uniquingKeysWith: { first, _ in first })
+        }
         .navigationTitle("Riff on…")
+        .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+/// A classic and the riffs others have documented on it: start from the
+/// classic itself, or from a riff someone already made.
+private struct RiffStartView: View {
+    let drink: Drink
+    let riffs: [ReferenceDrink]
+    let onFinish: () -> Void
+
+    var body: some View {
+        List {
+            Section {
+                NavigationLink {
+                    DrinkBuilderView(drink: DrinkTemplates.riff(on: drink), isNew: true, onFinish: onFinish)
+                } label: {
+                    Label("Start from the \(drink.name)", systemImage: "arrow.triangle.branch")
+                        .font(.headline)
+                }
+            }
+
+            Section {
+                ForEach(riffs) { riff in
+                    NavigationLink {
+                        ReferenceDrinkView(drink: riff.asDrink, reference: riff, onFinish: onFinish)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(riff.name)
+                                .font(.system(.body, design: .serif, weight: .semibold))
+                            Text(riff.ingredientSummary)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(2)
+                        }
+                    }
+                }
+            } header: {
+                Text("Documented riffs")
+            } footer: {
+                Text("From Bar Assistant's open recipe data. Open one to see its spec or start from it.")
+            }
+        }
+        .navigationTitle(drink.name)
         .navigationBarTitleDisplayMode(.inline)
     }
 }

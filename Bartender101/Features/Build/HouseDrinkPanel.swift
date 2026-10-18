@@ -36,7 +36,7 @@ struct HouseDrinkPanel: View {
                     }
                     .font(metrics.isOn ? .title3.weight(.semibold) : .subheadline.weight(.semibold))
                     .padding(.horizontal, 14)
-                    .frame(minHeight: metrics.isOn ? 48 : 34)
+                    .frame(minHeight: metrics.scaledControl(metrics.isOn ? 48 : 34))
                     .background(Capsule().fill(drink.stage.tint.opacity(0.18)))
                     .foregroundStyle(drink.stage == .shelved ? Color.secondary : Color.primary)
                     .overlay { ConfettiBurst(trigger: celebrations) }

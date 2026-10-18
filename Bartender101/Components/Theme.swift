@@ -127,8 +127,11 @@ struct ProgressRing<Label: View>: View {
 
     var body: some View {
         ZStack {
+            // A neutral track rather than a tinted one. At zero the filled arc
+            // is hidden entirely, so the track is the only thing drawn — and a
+            // 15%-opacity tint is close to invisible in both appearances.
             Circle()
-                .stroke(tint.opacity(0.15), lineWidth: lineWidth)
+                .stroke(Color(.tertiarySystemFill), lineWidth: lineWidth)
             Circle()
                 .trim(from: 0, to: max(0.001, min(1, shown)))
                 .stroke(Theme.accentGradient(tint), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
@@ -206,6 +209,140 @@ struct ConfettiBurst: View {
         }
         DispatchQueue.main.async {
             withAnimation(.easeOut(duration: 1.1)) { launched = true }
+        }
+    }
+}
+
+// MARK: - Unit picker
+
+/// The oz/ml switch, in the app's own button idiom rather than a system
+/// segmented control.
+///
+/// The stock `.segmented` picker draws its selection in a system material that
+/// reads grey-on-grey over the intro's dark gradient, and `.tint()` doesn't
+/// reach it — but which unit you're pouring in is worth seeing at a glance
+/// mid-shift. This matches the amber pair already pinned to the recipe page,
+/// so the same preference looks the same everywhere it appears.
+struct UnitPicker: View {
+    @Binding var unitRaw: String
+    var minHeight: CGFloat = 44
+
+    var body: some View {
+        HStack(spacing: 6) {
+            ForEach(MeasurementUnit.allCases) { unit in
+                let isSelected = unitRaw == unit.rawValue
+                Button {
+                    unitRaw = unit.rawValue
+                } label: {
+                    Text(unit == .oz ? "Ounces" : "Milliliters")
+                        .font(.subheadline.weight(.semibold))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                        .frame(maxWidth: .infinity, minHeight: minHeight)
+                        .background(
+                            Capsule().fill(isSelected ? Color.accentColor : Color.primary.opacity(0.08))
+                        )
+                        .foregroundStyle(isSelected ? Color.white : Color.primary)
+                        .contentShape(Capsule())
+                }
+                .buttonStyle(.pressable(scale: 0.95))
+                .accessibilityAddTraits(isSelected ? .isSelected : [])
+            }
+        }
+        .animation(Theme.snap, value: unitRaw)
+        .accessibilityLabel("Measure in")
+    }
+}
+
+// MARK: - Flip card
+
+/// A card that turns over in 3D. Both faces live in the same box, and the one
+/// facing away is switched off at the exact halfway point of the turn — so no
+/// frame ever shows the back's text mirrored through the front.
+///
+/// SwiftUI has no backface culling, and an opacity driven off a `Bool` fades on
+/// its own curve instead of tracking the rotation, which is what lets the back
+/// bleed through mid-flip. So this owns the angle: `Animatable` hands the
+/// interpolated angle to `body` every frame, making "which face is toward the
+/// camera" a fact about the frame rather than a guess about the animation's
+/// timing. Reduce Motion skips the turn and crossfades instead.
+struct FlipCard<Front: View, Back: View>: View {
+    /// false shows the front, true shows the back.
+    var isFlipped: Bool
+    /// How much the turn foreshortens; 0 is flat.
+    var perspective: CGFloat = 0.4
+    /// The turn.
+    var animation: Animation = .spring(response: 0.55, dampingFraction: 0.78)
+    /// The crossfade used instead, under Reduce Motion.
+    var reduceMotionAnimation: Animation = .easeInOut(duration: 0.2)
+
+    private let front: Front
+    private let back: Back
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    init(
+        isFlipped: Bool,
+        perspective: CGFloat = 0.4,
+        animation: Animation = .spring(response: 0.55, dampingFraction: 0.78),
+        reduceMotionAnimation: Animation = .easeInOut(duration: 0.2),
+        @ViewBuilder front: () -> Front,
+        @ViewBuilder back: () -> Back
+    ) {
+        self.isFlipped = isFlipped
+        self.perspective = perspective
+        self.animation = animation
+        self.reduceMotionAnimation = reduceMotionAnimation
+        // Built once per update, not once per animation frame.
+        self.front = front()
+        self.back = back()
+    }
+
+    var body: some View {
+        if reduceMotion {
+            // No turn at all: a straight crossfade, neither face ever mirrored.
+            ZStack {
+                front.opacity(isFlipped ? 0 : 1)
+                back.opacity(isFlipped ? 1 : 0)
+            }
+            .animation(reduceMotionAnimation, value: isFlipped)
+        } else {
+            Turn(angle: isFlipped ? 180 : 0, perspective: perspective, front: front, back: back)
+                .animation(animation, value: isFlipped)
+        }
+    }
+
+    /// The turning half. `Animatable` makes `angle` the animated value, so
+    /// `body` runs with the in-between angles and can switch off the face that
+    /// has turned away.
+    private struct Turn: View, Animatable {
+        var angle: Double
+        var perspective: CGFloat
+        var front: Front
+        var back: Back
+
+        var animatableData: Double {
+            get { angle }
+            set { angle = newValue }
+        }
+
+        /// Past 90° the back is the face toward the camera. The swap happens
+        /// while the card is edge-on and zero pixels wide, so it is never seen
+        /// — and a spring overshooting 180° stays on the right side of it.
+        private var showingBack: Bool { angle >= 90 }
+
+        var body: some View {
+            ZStack {
+                front
+                    .opacity(showingBack ? 0 : 1)
+                    .accessibilityHidden(showingBack)
+                back
+                    // Pre-mirrored, so it reads correctly once the card has turned.
+                    .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                    .opacity(showingBack ? 1 : 0)
+                    .accessibilityHidden(!showingBack)
+            }
+            .rotation3DEffect(.degrees(angle), axis: (x: 0, y: 1, z: 0), perspective: perspective)
         }
     }
 }

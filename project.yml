@@ -48,8 +48,9 @@ targets:
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.food-and-drink
         # No custom encryption — skips the export-compliance prompt on upload.
         INFOPLIST_KEY_ITSAppUsesNonExemptEncryption: NO
-        # iPad runs full screen (no Split View / Slide Over), portrait and landscape.
-        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        # iPad supports Split View and Slide Over. UIRequiresFullScreen is
+        # deprecated and iPadOS 26 ignores it in most configurations, so the
+        # app has to survive a compact width there either way.
         INFOPLIST_KEY_NSCameraUsageDescription: "Take photos of drinks you've made for your records."
 
   Bartender101Tests:

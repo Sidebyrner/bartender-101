@@ -75,6 +75,7 @@ struct BuildView: View {
         .sensoryFeedback(.success, trigger: celebrations)
         .sensoryFeedback(.impact(weight: .medium), trigger: moves)
         .sensoryFeedback(.selection, trigger: layoutRaw)
+        .readableWidth()
         .navigationTitle("Build")
         .toolbar {
             if !customDrinks.drinks.isEmpty {
